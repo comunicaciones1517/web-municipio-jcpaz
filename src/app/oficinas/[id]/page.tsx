@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Phone, MapPin, ClipboardList, Info } from "lucide-react";
 import { getAllOffices, getOfficeById } from "@/lib/data/oficinas";
 import HoursDisplay from "@/components/shared/HoursDisplay";
@@ -46,12 +47,12 @@ export default async function OfficeDetailPage({
             Volver a Oficinas
           </Link>
           {office.photo && (
-            <div className="mb-5 rounded-xl overflow-hidden max-h-72">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="mb-5 rounded-xl overflow-hidden relative h-72">
+              <Image
                 src={office.photo}
                 alt={`Fachada de ${office.name}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           )}

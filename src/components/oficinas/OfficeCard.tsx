@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, ChevronRight, Building2 } from "lucide-react";
 import type { MunicipalOffice } from "@/types";
 import HoursDisplay from "@/components/shared/HoursDisplay";
@@ -16,11 +17,11 @@ export default function OfficeCard({ office }: OfficeCardProps) {
       {/* Foto */}
       <div className="relative h-44 bg-gray-100 overflow-hidden">
         {office.photo ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={office.photo}
             alt={`Fachada de ${office.name}`}
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            fill
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-primary-100 to-primary-300 flex items-center justify-center">

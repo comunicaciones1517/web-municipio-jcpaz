@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock, User, ArrowRight } from "lucide-react";
 import type { Dependencia } from "@/types";
 import HoursDisplay from "@/components/shared/HoursDisplay";
@@ -21,11 +22,11 @@ export default function DependenciaCard({ dependencia }: Props) {
       {/* Foto */}
       {dependencia.photo && (
         <div className="relative h-44 overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={dependencia.photo}
             alt={`Fachada de ${dependencia.name}`}
-            className="w-full h-full object-cover object-top"
+            fill
+            className="object-cover object-top"
           />
         </div>
       )}
