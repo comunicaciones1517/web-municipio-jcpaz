@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   basePath: "/web-municipio-jcpaz",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: process.env.NODE_ENV === "production" ? "/web-municipio-jcpaz" : "",
+  },
   images: {
     unoptimized: true,
     remotePatterns: [

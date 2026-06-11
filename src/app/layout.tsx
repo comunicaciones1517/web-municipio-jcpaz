@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Image from "next/image";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -28,13 +27,12 @@ export default function RootLayout({
         <section style={{ backgroundColor: "#041f3a" }} className="py-3">
           <div className="flex justify-center">
             <div className="relative inline-block">
-              <Image
-                src="/banner-municipio.jpg"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/banner-municipio.jpg`}
                 alt="Municipalidad José C. Paz — Intendencia Mario Ishii"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="block h-[110px] w-auto"
+                className="block h-auto"
+                style={{ maxHeight: "110px" }}
               />
               <div
                 className="absolute bottom-0 right-0"
