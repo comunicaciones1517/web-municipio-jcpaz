@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -27,11 +28,13 @@ export default function RootLayout({
         <section style={{ backgroundColor: "#041f3a" }} className="py-3">
           <div className="flex justify-center">
             <div className="relative inline-block">
-              <img
+              <Image
                 src="/banner-municipio.jpg"
                 alt="Municipalidad José C. Paz — Intendencia Mario Ishii"
-                className="block h-auto"
-                style={{ maxHeight: "110px" }}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="block h-[110px] w-auto"
               />
               <div
                 className="absolute bottom-0 right-0"
