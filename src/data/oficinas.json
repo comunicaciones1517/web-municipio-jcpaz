@@ -1,0 +1,331 @@
+[
+  {
+    "id": "secretaria-deportes",
+    "name": "Secretaría de Deportes",
+    "address": "Canning 799, José C. Paz",
+    "zone": "Centro",
+    "phone": "11 4087-4027",
+    "photo": "/oficinas/secretaria-deportes.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Inscripción a talleres deportivos municipales",
+      "Coordinación de torneos y ligas",
+      "Colonia de vacaciones",
+      "Apoyo a clubes del distrito",
+      "Préstamo de instalaciones deportivas"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Roque+Sáenz+Peña+4981,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Sede de la Dirección General de Deportes Municipal."
+  },
+  {
+    "id": "polo-productivo",
+    "name": "Polo Productivo",
+    "address": "Cnel. Ramón Falcón y 18 de Octubre, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 527300",
+    "photo": "/oficinas/image-1780496931976.webp",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Inscripción a cursos de capacitación laboral",
+      "Orientación e inserción laboral",
+      "Apoyo a emprendedores y microempresas",
+      "Certificados de capacitación",
+      "Programas de empleo municipal y nacional"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Ramón+Falcón+y+18+de+Octubre,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Centro de formación laboral y productiva del municipio. Email: trabajo@josecpaz.mun.gba.gov.ar"
+  },
+  {
+    "id": "casa-tierra",
+    "name": "Casa Tierra — Dirección Gral. de Regularización Dominial",
+    "address": "Av. Gaspar Campos 6372, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 536176",
+    "photo": "/oficinas/casa-tierra.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Escrituración gratuita de vivienda",
+      "Regularización dominial de inmuebles",
+      "Entrega de títulos de propiedad",
+      "Asesoramiento sobre posesión de terrenos",
+      "Gestión ante Escribanía General de Gobierno"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Gaspar+Campos+6151,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Gestiona la regularización de la situación dominial de familias con viviendas sin escritura. Directora: Elba Benítez. Confirmar dirección específica llamando al municipio."
+  },
+  {
+    "id": "secretaria-accion-social",
+    "name": "Secretaría de Acción Social",
+    "address": "Av. Hipólito Yrigoyen 2945, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 422719",
+    "photo": "/oficinas/secretaria-accion-social.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Subsidios habitacionales",
+      "Asistencia a familias en situación de vulnerabilidad",
+      "Entrega de mercadería y ropa",
+      "Derivación a programas sociales provinciales y nacionales",
+      "Informes socioeconómicos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+Hipólito+Yrigoyen+2945,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "También: (02320) 440512 / 428624."
+  },
+  {
+    "id": "juzgado-de-faltas",
+    "name": "Juzgado de Faltas N° 4",
+    "address": "Federico Lacroze 5036, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 447150",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Audiencias por infracciones municipales",
+      "Pago y regularización de multas",
+      "Labrado de actas de infracción",
+      "Consulta de expedientes de faltas"
+    ],
+    "photo": "/oficinas/juzgado-de-faltas.jpg",
+    "mapLink": "https://maps.google.com/maps?q=Federico+Lacroze+5036,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed"
+  },
+  {
+    "id": "sonosis",
+    "name": "Centro de Zoonosis",
+    "address": "H. Arregui 365, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 649210",
+    "photo": "/oficinas/sonosis.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "08:00", "close": "12:00" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [],
+    "mapLink": "https://maps.google.com/maps?q=José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=14&output=embed",
+    "notes": "⚠️ Datos incompletos — pendiente de verificación. Por favor confirmá dirección, teléfono y servicios."
+  },
+  {
+    "id": "defensa-consumidor",
+    "name": "Defensa al Consumidor — OMIC",
+    "address": "Av. José Altube 2075, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 332139",
+    "photo": "/oficinas/defensa-consumidor.png",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Denuncia por incumplimiento de garantía",
+      "Reclamos por publicidad engañosa",
+      "Mediación entre consumidor y comercio",
+      "Asesoramiento sobre derechos del consumidor",
+      "Protección al consumidor hipervulnerable"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+José+Altube+2075,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "También: (02320) 423057. Email: defensaconsumidorjosecpaz@gmail.com. Asesoramiento telefónico Lun–Vie 8 a 14 hs."
+  },
+  {
+    "id": "honorable-concejo-deliberante",
+    "name": "Honorable Concejo Deliberante",
+    "address": "Hipólito Yrigoyen 2302, José C. Paz",
+    "zone": "Centro",
+    "phone": "11 3037-2834",
+    "photo": "/oficinas/honorable-concejo-deliberante.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Consulta de ordenanzas municipales",
+      "Acceso a expedientes legislativos",
+      "Presentación de notas al cuerpo deliberativo",
+      "Información sobre sesiones y actas"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Hipólito+Yrigoyen+2302,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Órgano legislativo del municipio. Web oficial: hcdjosecpaz.gob.ar"
+  },
+  {
+    "id": "consejo-escolar",
+    "name": "Consejo Escolar",
+    "address": "Coronel Arias 2204, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 432177",
+    "photo": "/oficinas/consejo-escolar.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "17:00" },
+      { "day": "martes",    "open": "08:00", "close": "17:00" },
+      { "day": "miercoles", "open": "08:00", "close": "17:00" },
+      { "day": "jueves",    "open": "08:00", "close": "17:00" },
+      { "day": "viernes",   "open": "08:00", "close": "17:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Gestión edilicia de establecimientos educativos",
+      "Provisión de materiales y mobiliario escolar",
+      "Administración de auxiliares escolares",
+      "Solicitudes de mantenimiento de escuelas",
+      "Información sobre el sistema educativo distrital"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Coronel+Arias+2204,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Organismo de administración escolar del Distrito de José C. Paz. Presidente: Carlos Leiva."
+  },
+  {
+    "id": "secretaria-educacion",
+    "name": "Secretaría de Educación",
+    "address": "Gaspar Campos 6151, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 527300",
+    "photo": "/oficinas/secretaria-educacion.png",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "15:00" },
+      { "day": "martes",    "open": "08:00", "close": "15:00" },
+      { "day": "miercoles", "open": "08:00", "close": "15:00" },
+      { "day": "jueves",    "open": "08:00", "close": "15:00" },
+      { "day": "viernes",   "open": "08:00", "close": "15:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Inscripción a jardines municipales",
+      "Becas educativas municipales",
+      "Información sobre Centros de Formación Profesional",
+      "Programas de terminalidad educativa",
+      "Coordinación con establecimientos educativos municipales"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Gaspar+Campos+6151,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Dependencia del municipio. Centro de Estudios Municipal: Leandro N. Alem 4593 — (02320) 648967."
+  },
+  {
+    "id": "dinaf",
+    "name": "DINAF — Dirección de Niñez, Adolescencia y Familia",
+    "address": "Zuviría 4800, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 350604",
+    "photo": "/oficinas/dinaf.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Protección de derechos de niños y adolescentes",
+      "Intervención en situaciones de riesgo o vulnerabilidad",
+      "Medidas de abrigo y protección excepcional",
+      "Orientación a familias en conflicto",
+      "Articulación con Juzgados de Familia"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Zuviría,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Guardia permanente las 24 hs los 365 días del año para situaciones de urgencia."
+  },
+  {
+    "id": "secretaria-comercio-industria",
+    "name": "Secretaría de Comercio e Industria",
+    "address": "Av. José Altube 2075, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 664409",
+    "photo": "/oficinas/secretaria-comercio-industria.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Habilitación comercial (apertura de local)",
+      "Renovación de habilitación comercial",
+      "Habilitación de industrias",
+      "Inspecciones comerciales",
+      "Libre deuda municipal",
+      "Asesoramiento a comerciantes y emprendedores"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+José+Altube+2075,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Instagram: @comercioeindustriajcp"
+  },
+  {
+    "id": "casa-vida",
+    "name": "Casa Vida",
+    "address": "José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 332063",
+    "photo": "/oficinas/casa-vida.jpg",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Asistencia a personas en situación de calle",
+      "Atención en casos de adicciones",
+      "Acompañamiento en situaciones de vulnerabilidad extrema",
+      "Derivación a programas de recuperación"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=14&output=embed",
+    "notes": "⚠️ Dirección pendiente de verificación. Dependiente de la Secretaría de Desarrollo Social."
+  }
+]

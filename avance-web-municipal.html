@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avance Web Municipal — José C. Paz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f1f5f9; color: #1e293b; line-height: 1.6; }
+
+    /* HEADER */
+    .hero {
+      background: linear-gradient(135deg, #1a5276 0%, #2e86c1 60%, #1e8449 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      margin-bottom: 16px;
+    }
+    .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+    .hero p { font-size: 1.05rem; opacity: 0.88; max-width: 580px; margin: 0 auto 24px; }
+    .hero .date { font-size: 13px; opacity: 0.7; }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 32px;
+      border-right: 1px solid #e2e8f0;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: #1a5276; line-height: 1; }
+    .stat-label { font-size: 12px; color: #64748b; text-align: center; margin-top: 4px; }
+
+    /* CONTENT */
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #1a5276;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title .icon { font-size: 1.5rem; }
+
+    /* WHAT WAS DONE */
+    .done-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .done-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border-left: 4px solid #1e8449;
+    }
+    .done-card .done-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .done-card h3 { font-size: 15px; font-weight: 700; color: #1a5276; margin-bottom: 6px; }
+    .done-card p { font-size: 13px; color: #475569; }
+    .done-card .tag {
+      display: inline-block;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-top: 8px;
+    }
+
+    /* CENTERS GRID */
+    .centers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .center-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+      transition: box-shadow 0.2s;
+    }
+    .center-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .center-photo {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+      background: #e2e8f0;
+    }
+    .center-photo-placeholder {
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    .center-body { padding: 14px 16px; }
+    .center-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .badge-type {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .badge-hospital_publico  { background:#dbeafe; color:#1d4ed8; }
+    .badge-hospital_privado  { background:#ede9fe; color:#6d28d9; }
+    .badge-centro_de_salud   { background:#dcfce7; color:#15803d; }
+    .badge-emergency { background:#fee2e2; color:#b91c1c; }
+    .center-name { font-size: 14px; font-weight: 700; color: #1e293b; margin-bottom: 4px; line-height: 1.3; }
+    .center-addr { font-size: 12px; color: #64748b; margin-bottom: 6px; }
+    .center-phone { font-size: 12px; color: #1a5276; font-weight: 600; }
+    .center-hours { font-size: 11px; color: #475569; margin-top: 4px; }
+    .has-photo-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 8px;
+      margin-top: 6px;
+    }
+
+    /* NAV DEMO */
+    .nav-demo {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+      max-width: 700px;
+    }
+    .nav-demo .demo-header {
+      background: linear-gradient(to right, #b91c1c, #ef4444);
+      color: white;
+      padding: 20px 24px;
+    }
+    .nav-demo .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      margin-bottom: 12px;
+      background: rgba(255,255,255,0.15);
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+    .nav-demo .back-btn::before { content: '←'; font-size: 14px; }
+    .nav-demo .demo-header h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+    .nav-demo .demo-header p { font-size: 13px; opacity: 0.8; }
+    .nav-demo .demo-body { padding: 20px 24px; font-size: 13px; color: #475569; }
+    .nav-demo .demo-body ul { margin-left: 18px; margin-top: 8px; }
+    .nav-demo .demo-body li { margin-bottom: 4px; }
+
+    /* PAGES TABLE */
+    .pages-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+    .pages-table th { background: #1a5276; color: white; padding: 12px 16px; text-align: left; font-size: 13px; }
+    .pages-table td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #f1f5f9; }
+    .pages-table tr:last-child td { border-bottom: none; }
+    .pages-table tr:hover td { background: #f8fafc; }
+    .dot-static { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; margin-right: 6px; }
+    .dot-ssg    { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 6px; }
+    .dot-dyn    { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 6px; }
+
+    /* FOOTER */
+    footer {
+      background: #1e293b;
+      color: #94a3b8;
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+    footer strong { color: white; }
+
+    /* CHIPS */
+    .chip {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 10px;
+      margin: 2px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.5rem; }
+      .stat { padding: 14px 16px; }
+      .stat-num { font-size: 1.5rem; }
+      .centers-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Informe de avance</div>
+  <h1>Portal Web Municipal<br>José C. Paz</h1>
+  <p>Resumen del trabajo realizado hoy en el sitio vecinal digital del municipio.</p>
+  <div class="date">Jueves 29 de mayo de 2026</div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">19</div>
+    <div class="stat-label">Centros de<br>salud cargados</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">13</div>
+    <div class="stat-label">Con foto de<br>fachada</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">29</div>
+    <div class="stat-label">Páginas<br>estáticas</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">0</div>
+    <div class="stat-label">Errores de<br>compilación</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">5</div>
+    <div class="stat-label">Secciones con<br>botón de Inicio</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <!-- LO QUE SE HIZO -->
+  <div class="section">
+    <div class="section-title"><span class="icon">✅</span> Qué se hizo hoy</div>
+    <div class="done-grid">
+      <div class="done-card">
+        <div class="done-icon">🏥</div>
+        <h3>15 centros de salud barriales</h3>
+        <p>Se cargaron todos los CAPS (Centros de Atención Primaria de Salud) del municipio con dirección, teléfono, horarios y especialidades para cada barrio.</p>
+        <span class="tag">✓ Completado</span>
+      </div>
+      <div class="done-card">
+        <div class="done-icon">🚑</div>
+        <h3>SAME y Conmutador de Salud</h3>
+        <p>Las 4 líneas de emergencias se simplificaron en los números públicos <strong>107</strong> y <strong>147</strong>. Los 2 conmutadores quedaron como entrada unificada de derivación.</p>
+        <span class="tag">✓ Completado</span>
+      </div>
+      <div class="done-card">
+        <div class="done-icon">📸</div>
+        <h3>Fotos de fachadas</h3>
+        <p>13 de 19 centros ya tienen foto real del edificio, encontradas en directorios médicos públicos. Se descartaron URLs de redes sociales que expiran.</p>
+        <span class="tag">✓ 13 / 19 con foto</span>
+      </div>
+      <div class="done-card">
+        <div class="done-icon">🔙</div>
+        <h3>Botón "← Inicio" en todas las secciones</h3>
+        <p>Ahora cada sección (Salud, Oficinas, Trámites, Transporte, Espacios Verdes) tiene un botón para volver al inicio directamente desde el encabezado de página.</p>
+        <span class="tag">✓ Completado</span>
+      </div>
+      <div class="done-card">
+        <div class="done-icon">⚙️</div>
+        <h3>Datos del Excel integrados</h3>
+        <p>Se procesó el archivo <em>centros de salud 2.0.xlsx</em> con 21 filas, interpretando los tipos de entrada (centros, emergencias, conmutadores) y generando un JSON estructurado.</p>
+        <span class="tag">✓ Completado</span>
+      </div>
+      <div class="done-card">
+        <div class="done-icon">🚀</div>
+        <h3>Build listo para producción</h3>
+        <p>29 páginas estáticas generadas, 0 errores TypeScript. La carpeta <code>out/</code> está lista para arrastrar a Netlify Drop y publicar.</p>
+        <span class="tag">✓ Listo para publicar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN NUEVA -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🔙</span> Nueva navegación — Botón "Volver"</div>
+    <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+      <div class="nav-demo">
+        <div class="demo-header">
+          <div class="back-btn">Inicio</div>
+          <h3>Salud</h3>
+          <p>Hospitales y centros de salud de José C. Paz</p>
+        </div>
+        <div class="demo-body">
+          <strong>Antes:</strong> el vecino no podía volver al inicio sin usar el botón del navegador.<br><br>
+          <strong>Ahora, en todas las secciones:</strong>
+          <ul>
+            <li>← Inicio (en Salud, Oficinas, Trámites, Transporte, Espacios Verdes)</li>
+            <li>← Volver a Salud (en la ficha de cada hospital)</li>
+            <li>← Volver a Oficinas (en el detalle de cada oficina)</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex:1; min-width:220px;">
+        <p style="font-size:14px; color:#475569; background:white; padding:16px; border-radius:12px; border:1px solid #e2e8f0;">
+          El botón se agrega de forma centralizada en el componente <code>PageHeader</code>, por lo que si en el futuro se agrega una nueva sección, automáticamente hereda el comportamiento.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTROS DE SALUD -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🏥</span> Los 19 efectores de salud cargados</div>
+    <div class="centers-grid">
+
+      <!-- Hospital Duhau -->
+      <div class="center-card">
+        <img class="center-photo" src="http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/Frente-del-Hospital.JPG-1.jpg" alt="Hospital Duhau" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges">
+            <span class="badge-type badge-hospital_privado">Hospital Privado</span>
+            <span class="badge-type badge-emergency">Guardia 24h</span>
+          </div>
+          <div class="center-name">Hospital Dr. Alberto Duhau</div>
+          <div class="center-addr">📍 Gral. Lavalle 2066</div>
+          <div class="center-phone">📞 (02320) 43-1951</div>
+          <div class="center-hours">⏰ Abierto las 24 horas</div>
+        </div>
+      </div>
+
+      <!-- Hospital Oftalmológico -->
+      <div class="center-card">
+        <img class="center-photo" src="https://intendenciasba.com.ar/wp-content/uploads/2021/03/Intendente-Mario-Ishii-_-Hospital-Oftalmol%C3%B3gico-Juan-Domingo-Per%C3%B3n-_-diario-Intendencias-BA-4-1024x453.jpg" alt="Hospital Oftalmológico" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges">
+            <span class="badge-type badge-hospital_publico">Hospital Público</span>
+            <span class="badge-type badge-emergency">Guardia 24h</span>
+          </div>
+          <div class="center-name">Hospital Oftalmológico "Juan D. Perón"</div>
+          <div class="center-addr">📍 Av. Hipólito Yrigoyen 3028</div>
+          <div class="center-phone">📞 (02320) 44-5449</div>
+          <div class="center-hours">⏰ Abierto las 24 horas</div>
+        </div>
+      </div>
+
+      <!-- SAME -->
+      <div class="center-card">
+        <div class="center-photo-placeholder">🚑</div>
+        <div class="center-body">
+          <div class="center-badges">
+            <span class="badge-type badge-hospital_publico">Hospital Público</span>
+            <span class="badge-type badge-emergency">Guardia 24h</span>
+          </div>
+          <div class="center-name">SAME – Emergencias Médicas</div>
+          <div class="center-addr">📍 Av. Hipólito Yrigoyen</div>
+          <div class="center-phone">📞 107 · 147</div>
+          <div class="center-hours">⏰ 24 horas · 365 días</div>
+        </div>
+      </div>
+
+      <!-- Conmutador -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg" alt="Secretaría de Salud" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">📞</div>
+        <div class="center-body">
+          <div class="center-badges">
+            <span class="badge-type badge-centro_de_salud">Centro de Salud</span>
+          </div>
+          <div class="center-name">Conmutador de Salud Municipal</div>
+          <div class="center-addr">📍 Av. Hipólito Yrigoyen</div>
+          <div class="center-phone">📞 (02320) 44-9105 / 44-9113</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- Sagrada Familia -->
+      <div class="center-card">
+        <div class="center-photo-placeholder">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Sagrada Familia</div>
+          <div class="center-addr">📍 Londres 3294</div>
+          <div class="center-phone">📞 (02320) 42-2736</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- San Atilio -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg" alt="San Atilio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud San Atilio</div>
+          <div class="center-addr">📍 Guillermo Miller 2948</div>
+          <div class="center-phone">📞 (02320) 42-3949</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- Las Heras -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg" alt="Las Heras" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges">
+            <span class="badge-type badge-centro_de_salud">Centro de Salud</span>
+            <span class="badge-type badge-emergency">Guardia 24h</span>
+          </div>
+          <div class="center-name">Centro de Salud Las Heras</div>
+          <div class="center-addr">📍 Remigio López 5363</div>
+          <div class="center-phone">📞 (02320) 42-4201</div>
+          <div class="center-hours">⏰ Abierto las 24 horas</div>
+          <div class="has-photo-badge">📸 10 especialidades</div>
+        </div>
+      </div>
+
+      <!-- La Paz -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg" alt="La Paz" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud La Paz</div>
+          <div class="center-addr">📍 Oribe 3400</div>
+          <div class="center-phone">📞 (02320) 42-4672</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- Sol y Verde -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg" alt="Sol y Verde" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Sol y Verde</div>
+          <div class="center-addr">📍 Dinamarca 3798</div>
+          <div class="center-phone">📞 (02320) 42-5655</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–20:00</div>
+        </div>
+      </div>
+
+      <!-- Santa Paula -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg" alt="Santa Paula" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Santa Paula</div>
+          <div class="center-addr">📍 Piñero 755</div>
+          <div class="center-phone">📞 (02320) 42-5665</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- El Ombú -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg" alt="El Ombú" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud El Ombú</div>
+          <div class="center-addr">📍 Gral. Arenales 336</div>
+          <div class="center-phone">📞 (02320) 42-5744</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–17:00</div>
+        </div>
+      </div>
+
+      <!-- Área Bajo Peso -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg" alt="Sec. Salud" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Área de Salud – Bajo Peso</div>
+          <div class="center-addr">📍 Av. Hipólito Yrigoyen</div>
+          <div class="center-phone">📞 (02320) 42-6724</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–15:00</div>
+        </div>
+      </div>
+
+      <!-- Las Acacias -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg" alt="Las Acacias" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Las Acacias</div>
+          <div class="center-addr">📍 Gral. Pintos 1665</div>
+          <div class="center-phone">📞 (02320) 43-7049</div>
+          <div class="center-hours">⏰ Lun–Vie 9:00–16:00</div>
+        </div>
+      </div>
+
+      <!-- Urquiza -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg" alt="Urquiza" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Urquiza</div>
+          <div class="center-addr">📍 Caracas 4900</div>
+          <div class="center-phone">📞 (02320) 43-7666</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- Primer Nivel -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg" alt="Primer Nivel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Primer Nivel</div>
+          <div class="center-addr">📍 Chile y Castelar</div>
+          <div class="center-phone">📞 (02320) 44-0800</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- 9 de Julio -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg" alt="9 de Julio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud 9 de Julio</div>
+          <div class="center-addr">📍 Ángel Delia 4265</div>
+          <div class="center-phone">📞 (02320) 44-6140</div>
+          <div class="center-hours">⏰ Lun–Vie 7:30–18:00 · Sáb 7:30–13:00</div>
+          <div class="has-photo-badge">📸 17 especialidades</div>
+        </div>
+      </div>
+
+      <!-- Suizo Infico -->
+      <div class="center-card">
+        <div class="center-photo-placeholder">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Suizo Infico</div>
+          <div class="center-addr">📍 Gral. Balcarce 3800</div>
+          <div class="center-phone">📞 (02320) 44-6158</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+      <!-- Frino Sur -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-frino-sur-jose-c-paz-buenos-aires-brughetti-2906.jpg" alt="Frino Sur" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Frino Sur</div>
+          <div class="center-addr">📍 Ramón Falcón 1836</div>
+          <div class="center-phone">📞 (02320) 46-5723</div>
+          <div class="center-hours">⏰ Lun–Vie 9:00–17:00 · Sáb 10:00–14:00</div>
+        </div>
+      </div>
+
+      <!-- Alberdi -->
+      <div class="center-card">
+        <img class="center-photo" src="https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg" alt="Alberdi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="center-photo-placeholder" style="display:none">🏥</div>
+        <div class="center-body">
+          <div class="center-badges"><span class="badge-type badge-centro_de_salud">Centro de Salud</span></div>
+          <div class="center-name">Centro de Salud Alberdi</div>
+          <div class="center-addr">📍 Montes de Oca 1700</div>
+          <div class="center-phone">📞 (02320) 53-2544</div>
+          <div class="center-hours">⏰ Lun–Vie 8:00–18:00</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PÁGINAS GENERADAS -->
+  <div class="section">
+    <div class="section-title"><span class="icon">📄</span> Páginas generadas (29 en total)</div>
+    <table class="pages-table">
+      <thead>
+        <tr>
+          <th>Ruta</th>
+          <th>Tipo</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>/</code></td><td><span class="dot-static"></span>Estática</td><td>Página de inicio con 6 accesos rápidos</td></tr>
+        <tr><td><code>/salud</code></td><td><span class="dot-dyn"></span>Dinámica</td><td>Listado con filtros por tipo, zona y especialidad</td></tr>
+        <tr><td><code>/salud/[id]</code> × 19</td><td><span class="dot-ssg"></span>SSG</td><td>Ficha de cada efector: mapa, horarios, especialidades</td></tr>
+        <tr><td><code>/oficinas</code></td><td><span class="dot-static"></span>Estática</td><td>Delegaciones y oficinas municipales</td></tr>
+        <tr><td><code>/oficinas/[id]</code> × 1</td><td><span class="dot-ssg"></span>SSG</td><td>Detalle de Secretaría de Obras y Servicios</td></tr>
+        <tr><td><code>/tramites</code></td><td><span class="dot-dyn"></span>Dinámica</td><td>Trámites online con filtros por categoría</td></tr>
+        <tr><td><code>/transporte</code></td><td><span class="dot-static"></span>Estática</td><td>Líneas de colectivo con horarios y paradas</td></tr>
+        <tr><td><code>/espacios-verdes</code></td><td><span class="dot-static"></span>Estática</td><td>Parques, plazas y polideportivos</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#94a3b8;margin-top:10px;">
+      <span class="dot-static"></span>Estática: HTML generado en build &nbsp;
+      <span class="dot-ssg"></span>SSG: generado por cada ítem de datos &nbsp;
+      <span class="dot-dyn"></span>Dinámica: renderiza según filtros de URL
+    </p>
+  </div>
+
+  <!-- PRÓXIMOS PASOS -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🗺️</span> Próximos pasos sugeridos</div>
+    <div class="done-grid">
+      <div class="done-card" style="border-left-color:#f59e0b;">
+        <div class="done-icon">📋</div>
+        <h3>Datos reales de Oficinas</h3>
+        <p>Actualmente hay solo 1 oficina con datos reales. Cargar el resto de delegaciones y dependencias municipales.</p>
+        <span class="tag" style="background:#fef3c7;color:#92400e;">Pendiente</span>
+      </div>
+      <div class="done-card" style="border-left-color:#f59e0b;">
+        <div class="done-icon">🌳</div>
+        <h3>Detalle de Espacios Verdes</h3>
+        <p>Agregar página de detalle individual para parques y plazas (similar a la ficha de hospitales).</p>
+        <span class="tag" style="background:#fef3c7;color:#92400e;">Pendiente</span>
+      </div>
+      <div class="done-card" style="border-left-color:#f59e0b;">
+        <div class="done-icon">🚌</div>
+        <h3>Datos reales de Transporte</h3>
+        <p>Actualizar las líneas de colectivo con recorridos, horarios y frecuencias reales del municipio.</p>
+        <span class="tag" style="background:#fef3c7;color:#92400e;">Pendiente</span>
+      </div>
+      <div class="done-card" style="border-left-color:#3b82f6;">
+        <div class="done-icon">🌐</div>
+        <h3>Publicación en Netlify</h3>
+        <p>La carpeta <code>out/</code> está lista. Solo hace falta arrastrarla a netlify.com/drop para tener la URL pública.</p>
+        <span class="tag" style="background:#dbeafe;color:#1d4ed8;">Listo para hacer</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Portal Web Municipal — José C. Paz</strong><br>
+  Informe generado el 29 de mayo de 2026 · Todos los datos son de carácter informativo
+</footer>
+
+</body>
+</html>

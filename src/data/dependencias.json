@@ -1,0 +1,110 @@
+[
+  {
+    "id": "cementerio-juan-xxiii",
+    "name": "Cementerio Municipal \"Juan XXIII\"",
+    "type": "cementerio",
+    "address": "Chuquisaca 4591, José C. Paz",
+    "zone": "Oeste",
+    "phone": "11 3887-8178",
+    "photo": "/dependencias/cementerio-juan-xxiii.jpg",
+    "director": "Roberto Denuchi",
+    "instagram": "https://www.instagram.com/cementeriomunicipal.jcp/",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "08:00", "close": "16:00" },
+      { "day": "domingo",   "open": "08:00", "close": "16:00" }
+    ],
+    "services": [
+      "Inhumaciones",
+      "Exhumaciones",
+      "Reducción de restos",
+      "Traslado de restos",
+      "Concesión de nichos",
+      "Concesión de parcelas"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Chuquisaca+4499,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "coordinates": { "lat": -34.5113718, "lng": -58.8033803 },
+    "comoLlegar": [
+      "Línea 749 — recorre Calle Chuquisaca; bajarse en Chuquisaca y Fragata Sarmiento (a metros del ingreso)",
+      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego caminata de 5 cuadras hacia el oeste",
+      "Línea 315 — hasta Av. Hipólito Yrigoyen, luego caminata de 5 cuadras hacia el oeste"
+    ]
+  },
+  {
+    "id": "biblioteca-arturo-jauretche",
+    "name": "Biblioteca Municipal \"Arturo M. Jauretche\"",
+    "type": "biblioteca",
+    "address": "Lavalle 2025, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 664550",
+    "photo": "/dependencias/biblioteca-arturo-jauretche.png",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "services": [
+      "Sala de lectura",
+      "Préstamo domiciliario",
+      "Consulta bibliográfica",
+      "Sección para no videntes",
+      "Pinacoteca",
+      "Diccionarios y enciclopedias",
+      "Literatura y ciencias sociales",
+      "Bellas artes y deportes"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Lavalle+y+Saenz+Pe%C3%B1a,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=17&output=embed",
+    "comoLlegar": [
+      "Línea 440 — para en Av. Hipólito Yrigoyen; desde allí caminata de 2 cuadras hasta Lavalle",
+      "Línea 176 — recorre el centro de José C. Paz, bajarse en la parada más cercana a Lavalle",
+      "Línea 365 — recorre el centro; bajarse en Lavalle",
+      "Tren San Martín — Estación José C. Paz, luego caminata de 5 cuadras hacia el norte por Lavalle"
+    ],
+    "notes": "Biblioteca pública y popular. Creada para satisfacer las necesidades educativas de la comunidad. La información de horarios puede variar; se recomienda llamar antes de concurrir."
+  },
+  {
+    "id": "teatro-municipal-ex-cine-paz",
+    "name": "Teatro Municipal \"Ex Cine Paz\"",
+    "type": "teatro",
+    "address": "Gral. Lavalle 2015 (esq. Roque Sáenz Peña), José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 43-2961",
+    "photo": "/dependencias/teatro-municipal-ex-cine-paz.png",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "services": [
+      "Espectáculos teatrales",
+      "Conciertos y música en vivo",
+      "Orquesta Sinfónica Municipal",
+      "Actividades culturales para niños",
+      "Talleres artísticos",
+      "Programación infantil y familiar",
+      "Venta de entradas en boletería"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Gral.+Lavalle+2015,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=17&output=embed",
+    "instagram": "https://www.instagram.com/culturajosecpaz/",
+    "facebook": "https://www.facebook.com/p/Direcci%C3%B3n-Gral-De-Cultura-Jos%C3%A9-C-Paz-100063118034227/",
+    "comoLlegar": [
+      "Línea 440 — para en Av. Hipólito Yrigoyen; desde allí caminata de 2 cuadras hasta Lavalle 2015",
+      "Línea 176 — recorre el centro de José C. Paz, bajarse en la parada de Lavalle",
+      "Línea 365 — recorre el centro; bajarse en Lavalle",
+      "Tren San Martín — Estación José C. Paz, luego caminata de 5 cuadras hacia el norte por Lavalle"
+    ],
+    "notes": "Ex Cine Paz, expropiado por el municipio y reconvertido en teatro cultural. Sede permanente de la Orquesta Sinfónica Municipal de José C. Paz. El horario indicado corresponde a boletería y administración; los espectáculos se programan según cartelera."
+  }
+]

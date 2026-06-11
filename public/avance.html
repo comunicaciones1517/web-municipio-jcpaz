@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud | José C. Paz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', 'Segoe UI', sans-serif; background: #f9fafb; color: #111827; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── BANNER ── */
+    .banner { background: #041f3a; padding: 12px 0; display: flex; justify-content: center; }
+    .banner-wrap { position: relative; display: inline-block; }
+    .banner-img { display: block; height: auto; max-height: 110px; }
+    .banner-cover { position: absolute; bottom: 0; right: 0; width: 30px; height: 25px; background: #041f3a; }
+
+    /* ── NAVBAR ── */
+    .navbar { position: sticky; top: 0; z-index: 50; background: #041f3a; box-shadow: 0 2px 8px rgba(0,0,0,0.35); }
+    .navbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: flex-end; }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-link { padding: 8px 12px; border-radius: 6px; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8); transition: background .15s, color .15s; }
+    .nav-link:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .nav-link.active { background: rgba(255,255,255,0.2); color: #fff; }
+
+    /* ── PAGE HEADER ── */
+    .page-header { background: linear-gradient(to right, #b91c1c, #ef4444); color: #fff; padding: 40px 16px; }
+    .page-header-inner { max-width: 1280px; margin: 0 auto; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 16px; transition: color .15s; }
+    .back-link:hover { color: #fff; }
+    .page-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .page-title { font-size: 30px; font-weight: 700; }
+    .page-subtitle { color: rgba(255,255,255,0.85); font-size: 18px; max-width: 672px; line-height: 1.5; }
+
+    /* ── CONTENT ── */
+    .content { max-width: 1280px; margin: 0 auto; padding: 32px 16px; flex: 1; }
+    @media (min-width: 640px) { .content { padding: 32px 24px; } }
+    @media (min-width: 1024px) { .content { padding: 32px 32px; } }
+
+    /* ── FILTERS ── */
+    .filters-box { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 24px; }
+    .search-input { width: 100%; padding: 10px 16px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 14px; color: #374151; font-family: inherit; outline: none; margin-bottom: 12px; }
+    .search-input:focus { border-color: #1a5276; box-shadow: 0 0 0 2px rgba(26,82,118,0.1); }
+    .search-input::placeholder { color: #9ca3af; }
+    .filter-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
+    @media (min-width: 768px) { .filter-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .filter-group label { display: block; font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .filter-select { width: 100%; padding: 8px 12px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 14px; font-family: inherit; background: #fff; color: #374151; outline: none; cursor: pointer; }
+    .filter-checkbox { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #374151; cursor: pointer; user-select: none; }
+    .filter-checkbox input { cursor: pointer; width: 16px; height: 16px; accent-color: #1a5276; }
+
+    /* ── CARDS ── */
+    .count-text { font-size: 14px; color: #6b7280; margin-bottom: 24px; }
+    .cards-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 768px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1280px) { .cards-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .no-results { text-align: center; color: #6b7280; padding: 48px 0; font-size: 16px; }
+
+    /* ── FACILITY CARD ── */
+    .facility-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04); border: 1px solid #f3f4f6; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .3s; }
+    .facility-card:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+
+    .card-photo { position: relative; height: 224px; background: #e5e7eb; overflow: hidden; flex-shrink: 0; }
+    .card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; display: block; }
+    .facility-card:hover .card-photo img { transform: scale(1.05); }
+    .photo-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #93c5fd, #60a5fa); display: flex; align-items: center; justify-content: center; font-size: 64px; opacity: 0.35; }
+    .card-badges { position: absolute; top: 12px; left: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .badge { display: inline-flex; align-items: center; gap: 4px; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 9999px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+    .badge-hp  { background: #2563eb; }
+    .badge-hpr { background: #9333ea; }
+    .badge-cs  { background: #16a34a; }
+    .badge-cl  { background: #ea580c; }
+    .badge-guard { background: #dc2626; }
+
+    .card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+    .card-name { font-weight: 900; color: #111827; font-size: 20px; line-height: 1.25; margin-bottom: 4px; text-transform: uppercase; letter-spacing: -0.02em; }
+    .card-address { display: flex; align-items: flex-start; gap: 6px; color: #6b7280; font-size: 14px; margin-bottom: 16px; }
+
+    .phone-primary { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .phone-secondary { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+    .phone-icon-box { border-radius: 8px; padding: 8px; flex-shrink: 0; display: flex; }
+    .phone-icon-box.blue { background: #eaf2fb; }
+    .phone-icon-box.gray { background: #f9fafb; }
+    .phone-num-big { font-size: 24px; font-weight: 700; color: #154360; letter-spacing: -0.02em; }
+    .phone-num-small { font-size: 16px; font-weight: 600; color: #6b7280; }
+
+    .hours-pill { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+    .hours-24     { background: #f0fdf4; color: #15803d; }
+    .hours-open   { background: #fefce8; color: #a16207; }
+    .hours-closed { background: #fef2f2; color: #b91c1c; }
+
+    .specialties { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; min-height: 26px; }
+    .spec-chip { font-size: 12px; background: #f3f4f6; color: #4b5563; padding: 4px 10px; border-radius: 9999px; }
+    .spec-more { font-size: 12px; color: #9ca3af; padding: 4px 4px; }
+
+    .card-cta { margin-top: auto; padding-top: 16px; border-top: 1px solid #f3f4f6; display: flex; align-items: center; justify-content: space-between; }
+    .cta-label { font-size: 11px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+    .cta-btn { display: flex; align-items: center; gap: 4px; color: #1a5276; font-weight: 700; font-size: 14px; }
+
+    /* ── FOOTER ── */
+    .footer { background: #111827; color: #d1d5db; margin-top: 64px; }
+    .footer-grid { max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: 1fr; gap: 32px; }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .footer-col h3 { color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+    .footer-col p { font-size: 14px; line-height: 1.6; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { font-size: 14px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
+    .footer-icon { flex-shrink: 0; margin-top: 2px; color: #2980b9; }
+    .footer-col a:hover { color: #fff; transition: color .15s; }
+    .footer-bottom { border-top: 1px solid #374151; padding: 24px; text-align: center; font-size: 12px; color: #6b7280; max-width: 1280px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<!-- Banner -->
+<div class="banner">
+  <div class="banner-wrap">
+    <img src="banner-municipio.jpg" alt="Municipalidad José C. Paz — Intendencia Mario Ishii" class="banner-img">
+    <div class="banner-cover"></div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <nav class="nav-links">
+      <a href="salud/index.html" class="nav-link active">Salud</a>
+      <a href="oficinas/index.html" class="nav-link">Oficinas</a>
+      <a href="tramites/index.html" class="nav-link">Trámites</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Page Header -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <a href="index.html" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Inicio
+    </a>
+    <div class="page-title-row">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l1.5-3 2 4 1.5-2h5.28"/></svg>
+      <h1 class="page-title">Salud</h1>
+    </div>
+    <p class="page-subtitle">Hospitales y centros de salud de José C. Paz — horarios, especialidades, turnos y cómo llegar.</p>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="content">
+  <div class="filters-box">
+    <input type="text" class="search-input" id="searchInput" placeholder="Buscar hospital, especialidad, barrio...">
+    <div class="filter-grid">
+      <div class="filter-group">
+        <label>Tipo</label>
+        <select class="filter-select" id="filterTipo">
+          <option value="">Todos</option>
+          <option value="hospital_publico">Hospital Público</option>
+          <option value="hospital_privado">Hospital Privado</option>
+          <option value="centro_de_salud">Centro de Salud</option>
+          <option value="clinica">Clínica</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Zona / Barrio</label>
+        <select class="filter-select" id="filterZona">
+          <option value="">Todas las zonas</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Especialidad</label>
+        <select class="filter-select" id="filterEsp">
+          <option value="">Todas</option>
+        </select>
+      </div>
+    </div>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="filterGuardia">
+      Solo con guardia 24 horas
+    </label>
+  </div>
+
+  <p class="count-text" id="countText"></p>
+  <div class="cards-grid" id="cardsGrid"></div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>Municipio Digital</h3>
+      <p>Portal vecinal de servicios municipales. Encontrá información sobre salud, trámites, transporte y espacios públicos de tu municipio.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Contacto</h3>
+      <ul>
+        <li>
+          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>(02320) 440611</span>
+        </li>
+        <li>
+          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Gaspar Campos 6151, 1665 - Sede Central</span>
+        </li>
+        <li>
+          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Lunes a viernes 8:00–17:00 hs</span>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Acceso rápido</h3>
+      <ul>
+        <li><a href="salud/index.html">Salud y Hospitales</a></li>
+        <li><a href="oficinas/index.html">Oficinas Municipales</a></li>
+        <li><a href="tramites/index.html">Trámites Online</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Municipio Digital. Todos los derechos reservados. Los datos presentados son de carácter informativo.
+  </div>
+</footer>
+
+<script>
+const FACILITIES = [
+  {
+    id: "hospital-duhau-jose-c-paz",
+    name: "Hospital Dr. Alberto Duhau",
+    type: "hospital_privado",
+    address: "Gral. Lavalle 2066, José C. Paz",
+    zone: "José C. Paz",
+    phones: ["(02320) 43-1951", "(011) 15-2120-1600"],
+    hasEmergencyRoom: true,
+    photo: "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/Frente-del-Hospital.JPG-1.jpg",
+    hours: [
+      { day: "lunes", open: "00:00", close: "23:59" },
+      { day: "martes", open: "00:00", close: "23:59" },
+      { day: "miercoles", open: "00:00", close: "23:59" },
+      { day: "jueves", open: "00:00", close: "23:59" },
+      { day: "viernes", open: "00:00", close: "23:59" },
+      { day: "sabado", open: "00:00", close: "23:59" },
+      { day: "domingo", open: "00:00", close: "23:59" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Ginecología","Cardiología","Cirugía General","Traumatología y Ortopedia","Dermatología","Neurología","Nefrología","Urología","Oftalmología","Radiología","Rehabilitación"]
+  },
+  {
+    id: "hospital-oftalmologico-jose-c-paz",
+    name: "Hospital Oftalmológico Municipal \"Juan Domingo Perón\"",
+    type: "hospital_publico",
+    address: "Av. Hipólito Yrigoyen 3028 esq. Artigas, José C. Paz",
+    zone: "José C. Paz",
+    phones: ["(02320) 44-5449", "(02320) 44-5983"],
+    hasEmergencyRoom: true,
+    photo: "https://intendenciasba.com.ar/wp-content/uploads/2021/03/Intendente-Mario-Ishii-_-Hospital-Oftalmol%C3%B3gico-Juan-Domingo-Per%C3%B3n-_-diario-Intendencias-BA-4-1024x453.jpg",
+    hours: [
+      { day: "lunes", open: "00:00", close: "23:59" },
+      { day: "martes", open: "00:00", close: "23:59" },
+      { day: "miercoles", open: "00:00", close: "23:59" },
+      { day: "jueves", open: "00:00", close: "23:59" },
+      { day: "viernes", open: "00:00", close: "23:59" },
+      { day: "sabado", open: "00:00", close: "23:59" },
+      { day: "domingo", open: "00:00", close: "23:59" }
+    ],
+    specialties: ["Oftalmología General","Córnea","Retina","Glaucoma","Uveítis","Vía lagrimal","Oftalmología Pediátrica","Estrabismo"]
+  },
+  {
+    id: "same-emergencias-jose-c-paz",
+    name: "SAME – Servicio de Atención Médica de Emergencias",
+    type: "hospital_publico",
+    address: "Av. Hipólito Yrigoyen, José C. Paz",
+    zone: "José C. Paz",
+    phones: ["107", "147"],
+    hasEmergencyRoom: true,
+    photo: null,
+    hours: [
+      { day: "lunes", open: "00:00", close: "23:59" },
+      { day: "martes", open: "00:00", close: "23:59" },
+      { day: "miercoles", open: "00:00", close: "23:59" },
+      { day: "jueves", open: "00:00", close: "23:59" },
+      { day: "viernes", open: "00:00", close: "23:59" },
+      { day: "sabado", open: "00:00", close: "23:59" },
+      { day: "domingo", open: "00:00", close: "23:59" }
+    ],
+    specialties: ["Emergencias médicas","Trauma","Urgencias cardiovasculares","Urgencias pediátricas","Urgencias obstétricas"]
+  },
+  {
+    id: "conmutador-salud-jose-c-paz",
+    name: "Conmutador de Salud Municipal",
+    type: "centro_de_salud",
+    address: "Av. Hipólito Yrigoyen, José C. Paz",
+    zone: "José C. Paz",
+    phones: ["(02320) 44-9105", "(02320) 44-9113"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: []
+  },
+  {
+    id: "centro-sagrada-familia",
+    name: "Centro de Salud Sagrada Familia",
+    type: "centro_de_salud",
+    address: "Londres 3294, José C. Paz",
+    zone: "Barrio Sagrada Familia",
+    phones: ["(02320) 42-2736"],
+    hasEmergencyRoom: false,
+    photo: null,
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría"]
+  },
+  {
+    id: "centro-san-atilio",
+    name: "Centro de Salud San Atilio",
+    type: "centro_de_salud",
+    address: "Guillermo Miller 2948, José C. Paz",
+    zone: "Barrio San Atilio",
+    phones: ["(02320) 42-3949"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría"]
+  },
+  {
+    id: "centro-las-heras",
+    name: "Centro de Salud Las Heras",
+    type: "centro_de_salud",
+    address: "Remigio López 5363, José C. Paz",
+    zone: "Barrio Las Heras",
+    phones: ["(02320) 42-4201"],
+    hasEmergencyRoom: true,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg",
+    hours: [
+      { day: "lunes", open: "00:00", close: "23:59" },
+      { day: "martes", open: "00:00", close: "23:59" },
+      { day: "miercoles", open: "00:00", close: "23:59" },
+      { day: "jueves", open: "00:00", close: "23:59" },
+      { day: "viernes", open: "00:00", close: "23:59" },
+      { day: "sabado", open: "00:00", close: "23:59" },
+      { day: "domingo", open: "00:00", close: "23:59" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Ginecología","Obstetricia","Cardiología","Dermatología","Oftalmología","Neumonología","Psicología","Nutrición"]
+  },
+  {
+    id: "centro-la-paz",
+    name: "Centro de Salud La Paz",
+    type: "centro_de_salud",
+    address: "Oribe 3400, José C. Paz",
+    zone: "Barrio La Paz",
+    phones: ["(02320) 42-4672"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría"]
+  },
+  {
+    id: "centro-sol-y-verde",
+    name: "Centro de Salud Sol y Verde",
+    type: "centro_de_salud",
+    address: "Dinamarca 3798, José C. Paz",
+    zone: "Barrio Sol y Verde",
+    phones: ["(02320) 42-5655"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "20:00" },
+      { day: "martes", open: "08:00", close: "20:00" },
+      { day: "miercoles", open: "08:00", close: "20:00" },
+      { day: "jueves", open: "08:00", close: "20:00" },
+      { day: "viernes", open: "08:00", close: "20:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Cardiología"]
+  },
+  {
+    id: "centro-santa-paula",
+    name: "Centro de Salud Santa Paula",
+    type: "centro_de_salud",
+    address: "Piñero 755, José C. Paz",
+    zone: "Barrio Santa Paula",
+    phones: ["(02320) 42-5665"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Neonatología"]
+  },
+  {
+    id: "centro-el-ombu",
+    name: "Centro de Salud El Ombú",
+    type: "centro_de_salud",
+    address: "Gral. Arenales 336, José C. Paz",
+    zone: "Barrio El Ombú",
+    phones: ["(02320) 42-5744"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "17:00" },
+      { day: "martes", open: "08:00", close: "17:00" },
+      { day: "miercoles", open: "08:00", close: "17:00" },
+      { day: "jueves", open: "08:00", close: "17:00" },
+      { day: "viernes", open: "08:00", close: "17:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica"]
+  },
+  {
+    id: "area-bajo-peso",
+    name: "Área de Salud – Bajo Peso",
+    type: "centro_de_salud",
+    address: "Av. Hipólito Yrigoyen, José C. Paz",
+    zone: "José C. Paz",
+    phones: ["(02320) 42-6724"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "15:00" },
+      { day: "martes", open: "08:00", close: "15:00" },
+      { day: "miercoles", open: "08:00", close: "15:00" },
+      { day: "jueves", open: "08:00", close: "15:00" },
+      { day: "viernes", open: "08:00", close: "15:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Nutrición","Pediatría"]
+  },
+  {
+    id: "centro-las-acacias",
+    name: "Centro de Salud Las Acacias",
+    type: "centro_de_salud",
+    address: "Gral. Pintos 1665, José C. Paz",
+    zone: "Barrio Las Acacias",
+    phones: ["(02320) 43-7049"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg",
+    hours: [
+      { day: "lunes", open: "09:00", close: "16:00" },
+      { day: "martes", open: "09:00", close: "16:00" },
+      { day: "miercoles", open: "09:00", close: "16:00" },
+      { day: "jueves", open: "09:00", close: "16:00" },
+      { day: "viernes", open: "09:00", close: "16:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría"]
+  },
+  {
+    id: "centro-salud-urquiza",
+    name: "Centro de Salud Urquiza",
+    type: "centro_de_salud",
+    address: "Caracas 4900, José C. Paz",
+    zone: "Barrio Urquiza",
+    phones: ["(02320) 43-7666"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría"]
+  },
+  {
+    id: "centro-primer-nivel",
+    name: "Centro de Salud Primer Nivel",
+    type: "centro_de_salud",
+    address: "Chile y Castelar, José C. Paz",
+    zone: "José C. Paz",
+    phones: ["(02320) 44-0800"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Medicina Familiar"]
+  },
+  {
+    id: "centro-9-de-julio",
+    name: "Centro de Salud 9 de Julio",
+    type: "centro_de_salud",
+    address: "Ángel Delia 4265, José C. Paz",
+    zone: "Barrio 9 de Julio",
+    phones: ["(02320) 44-6140"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg",
+    hours: [
+      { day: "lunes", open: "07:30", close: "18:00" },
+      { day: "martes", open: "07:30", close: "18:00" },
+      { day: "miercoles", open: "07:30", close: "18:00" },
+      { day: "jueves", open: "07:30", close: "18:00" },
+      { day: "viernes", open: "07:30", close: "18:00" },
+      { day: "sabado", open: "07:30", close: "13:00" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Ginecología","Neurología","Diabetología","Cardiología","Gastroenterología","Urología","Traumatología","Kinesiología","Nutrición","Fonoaudiología","Psicología","Podología","Odontología","Otorrinolaringología","Psiquiatría"]
+  },
+  {
+    id: "centro-suizo-infico",
+    name: "Centro de Salud Suizo Infico",
+    type: "centro_de_salud",
+    address: "Gral. Balcarce 3800, José C. Paz",
+    zone: "Barrio Suizo Infico",
+    phones: ["(02320) 44-6158"],
+    hasEmergencyRoom: false,
+    photo: null,
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría"]
+  },
+  {
+    id: "centro-salud-frino-sur",
+    name: "Centro de Salud Frino Sur",
+    type: "centro_de_salud",
+    address: "Ramón Falcón 1836, José C. Paz",
+    zone: "Barrio Frino",
+    phones: ["(02320) 46-5723"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-frino-sur-jose-c-paz-buenos-aires-brughetti-2906.jpg",
+    hours: [
+      { day: "lunes", open: "09:00", close: "17:00" },
+      { day: "martes", open: "09:00", close: "17:00" },
+      { day: "miercoles", open: "09:00", close: "17:00" },
+      { day: "jueves", open: "09:00", close: "17:00" },
+      { day: "viernes", open: "09:00", close: "17:00" },
+      { day: "sabado", open: "10:00", close: "14:00" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Psicología","Kinesiología"]
+  },
+  {
+    id: "centro-alberdi",
+    name: "Centro de Salud Alberdi",
+    type: "centro_de_salud",
+    address: "Montes de Oca 1700, José C. Paz",
+    zone: "Barrio Alberdi",
+    phones: ["(02320) 53-2544"],
+    hasEmergencyRoom: false,
+    photo: "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg",
+    hours: [
+      { day: "lunes", open: "08:00", close: "18:00" },
+      { day: "martes", open: "08:00", close: "18:00" },
+      { day: "miercoles", open: "08:00", close: "18:00" },
+      { day: "jueves", open: "08:00", close: "18:00" },
+      { day: "viernes", open: "08:00", close: "18:00" },
+      { day: "sabado", open: "cerrado", close: "" },
+      { day: "domingo", open: "cerrado", close: "" }
+    ],
+    specialties: ["Clínica Médica","Pediatría","Medicina Familiar"]
+  }
+];
+
+const TYPE_LABELS = {
+  hospital_publico: "Hospital Público",
+  hospital_privado: "Hospital Privado",
+  centro_de_salud: "Centro de Salud",
+  clinica: "Clínica"
+};
+const TYPE_BADGE = {
+  hospital_publico: "badge-hp",
+  hospital_privado: "badge-hpr",
+  centro_de_salud: "badge-cs",
+  clinica: "badge-cl"
+};
+
+const DAYS = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"];
+
+function getTodaySchedule(hours) {
+  const today = DAYS[new Date().getDay()];
+  return hours.find(h => h.day === today) || null;
+}
+
+const ICON_CLOCK = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
+const ICON_MAP = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`;
+const ICON_PHONE_BLUE = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a5276" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+const ICON_PHONE_GRAY = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+const ICON_SHIELD = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
+const ICON_CHEVRON = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>`;
+
+function buildHoursPill(f) {
+  const s = getTodaySchedule(f.hours);
+  const closed = !s || s.open === 'cerrado' || s.open === '';
+  const allDay = s && s.open === '00:00' && s.close === '23:59';
+  if (closed) return `<div class="hours-pill hours-closed">${ICON_CLOCK}<span>Cerrado hoy</span></div>`;
+  if (allDay)  return `<div class="hours-pill hours-24">${ICON_CLOCK}<span>Abierto las 24 horas</span></div>`;
+  return `<div class="hours-pill hours-open">${ICON_CLOCK}<span>Hoy: ${s.open} – ${s.close}</span></div>`;
+}
+
+function buildCard(f) {
+  const typeLabel = TYPE_LABELS[f.type] || f.type;
+  const badgeCls  = TYPE_BADGE[f.type] || 'badge-cs';
+
+  const photo = f.photo
+    ? `<img src="${f.photo}" alt="Foto de ${f.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'photo-placeholder\\'>🏥</div>'">`
+    : `<div class="photo-placeholder">🏥</div>`;
+
+  const guardiaHtml = f.hasEmergencyRoom
+    ? `<span class="badge badge-guard">${ICON_SHIELD} Guardia 24h</span>` : '';
+
+  const phone2 = f.phones[1]
+    ? `<div class="phone-secondary">
+         <div class="phone-icon-box gray">${ICON_PHONE_GRAY}</div>
+         <span class="phone-num-small">${f.phones[1]}</span>
+       </div>` : '';
+
+  const specs = f.specialties.slice(0,3).map(s=>`<span class="spec-chip">${s}</span>`).join('');
+  const more  = f.specialties.length > 3 ? `<span class="spec-more">+${f.specialties.length-3} más</span>` : '';
+
+  return `
+    <div class="facility-card"
+      data-type="${f.type}"
+      data-zone="${f.zone.toLowerCase()}"
+      data-specs="${f.specialties.join('|').toLowerCase()}"
+      data-guardia="${f.hasEmergencyRoom ? '1' : '0'}"
+      data-search="${(f.name + ' ' + f.address + ' ' + f.zone + ' ' + f.specialties.join(' ')).toLowerCase()}">
+      <div class="card-photo">
+        ${photo}
+        <div class="card-badges">
+          <span class="badge ${badgeCls}">${typeLabel}</span>
+          ${guardiaHtml}
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-name">${f.name}</h3>
+        <div class="card-address">${ICON_MAP}<span>${f.address}</span></div>
+        <a href="tel:${f.phones[0].replace(/[\s\-()\+]/g,'')}" class="phone-primary">
+          <div class="phone-icon-box blue">${ICON_PHONE_BLUE}</div>
+          <span class="phone-num-big">${f.phones[0]}</span>
+        </a>
+        ${phone2}
+        ${buildHoursPill(f)}
+        <div class="specialties">${specs}${more}</div>
+        <div class="card-cta">
+          <span class="cta-label">Ver información completa</span>
+          <span class="cta-btn">VER MÁS ${ICON_CHEVRON}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function applyFilters() {
+  const q      = document.getElementById('searchInput').value.toLowerCase();
+  const tipo   = document.getElementById('filterTipo').value;
+  const zona   = document.getElementById('filterZona').value;
+  const esp    = document.getElementById('filterEsp').value.toLowerCase();
+  const guard  = document.getElementById('filterGuardia').checked;
+
+  const cards = document.querySelectorAll('.facility-card');
+  let visible = 0;
+  cards.forEach(c => {
+    const ok =
+      (!q    || c.dataset.search.includes(q)) &&
+      (!tipo || c.dataset.type === tipo) &&
+      (!zona || c.dataset.zone === zona.toLowerCase()) &&
+      (!esp  || c.dataset.specs.includes(esp)) &&
+      (!guard || c.dataset.guardia === '1');
+    c.style.display = ok ? '' : 'none';
+    if (ok) visible++;
+  });
+
+  const nr = document.getElementById('noResults');
+  if (nr) nr.style.display = visible === 0 ? '' : 'none';
+  document.getElementById('countText').textContent = `${visible} efectore${visible !== 1 ? 's' : ''} de salud`;
+}
+
+// Init
+(function init() {
+  // Populate zone dropdown
+  const zones = [...new Set(FACILITIES.map(f => f.zone))].sort();
+  const zonesSel = document.getElementById('filterZona');
+  zones.forEach(z => {
+    const o = document.createElement('option');
+    o.value = z;
+    o.textContent = z;
+    zonesSel.appendChild(o);
+  });
+
+  // Populate specialties dropdown
+  const allSpecs = [...new Set(FACILITIES.flatMap(f => f.specialties))].sort();
+  const espSel = document.getElementById('filterEsp');
+  allSpecs.forEach(s => {
+    const o = document.createElement('option');
+    o.value = s;
+    o.textContent = s;
+    espSel.appendChild(o);
+  });
+
+  // Render cards
+  const grid = document.getElementById('cardsGrid');
+  grid.innerHTML = FACILITIES.map(buildCard).join('') +
+    `<div id="noResults" class="no-results" style="display:none;grid-column:1/-1">No se encontraron efectores con esos filtros.</div>`;
+
+  document.getElementById('countText').textContent = `${FACILITIES.length} efectores de salud`;
+
+  // Bind filters
+  ['searchInput','filterTipo','filterZona','filterEsp'].forEach(id =>
+    document.getElementById(id).addEventListener('input', applyFilters));
+  document.getElementById('filterGuardia').addEventListener('change', applyFilters);
+})();
+</script>
+</body>
+</html>

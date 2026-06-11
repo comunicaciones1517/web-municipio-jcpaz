@@ -1,0 +1,12 @@
+﻿{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-municipio",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "C:\\Users\\Usuario\\Desktop\\web municipio\\start-dev.cmd"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "id": "linea-19",
+    "lineNumber": "19",
+    "operator": "La Vecinal de Floresta S.A.",
+    "routeDescription": "Once — Floresta — Liniers",
+    "keyStops": [
+      "Estación Once (Pueyrredón y Mitre)",
+      "Av. Corrientes y Medrano",
+      "Av. Rivadavia y Acoyte",
+      "Av. Rivadavia y Carabobo",
+      "Av. Rivadavia y Nazca",
+      "Av. Rivadavia y Boyacá",
+      "Av. Rivadavia y Caballito",
+      "Estación Liniers (Rivadavia y Av. General Paz)"
+    ],
+    "frequency": "Cada 8-12 min en hora pico / 15-20 min en horario reducido",
+    "schedule": {
+      "weekdays": "04:30 - 01:00",
+      "saturday": "05:00 - 00:30",
+      "sunday": "05:30 - 00:00"
+    },
+    "mapLink": "https://maps.google.com/?q=colectivo+19+Buenos+Aires"
+  },
+  {
+    "id": "linea-57",
+    "lineNumber": "57",
+    "operator": "Empresa de Transportes General San Martín S.A.",
+    "routeDescription": "Barrio Norte — Centro — San Telmo",
+    "keyStops": [
+      "Las Heras y Pueyrredón",
+      "Av. Santa Fe y Callao",
+      "Av. Corrientes y Florida",
+      "Diagonal Norte y Maipú",
+      "Av. de Mayo y Perú",
+      "Av. Brasil y Defensa (San Telmo)"
+    ],
+    "frequency": "Cada 10 min en hora pico / 15-20 min en horario valle",
+    "schedule": {
+      "weekdays": "04:45 - 00:30",
+      "saturday": "05:15 - 00:00",
+      "sunday": "06:00 - 23:30"
+    },
+    "mapLink": "https://maps.google.com/?q=colectivo+57+Buenos+Aires"
+  },
+  {
+    "id": "linea-126",
+    "lineNumber": "126",
+    "operator": "Transportes Metropolitanos Belgrano Norte S.A.",
+    "routeDescription": "Villa del Sur — Centro — Retiro",
+    "keyStops": [
+      "Av. Escalada y Av. del Trabajo (Villa del Sur)",
+      "Av. Directorio y Av. Varela",
+      "Av. Rivadavia y Nazca",
+      "Av. Rivadavia y Medrano",
+      "Av. Corrientes y Callao",
+      "Av. Santa Fe y 9 de Julio",
+      "Terminal de Ómnibus de Retiro"
+    ],
+    "frequency": "Cada 10-15 min en hora pico / 20-25 min en horario reducido",
+    "schedule": {
+      "weekdays": "04:00 - 01:30",
+      "saturday": "04:30 - 01:00",
+      "sunday": "05:00 - 00:30"
+    },
+    "mapLink": "https://maps.google.com/?q=colectivo+126+Buenos+Aires"
+  },
+  {
+    "id": "linea-161",
+    "lineNumber": "161 — Ramal A",
+    "operator": "Ecotrans S.A.",
+    "routeDescription": "Constitución — Barracas — Parque Patricios",
+    "keyStops": [
+      "Estación Constitución (Perú y Brasil)",
+      "Av. Caseros y Av. Montes de Oca",
+      "Av. Amancio Alcorta y Av. Sáenz",
+      "Parque Patricios (Perdriel y Caseros)",
+      "Av. Chiclana y Av. Entre Ríos"
+    ],
+    "frequency": "Cada 15 min en hora pico / 20-30 min en horario reducido",
+    "schedule": {
+      "weekdays": "05:30 - 23:30",
+      "saturday": "06:00 - 23:00",
+      "sunday": "07:00 - 22:00"
+    }
+  },
+  {
+    "id": "linea-236",
+    "lineNumber": "236",
+    "operator": "Microómnibus Norte S.A.",
+    "routeDescription": "Villa del Parque — Agronomía — Palermo — Recoleta",
+    "keyStops": [
+      "Av. Nazca y Av. San Martín (Villa del Parque)",
+      "Av. San Martín y Francisco Bilbao",
+      "Av. Corrientes y Av. Dorrego (Chacarita)",
+      "Av. Santa Fe y Thames (Palermo)",
+      "Av. del Libertador y Recoleta"
+    ],
+    "frequency": "Cada 12 min en hora pico / 20 min en horario valle",
+    "schedule": {
+      "weekdays": "04:30 - 00:30",
+      "saturday": "05:00 - 00:00",
+      "sunday": "05:30 - 23:30"
+    },
+    "mapLink": "https://maps.google.com/?q=colectivo+236+Buenos+Aires"
+  },
+  {
+    "id": "linea-344",
+    "lineNumber": "344",
+    "operator": "Transportes Automotores La Plata S.A.",
+    "routeDescription": "Centro — Barrio Norte — Belgrano — Núñez",
+    "keyStops": [
+      "Av. 9 de Julio y Av. Corrientes (Centro)",
+      "Av. Santa Fe y Callao (Barrio Norte)",
+      "Av. Cabildo y Juramento (Belgrano)",
+      "Av. del Libertador y Virrey del Pino (Núñez)",
+      "Av. del Libertador y Av. General Paz"
+    ],
+    "frequency": "Cada 10 min en hora pico / 15-20 min en horario reducido",
+    "schedule": {
+      "weekdays": "04:00 - 02:00",
+      "saturday": "04:30 - 01:30",
+      "sunday": "05:00 - 01:00"
+    }
+  }
+]

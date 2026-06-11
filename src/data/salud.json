@@ -1,0 +1,1132 @@
+[
+  {
+    "id": "hospital-duhau-jose-c-paz",
+    "name": "Hospital Dr. Alberto Duhau",
+    "type": "hospital_privado",
+    "address": "Gral. Lavalle 2066, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 43-1951", "(011) 15-2120-1600"],
+    "emergencyPhone": "(02320) 43-1951",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Clínica Médica", "Pediatría", "Ginecología",
+      "Cardiología", "Cirugía General", "Traumatología y Ortopedia",
+      "Dermatología", "Neurología", "Nefrología",
+      "Urología", "Oftalmología", "Radiología", "Rehabilitación"
+    ],
+    "services": [
+      "Guardia 24h", "Internación general",
+      "Cirugía programada y de urgencia",
+      "Diagnóstico por imágenes (Rx, ecografía, resonancia, TAC)",
+      "Laboratorio de análisis clínicos",
+      "Vacunatorio",
+      "Consultorios externos de especialidades",
+      "Atención ambulatoria"
+    ],
+    "website": "https://www.hospitalduhau.com.ar",
+    "photo": "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/Frente-del-Hospital.JPG-1.jpg",
+    "photos": [
+      "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/Frente-del-Hospital.JPG-1.jpg",
+      "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/consultorios-externos-Familia-Altube.jpg",
+      "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/Laboratorio.jpg",
+      "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/09/Sector-de-Hemodinamia.jpg",
+      "http://www.hospitalduhau.com.ar/wp-content/uploads/2019/10/DSC_7341.jpg"
+    ],
+    "mapLink": "https://maps.google.com/?q=Gral+Lavalle+2066+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "coordinates": { "lat": -34.5196, "lng": -58.7714 },
+    "comoLlegar": [
+      "Línea 176 (Chacarita – Pilar/Escobar): para en Gral. Lavalle, a metros del hospital.",
+      "Línea 365: recorre la zona norte del GBA con parada cercana en José C. Paz centro.",
+      "Línea 391: acceso desde Palermo y zona norte hacia José C. Paz.",
+      "Línea 440: conecta con estaciones del Ferrocarril Belgrano Norte.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz, a 10 min a pie por Gral. Lavalle."
+    ],
+    "notes": "Consultorios externos: lunes a viernes 8:00–18:00 hs. Guardia las 24 hs todos los días. Web: www.hospitalduhau.com.ar — Más de 80 años de historia, referente del noroeste del GBA."
+  },
+  {
+    "id": "hospital-oftalmologico-jose-c-paz",
+    "name": "Hospital Oftalmológico Municipal \"Juan Domingo Perón\"",
+    "type": "hospital_publico",
+    "address": "Av. Hipólito Yrigoyen 3028 esq. Artigas, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 532185"],
+    "emergencyPhone": "(02320) 532185",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Oftalmología General",
+      "Córnea", "Retina", "Glaucoma",
+      "Uveítis", "Vía lagrimal",
+      "Oftalmología Pediátrica",
+      "Estrabismo"
+    ],
+    "services": [
+      "Guardia oftalmológica 24h",
+      "Consulta general y de especialidades",
+      "Graduación de lentes",
+      "Fondo de ojo",
+      "Control de presión intraocular",
+      "Ecometría ocular",
+      "Ecografía ocular",
+      "Cirugía de cataratas",
+      "Cirugía de chalazión",
+      "Cirugía de pterigión",
+      "Laser Argón",
+      "Trasplante de córnea",
+      "OCT (tomografía de coherencia óptica)",
+      "Topografía corneal"
+    ],
+    "photo": "https://intendenciasba.com.ar/wp-content/uploads/2021/03/Intendente-Mario-Ishii-_-Hospital-Oftalmol%C3%B3gico-Juan-Domingo-Per%C3%B3n-_-diario-Intendencias-BA-4-1024x453.jpg",
+    "photos": [
+      "https://intendenciasba.com.ar/wp-content/uploads/2021/03/Intendente-Mario-Ishii-_-Hospital-Oftalmol%C3%B3gico-Juan-Domingo-Per%C3%B3n-_-diario-Intendencias-BA-4-1024x453.jpg"
+    ],
+    "mapLink": "https://maps.google.com/?q=Av+Hip%C3%B3lito+Yrigoyen+3028+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "coordinates": { "lat": -34.5229, "lng": -58.7681 },
+    "comoLlegar": [
+      "Línea 176 (Chacarita – Pilar/Escobar): para en Av. Hipólito Yrigoyen, frente al hospital.",
+      "Línea 365: recorre Av. Hipólito Yrigoyen con parada en la puerta.",
+      "Línea 391: conecta con zona sur del GBA hasta José C. Paz por Av. Yrigoyen.",
+      "Línea 440 y 449: parada en Av. Hipólito Yrigoyen al 3000.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz, luego colectivo 365 o 440 hacia Av. Yrigoyen 3028 (5 min)."
+    ],
+    "notes": "Turnos: llamar la última semana de cada mes para el mes siguiente al (02320) 44-5983 (lunes a viernes 8:00–18:00 hs) o WhatsApp 11 2541-4452. Atención GRATUITA para vecinos de José C. Paz sin obra social. Residentes de otros partidos o con obra social pagan arancel diferencial. Atiende ~250 pacientes por día."
+  },
+  {
+    "id": "same-emergencias-jose-c-paz",
+    "name": "SAME – Servicio de Atención Médica de Emergencias",
+    "type": "hospital_publico",
+    "address": "Av. Hipólito Yrigoyen, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["107", "147"],
+    "emergencyPhone": "107",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Emergencias médicas",
+      "Trauma",
+      "Urgencias cardiovasculares",
+      "Urgencias pediátricas",
+      "Urgencias obstétricas"
+    ],
+    "services": [
+      "Guardia 24h",
+      "Traslado en ambulancia de alta complejidad",
+      "Desfibrilación y soporte vital avanzado",
+      "Atención prehospitalaria",
+      "Coordinación con hospitales de referencia",
+      "Cobertura en todo el partido de José C. Paz"
+    ],
+    "mapLink": "https://maps.google.com/?q=Av+Hip%C3%B3lito+Yrigoyen+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 176: recorre Av. Hipólito Yrigoyen con paradas frecuentes.",
+      "Línea 365: parada en Av. Hipólito Yrigoyen.",
+      "Línea 440 y 449: acceso desde estación Ferrocarril Belgrano Norte.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz."
+    ],
+    "notes": "Llamar al 107 ante cualquier emergencia médica. El 147 atiende urgencias municipales y derivaciones. Servicio completamente gratuito, disponible las 24 horas los 365 días del año. En caso de emergencia no trasladarse por cuenta propia: llamar primero al 107."
+  },
+  {
+    "id": "conmutador-salud-jose-c-paz",
+    "name": "Conmutador de Salud Municipal",
+    "type": "centro_de_salud",
+    "address": "Av. Hipólito Yrigoyen, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 449105"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [],
+    "services": [
+      "Derivación al centro de salud correspondiente",
+      "Información sobre turnos y horarios de CAPS",
+      "Coordinación del sistema sanitario municipal",
+      "Orientación al vecino sobre servicios de salud disponibles"
+    ],
+    "mapLink": "https://maps.google.com/?q=Av+Hip%C3%B3lito+Yrigoyen+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 176: recorre Av. Hipólito Yrigoyen.",
+      "Línea 365: parada en Av. Hipólito Yrigoyen.",
+      "Línea 440 y 449: acceso desde la zona central.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz."
+    ],
+    "notes": "Centralita telefónica de la Secretaría de Salud Municipal. Informa y deriva las consultas al área o centro de salud que corresponda. Lunes a viernes en horario administrativo."
+  },
+  {
+    "id": "centro-sagrada-familia",
+    "name": "Centro de Salud Sagrada Familia",
+    "type": "centro_de_salud",
+    "address": "Uspayata y Londres, José C. Paz",
+    "zone": "Barrio Sagrada Familia",
+    "phones": ["(02320) 42-2736"],
+    "hasEmergencyRoom": false,
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Londres+3294+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 461: recorre el interior del partido, parada cercana a Londres.",
+      "Línea 449: acceso desde la zona central de José C. Paz.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar a pie o en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-san-atilio",
+    "name": "Centro de Salud San Atilio",
+    "type": "centro_de_salud",
+    "address": "Guillermo Miller 2948, José C. Paz",
+    "zone": "Barrio San Atilio",
+    "phones": ["(02320) 42-3949"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Guillermo+Miller+2948+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 449: conecta con la zona de Barrio San Atilio.",
+      "Línea 461: recorre el interior del partido con parada en la zona.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-las-heras",
+    "name": "Centro de Salud Las Heras",
+    "type": "centro_de_salud",
+    "address": "Remigio López 5363, José C. Paz",
+    "zone": "Barrio Las Heras",
+    "phones": ["(02320) 42-4201"],
+    "hasEmergencyRoom": true,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Ginecología",
+      "Obstetricia",
+      "Cardiología",
+      "Dermatología",
+      "Oftalmología",
+      "Neumonología",
+      "Psicología",
+      "Nutrición"
+    ],
+    "services": [
+      "Guardia 24h de adultos",
+      "Enfermería 24h",
+      "Laboratorio de análisis clínicos (lunes a viernes 8:00–10:00 hs)",
+      "Ecografías",
+      "Monitoreos fetales",
+      "Electrocardiogramas",
+      "Farmacia (lunes a viernes 8:00–18:00 hs)",
+      "Vacunación",
+      "Servicio Social",
+      "Plan Nacer / Sumar",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Remigio+L%C3%B3pez+5363+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 391: recorre la zona sur del partido pasando por Las Heras.",
+      "Línea 449: conexión desde el centro de José C. Paz.",
+      "Línea 461: parada en la zona de Barrio Las Heras.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y tomar remís hacia Remigio López."
+    ],
+    "notes": "Uno de los centros de salud más completos del partido. Cuenta con guardia médica de adultos y enfermería las 24 horas. Las especialidades se atienden en días y horarios específicos; consultar turnos por teléfono."
+  },
+  {
+    "id": "centro-la-paz",
+    "name": "Centro de Salud La Paz",
+    "type": "centro_de_salud",
+    "address": "Oribe 3400, José C. Paz",
+    "zone": "Barrio La Paz",
+    "phones": ["(02320) 42-4672"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Oribe+3400+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 449: conecta con la zona de Barrio La Paz.",
+      "Línea 461: parada cercana en la zona del barrio.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-sol-y-verde",
+    "name": "Centro de Salud Sol y Verde",
+    "type": "centro_de_salud",
+    "address": "Dinamarca 3798, José C. Paz",
+    "zone": "Barrio Sol y Verde",
+    "phones": ["(02320) 42-5655"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Cardiología"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Diagnóstico cardiovascular",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Dinamarca+3798+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 449: acceso desde el centro de José C. Paz hacia Barrio Sol y Verde.",
+      "Línea 461: parada en la zona de Dinamarca.",
+      "Línea 391: recorre el sector con parada cercana."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal. Atención de lunes a viernes con horario extendido hasta las 20:00 hs."
+  },
+  {
+    "id": "centro-santa-paula",
+    "name": "Centro de Salud Santa Paula",
+    "type": "centro_de_salud",
+    "address": "Piñero 755, José C. Paz",
+    "zone": "Barrio Santa Paula",
+    "phones": ["(02320) 42-5665"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Neonatología"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Control de recién nacidos",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Pi%C3%B1ero+755+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 461: recorre el interior del partido con parada en Barrio Santa Paula.",
+      "Línea 449: conecta con la zona desde el centro.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-el-ombu",
+    "name": "Centro de Salud El Ombú",
+    "type": "centro_de_salud",
+    "address": "Gral. Arenales 336, José C. Paz",
+    "zone": "Barrio El Ombú",
+    "phones": ["(02320) 42-5744"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Gral+Arenales+336+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 449: acceso desde el centro hacia Barrio El Ombú.",
+      "Línea 461: parada en la zona de Gral. Arenales.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal de barrio. Atención de lunes a viernes hasta las 17:00 hs."
+  },
+  {
+    "id": "area-bajo-peso",
+    "name": "Área de Salud – Bajo Peso",
+    "type": "centro_de_salud",
+    "address": "Av. Hipólito Yrigoyen, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 42-6724"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Nutrición",
+      "Pediatría"
+    ],
+    "services": [
+      "Programa de seguimiento de niños con bajo peso",
+      "Control nutricional pediátrico",
+      "Evaluación y tratamiento del retraso de crecimiento",
+      "Orientación nutricional a familias",
+      "Derivaciones a especialistas"
+    ],
+    "mapLink": "https://maps.google.com/?q=Av+Hip%C3%B3lito+Yrigoyen+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 176: parada en Av. Hipólito Yrigoyen.",
+      "Línea 365: recorre Av. Hipólito Yrigoyen.",
+      "Línea 440 y 449: parada en el corredor central.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz."
+    ],
+    "notes": "Área especializada de la Secretaría de Salud Municipal dedicada al seguimiento y tratamiento de niños con bajo peso y problemas nutricionales. Programa gratuito para vecinos de José C. Paz. Consultar disponibilidad de turnos por teléfono."
+  },
+  {
+    "id": "centro-las-acacias",
+    "name": "Centro de Salud Las Acacias",
+    "type": "centro_de_salud",
+    "address": "Gral. Pintos 1665, José C. Paz",
+    "zone": "Barrio Las Acacias",
+    "phones": ["(02320) 43-7049"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Derivaciones a especialistas",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Gral+Pintos+1665+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 449: conexión desde el centro de José C. Paz hacia Las Acacias.",
+      "Línea 461: parada en la zona de Gral. Pintos.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-salud-urquiza",
+    "name": "Centro de Salud Urquiza",
+    "type": "centro_de_salud",
+    "address": "Caracas 4900, José C. Paz",
+    "zone": "Barrio Urquiza",
+    "phones": ["(02320) 43-7666"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Caracas+4900+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 391: recorre la zona de Barrio Urquiza.",
+      "Línea 449: conexión desde el centro hacia la zona.",
+      "Línea 461: parada en la zona de Caracas."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-primer-nivel",
+    "name": "Centro de Salud Primer Nivel",
+    "type": "centro_de_salud",
+    "address": "Chile y Castelar, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 44-0800"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Medicina Familiar"
+    ],
+    "services": [
+      "Consultas médicas de primer nivel",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Coordinación y derivación al segundo nivel de atención",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Chile+y+Castelar+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 449: parada en la zona central de José C. Paz.",
+      "Línea 440: conecta con la zona desde estaciones del Ferrocarril Belgrano Norte.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz, a pocas cuadras."
+    ],
+    "notes": "Sede de coordinación del Primer Nivel de Atención en Salud del municipio. Atiende consultas primarias y gestiona derivaciones a centros de mayor complejidad. Atención de lunes a viernes."
+  },
+  {
+    "id": "centro-9-de-julio",
+    "name": "Centro de Salud 9 de Julio",
+    "type": "centro_de_salud",
+    "address": "D'Elia y Castro Barros, José C. Paz",
+    "zone": "Barrio 9 de Julio",
+    "phones": ["(02320) 44-6140"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "08:00", "close": "12:00" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Ginecología",
+      "Neurología",
+      "Diabetología",
+      "Cardiología",
+      "Gastroenterología",
+      "Urología",
+      "Traumatología",
+      "Kinesiología",
+      "Nutrición",
+      "Fonoaudiología",
+      "Psicología",
+      "Podología",
+      "Odontología",
+      "Otorrinolaringología",
+      "Psiquiatría"
+    ],
+    "services": [
+      "Consultas de especialidades",
+      "Pediatría gratuita",
+      "Ginecología gratuita",
+      "Clínica médica gratuita",
+      "Ecografías",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Asesoría legal",
+      "Atención primaria y especialidades"
+    ],
+    "mapLink": "https://maps.google.com/?q=%C3%81ngel+Delia+4265+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 391: recorre el sector de Barrio 9 de Julio con parada cercana.",
+      "Línea 461: parada en la zona de Ángel Delia.",
+      "Línea 449: conexión desde el centro de José C. Paz.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y tomar remís hacia Ángel Delia."
+    ],
+    "notes": "Uno de los centros de salud más completos del partido, con más de 15 especialidades. Las especialidades de pediatría, ginecología y clínica médica son completamente gratuitas. Las restantes pueden tener arancel diferencial. Atiende los sábados hasta las 13:00 hs."
+  },
+  {
+    "id": "centro-suizo-infico",
+    "name": "Centro de Salud Suizo Infico",
+    "type": "centro_de_salud",
+    "address": "Gral. Balcarce 3812, José C. Paz",
+    "zone": "Barrio Suizo Infico",
+    "phones": ["(02320) 44-6158"],
+    "hasEmergencyRoom": false,
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "14:00" },
+      { "day": "martes",    "open": "08:00", "close": "14:00" },
+      { "day": "miercoles", "open": "08:00", "close": "14:00" },
+      { "day": "jueves",    "open": "08:00", "close": "14:00" },
+      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Gral+Balcarce+3800+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 461: parada en la zona de Gral. Balcarce.",
+      "Línea 449: conexión desde el centro hacia Barrio Suizo Infico.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "centro-salud-frino-sur",
+    "name": "Centro de Salud Frino Sur",
+    "type": "centro_de_salud",
+    "address": "Ramón Falcón 1836, José C. Paz",
+    "zone": "Barrio Frino",
+    "phones": ["(02320) 46-5723"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-frino-sur-jose-c-paz-buenos-aires-brughetti-2906.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-frino-sur-jose-c-paz-buenos-aires-brughetti-2906.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "09:00", "close": "17:00" },
+      { "day": "martes",    "open": "09:00", "close": "17:00" },
+      { "day": "miercoles", "open": "09:00", "close": "17:00" },
+      { "day": "jueves",    "open": "09:00", "close": "17:00" },
+      { "day": "viernes",   "open": "09:00", "close": "17:00" },
+      { "day": "sabado",    "open": "10:00", "close": "14:00" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Psicología",
+      "Kinesiología"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Psicología",
+      "Kinesiología y fisioterapia",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Ram%C3%B3n+Falc%C3%B3n+1836+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 391: recorre la zona sur del partido pasando por Barrio Frino.",
+      "Línea 461: parada en la zona de Ramón Falcón.",
+      "Línea 449: conexión desde el centro de José C. Paz."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal. Abre también los sábados de 10:00 a 14:00 hs. Atención gratuita para vecinos del partido."
+  },
+  {
+    "id": "centro-alberdi",
+    "name": "Centro de Salud Alberdi",
+    "type": "centro_de_salud",
+    "address": "Montes de Oca 1700, José C. Paz",
+    "zone": "Barrio Alberdi",
+    "phones": ["(02320) 53-2544"],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg",
+    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg"],
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Medicina Familiar"
+    ],
+    "services": [
+      "Consultas médicas",
+      "Atención pediátrica",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Primeros auxilios",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Montes+de+Oca+1700+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "comoLlegar": [
+      "Línea 461: recorre el interior del partido con parada en Barrio Alberdi.",
+      "Línea 449: conexión desde el centro hacia la zona.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís hacia Montes de Oca."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+  },
+  {
+    "id": "hospital-traumatologia-domingo-angio",
+    "name": "Hospital de Traumatología \"Domingo Angio\"",
+    "type": "hospital_publico",
+    "address": "Padre Ustarroz 5258, José C. Paz",
+    "zone": "Barrio Concejal Alfonzo",
+    "photo": "/salud/hospital-angio.png",
+    "phones": ["(02320) 353101"],
+    "emergencyPhone": "(02320) 353101",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Traumatología",
+      "Ortopedia",
+      "Cirugía de urgencias traumatológicas",
+      "Diagnóstico precoz",
+      "Clínica médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Guardia 24h",
+      "Atención de fracturas y lesiones traumatológicas",
+      "Diagnóstico por imágenes",
+      "Yesos y inmovilizaciones",
+      "Internación",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Padre+Ustarroz+5258,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "comoLlegar": [
+      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego remís hacia Barrio Alfonzo.",
+      "Línea 749 — recorre zona oeste del partido, consultar parada más cercana.",
+      "Línea 315 — acceso desde zona norte hacia Ustarroz."
+    ],
+    "notes": "Hospital de Emergencias Médicas de 24 Horas (HEM24). Consultas de especialidades de lunes a viernes de 8:00 a 18:00 hs; guardia traumatológica permanente."
+  },
+  {
+    "id": "hospital-ruben-caporaletti",
+    "name": "Hospital Rubén \"Cacho\" Caporaletti",
+    "type": "hospital_publico",
+    "address": "Av. Croacia 2312, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 353102"],
+    "emergencyPhone": "(02320) 353102",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Cirugía General",
+      "Traumatología",
+      "Pediatría",
+      "Tomografía computada",
+      "Diagnóstico por imágenes",
+      "Cardiología",
+      "Neurología"
+    ],
+    "services": [
+      "Guardia 24h",
+      "Internación de alta complejidad",
+      "Tomógrafo propio",
+      "Quirófano",
+      "Laboratorio",
+      "Diagnóstico por imágenes",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+Croacia+2312,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "coordinates": { "lat": -34.512461, "lng": -58.7964676 },
+    "comoLlegar": [
+      "Línea 176 — recorre Av. Hipólito Yrigoyen; bajar y tomar remís hacia Av. Croacia.",
+      "Línea 365 — conexión desde zona sur; parada en Yrigoyen con desvío hacia Croacia.",
+      "Línea 440 — desde zona central hacia zona norte del partido.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís o colectivo interno."
+    ],
+    "notes": "Hospital de alta complejidad municipal. Brinda atención a vecinos de José C. Paz y de otros partidos. Sin restricción por obra social ni distrito."
+  },
+  {
+    "id": "hospital-mujer-nino-nelly-quiroga",
+    "name": "Hospital de la Mujer y el Niño \"Nelly Quiroga\"",
+    "type": "hospital_publico",
+    "address": "Montes de Oca 2910 (esq. Fray Butler), José C. Paz",
+    "zone": "Barrio Frino",
+    "phones": ["(02320) 353104"],
+    "emergencyPhone": "(02320) 353104",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Ginecología",
+      "Obstetricia",
+      "Controles obstétricos",
+      "Pediatría",
+      "Neonatología",
+      "Ecografía obstétrica",
+      "Vacunatorio",
+      "Patología preventiva"
+    ],
+    "services": [
+      "Guardia 24h",
+      "Atención del parto",
+      "Internación materno-infantil (30 camas)",
+      "Laboratorio",
+      "Ecografías",
+      "Vacunatorio",
+      "Estudios preventivos para la mujer",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Montes+de+Oca+2910,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "comoLlegar": [
+      "Línea 176 — bajar en Av. Hipólito Yrigoyen, luego caminata o remís hacia Montes de Oca.",
+      "Línea 365 — parada en Av. Yrigoyen, luego acceso hacia Barrio Frino.",
+      "Línea 440 — desde zona central hacia zona sur del partido.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Montes de Oca."
+    ],
+    "notes": "Hospital especializado en salud de la mujer y el niño, con 30 camas de internación y 2.000 m² cubiertos. Atención materno-infantil de alta complejidad."
+  },
+  {
+    "id": "hospital-oncologico-victoria-ishii",
+    "name": "Hospital Oncológico \"Victoria Irene Ishii\"",
+    "type": "hospital_publico",
+    "address": "Av. Héctor Arregui 501, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 353105"],
+    "hasEmergencyRoom": false,
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "20:00" },
+      { "day": "martes",    "open": "08:00", "close": "20:00" },
+      { "day": "miercoles", "open": "08:00", "close": "20:00" },
+      { "day": "jueves",    "open": "08:00", "close": "20:00" },
+      { "day": "viernes",   "open": "08:00", "close": "20:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Oncología",
+      "Cirugía General y Digestiva",
+      "Ginecología",
+      "Oncoginecología",
+      "Urología",
+      "Hemato-oncología",
+      "Cuidados Paliativos y Tratamiento del Dolor",
+      "Gastroenterología",
+      "Otorrinolaringología",
+      "Anatomía Patológica"
+    ],
+    "services": [
+      "Quimioterapia y agentes biológicos",
+      "Tratamiento HAIFU (tecnología única en Latinoamérica)",
+      "Unidad de Terapia Intensiva",
+      "Quirófano y sala de recuperación",
+      "Endoscopia diagnóstica y terapéutica",
+      "Laboratorio y radiología",
+      "Cirugía ambulatoria",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+H%C3%A9ctor+Arregui+501,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "comoLlegar": [
+      "Línea 176 — bajar en Av. Hipólito Yrigoyen, luego remís hacia Av. Arregui.",
+      "Línea 365 — parada en zona central, luego acceso hacia Av. Arregui.",
+      "Línea 440 — desde zona central del partido.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Arregui 501."
+    ],
+    "notes": "Hospital oncológico municipal con tecnología HAIFU, la única de Latinoamérica. Puesto 18° en el mundo en tecnología oncológica. Atención completamente gratuita para vecinos de José C. Paz."
+  },
+  {
+    "id": "hospital-salud-mental-loiacono",
+    "name": "Hospital de Salud Mental y Terapéutico \"Lic. María Edith Loiácono\"",
+    "type": "hospital_publico",
+    "address": "Serrano 4799, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": ["(02320) 332227"],
+    "hasEmergencyRoom": false,
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "20:00" },
+      { "day": "martes",    "open": "08:00", "close": "20:00" },
+      { "day": "miercoles", "open": "08:00", "close": "20:00" },
+      { "day": "jueves",    "open": "08:00", "close": "20:00" },
+      { "day": "viernes",   "open": "08:00", "close": "20:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Psicología",
+      "Psiquiatría",
+      "Terapia Ocupacional",
+      "Tratamiento de adicciones",
+      "Rehabilitación psicosocial",
+      "Salud mental infanto-juvenil"
+    ],
+    "services": [
+      "Atención ambulatoria",
+      "Hospital de día",
+      "Internación (18 camas)",
+      "Programa PURPSI (medicamentos gratuitos)",
+      "Radio terapéutica",
+      "Equipo multidisciplinario (psicólogos, psiquiatras, operadores)",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Serrano+4799,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "instagram": "https://www.instagram.com/saludmental_jcpaz/",
+    "comoLlegar": [
+      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego remís hacia Serrano 4799.",
+      "Línea 749 — recorre zona oeste; consultar parada más cercana a Serrano.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Serrano."
+    ],
+    "notes": "Atención completamente gratuita. El Programa PURPSI entrega medicación psiquiátrica sin costo a pacientes inscriptos. Instagram: @saludmental_jcpaz"
+  },
+  {
+    "id": "hospital-odontologico-eva-peron",
+    "name": "Hospital Odontológico \"Eva Perón\"",
+    "type": "hospital_publico",
+    "address": "Av. Hipólito Yrigoyen 3050, José C. Paz",
+    "zone": "Villa Altube",
+    "phones": ["(02320) 422260"],
+    "hasEmergencyRoom": false,
+    "hours": [
+      { "day": "lunes",     "open": "07:00", "close": "19:00" },
+      { "day": "martes",    "open": "07:00", "close": "19:00" },
+      { "day": "miercoles", "open": "07:00", "close": "19:00" },
+      { "day": "jueves",    "open": "07:00", "close": "19:00" },
+      { "day": "viernes",   "open": "07:00", "close": "19:00" },
+      { "day": "sabado",    "open": "cerrado", "close": "" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Odontología General",
+      "Endodoncia (tratamientos de conducto)",
+      "Cirugía oral y maxilofacial",
+      "Periodoncia",
+      "Ortodoncia",
+      "Odontopediatría",
+      "Implantología",
+      "Radiología dental",
+      "Higiene dental"
+    ],
+    "services": [
+      "18 consultorios odontológicos",
+      "2 quirófanos",
+      "Atención de urgencias odontológicas",
+      "Radiografías dentales",
+      "Turnos programados y de urgencia",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+Hip%C3%B3lito+Yrigoyen+3050%2C+Jos%C3%A9+C.+Paz%2C+Buenos+Aires%2C+Argentina&hl=es&z=17&output=embed",
+    "comoLlegar": [
+      "Línea 176 — recorre Ruta 24 (ex 197); bajarse entre Chacabuco y Artigas.",
+      "Línea 440 — acceso desde Av. Hipólito Yrigoyen hacia Villa Altube.",
+      "Línea 365 — parada sobre Ruta 24 en Barrio Villa Altube.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego colectivo 176 hacia Ruta 24."
+    ],
+    "notes": "Turnos: llamar al (02320) 422260. El hospital atiende urgencias odontológicas sin turno previo."
+  },
+  {
+    "id": "hospital-cardiovascular-buljan",
+    "name": "Hospital Cardiovascular y Metabólico \"Miguel Ángel Bulján\"",
+    "type": "hospital_publico",
+    "address": "Dinamarca 3627 (esq. Finlay), Barrio Sol y Verde, José C. Paz",
+    "zone": "Barrio Sol y Verde",
+    "phones": ["(02320) 353103"],
+    "emergencyPhone": "(02320) 353103",
+    "hasEmergencyRoom": true,
+    "hours": [
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+    ],
+    "specialties": [
+      "Cardiología",
+      "Hemodinamia y angiografía",
+      "Medicina interna y clínica médica",
+      "Diabetología y endocrinología",
+      "Rehabilitación cardiovascular",
+      "Terapia Intensiva (UTI)",
+      "Pediatría",
+      "Diagnóstico por imágenes cardiovasculares"
+    ],
+    "services": [
+      "Guardia 24h",
+      "Angiógrafo municipal de última generación",
+      "Intervenciones quirúrgicas cardiovasculares",
+      "Unidad de Terapia Intensiva (7 camas UTI, 35 camas totales)",
+      "Laboratorio de análisis clínicos",
+      "Unidad especializada en diabetes y enfermedades metabólicas",
+      "Gimnasio de rehabilitación cardiovascular",
+      "Atención gratuita a vecinos"
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Dinamarca+3627,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "comoLlegar": [
+      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego remís hacia Barrio Sol y Verde.",
+      "Línea 176 — parada en zona central, luego remís hacia Dinamarca 3627.",
+      "Línea 749 — recorre zona oeste del partido; consultar parada más cercana.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Barrio Sol y Verde."
+    ],
+    "notes": "Atiende ~1.500 personas diarias de José C. Paz, Gral. Rodríguez, San Miguel, Malvinas Argentinas y zonas aledañas. Cuenta con el único Angiógrafo Municipal del partido."
+  }
+]

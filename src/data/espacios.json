@@ -1,0 +1,134 @@
+[
+  {
+    "id": "parque-centenario",
+    "name": "Parque Centenario",
+    "type": "parque",
+    "address": "Av. Ángel Gallardo 490, Caballito",
+    "zone": "Caballito",
+    "amenities": [
+      "Juegos infantiles",
+      "Lago artificial",
+      "Anfiteatro al aire libre",
+      "Pista de jogging",
+      "Canchas de tenis",
+      "Canchas de fútbol",
+      "Museo de Ciencias Naturales",
+      "Feria de artesanías (fines de semana)",
+      "Kioscos y confiterías",
+      "Wi-Fi gratuito",
+      "Baños públicos"
+    ],
+    "hours": "Abierto las 24 horas",
+    "mapLink": "https://maps.google.com/?q=Parque+Centenario+Av+Angel+Gallardo+490+Caballito+Buenos+Aires",
+    "area": "6,7 ha"
+  },
+  {
+    "id": "plaza-constitucion",
+    "name": "Plaza Constitución",
+    "type": "plaza",
+    "address": "Av. Brasil y Lima, San Cristóbal",
+    "zone": "San Cristóbal",
+    "amenities": [
+      "Juegos infantiles",
+      "Espacio para perros",
+      "Bancos y mesas",
+      "Árboles centenarios",
+      "Iluminación nocturna",
+      "Baños públicos"
+    ],
+    "hours": "Abierto las 24 horas",
+    "mapLink": "https://maps.google.com/?q=Plaza+Constitucion+Buenos+Aires",
+    "area": "2,1 ha"
+  },
+  {
+    "id": "polideportivo-norte",
+    "name": "Polideportivo Municipal Norte",
+    "type": "polideportivo",
+    "address": "Av. Las Heras 2200, Barrio Norte",
+    "zone": "Barrio Norte",
+    "amenities": [
+      "Pileta de natación cubierta",
+      "Pileta de natación exterior (verano)",
+      "Gimnasio con equipamiento",
+      "Canchas de básquet",
+      "Canchas de vóley",
+      "Salón de usos múltiples",
+      "Vestuarios y duchas",
+      "Clases de natación, yoga, pilates, aeróbica",
+      "Actividades para adultos mayores"
+    ],
+    "hours": "Lunes a viernes 07:00–22:00 | Sábados 08:00–20:00 | Domingos 09:00–18:00",
+    "mapLink": "https://maps.google.com/?q=Av+Las+Heras+2200+Barrio+Norte+Buenos+Aires"
+  },
+  {
+    "id": "polideportivo-sur",
+    "name": "Polideportivo Municipal Villa del Sur",
+    "type": "polideportivo",
+    "address": "Av. Escalada 3800, Villa del Sur",
+    "zone": "Villa del Sur",
+    "amenities": [
+      "Canchas de fútbol 5",
+      "Canchas de fútbol 11 (césped sintético)",
+      "Pista de atletismo",
+      "Canchas de tenis",
+      "Gimnasio cubierto",
+      "Vestuarios",
+      "Estacionamiento",
+      "Clases de fútbol infantil y adulto"
+    ],
+    "hours": "Lunes a viernes 08:00–22:00 | Sábados 08:00–20:00 | Domingos 09:00–17:00",
+    "mapLink": "https://maps.google.com/?q=Av+Escalada+3800+Villa+del+Sur+Buenos+Aires"
+  },
+  {
+    "id": "plaza-san-martin-centro",
+    "name": "Plaza General San Martín",
+    "type": "plaza",
+    "address": "Av. Santa Fe y Maipú, Centro",
+    "zone": "Centro",
+    "amenities": [
+      "Monumento ecuestre al Gral. San Martín",
+      "Jardines ornamentales",
+      "Bancos y paseos",
+      "Iluminación nocturna",
+      "Fuente ornamental"
+    ],
+    "hours": "Abierto las 24 horas",
+    "mapLink": "https://maps.google.com/?q=Plaza+San+Martin+Buenos+Aires",
+    "area": "3,5 ha"
+  },
+  {
+    "id": "reserva-ecologica-sur",
+    "name": "Reserva Verde Municipal del Sur",
+    "type": "reserva",
+    "address": "Cnel. Segovia 4200, Villa del Sur",
+    "zone": "Villa del Sur",
+    "amenities": [
+      "Senderos para caminatas",
+      "Avistaje de aves",
+      "Área de picnic",
+      "Vivero municipal",
+      "Visitas guiadas (sábados 10:00 hs)",
+      "Baños públicos"
+    ],
+    "hours": "Martes a domingo 08:00–18:00 (cerrado los lunes por mantenimiento)",
+    "mapLink": "https://maps.google.com/?q=Coronel+Segovia+4200+Villa+del+Sur+Buenos+Aires",
+    "area": "12 ha"
+  },
+  {
+    "id": "espacio-deportivo-parque",
+    "name": "Espacio Deportivo Abierto Villa del Parque",
+    "type": "espacio_deportivo",
+    "address": "Nazca y Cuenca, Villa del Parque",
+    "zone": "Villa del Parque",
+    "amenities": [
+      "Cancha de fútbol 5 (iluminada)",
+      "Skate park",
+      "Zona de calistenia / Street Workout",
+      "Pista de BMX",
+      "Bancos y árboles con sombra",
+      "Iluminación nocturna"
+    ],
+    "hours": "Abierto las 24 horas (iluminación hasta las 23:00)",
+    "mapLink": "https://maps.google.com/?q=Nazca+y+Cuenca+Villa+del+Parque+Buenos+Aires"
+  }
+]
