@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   HeartPulse,
   Building2,
-  ClipboardList,
   Landmark,
   Phone,
   ArrowRight,
@@ -28,16 +27,6 @@ const SECTIONS = [
     color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
     iconColor: "text-blue-600",
     badgeColor: "bg-blue-100 text-blue-700",
-  },
-  {
-    href: "/tramites",
-    icon: ClipboardList,
-    title: "Trámites Online",
-    description:
-      "Iniciá habilitaciones, solicitá certificados y más trámites desde tu computadora.",
-    color: "bg-green-50 border-green-200 hover:bg-green-100",
-    iconColor: "text-green-600",
-    badgeColor: "bg-green-100 text-green-700",
   },
   {
     href: "/dependencias",
@@ -68,13 +57,6 @@ export default function HomePage() {
             >
               <HeartPulse className="h-5 w-5" />
               Buscar servicios de salud
-            </Link>
-            <Link
-              href="/tramites"
-              className="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white font-semibold px-6 py-3 rounded-lg border border-white/30 transition-colors"
-            >
-              <ClipboardList className="h-5 w-5" />
-              Ver trámites online
             </Link>
           </div>
         </div>
@@ -135,25 +117,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Info util */}
-      <section className="bg-gray-100 py-10 px-4">
-        <div className="mx-auto max-w-7xl text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">
-            ¿Sabías que podés gestionar tus trámites online?
-          </h2>
-          <p className="text-gray-500 text-sm max-w-xl mx-auto mb-5">
-            Muchos trámites del municipio ya se pueden iniciar desde casa. Ahorrá
-            tiempo y evitá colas.
-          </p>
-          <Link
-            href="/tramites"
-            className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors text-sm"
-          >
-            Ver trámites disponibles
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
