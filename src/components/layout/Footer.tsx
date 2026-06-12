@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.84 1.56V6.8a4.85 4.85 0 01-1.07-.11z" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -62,7 +70,43 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-gray-700 pt-6 text-xs text-gray-500 text-center">
+        {/* Redes sociales */}
+        <div className="mt-10 border-t border-gray-700 pt-8">
+          <h3 className="text-white font-semibold text-lg mb-4 text-center">
+            Seguinos en redes
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a
+              href="https://www.instagram.com/comunicaciones.1517/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-300 hover:text-pink-400 transition-colors"
+            >
+              <Instagram className="h-5 w-5" />
+              <span>@comunicaciones.1517</span>
+            </a>
+            <a
+              href="https://www.facebook.com/comunicaciones.josecpaz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-300 hover:text-blue-400 transition-colors"
+            >
+              <Facebook className="h-5 w-5" />
+              <span>comunicaciones.josecpaz</span>
+            </a>
+            <a
+              href="https://www.tiktok.com/@comunicaciones1517"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
+            >
+              <TikTokIcon className="h-5 w-5" />
+              <span>@comunicaciones1517</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-gray-700 pt-6 text-xs text-gray-500 text-center">
           © {new Date().getFullYear()} Municipio Digital. Todos los derechos
           reservados. Los datos presentados son de carácter informativo.
         </div>
