@@ -54,7 +54,6 @@ export default function Footer() {
               {[
                 { href: "/salud", label: "Salud y Hospitales" },
                 { href: "/oficinas", label: "Oficinas Municipales" },
-                { href: "/tramites", label: "Trámites Online" },
                 { href: "/dependencias", label: "Dependencias" },
               ].map((link) => (
                 <li key={link.href}>

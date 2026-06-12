@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 const NAV_LINKS = [
   { href: "/salud", label: "Salud" },
   { href: "/oficinas", label: "Oficinas" },
-  { href: "/tramites", label: "Trámites" },
   { href: "/dependencias", label: "Dependencias" },
 ];
 
