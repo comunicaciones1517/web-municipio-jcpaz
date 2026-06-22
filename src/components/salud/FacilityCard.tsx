@@ -28,7 +28,7 @@ export default function FacilityCard({ facility }: FacilityCardProps) {
         {facility.photo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={facility.photo}
+            src={facility.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${facility.photo}` : facility.photo}
             alt={`Foto de ${facility.name}`}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />

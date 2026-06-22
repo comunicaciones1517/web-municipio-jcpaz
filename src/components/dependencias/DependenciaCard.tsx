@@ -23,7 +23,7 @@ export default function DependenciaCard({ dependencia }: Props) {
       {dependencia.photo && (
         <div className="relative h-44 overflow-hidden">
           <Image
-            src={dependencia.photo}
+            src={dependencia.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${dependencia.photo}` : dependencia.photo}
             alt={`Fachada de ${dependencia.name}`}
             fill
             className="object-cover object-top"

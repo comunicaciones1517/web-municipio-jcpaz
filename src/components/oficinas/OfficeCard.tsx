@@ -18,7 +18,7 @@ export default function OfficeCard({ office }: OfficeCardProps) {
       <div className="relative h-44 bg-gray-100 overflow-hidden">
         {office.photo ? (
           <Image
-            src={office.photo}
+            src={office.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${office.photo}` : office.photo}
             alt={`Fachada de ${office.name}`}
             fill
             className="object-cover object-top group-hover:scale-105 transition-transform duration-500"

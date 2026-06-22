@@ -49,7 +49,7 @@ export default async function OfficeDetailPage({
           {office.photo && (
             <div className="mb-5 rounded-xl overflow-hidden relative h-72">
               <Image
-                src={office.photo}
+                src={office.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${office.photo}` : office.photo}
                 alt={`Fachada de ${office.name}`}
                 fill
                 className="object-cover"

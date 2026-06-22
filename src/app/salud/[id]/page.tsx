@@ -84,7 +84,7 @@ export default async function FacilityDetailPage({
             <div className="mb-5 rounded-xl overflow-hidden h-52 sm:h-64 w-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={facility.photo}
+                src={facility.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${facility.photo}` : facility.photo}
                 alt={`Foto de ${facility.name}`}
                 className="w-full h-full object-cover"
               />
