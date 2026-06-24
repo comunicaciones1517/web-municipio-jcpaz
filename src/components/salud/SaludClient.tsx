@@ -22,21 +22,18 @@ function norm(str: string) {
 
 interface Props {
   facilities: HealthFacility[];
-  zones: string[];
   specialties: string[];
 }
 
-export default function SaludClient({ facilities, zones, specialties }: Props) {
+export default function SaludClient({ facilities, specialties }: Props) {
   const [query, setQuery] = useState("");
   const [tipo, setTipo] = useState("");
-  const [zona, setZona] = useState("");
   const [especialidad, setEspecialidad] = useState("");
   const [soloGuardia, setSoloGuardia] = useState(false);
 
   const filtered = useMemo(() => {
     let r = facilities;
     if (tipo) r = r.filter((f) => f.type === tipo);
-    if (zona) r = r.filter((f) => f.zone === zona);
     if (especialidad)
       r = r.filter((f) =>
         f.specialties.some((s) => norm(s) === norm(especialidad))
@@ -52,9 +49,9 @@ export default function SaludClient({ facilities, zones, specialties }: Props) {
       );
     }
     return r;
-  }, [facilities, tipo, zona, especialidad, soloGuardia, query]);
+  }, [facilities, tipo, especialidad, soloGuardia, query]);
 
-  const hasFilters = tipo || zona || especialidad || soloGuardia || query;
+  const hasFilters = tipo || especialidad || soloGuardia || query;
 
   return (
     <>
@@ -68,7 +65,7 @@ export default function SaludClient({ facilities, zones, specialties }: Props) {
           className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-300"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label className="block text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">
               Tipo
@@ -82,24 +79,6 @@ export default function SaludClient({ facilities, zones, specialties }: Props) {
               {TYPES.map((t) => (
                 <option key={t} value={t}>
                   {FACILITY_TYPE_LABELS[t]}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">
-              Zona / Barrio
-            </label>
-            <select
-              value={zona}
-              onChange={(e) => setZona(e.target.value)}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 bg-white"
-            >
-              <option value="">Todas las zonas</option>
-              {zones.map((z) => (
-                <option key={z} value={z}>
-                  {z}
                 </option>
               ))}
             </select>
@@ -139,7 +118,6 @@ export default function SaludClient({ facilities, zones, specialties }: Props) {
             onClick={() => {
               setQuery("");
               setTipo("");
-              setZona("");
               setEspecialidad("");
               setSoloGuardia(false);
             }}

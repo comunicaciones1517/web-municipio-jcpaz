@@ -6,7 +6,6 @@ import { X } from "lucide-react";
 import { FACILITY_TYPE_LABELS } from "@/lib/utils";
 
 interface FacilityFiltersProps {
-  zones: string[];
   specialties: string[];
 }
 
@@ -18,14 +17,12 @@ const TYPES = [
 ] as const;
 
 export default function FacilityFilters({
-  zones,
   specialties,
 }: FacilityFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const currentType = searchParams.get("tipo") ?? "";
-  const currentZone = searchParams.get("zona") ?? "";
   const currentSpecialty = searchParams.get("especialidad") ?? "";
   const currentGuardia = searchParams.get("guardia") === "1";
   const currentSearch = searchParams.get("q") ?? "";
@@ -48,7 +45,7 @@ export default function FacilityFilters({
   };
 
   const hasFilters =
-    currentType || currentZone || currentSpecialty || currentGuardia || currentSearch;
+    currentType || currentSpecialty || currentGuardia || currentSearch;
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-4">
@@ -61,7 +58,7 @@ export default function FacilityFilters({
         className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-300"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {/* Tipo */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">
@@ -76,25 +73,6 @@ export default function FacilityFilters({
             {TYPES.map((t) => (
               <option key={t} value={t}>
                 {FACILITY_TYPE_LABELS[t]}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Zona */}
-        <div>
-          <label className="block text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">
-            Zona / Barrio
-          </label>
-          <select
-            value={currentZone}
-            onChange={(e) => updateParam("zona", e.target.value)}
-            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 bg-white"
-          >
-            <option value="">Todas las zonas</option>
-            {zones.map((z) => (
-              <option key={z} value={z}>
-                {z}
               </option>
             ))}
           </select>

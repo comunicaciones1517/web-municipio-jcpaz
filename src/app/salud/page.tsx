@@ -4,7 +4,6 @@ import PageHeader from "@/components/layout/PageHeader";
 import SaludClient from "@/components/salud/SaludClient";
 import {
   getAllFacilities,
-  getAllZones,
   getAllSpecialties,
 } from "@/lib/data/salud";
 
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 
 export default function SaludPage() {
   const facilities = getAllFacilities();
-  const zones = getAllZones();
   const specialties = getAllSpecialties();
 
   return (
@@ -32,7 +30,6 @@ export default function SaludPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <SaludClient
           facilities={facilities}
-          zones={zones}
           specialties={specialties}
         />
       </div>
