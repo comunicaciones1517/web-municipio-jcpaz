@@ -1,0 +1,47 @@
+[
+  {
+    "id": "hospital-duhau",
+    "nombre": "Hospital Dr. Alberto Duhau",
+    "tipo": "hospital",
+    "lat": -34.5196,
+    "lng": -58.7714,
+    "direccion": "Gral. Lavalle 2066, José C. Paz",
+    "telefono": "(02320) 43-1951",
+    "horario": "Guardia 24 hs · Consultorios Lun–Sáb 8:00–20:00",
+    "diasHorario": "24h",
+    "horarioDesde": "00:00",
+    "horarioHasta": "23:59",
+    "servicios": ["Guardia 24h", "Clínica Médica", "Cardiología", "Traumatología", "Pediatría", "Ginecología", "Maternidad", "Laboratorio", "Diagnóstico por Imágenes"],
+    "guardia24h": true
+  },
+  {
+    "id": "hospital-oftalmologico",
+    "nombre": "Hospital Oftalmológico Municipal \"Juan Domingo Perón\"",
+    "tipo": "hospital",
+    "lat": -34.5229,
+    "lng": -58.7681,
+    "direccion": "Av. Hipólito Yrigoyen 3028 esq. Artigas, José C. Paz",
+    "telefono": "(02320) 532185",
+    "horario": "Guardia oftalmológica 24 hs",
+    "diasHorario": "24h",
+    "horarioDesde": "00:00",
+    "horarioHasta": "23:59",
+    "servicios": ["Guardia 24h", "Oftalmología General", "Córnea", "Retina", "Glaucoma", "Cirugía de cataratas", "OCT", "Laser Argón"],
+    "guardia24h": true
+  },
+  {
+    "id": "hospital-caporaletti",
+    "nombre": "Hospital Rubén \"Cacho\" Caporaletti",
+    "tipo": "hospital",
+    "lat": -34.512461,
+    "lng": -58.7964676,
+    "direccion": "Av. Croacia 2312, José C. Paz",
+    "telefono": "(02320) 353102",
+    "horario": "Guardia 24 hs",
+    "diasHorario": "24h",
+    "horarioDesde": "00:00",
+    "horarioHasta": "23:59",
+    "servicios": ["Guardia 24h", "Internación de alta complejidad", "Tomógrafo", "Quirófano", "Laboratorio", "Diagnóstico por Imágenes"],
+    "guardia24h": true
+  }
+]
