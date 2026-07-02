@@ -7,6 +7,19 @@
       "runtimeArgs": ["/c", "C:\\Users\\Usuario\\Desktop\\web municipio\\start-dev.cmd"],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "sector-flow",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd /d C:\\Users\\Usuario\\Desktop\\sector-flow && npm run dev"],
+      "port": 3000,
+      "autoPort": true
+    }
+    ,{
+      "name": "portal-salud",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "serve", "portal-salud", "-p", "8080", "--no-clipboard"],
+      "port": 8080
     }
   ]
 }

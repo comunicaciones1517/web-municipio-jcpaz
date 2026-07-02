@@ -222,6 +222,14 @@ En los archivos `lib/data/*.ts`, usar `Array.from(new Set(...))` en lugar de `[.
 ### CSS: "@apply border-border" — clase inexistente
 `globals.css` solo tiene las 3 directivas de Tailwind. No usar `@apply` con clases de shadcn/ui que no estén definidas.
 
+### basePath y NEXT_PUBLIC_BASE_PATH — deben ser siempre consistentes
+`next.config.ts` tiene `basePath` Y `NEXT_PUBLIC_BASE_PATH` ambos condicionales a `NODE_ENV === "production"`:
+```ts
+basePath: process.env.NODE_ENV === "production" ? "/web-municipio-jcpaz" : "",
+env: { NEXT_PUBLIC_BASE_PATH: process.env.NODE_ENV === "production" ? "/web-municipio-jcpaz" : "" }
+```
+**Nunca poner `basePath` fijo y `NEXT_PUBLIC_BASE_PATH` condicional** (o viceversa): en dev, las imágenes locales usan `${NEXT_PUBLIC_BASE_PATH}/foto.jpg` y si `basePath` está activo pero la variable es vacía, Next.js sirve los archivos estáticos bajo `/web-municipio-jcpaz/salud/...` pero la `<img>` busca en `/salud/...` → imagen rota.
+
 ---
 
 ## Comandos
