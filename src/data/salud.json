@@ -195,6 +195,8 @@
     "zone": "Barrio Sagrada Familia",
     "phones": ["(02320) 42-2736"],
     "hasEmergencyRoom": false,
+    "photo": "/salud/centro-sagrada-familia.webp",
+    "photos": ["/salud/centro-sagrada-familia.webp"],
     "hours": [
       { "day": "lunes",     "open": "08:00", "close": "14:00" },
       { "day": "martes",    "open": "08:00", "close": "14:00" },
@@ -914,6 +916,8 @@
     "phones": ["(02320) 353104"],
     "emergencyPhone": "(02320) 353104",
     "hasEmergencyRoom": true,
+    "photo": "/salud/hospital-mujer-nino.jpg",
+    "photos": ["/salud/hospital-mujer-nino.jpg"],
     "hours": [
       { "day": "lunes",     "open": "00:00", "close": "23:59" },
       { "day": "martes",    "open": "00:00", "close": "23:59" },
