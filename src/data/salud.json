@@ -741,8 +741,6 @@
     "zone": "Barrio Frino",
     "phones": ["(02320) 46-5723"],
     "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-frino-sur-jose-c-paz-buenos-aires-brughetti-2906.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-frino-sur-jose-c-paz-buenos-aires-brughetti-2906.jpg"],
     "hours": [
       { "day": "lunes",     "open": "09:00", "close": "17:00" },
       { "day": "martes",    "open": "09:00", "close": "17:00" },
