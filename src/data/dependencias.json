@@ -20,11 +20,7 @@
     ],
     "services": [
       "Inhumaciones",
-      "Exhumaciones",
-      "Reducción de restos",
-      "Traslado de restos",
-      "Concesión de nichos",
-      "Concesión de parcelas"
+      "Exhumaciones"
     ],
     "mapLink": "https://maps.google.com/maps?q=Chuquisaca+4499,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "coordinates": { "lat": -34.5113718, "lng": -58.8033803 },
