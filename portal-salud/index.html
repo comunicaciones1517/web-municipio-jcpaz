@@ -862,21 +862,9 @@
   </button>
 
   <div id="em-bar">
-    <a class="em" href="tel:107" title="SAME — Emergencias Médicas">
+    <a class="em" href="tel:107" title="SAME — Emergencias Médicas (107)">
       <span class="em-label"><span class="em-dot"></span>SAME</span>
-      <span class="em-num">107</span>
-    </a>
-    <a class="em" href="tel:911" title="Policía">
-      <span class="em-label">POLICÍA</span>
-      <span class="em-num">911</span>
-    </a>
-    <a class="em" href="tel:1156615900" title="Bomberos">
-      <span class="em-label">BOMBEROS</span>
-      <span class="em-num">11 5661-5900</span>
-    </a>
-    <a class="em" href="tel:144" title="Línea 144 — Violencia de Género">
-      <span class="em-label">VIO. DE GÉNERO</span>
-      <span class="em-num">144</span>
+      <span class="em-num">107 / 147</span>
     </a>
   </div>
 </header>
@@ -902,50 +890,50 @@
       <div class="panel-label">Tipo de centro</div>
       <div id="filters" role="group">
 
-        <button class="fbtn on" data-f="caps" aria-pressed="true">
+        <button class="fbtn" data-f="caps" aria-pressed="false">
           <span class="fdot fdot-caps" aria-hidden="true"></span>
           CAPS
           <span class="fcount" id="cnt-caps">0</span>
         </button>
 
-        <button class="fbtn on" data-f="hospital" aria-pressed="true">
+        <button class="fbtn" data-f="hospital" aria-pressed="false">
           <span class="fdot fdot-hosp" aria-hidden="true"></span>
           Hospitales
           <span class="fcount" id="cnt-hosp">0</span>
         </button>
 
 
-        <button class="fbtn on" data-f="oficina" aria-pressed="true">
+        <button class="fbtn" data-f="oficina" aria-pressed="false">
           <span class="fdot fdot-ofic" aria-hidden="true"></span>
           Oficinas
           <span class="fcount" id="cnt-ofic">0</span>
         </button>
 
-        <button class="fbtn on" data-f="seguridad" aria-pressed="true">
+        <button class="fbtn" data-f="seguridad" aria-pressed="false">
           <span class="fdot fdot-seg" aria-hidden="true"></span>
           Seguridad
           <span class="fcount" id="cnt-seg">0</span>
         </button>
 
-        <button class="fbtn on" data-f="juzgado" aria-pressed="true">
+        <button class="fbtn" data-f="juzgado" aria-pressed="false">
           <span class="fdot fdot-juz" aria-hidden="true"></span>
           Juzgado de Faltas
           <span class="fcount" id="cnt-juz">0</span>
         </button>
 
-        <button class="fbtn on" data-f="cementerio" aria-pressed="true">
+        <button class="fbtn" data-f="cementerio" aria-pressed="false">
           <span class="fdot fdot-cem" aria-hidden="true"></span>
           Cementerio
           <span class="fcount" id="cnt-cem">0</span>
         </button>
 
-        <button class="fbtn on" data-f="social" aria-pressed="true">
+        <button class="fbtn" data-f="social" aria-pressed="false">
           <span class="fdot fdot-soc" aria-hidden="true"></span>
           Desarrollo Social
           <span class="fcount" id="cnt-soc">0</span>
         </button>
 
-        <button class="fbtn on" data-f="educacion" aria-pressed="true">
+        <button class="fbtn" data-f="educacion" aria-pressed="false">
           <span class="fdot fdot-edu" aria-hidden="true"></span>
           Educación
           <span class="fcount" id="cnt-edu">0</span>
@@ -1127,7 +1115,7 @@ let markers      = {};
 let selectedId   = null;
 let mapReady     = false;
 let searchQ      = '';
-const activeF    = new Set(['caps', 'hospital', 'oficina', 'seguridad', 'juzgado', 'cementerio', 'social', 'educacion']);
+const activeF    = new Set([]);
 
 let jcpCoords = null;   // polígono oficial de JCP descargado desde OpenStreetMap
 let jcpPx     = null;   // coordenadas proyectadas al canvas (actualizado en cada movimiento del mapa)
