@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -124,30 +124,56 @@
     #search:focus        { border-color: var(--caps); }
     #search::placeholder { color: var(--muted); }
 
-    /* Chip SAMU */
-    #samu-chip {
-      margin-left: auto;
+    /* Barra de emergencias */
+    #em-bar {
+      margin-left: 12px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      flex-shrink: 1;
+      padding: 2px 0;
+    }
+    #em-bar::-webkit-scrollbar { display: none; }
+    .em {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 4px 9px;
       background: rgba(255,59,59,.08);
-      border: 1px solid rgba(255,59,59,.2);
-      border-radius: 9px;
-      padding: 6px 14px;
+      border: 1px solid rgba(255,59,59,.18);
+      border-radius: 7px;
       text-decoration: none;
-      transition: background .18s;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .14s;
+      line-height: 1.25;
+    }
+    .em:hover { background: rgba(255,59,59,.2); }
+    .em-label {
+      font-size: 8px;
+      font-weight: 600;
+      color: rgba(255,96,96,.5);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .em-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: #ff6060;
+    }
+    .em-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #ff4040;
       flex-shrink: 0;
     }
-    #samu-chip:hover { background: rgba(255,59,59,.14); }
-    .samu-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--samu);
-      animation: blink 1.6s ease-in-out infinite;
-    }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
-    #samu-chip .sl { font-size:13px; font-weight:700; color:#ff6060; }
-    #samu-chip .ss { font-size:10px; color:rgba(255,96,96,.45); text-transform:uppercase; letter-spacing:.05em; }
+    .em-dot { animation: blink 1.6s ease-in-out infinite; }
 
     /* ============================================================
        LAYOUT
@@ -597,7 +623,7 @@
     #gps-btn.searching    { animation: gps-pulse 1.2s ease-in-out infinite; }
     @keyframes gps-pulse  { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-    #theme-btn {
+    #theme-btn, #sat-btn {
       width: 36px; height: 36px;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -609,7 +635,13 @@
       flex-shrink: 0;
       transition: background .14s, color .14s, border-color .14s;
     }
-    #theme-btn:hover { background: var(--border); color: var(--text); }
+    #theme-btn:hover, #sat-btn:hover { background: var(--border); color: var(--text); }
+    #sat-btn.active {
+      background: rgba(0,200,120,.12);
+      border-color: rgba(0,200,120,.4);
+      color: var(--caps);
+    }
+    #theme-btn.disabled { opacity: .35; pointer-events: none; }
 
     /* Modo manual: cursor crosshair sobre el mapa */
     #map-wrap.manual-mode         { cursor: crosshair; }
@@ -756,7 +788,7 @@
     #notif {
       position: absolute;
       top: 14px; left: 50%; transform: translateX(-50%);
-      background: rgba(7,11,22,.92);
+      background: var(--sidebar);
       backdrop-filter: blur(10px);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -780,45 +812,6 @@
      TOPBAR
 ============================================================ -->
 <header id="topbar">
-  <div id="logo" aria-label="Municipalidad José C. Paz">
-    <svg id="logo-svg" viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- Edificio municipal -->
-      <!-- Torre central -->
-      <polygon points="110,3 113,9 107,9" fill="none" stroke="white" stroke-width="1.1" stroke-linejoin="round"/>
-      <rect x="108.5" y="9" width="3" height="4" fill="none" stroke="white" stroke-width="1"/>
-      <!-- Cuerpo principal -->
-      <rect x="96" y="13" width="28" height="15" fill="none" stroke="white" stroke-width="1.2"/>
-      <!-- Ventanas fila superior -->
-      <rect x="98.5" y="15.5" width="4" height="3" fill="none" stroke="white" stroke-width="0.8"/>
-      <rect x="108" y="15.5" width="4" height="3" fill="none" stroke="white" stroke-width="0.8"/>
-      <rect x="117.5" y="15.5" width="4" height="3" fill="none" stroke="white" stroke-width="0.8"/>
-      <!-- Puerta central -->
-      <rect x="107" y="21" width="6" height="7" fill="none" stroke="white" stroke-width="0.9"/>
-      <!-- Línea base -->
-      <line x1="94" y1="28" x2="126" y2="28" stroke="white" stroke-width="1"/>
-
-      <!-- Laurel izquierdo -->
-      <path d="M94,24 C90,20 85,18 82,20 C85,18 85,14 88,14 C86,16 88,20 92,22" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <path d="M91,26 C87,23 81,22 78,24 C82,21 81,17 84,17 C82,19 85,23 89,24" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <path d="M89,28 C85,27 79,27 76,30 C80,26 80,22 83,23 C81,25 84,28 88,28" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <path d="M89,30 C85,31 80,33 78,37 C81,32 82,28 85,29 C83,31 86,33 90,31" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <!-- Tallo laurel izq -->
-      <path d="M94,24 C92,27 90,30 89,34" stroke="#3a9e4a" stroke-width="1.1" stroke-linecap="round"/>
-
-      <!-- Laurel derecho (espejo) -->
-      <path d="M126,24 C130,20 135,18 138,20 C135,18 135,14 132,14 C134,16 132,20 128,22" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <path d="M129,26 C133,23 139,22 142,24 C138,21 139,17 136,17 C138,19 135,23 131,24" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <path d="M131,28 C135,27 141,27 144,30 C140,26 140,22 137,23 C139,25 136,28 132,28" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <path d="M131,30 C135,31 140,33 142,37 C139,32 138,28 135,29 C137,31 134,33 130,31" fill="none" stroke="#3a9e4a" stroke-width="1.3" stroke-linecap="round"/>
-      <!-- Tallo laurel der -->
-      <path d="M126,24 C128,27 130,30 131,34" stroke="#3a9e4a" stroke-width="1.1" stroke-linecap="round"/>
-
-      <!-- Texto MUNICIPALIDAD -->
-      <text x="110" y="36" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" font-weight="400" fill="white" letter-spacing="2">MUNICIPALIDAD</text>
-      <!-- Texto JOSE C. PAZ -->
-      <text x="110" y="43" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="white" letter-spacing="1.5">JOSE C. PAZ</text>
-    </svg>
-  </div>
 
   <div id="search-wrap">
     <svg id="search-ico" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -829,10 +822,31 @@
       autocomplete="off" spellcheck="false" aria-label="Buscar centros de salud">
   </div>
 
+  <button id="sat-btn" title="Vista satélite" aria-label="Vista satélite">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <!-- cuerpo central -->
+      <rect x="6.5" y="6.5" width="3" height="3" rx=".6" fill="currentColor"/>
+      <!-- paneles solares horizontales -->
+      <rect x="1" y="7.2" width="4.5" height="1.6" rx=".4" fill="currentColor" opacity=".7"/>
+      <rect x="10.5" y="7.2" width="4.5" height="1.6" rx=".4" fill="currentColor" opacity=".7"/>
+      <!-- antena -->
+      <line x1="8" y1="6.5" x2="8" y2="4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="8" cy="3.4" r="1" fill="currentColor" opacity=".8"/>
+    </svg>
+  </button>
+
   <button id="theme-btn" title="Cambiar tema" aria-label="Modo día/noche">
     <svg id="theme-ico" width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <!-- Luna (modo noche visible por defecto) -->
-      <path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" fill="currentColor"/>
+      <!-- Sol (modo día por defecto) -->
+      <circle cx="8" cy="8" r="3" fill="currentColor"/>
+      <line x1="8" y1="1" x2="8" y2="3"   stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="1" y1="8" x2="3" y2="8"   stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="3"  y1="3"  x2="4.5" y2="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="11.5" y1="11.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="13" y1="3"  x2="11.5" y2="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="4.5" y1="11.5" x2="3" y2="13"   stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
   </button>
 
@@ -847,11 +861,24 @@
     </svg>
   </button>
 
-  <a id="samu-chip" href="tel:107" title="SAMU — Emergencias Médicas 107">
-    <div class="samu-dot" aria-hidden="true"></div>
-    <span class="sl">SAMU · 107</span>
-    <span class="ss">emergencias</span>
-  </a>
+  <div id="em-bar">
+    <a class="em" href="tel:107" title="SAME — Emergencias Médicas">
+      <span class="em-label"><span class="em-dot"></span>SAME</span>
+      <span class="em-num">107</span>
+    </a>
+    <a class="em" href="tel:911" title="Policía">
+      <span class="em-label">POLICÍA</span>
+      <span class="em-num">911</span>
+    </a>
+    <a class="em" href="tel:1156615900" title="Bomberos">
+      <span class="em-label">BOMBEROS</span>
+      <span class="em-num">11 5661-5900</span>
+    </a>
+    <a class="em" href="tel:144" title="Línea 144 — Violencia de Género">
+      <span class="em-label">VIO. DE GÉNERO</span>
+      <span class="em-num">144</span>
+    </a>
+  </div>
 </header>
 
 
@@ -942,7 +969,7 @@
     <div id="map" aria-label="Mapa de centros de salud de José C. Paz"></div>
 
     <!-- Banner ubicación manual -->
-    <div id="manual-banner">📍 Tocá el mapa para fijar tu ubicación</div>
+    <div id="manual-banner">Tocá el mapa para fijar tu ubicación</div>
 
     <!-- Notificación flotante -->
     <div id="notif" role="status" aria-live="polite"></div>
@@ -1007,14 +1034,14 @@
     <!-- Panel de navegación (ruta activa) -->
     <div id="nav-panel" role="region" aria-label="Ruta activa">
       <div id="nav-header">
-        <span id="nav-mode-icon">🚶</span>
+        <span id="nav-mode-icon">A pie</span>
         <div id="nav-summary">
           <div id="nav-duration">—</div>
           <div id="nav-meta">—</div>
         </div>
         <div id="nav-tabs">
-          <button class="nav-tab" id="tab-walk"  data-mode="foot">🚶 A pie</button>
-          <button class="nav-tab" id="tab-drive" data-mode="driving">🚗 Auto</button>
+          <button class="nav-tab" id="tab-walk"  data-mode="foot">A pie</button>
+          <button class="nav-tab" id="tab-drive" data-mode="driving">Auto</button>
         </div>
         <button id="nav-close" aria-label="Cerrar ruta">✕</button>
       </div>
@@ -1089,7 +1116,7 @@ const COL = {
 
 /* CSS filter que convierte los tiles grises de CartoDB al azul oscuro de la referencia.
    Técnica: sepia() añade tono cálido → hue-rotate(210°) lo gira a azul-índigo → saturate() lo intensifica. */
-const MAP_FILTER = 'sepia(1) hue-rotate(195deg) saturate(2.6) brightness(1.05) contrast(1.05)';
+const MAP_FILTER = 'none'; /* light mode por defecto — sin filtro */
 
 
 /* ──────────────────────────────────
@@ -1117,9 +1144,9 @@ const map = new maplibregl.Map({
       carto: {
         type: 'raster',
         tiles: [
-          'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-          'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-          'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
+          'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
+          'https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
+          'https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png'
         ],
         tileSize: 256,
         maxzoom: 19,
@@ -1153,7 +1180,74 @@ map.on('load', () => {
 
   mapReady = true;
   loadCentros();
+  cargarLimitesPartido();
 });
+
+async function cargarLimitesPartido() {
+  /* Intentar Nominatim search — devuelve geometría más confiable que lookup */
+  const url = 'https://nominatim.openstreetmap.org/search?q=José+C.+Paz+partido+Buenos+Aires+Argentina&format=geojson&polygon_geojson=1&limit=5&countrycodes=ar';
+  let feature;
+
+  try {
+    const res  = await fetch(url);
+    const data = await res.json();
+    console.log('Nominatim features:', data.features?.length, data.features?.map(f => f.properties?.display_name + ' | ' + f.geometry?.type));
+    /* Buscar el feature que sea de tipo Polygon/MultiPolygon y sea boundary admin */
+    feature = data.features?.find(f =>
+      f.geometry?.type === 'Polygon' || f.geometry?.type === 'MultiPolygon'
+    ) ?? data.features?.[0];
+  } catch(err) {
+    console.error('Nominatim fetch error:', err);
+  }
+
+  /* Limpiar capas previas si existen (recarga) */
+  ['partido-fill','partido-glow','partido-border'].forEach(id => {
+    try { if (map.getLayer(id)) map.removeLayer(id); } catch(_) {}
+  });
+  try { if (map.getSource('partido')) map.removeSource('partido'); } catch(_) {}
+
+  if (!feature?.geometry) {
+    console.error('Sin geometría del partido — usando fallback bbox solo para maxBounds');
+    map.setMaxBounds([[-58.855, -34.575], [-58.700, -34.460]]);
+    return;
+  }
+
+  console.log('Partido JCP cargado, tipo:', feature.geometry.type);
+
+  map.addSource('partido', { type: 'geojson', data: feature });
+
+  map.addLayer({
+    id: 'partido-fill',
+    type: 'fill',
+    source: 'partido',
+    paint: { 'fill-color': '#3c82ff', 'fill-opacity': 0.06 }
+  }, 'base');  /* insertado justo encima del tile base */
+
+  map.addLayer({
+    id: 'partido-glow',
+    type: 'line',
+    source: 'partido',
+    paint: { 'line-color': '#3c82ff', 'line-width': 12, 'line-opacity': 0.22, 'line-blur': 8 }
+  });
+
+  map.addLayer({
+    id: 'partido-border',
+    type: 'line',
+    source: 'partido',
+    paint: { 'line-color': '#7cb9ff', 'line-width': 2, 'line-opacity': 1.0 }
+  });
+
+  /* Bounding box: usar feature.bbox o calcularlo desde las coordenadas */
+  let w, s, e, n;
+  if (feature.bbox) {
+    [w, s, e, n] = feature.bbox;
+  } else {
+    w = -58.84; s = -34.57; e = -58.71; n = -34.47;
+  }
+  const pad = 0.018;
+  map.setMaxBounds([[w - pad, s - pad], [e + pad, n + pad]]);
+  console.log('MaxBounds seteado:', w, s, e, n);
+}
 
 /* El handler de click del mapa está más abajo (maneja modo manual + cerrar tarjeta) */
 
@@ -1211,7 +1305,7 @@ const CENTROS_DATA = [
     "id": "hospital-buljan",
     "nombre": "Hospital Municipal Bulján",
     "tipo": "hospital",
-    "lat": -34.50277855936912, "lng": -58.79723451209908,
+    "lat": -34.50271976957026, "lng": -58.79732001651964,
     "direccion": "Dinamarca 3627, José C. Paz",
     "telefono": "11-6397-2456",
     "horario": "Guardia 24 hs",
@@ -1235,7 +1329,7 @@ const CENTROS_DATA = [
     "id": "hospital-oncologico",
     "nombre": "Hospital Oncológico Municipal",
     "tipo": "hospital",
-    "lat": -34.5184960, "lng": -58.7515627,
+    "lat": -34.51518266977153, "lng": -58.75503349173969,
     "direccion": "Av. H. Arregui 501, José C. Paz",
     "telefono": "(02320) 353105",
     "horario": "Lun–Vie 8:00–19:00 · Sáb 8:00–12:00",
@@ -1247,7 +1341,7 @@ const CENTROS_DATA = [
     "id": "hospital-nelly-quiroga",
     "nombre": "Hospital Municipal Nelly Quiroga",
     "tipo": "hospital",
-    "lat": -34.5198644, "lng": -58.7858644,
+    "lat": -34.5112544512451, "lng": -58.77270088095837,
     "direccion": "Montes de Oca 2910, José C. Paz",
     "telefono": "11-6094-7629",
     "horario": "Lun–Vie 8:00–16:00",
@@ -1259,7 +1353,7 @@ const CENTROS_DATA = [
     "id": "hospital-angio",
     "nombre": "Hospital Traumatológico \"Domingo Angio\"",
     "tipo": "hospital",
-    "lat": -34.5421144, "lng": -58.7676764,
+    "lat": -34.537878495698614, "lng": -58.77166732442581,
     "direccion": "Padre Ustarroz 5258, José C. Paz",
     "telefono": "(02320) 353101",
     "horario": "Guardia 24 hs",
@@ -1271,7 +1365,7 @@ const CENTROS_DATA = [
     "id": "hospital-salud-mental",
     "nombre": "Hospital de Salud Mental Municipal",
     "tipo": "hospital",
-    "lat": -34.5167489, "lng": -58.7391884,
+    "lat": -34.51585728583602, "lng": -58.73937214955413,
     "direccion": "Serrano 4749, José C. Paz",
     "telefono": "11-5119-4040",
     "horario": "Lun–Vie 8:00–18:00",
@@ -1283,7 +1377,7 @@ const CENTROS_DATA = [
     "id": "caps-ombu",
     "nombre": "Centro de Salud Ombú",
     "tipo": "caps",
-    "lat": -34.5086050, "lng": -58.7374858,
+    "lat": -34.50864736024815, "lng": -58.73746818045294,
     "direccion": "Arenales 362, José C. Paz",
     "telefono": "(02320) 425744",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1295,7 +1389,7 @@ const CENTROS_DATA = [
     "id": "caps-suizo-infico",
     "nombre": "Centro de Salud Suizo Infico",
     "tipo": "caps",
-    "lat": -34.5322626, "lng": -58.7549440,
+    "lat": -34.53777317536502, "lng": -58.74721570344034,
     "direccion": "Balcarce 3812, José C. Paz",
     "telefono": "(02320) 446158",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1305,14 +1399,14 @@ const CENTROS_DATA = [
   },
   {
     "id": "sec-salud",
-    "nombre": "Secretaría de Salud Municipal",
-    "tipo": "oficina",
-    "lat": -34.5167362, "lng": -58.7470809,
+    "nombre": "Secretaría de Salud y Secretaría de Acción Social",
+    "tipo": "social",
+    "lat": -34.52496838096723, "lng": -58.76438819834192,
     "direccion": "Av. Hipólito Yrigoyen 2945, José C. Paz",
     "telefono": "(02320) 449105",
     "horario": "Lun–Vie 8:00–16:00",
     "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "16:00",
-    "servicios": ["Emergencias médicas", "Derivaciones", "Información sanitaria"],
+    "servicios": ["Emergencias médicas", "Derivaciones", "Información sanitaria", "Asistencia social", "Programas sociales"],
     "guardia24h": false
   },
   {
@@ -1331,7 +1425,7 @@ const CENTROS_DATA = [
     "id": "obras-servicios",
     "nombre": "Obras y Servicios Públicos",
     "tipo": "oficina",
-    "lat": -34.5198139, "lng": -58.7455762,
+    "lat": -34.526905857859155, "lng": -58.757410087013355,
     "direccion": "Lavalle 2526, José C. Paz",
     "telefono": "(02320) 571000",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1343,7 +1437,7 @@ const CENTROS_DATA = [
     "id": "biblioteca",
     "nombre": "Biblioteca Municipal",
     "tipo": "educacion",
-    "lat": -34.5240687, "lng": -58.7522799,
+    "lat": -34.524120636493585, "lng": -58.75220695342329,
     "direccion": "Lavalle 2025, José C. Paz",
     "telefono": "(02320) 664550",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1355,7 +1449,7 @@ const CENTROS_DATA = [
     "id": "consejo-deliberante",
     "nombre": "Consejo Deliberante",
     "tipo": "oficina",
-    "lat": -34.5193908, "lng": -58.7526770,
+    "lat": -34.52162332523258, "lng": -58.758766933977725,
     "direccion": "Av. Hipólito Yrigoyen 2302, José C. Paz",
     "telefono": "11-3037-2834",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1367,7 +1461,7 @@ const CENTROS_DATA = [
     "id": "sipem",
     "nombre": "SIPEM",
     "tipo": "oficina",
-    "lat": -34.5202224, "lng": -58.7660275,
+    "lat": -34.51712098023729, "lng": -58.768714066933995,
     "direccion": "Ramón Falcón 850, José C. Paz",
     "telefono": "(02320) 526042",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1379,7 +1473,7 @@ const CENTROS_DATA = [
     "id": "deportes",
     "nombre": "Secretaría de Deportes",
     "tipo": "oficina",
-    "lat": -34.5072024, "lng": -58.7455843,
+    "lat": -34.523248077333285, "lng": -58.752591392621625,
     "direccion": "Canning 799, José C. Paz",
     "telefono": "11-4087-4027",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1403,7 +1497,7 @@ const CENTROS_DATA = [
     "id": "sec-comercio",
     "nombre": "Secretaría de Comercio e Industrias",
     "tipo": "oficina",
-    "lat": -34.5168303, "lng": -58.7439083,
+    "lat": -34.52335621666544, "lng": -58.75346497285114,
     "direccion": "Av. Altube 2075, José C. Paz",
     "telefono": "(02320) 535974",
     "horario": "Lun–Vie 8:00–16:00",
@@ -1415,7 +1509,7 @@ const CENTROS_DATA = [
     "id": "comisaria-1",
     "nombre": "Comisaría 1era",
     "tipo": "seguridad",
-    "lat": -34.522737, "lng": -58.752725,
+    "lat": -34.52270367333664, "lng": -58.752733455700636,
     "direccion": "Altube 1998, José C. Paz",
     "telefono": "(02320) 447291",
     "horario": "24 hs",
@@ -1442,7 +1536,7 @@ const CENTROS_DATA = [
     "id": "caps-9-de-julio",
     "nombre": "CAPS 9 de Julio",
     "tipo": "caps",
-    "lat": -34.5250678, "lng": -58.7324971,
+    "lat": -34.52078194424525, "lng": -58.73766657769274,
     "direccion": "D'Elía 4265, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1454,7 +1548,7 @@ const CENTROS_DATA = [
     "id": "caps-alberdi",
     "nombre": "CAPS Alberdi",
     "tipo": "caps",
-    "lat": -34.5061348, "lng": -58.7614555,
+    "lat": -34.50611610925523, "lng": -58.761797241381,
     "direccion": "Arregui y Montes de Oca, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1478,7 +1572,7 @@ const CENTROS_DATA = [
     "id": "caps-la-paz",
     "nombre": "CAPS La Paz",
     "tipo": "caps",
-    "lat": -34.5215, "lng": -58.7712,
+    "lat": -34.52218260969696, "lng": -58.77228409137353,
     "direccion": "Oribe y Castañeda, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1490,7 +1584,7 @@ const CENTROS_DATA = [
     "id": "caps-las-acacias",
     "nombre": "CAPS Las Acacias",
     "tipo": "caps",
-    "lat": -34.5407, "lng": -58.7603,
+    "lat": -34.54060368786443, "lng": -58.75973432175797,
     "direccion": "Gral. Pintos y Eva Duarte de Perón, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1514,7 +1608,7 @@ const CENTROS_DATA = [
     "id": "caps-mirador-altube",
     "nombre": "CAPS Mirador Altube",
     "tipo": "caps",
-    "lat": -34.5110, "lng": -58.7690,
+    "lat": -34.53631114564954, "lng": -58.78966515352125,
     "direccion": "Ruta Prov. 197 y Tres Marías esq. Salto, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1526,7 +1620,7 @@ const CENTROS_DATA = [
     "id": "caps-primavera",
     "nombre": "CAPS Primavera",
     "tipo": "caps",
-    "lat": -34.5254, "lng": -58.7887,
+    "lat": -34.52950775058294, "lng": -58.79394733792955,
     "direccion": "Santa Marta y Ayacucho, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1538,7 +1632,7 @@ const CENTROS_DATA = [
     "id": "caps-sagrada-familia",
     "nombre": "CAPS Sagrada Familia",
     "tipo": "caps",
-    "lat": -34.5069, "lng": -58.7963,
+    "lat": -34.50960682155099, "lng": -58.786497002531895,
     "direccion": "Uspallata y Londres, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1562,7 +1656,7 @@ const CENTROS_DATA = [
     "id": "caps-san-roque",
     "nombre": "CAPS San Roque",
     "tipo": "caps",
-    "lat": -34.5260, "lng": -58.7305,
+    "lat": -34.51884296396385, "lng": -58.72307679937539,
     "direccion": "Cacique Coliqueo y Pavón, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1574,7 +1668,7 @@ const CENTROS_DATA = [
     "id": "caps-santa-paula",
     "nombre": "CAPS Santa Paula",
     "tipo": "caps",
-    "lat": -34.5129, "lng": -58.7827,
+    "lat": -34.50592687220248, "lng": -58.74736088556982,
     "direccion": "Piñeyro 755, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1586,7 +1680,7 @@ const CENTROS_DATA = [
     "id": "caps-sol-y-verde",
     "nombre": "CAPS Sol y Verde",
     "tipo": "caps",
-    "lat": -34.5017, "lng": -58.7994,
+    "lat": -34.50216512718331, "lng": -58.798731614243174,
     "direccion": "Dinamarca y Finlay, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1598,7 +1692,7 @@ const CENTROS_DATA = [
     "id": "caps-suizo-ideal",
     "nombre": "CAPS Suizo Ideal",
     "tipo": "caps",
-    "lat": -34.5193, "lng": -58.7248,
+    "lat": -34.533358783248715, "lng": -58.74036598140814,
     "direccion": "Chile 2000, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1610,7 +1704,7 @@ const CENTROS_DATA = [
     "id": "caps-trailer-piñeiro",
     "nombre": "CAPS Trailer Piñeiro",
     "tipo": "caps",
-    "lat": -34.5147, "lng": -58.7684,
+    "lat": -34.51627625476875, "lng": -58.76916722619744,
     "direccion": "Pedernera y Lacroze, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1622,7 +1716,7 @@ const CENTROS_DATA = [
     "id": "caps-piñeiro-2",
     "nombre": "CAPS Piñeiro II",
     "tipo": "caps",
-    "lat": -34.4855, "lng": -58.8088,
+    "lat": -34.51541072933933, "lng": -58.78039783140904,
     "direccion": "Carmen Puch 1673, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1634,7 +1728,7 @@ const CENTROS_DATA = [
     "id": "caps-urquiza",
     "nombre": "CAPS Urquiza",
     "tipo": "caps",
-    "lat": -34.4866, "lng": -58.7801,
+    "lat": -34.505833577934304, "lng": -58.81193199661413,
     "direccion": "Caracas 4785, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1646,7 +1740,7 @@ const CENTROS_DATA = [
     "id": "caps-zona-norte",
     "nombre": "CAPS Zona Norte",
     "tipo": "caps",
-    "lat": -34.5209, "lng": -58.7276,
+    "lat": -34.520845674889905, "lng": -58.7276436207134,
     "direccion": "Malnatti 3759, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1682,7 +1776,7 @@ const CENTROS_DATA = [
     "id": "comisaria-mujer",
     "nombre": "Comisaría de la Mujer",
     "tipo": "seguridad",
-    "lat": -34.5244, "lng": -58.7850,
+    "lat": -34.51723831741379, "lng": -58.79221068729228,
     "direccion": "Av. Croacia 1750, José C. Paz",
     "telefono": "",
     "horario": "24 hs",
@@ -1694,7 +1788,7 @@ const CENTROS_DATA = [
     "id": "comisaria-2",
     "nombre": "Comisaría 2da José C. Paz",
     "tipo": "seguridad",
-    "lat": -34.5182, "lng": -58.7538,
+    "lat": -34.51012832539087, "lng": -58.77735305329491,
     "direccion": "Fray Butler 2199, José C. Paz",
     "telefono": "",
     "horario": "24 hs",
@@ -1706,7 +1800,7 @@ const CENTROS_DATA = [
     "id": "comando-patrullas",
     "nombre": "Comando de Patrullas José C. Paz",
     "tipo": "seguridad",
-    "lat": -34.5305, "lng": -58.7800,
+    "lat": -34.53034665644897, "lng": -58.77973627668407,
     "direccion": "Av. Croacia 33, José C. Paz",
     "telefono": "",
     "horario": "24 hs",
@@ -1718,7 +1812,7 @@ const CENTROS_DATA = [
     "id": "secretaria-seguridad",
     "nombre": "Secretaría de Seguridad",
     "tipo": "seguridad",
-    "lat": -34.5247, "lng": -58.7651,
+    "lat": -34.5246391499017, "lng": -58.76473621669887,
     "direccion": "Artigas y Av. Hipólito Yrigoyen, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–16:00",
@@ -1730,7 +1824,7 @@ const CENTROS_DATA = [
     "id": "defensa-civil",
     "nombre": "Defensa Civil",
     "tipo": "seguridad",
-    "lat": -34.5020, "lng": -58.7830,
+    "lat": -34.52457074251988, "lng": -58.7646235857943,
     "direccion": "Artigas y Ruta Prov. 197, José C. Paz",
     "telefono": "",
     "horario": "24 hs",
@@ -1742,7 +1836,7 @@ const CENTROS_DATA = [
     "id": "comisaria-3",
     "nombre": "Comisaría 3ra",
     "tipo": "seguridad",
-    "lat": -34.5271, "lng": -58.7933,
+    "lat": -34.53055812109719, "lng": -58.789040403027286,
     "direccion": "Carabobo 300, José C. Paz",
     "telefono": "",
     "horario": "24 hs",
@@ -1750,23 +1844,12 @@ const CENTROS_DATA = [
     "servicios": ["Seguridad", "Emergencias policiales", "Denuncias"],
     "guardia24h": true
   },
-  {
-    "id": "desarrollo-social",
-    "nombre": "Desarrollo Social",
-    "tipo": "social",
-    "lat": -34.5168, "lng": -58.7471,
-    "direccion": "Hipólito Irigoyen 2945, José C. Paz",
-    "telefono": "",
-    "horario": "Lun–Vie 8:00–15:00",
-    "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "15:00",
-    "servicios": ["Asistencia social", "Programas sociales", "Atención al vecino"],
-    "guardia24h": false
-  },
+
   {
     "id": "dinaf",
     "nombre": "DINAF",
     "tipo": "social",
-    "lat": -34.5178, "lng": -58.7402,
+    "lat": -34.52236258987871, "lng": -58.74867822430849,
     "direccion": "Zuviría 4800, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–15:00",
@@ -1778,7 +1861,7 @@ const CENTROS_DATA = [
     "id": "discapacidad",
     "nombre": "Discapacidad",
     "tipo": "social",
-    "lat": -34.5223, "lng": -58.7695,
+    "lat": -34.5265610993145, "lng": -58.77051045611872,
     "direccion": "Hipólito Irigoyen 3151, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–15:00",
@@ -1802,7 +1885,7 @@ const CENTROS_DATA = [
     "id": "mediacion-comunitaria",
     "nombre": "Centro de Mediación Comunitaria y Vecinal",
     "tipo": "social",
-    "lat": -34.5156, "lng": -58.7693,
+    "lat": -34.52007476637447, "lng": -58.75274775310244,
     "direccion": "Federico Lacroze 5060, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–15:00",
@@ -1834,35 +1917,13 @@ const CENTROS_DATA = [
     "servicios": ["Tarjeta SUBE", "Carga y alta de SUBE", "Atención al usuario"],
     "guardia24h": false
   },
-  {
-    "id": "delegacion-mujer",
-    "nombre": "Delegación General de la Mujer",
-    "tipo": "social",
-    "lat": -34.5162, "lng": -58.7700,
-    "direccion": "Melvin Jones 5060 2° piso, José C. Paz",
-    "telefono": "",
-    "horario": "Lun–Vie 8:00–15:00",
-    "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "15:00",
-    "servicios": ["Políticas de género", "Asistencia a la mujer", "Programas de igualdad"],
-    "guardia24h": false
-  },
-  {
-    "id": "centro-emergentes",
-    "nombre": "Centro de Emergentes",
-    "tipo": "social",
-    "lat": -34.5362, "lng": -58.7432,
-    "direccion": "Av. Gaspar Campos 6372, José C. Paz",
-    "telefono": "",
-    "horario": "Lun–Vie 8:00–15:00",
-    "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "15:00",
-    "servicios": ["Atención de emergencias sociales", "Asistencia urgente"],
-    "guardia24h": false
-  },
+
+
   {
     "id": "centro-bella-estacion",
     "nombre": "Centro Bella Estación",
     "tipo": "social",
-    "lat": -34.5188, "lng": -58.7518,
+    "lat": -34.517253710555416, "lng": -58.752937239205934,
     "direccion": "Arregui 241, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–15:00",
@@ -1872,21 +1933,21 @@ const CENTROS_DATA = [
   },
   {
     "id": "dir-casa-tierras",
-    "nombre": "Dirección General de Casa de Tierras",
+    "nombre": "Dir. Gral. Casa de Tierras y Centro de Emergentes",
     "tipo": "social",
-    "lat": -34.524287, "lng": -58.754767,
+    "lat": -34.52433114630997, "lng": -58.75468973171631,
     "direccion": "Av. Gaspar Campos 6372, José C. Paz",
     "telefono": "(02320) 536176",
     "horario": "Lun–Vie 8:00–14:00",
     "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "14:00",
-    "servicios": ["Regularización de tierras", "Escrituras", "Loteos"],
+    "servicios": ["Regularización de tierras", "Escrituras", "Loteos", "Atención de emergencias sociales", "Asistencia urgente"],
     "guardia24h": false
   },
   {
     "id": "teatro-municipal",
     "nombre": "Dir. Gral. de Cultura — Teatro Municipal",
     "tipo": "social",
-    "lat": -34.5241, "lng": -58.7524,
+    "lat": -34.52401327072318, "lng": -58.752094201202034,
     "direccion": "Gral. Lavalle 2015, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–15:00",
@@ -1919,34 +1980,23 @@ const CENTROS_DATA = [
     "guardia24h": false
   },
   {
-    "id": "juzgado-faltas-2",
-    "nombre": "Juzgado de Faltas N°2",
+    "id": "juzgado-faltas",
+    "nombre": "Juzgado de Faltas y Delegación General de la Mujer",
     "tipo": "juzgado",
-    "lat": -34.5150, "lng": -58.7688,
-    "direccion": "Federico Lacroce 5036, José C. Paz",
+    "lat": -34.52007476637447, "lng": -58.75274775310244,
+    "direccion": "Federico Lacroze 5036 / Melvin Jones 5060, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
     "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "14:00",
-    "servicios": ["Juzgado de faltas municipal", "Infracciones", "Contravenciones"],
+    "servicios": ["Juzgado de faltas municipal", "Infracciones", "Contravenciones", "Políticas de género", "Asistencia a la mujer"],
     "guardia24h": false
   },
-  {
-    "id": "juzgado-faltas-3-4",
-    "nombre": "Juzgados de Faltas N°3 y N°4",
-    "tipo": "juzgado",
-    "lat": -34.5158, "lng": -58.7695,
-    "direccion": "Melvin Jones 5060, José C. Paz",
-    "telefono": "",
-    "horario": "Lun–Vie 8:00–14:00",
-    "diasHorario": "L-V", "horarioDesde": "08:00", "horarioHasta": "14:00",
-    "servicios": ["Juzgado de faltas municipal", "Infracciones", "Contravenciones"],
-    "guardia24h": false
-  },
+
   {
     "id": "juzgado-de-paz",
     "nombre": "Juzgado de Paz",
     "tipo": "juzgado",
-    "lat": -34.5227, "lng": -58.7498,
+    "lat": -34.5254920200236, "lng": -58.755230920185504,
     "direccion": "Lavalle 2286, José C. Paz",
     "telefono": "",
     "horario": "Lun–Vie 8:00–14:00",
@@ -1958,7 +2008,7 @@ const CENTROS_DATA = [
     "id": "bomberos",
     "nombre": "Cuartel de Bomberos",
     "tipo": "seguridad",
-    "lat": -34.5132, "lng": -58.7364,
+    "lat": -34.51496118970932, "lng": -58.739968911145176,
     "direccion": "San Agustín y Pasaje Azul, José C. Paz",
     "telefono": "100",
     "horario": "24 hs",
@@ -2764,7 +2814,7 @@ function activarModoManual() {
   q('gps-btn').classList.add('manual');
   q('map-wrap').classList.add('manual-mode');
   q('manual-banner').classList.add('vis');
-  notif('📍 Tocá el mapa para fijar tu ubicación', 99999);
+  notif('Tocá el mapa para fijar tu ubicación', 99999);
 }
 
 function desactivarModoManual() {
@@ -2787,7 +2837,7 @@ map.on('click', e => {
     desactivarModoManual();
     gpsMode = 'off';
     q('gps-btn').classList.add('active');
-    notif('✅ Ubicación fijada manualmente', 3000);
+    notif('Ubicación fijada manualmente.', 3000);
     return;
   }
   cerrarTarjeta();
@@ -2795,22 +2845,22 @@ map.on('click', e => {
 
 function solicitarGPS() {
   if (!('geolocation' in navigator)) {
-    notif('⚠ Tu navegador no soporta geolocalización.');
+    notif('Tu navegador no soporta geolocalización.');
     return;
   }
   q('gps-btn').classList.add('searching');
-  notif('📡 Buscando tu ubicación…', 8000);
+  notif('Buscando tu ubicación…', 8000);
 
   navigator.geolocation.getCurrentPosition(
     pos => onPosOk(pos),
     err => {
       q('gps-btn').classList.remove('searching');
       const msgs = {
-        1: '🔒 Permiso de ubicación denegado. Podés buscar tu dirección manualmente.',
-        2: '📡 No se pudo obtener la ubicación. Verificá tu señal GPS.',
+        1: 'Permiso de ubicación denegado. Podés buscar tu dirección manualmente.',
+        2: 'No se pudo obtener la ubicación. Verificá tu señal GPS.',
         3: '⏱ Tiempo agotado buscando ubicación.'
       };
-      notif(msgs[err.code] || '⚠ Error de geolocalización.', 6000);
+      notif(msgs[err.code] || 'Error de geolocalización.', 6000);
     },
     { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
   );
@@ -2851,7 +2901,7 @@ function detenerGPS() {
   userMarker?.remove(); userMarker = null; userPos = null;
   q('gps-btn').classList.remove('active', 'searching');
   limpiarRuta();
-  notif('📍 Ubicación desactivada.');
+  notif('Ubicación desactivada.');
 }
 
 /* ── Marcador del usuario (punto azul animado) ── */
@@ -2900,7 +2950,7 @@ function mostrarCentroMasCercano() {
   const min = Math.round(p.dist / 80); // ~80 m/min caminando
 
   notif(
-    `📍 <strong>${htmlEsc(p.nombre)}</strong> — ${km} · ~${min} min caminando`,
+    `<strong>${htmlEsc(p.nombre)}</strong> — ${km} · ~${min} min caminando`,
     7000
   );
 }
@@ -2916,7 +2966,7 @@ async function calcularRuta(destino, modo = 'foot') {
      La ruta se calculará automáticamente en onPosOk cuando el permiso sea concedido. */
   if (!userPos) {
     pendingNavModo = modo;
-    notif('📡 Activando ubicación… el recorrido empezará automáticamente.');
+    notif('Activando ubicación… el recorrido empezará automáticamente.');
     solicitarGPS();
     return;
   }
@@ -2933,7 +2983,7 @@ async function calcularRuta(destino, modo = 'foot') {
   /* Resaltar tab activo */
   q('tab-walk').className  = 'nav-tab' + (modo === 'foot'    ? ' on-walk'  : '');
   q('tab-drive').className = 'nav-tab' + (modo === 'driving' ? ' on-drive' : '');
-  q('nav-mode-icon').textContent = modo === 'foot' ? '🚶' : '🚗';
+  q('nav-mode-icon').textContent = modo === 'foot' ? 'A pie' : 'Auto';
 
   const origin = `${userPos.lng},${userPos.lat}`;
   const dest   = `${destino.lng},${destino.lat}`;
@@ -2976,7 +3026,7 @@ async function calcularRuta(destino, modo = 'foot') {
 
   } catch (e) {
     q('nav-panel').classList.remove('vis');
-    notif(`⚠ No se pudo calcular la ruta: ${e.message}`, 5000);
+    notif(`No se pudo calcular la ruta: ${e.message}`, 5000);
   }
 }
 
@@ -2986,8 +3036,8 @@ function extraerPasos(steps, modo, color) {
   const icoMap  = {
     'turn-left':       '↰', 'turn-right':      '↱',
     'turn-slight-left':'↙', 'turn-slight-right':'↘',
-    'continue':        '↑', 'depart':           '🏁',
-    'arrive':          '📍', 'roundabout':      '🔄',
+    'continue':        '↑', 'depart':           '↑',
+    'arrive':          '◎', 'roundabout':      '↺',
     'merge':           '↗', 'fork':             '⑂',
   };
 
@@ -3009,7 +3059,7 @@ function extraerPasos(steps, modo, color) {
           <span class="step-ico">${ico}</span>
           <div>
             <div class="step-txt">
-              ${tipo === 'arrive' ? '📍 Llegás a ' + htmlEsc(navDestino?.nombre || 'destino') : `Seguí ${name}`}
+              ${tipo === 'arrive' ? 'Llegás a ' + htmlEsc(navDestino?.nombre || 'destino') : `Seguí ${name}`}
             </div>
             <div class="step-meta">${distT}</div>
           </div>
@@ -3074,7 +3124,7 @@ function navBtnClick(modo) {
     navDestino = centros.find(c => c.id === selectedId) || null;
   }
   if (!navDestino) {
-    notif('⚠ Seleccioná un centro primero.');
+    notif('Seleccioná un centro primero.');
     return;
   }
   q('card-walk').classList.toggle('active',  modo === 'foot');
@@ -3131,23 +3181,35 @@ const ICO_SOL  = `<circle cx="8" cy="8" r="3" fill="currentColor"/>
   <line x1="13" y1="3"  x2="11.5" y2="4.5"  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
   <line x1="4.5" y1="11.5" x2="3" y2="13"   stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;
 
-let isDark = true;
+let isDark = false;
+let isSat  = false;
+
+const ESRI_TILES = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+
+function aplicarTema() {
+  if (isSat) return; // satélite manda
+  const servers = ['a','b','c'];
+  const tileUrl = isDark ? DARK_TILES : LIGHT_TILES;
+  map.getSource('carto').setTiles(servers.map(s => tileUrl.replace('{s}', s)));
+  map.getCanvas().style.filter = isDark ? DARK_FILTER : LIGHT_FILTER;
+}
 
 q('theme-btn').addEventListener('click', () => {
   isDark = !isDark;
   document.documentElement.setAttribute('data-theme', isDark ? '' : 'light');
-
-  /* Cambiar tiles del mapa */
-  const servers = ['a','b','c'];
-  const tileUrl = isDark ? DARK_TILES : LIGHT_TILES;
-  const tiles   = servers.map(s => tileUrl.replace('{s}', s));
-  map.getSource('carto').setTiles(tiles);
-
-  /* Cambiar filtro CSS del canvas del mapa */
-  map.getCanvas().style.filter = isDark ? DARK_FILTER : LIGHT_FILTER;
-
-  /* Cambiar ícono del botón */
   q('theme-ico').innerHTML = isDark ? ICO_LUNA : ICO_SOL;
+  aplicarTema();
+});
+
+q('sat-btn').addEventListener('click', () => {
+  isSat = !isSat;
+  q('sat-btn').classList.toggle('active', isSat);
+
+  if (isSat) {
+    map.easeTo({ pitch: 50, bearing: -20, duration: 800 });
+  } else {
+    map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
+  }
 });
 
 /* ── Toggle sidebar ── */
