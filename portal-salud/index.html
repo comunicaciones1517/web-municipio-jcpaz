@@ -2055,8 +2055,8 @@ function filtrados() {
                  c.servicios.some(s => s.toLowerCase().includes(q));
       if (!ok) return false;
     }
-    /* Tipo */
-    if (tipos.length > 0 && !tipos.includes(c.tipo)) return false;
+    /* Tipo — si no hay ninguno activo, ocultar todo */
+    if (tipos.length === 0 || !tipos.includes(c.tipo)) return false;
     /* Servicio */
     if (haySrv) {
       const ok = (guard && c.guardia24h)         ||
