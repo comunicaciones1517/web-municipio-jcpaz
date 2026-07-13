@@ -105,7 +105,7 @@
   },
   {
     "id": "juzgado-de-faltas",
-    "name": "Juzgado de Faltas N° 4",
+    "name": "Juzgado de Faltas",
     "address": "Federico Lacroze 5036, José C. Paz",
     "zone": "Centro",
     "phone": "(02320) 447150",
@@ -125,7 +125,8 @@
       "Consulta de expedientes de faltas"
     ],
     "photo": "/oficinas/juzgado-de-faltas.jpg",
-    "mapLink": "https://maps.google.com/maps?q=Federico+Lacroze+5036,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed"
+    "mapLink": "https://maps.google.com/maps?q=Federico+Lacroze+5036,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "En este edificio funcionan los Juzgados de Faltas N° 1, 2, 3 y 4."
   },
   {
     "id": "sonosis",
