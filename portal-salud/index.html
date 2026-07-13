@@ -3175,7 +3175,6 @@ let isSat  = false;
 const ESRI_TILES = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 
 function aplicarTema() {
-  if (isSat) return; // satélite manda
   const servers = ['a','b','c'];
   const tileUrl = isDark ? DARK_TILES : LIGHT_TILES;
   map.getSource('carto').setTiles(servers.map(s => tileUrl.replace('{s}', s)));
