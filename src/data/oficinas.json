@@ -2,10 +2,10 @@
   {
     "id": "secretaria-deportes",
     "name": "Secretaría de Deportes",
-    "address": "Canning 799, José C. Paz",
+    "address": "Roque Sáenz Peña 4985, José C. Paz",
     "zone": "Centro",
     "phone": "11 4087-4027",
-    "photo": "/oficinas/secretaria-deportes.jpg",
+    "photo": "/oficinas/SECRETARIA DE DEPORTES.png",
     "hours": [
       { "day": "lunes",     "open": "08:00", "close": "14:00" },
       { "day": "martes",    "open": "08:00", "close": "14:00" },
@@ -22,7 +22,7 @@
       "Apoyo a clubes del distrito",
       "Préstamo de instalaciones deportivas"
     ],
-    "mapLink": "https://maps.google.com/maps?q=Roque+Sáenz+Peña+4981,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "mapLink": "https://maps.google.com/maps?q=Roque+Sáenz+Peña+4985,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "notes": "Sede de la Dirección General de Deportes Municipal."
   },
   {
