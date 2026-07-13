@@ -55,6 +55,7 @@ export default function Footer() {
                 { href: "/salud", label: "Salud y Hospitales" },
                 { href: "/oficinas", label: "Oficinas Municipales" },
                 { href: "/dependencias", label: "Dependencias" },
+                { href: "/hcd", label: "Concejo Deliberante" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

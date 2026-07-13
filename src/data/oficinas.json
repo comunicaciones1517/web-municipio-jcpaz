@@ -174,31 +174,6 @@
     "notes": "También: (02320) 423057. Email: defensaconsumidorjosecpaz@gmail.com. Asesoramiento telefónico Lun–Vie 8 a 14 hs."
   },
   {
-    "id": "honorable-concejo-deliberante",
-    "name": "Honorable Concejo Deliberante",
-    "address": "Hipólito Yrigoyen 2302, José C. Paz",
-    "zone": "Centro",
-    "phone": "11 3037-2834",
-    "photo": "/oficinas/honorable-concejo-deliberante.jpg",
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "14:00" },
-      { "day": "martes",    "open": "08:00", "close": "14:00" },
-      { "day": "miercoles", "open": "08:00", "close": "14:00" },
-      { "day": "jueves",    "open": "08:00", "close": "14:00" },
-      { "day": "viernes",   "open": "08:00", "close": "14:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "tramites": [
-      "Consulta de ordenanzas municipales",
-      "Acceso a expedientes legislativos",
-      "Presentación de notas al cuerpo deliberativo",
-      "Información sobre sesiones y actas"
-    ],
-    "mapLink": "https://maps.google.com/maps?q=Hipólito+Yrigoyen+2302,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
-    "notes": "Órgano legislativo del municipio. Web oficial: hcdjosecpaz.gob.ar"
-  },
-  {
     "id": "consejo-escolar",
     "name": "Consejo Escolar",
     "address": "Coronel Arias 2204, José C. Paz",

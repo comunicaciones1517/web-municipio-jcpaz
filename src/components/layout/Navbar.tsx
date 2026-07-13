@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/salud", label: "Salud" },
   { href: "/oficinas", label: "Oficinas" },
   { href: "/dependencias", label: "Dependencias" },
+  { href: "/hcd", label: "HCD" },
   { href: "https://comunicaciones1517.github.io/web-municipio-jcpaz/portal-salud/", label: "Mapa de Salud", external: true },
 ];
 

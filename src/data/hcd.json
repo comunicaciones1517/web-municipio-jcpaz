@@ -1,0 +1,25 @@
+{
+  "name": "Honorable Concejo Deliberante",
+  "address": "Hipólito Yrigoyen 2302, José C. Paz",
+  "zone": "Centro",
+  "phone": "11 3037-2834",
+  "photo": "/oficinas/honorable-concejo-deliberante.jpg",
+  "website": "https://hcdjosecpaz.gob.ar",
+  "hours": [
+    { "day": "lunes",     "open": "08:00", "close": "14:00" },
+    { "day": "martes",    "open": "08:00", "close": "14:00" },
+    { "day": "miercoles", "open": "08:00", "close": "14:00" },
+    { "day": "jueves",    "open": "08:00", "close": "14:00" },
+    { "day": "viernes",   "open": "08:00", "close": "14:00" },
+    { "day": "sabado",    "open": "cerrado", "close": "" },
+    { "day": "domingo",   "open": "cerrado", "close": "" }
+  ],
+  "funciones": [
+    "Consulta de ordenanzas municipales",
+    "Acceso a expedientes legislativos",
+    "Presentación de notas al cuerpo deliberativo",
+    "Información sobre sesiones y actas"
+  ],
+  "mapLink": "https://maps.google.com/maps?q=Hipólito+Yrigoyen+2302,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+  "description": "El Honorable Concejo Deliberante es el órgano legislativo del municipio de José C. Paz. Se encarga de la sanción de ordenanzas, resoluciones y declaraciones que regulan la vida institucional del distrito."
+}
