@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, MapPin, ExternalLink, Landmark } from "lucide-react";
+import { Phone, MapPin, Mail, ExternalLink, Landmark, Instagram } from "lucide-react";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import hcdData from "@/data/hcd.json";
 import type { DaySchedule } from "@/types";
@@ -75,18 +75,38 @@ export default function HCDPage() {
                 <MapPin className="h-4 w-4 text-primary-600 shrink-0 mt-0.5" />
                 <span className="text-gray-700">{hcd.address}</span>
               </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-primary-600 shrink-0" />
+                <a
+                  href="mailto:info.hcdjcp@gmail.com"
+                  className="text-primary-700 hover:underline"
+                >
+                  info.hcdjcp@gmail.com
+                </a>
+              </li>
             </ul>
-            {hcd.website && (
+            <div className="mt-4 flex flex-wrap gap-3">
+              {hcd.website && (
+                <a
+                  href={hcd.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-primary-600 hover:underline"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Sitio web oficial
+                </a>
+              )}
               <a
-                href={hcd.website}
+                href="https://www.instagram.com/hcdjosecpaz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm text-primary-600 hover:underline"
+                className="inline-flex items-center gap-2 text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
               >
-                <ExternalLink className="h-4 w-4" />
-                Sitio web oficial
+                <Instagram className="h-4 w-4" />
+                @hcdjosecpaz
               </a>
-            )}
+            </div>
           </div>
 
           {/* Funciones */}
