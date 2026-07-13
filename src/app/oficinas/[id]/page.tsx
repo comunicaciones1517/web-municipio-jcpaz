@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Phone, MapPin, ClipboardList, Info, FileText } from "lucide-react";
+import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText } from "lucide-react";
 import { getAllOffices, getOfficeById } from "@/lib/data/oficinas";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import PhoneLink from "@/components/shared/PhoneLink";
@@ -75,18 +75,49 @@ export default async function OfficeDetailPage({
             Contacto
           </h2>
           <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-2">
-            <PhoneLink number={office.phone} />
-            {(office as any).phoneReclamos && (
-              <div className="flex items-center gap-2 text-sm">
-                <Phone className="h-4 w-4 text-red-500 shrink-0" />
-                <span className="text-gray-500">Reclamos:</span>
+            {(office as any).phonesExtra ? (
+              <ul className="space-y-2">
+                {(office as any).phonesExtra.map((p: { number: string; label: string; horario: string }, i: number) => (
+                  <li key={i} className="flex flex-wrap items-center gap-2 text-sm">
+                    <Phone className="h-4 w-4 text-primary-600 shrink-0" />
+                    <a
+                      href={`tel:${p.number.replace(/\D/g, "")}`}
+                      className="text-primary-700 font-semibold hover:underline"
+                    >
+                      {p.number}
+                    </a>
+                    <span className="text-gray-500">({p.label})</span>
+                    <span className="text-xs text-gray-400">{p.horario}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <>
+                <PhoneLink number={office.phone} />
+                {(office as any).phoneReclamos && (
+                  <div className="flex flex-wrap items-center gap-2 text-sm">
+                    <Phone className="h-4 w-4 text-red-500 shrink-0" />
+                    <span className="text-gray-500">Reclamos:</span>
+                    <a
+                      href={`tel:${(office as any).phoneReclamos.replace(/\D/g, "")}`}
+                      className="text-red-600 font-semibold hover:underline"
+                    >
+                      {(office as any).phoneReclamos}
+                    </a>
+                    <span className="text-xs text-gray-400">(Lun–Vie 08:00 a 17:00)</span>
+                  </div>
+                )}
+              </>
+            )}
+            {(office as any).email && (
+              <div className="flex items-center gap-2 text-sm pt-1">
+                <Mail className="h-4 w-4 text-primary-600 shrink-0" />
                 <a
-                  href={`tel:${(office as any).phoneReclamos.replace(/\D/g, "")}`}
-                  className="text-red-600 font-semibold hover:underline"
+                  href={`mailto:${(office as any).email}`}
+                  className="text-primary-700 hover:underline"
                 >
-                  {(office as any).phoneReclamos}
+                  {(office as any).email}
                 </a>
-                <span className="text-xs text-gray-400">(Lun–Vie 08:00 a 17:00)</span>
               </div>
             )}
             <div className="pt-2 border-t border-gray-100">
@@ -124,6 +155,37 @@ export default async function OfficeDetailPage({
             Para consultas sobre trámites no listados, contactar la oficina directamente.
           </p>
         </section>
+
+        {/* Requisitos por trámite */}
+        {(office as any).requisitos && (() => {
+          const reqs = (office as any).requisitos as { titulo: string; items: string[] }[];
+          return (
+            <section>
+              <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+                <FileText className="h-5 w-5 text-primary-600" />
+                Requisitos por trámite
+              </h2>
+              <div className="space-y-4">
+                {reqs.map((req, i) => (
+                  <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+                    <summary className="px-4 py-3 cursor-pointer text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors flex items-center justify-between">
+                      {req.titulo}
+                      <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+                    </summary>
+                    <ul className="px-4 pb-4 pt-1 space-y-1.5 border-t border-gray-100">
+                      {req.items.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
+                          <span className="w-2 h-2 rounded-full bg-primary-500 shrink-0 mt-1.5" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Registro de título */}
         {(office as any).registroTitulo && (() => {

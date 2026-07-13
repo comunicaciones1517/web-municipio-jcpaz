@@ -150,17 +150,23 @@
   },
   {
     "id": "defensa-consumidor",
-    "name": "Defensa al Consumidor — OMIC",
+    "name": "Secretaría de Inspecciones Generales y Defensa del Consumidor",
     "address": "Av. José Altube 2075, José C. Paz",
     "zone": "Centro",
     "phone": "(02320) 332139",
+    "phonesExtra": [
+      { "number": "(02320) 332139", "label": "Recepción General", "horario": "Lun–Vie 08:00 a 16:00" },
+      { "number": "(02320) 332158", "label": "Habilitaciones", "horario": "Lun–Vie 08:00 a 16:00" },
+      { "number": "(02320) 423057", "label": "Mediación Comunitaria y Defensa del Consumidor", "horario": "Lun–Vie 08:00 a 16:00" }
+    ],
+    "email": "habilitacionesjcp@gmail.com",
     "photo": "/oficinas/defensa-consumidor.png",
     "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "14:00" },
-      { "day": "martes",    "open": "08:00", "close": "14:00" },
-      { "day": "miercoles", "open": "08:00", "close": "14:00" },
-      { "day": "jueves",    "open": "08:00", "close": "14:00" },
-      { "day": "viernes",   "open": "08:00", "close": "14:00" },
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
       { "day": "sabado",    "open": "cerrado", "close": "" },
       { "day": "domingo",   "open": "cerrado", "close": "" }
     ],
@@ -169,10 +175,86 @@
       "Reclamos por publicidad engañosa",
       "Mediación entre consumidor y comercio",
       "Asesoramiento sobre derechos del consumidor",
-      "Protección al consumidor hipervulnerable"
+      "Protección al consumidor hipervulnerable",
+      "Consultas previas para habilitaciones",
+      "Habilitaciones comerciales",
+      "Anexo de rubro",
+      "Anexo de M²",
+      "Cese parcial o total de comercio",
+      "Transferencia de habilitación"
+    ],
+    "requisitos": [
+      {
+        "titulo": "Consultas Previas",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Impuesto Municipal",
+          "Fotocopia de Pedido de Numeración Domiciliaria"
+        ]
+      },
+      {
+        "titulo": "Habilitaciones",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Impuesto Municipal",
+          "Fotocopia de Contrato de locación o comodato",
+          "Fotocopia de Escritura o boleto compra-venta (en caso de ser propietarios o comodato)",
+          "Fotocopia de Plano de Obra con certificado parcelario o fotocopia de pedido de numeración domiciliaria",
+          "Fotocopia de Constancia de Inscripción de ARCA y ARBA"
+        ]
+      },
+      {
+        "titulo": "Anexo de Rubro",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Seguridad e Higiene al día",
+          "Fotocopia de Constancia de Inscripción en ARCA y ARBA",
+          "Trámite de solicitud de habilitación anterior o denuncia de extravío"
+        ]
+      },
+      {
+        "titulo": "Anexo de M²",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Seguridad e Higiene al día",
+          "Fotocopia de Planos de Obra donde estén ubicados los M² anexados con el Certificado Parcelario",
+          "Trámite de Solicitud de Habilitación Anterior o Denuncia de extravío"
+        ]
+      },
+      {
+        "titulo": "Cese Parcial de Comercio",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Seguridad e Higiene al día",
+          "Trámite de Solicitud de Habilitación Anterior o Denuncia de extravío"
+        ]
+      },
+      {
+        "titulo": "Cese Total de Comercio",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Seguridad e Higiene al día",
+          "Fotocopia de Cese definitivo de ARBA en el domicilio o Carta expresando no darse de baja por no estar inscripto en ARBA",
+          "Trámite de Solicitud de Habilitación Anterior o Denuncia de extravío"
+        ]
+      },
+      {
+        "titulo": "Transferencia",
+        "items": [
+          "Fotocopia de DNI (ambas partes)",
+          "Fotocopia de VCP (Impuesto Municipal)",
+          "Propietario: Fotocopia del boleto de compra-venta o Escritura",
+          "Inquilino: Contrato de Locación (24 meses o más) detallado por ARBA o contrato de comodato (acompañado del boleto de compra-venta o escritura del propietario) timbrado por Bco. Provincia",
+          "Certificado Parcelario (Original) con fotocopia del Plano de Obra Aprobado (Dirección de Catastro)",
+          "Inscripción de ARCA (Monotributo o Responsable Inscripto)",
+          "Inscripción de ARBA (Ingresos Brutos) o Convenio Multilateral",
+          "Certificado de Habilitación anterior o formularios",
+          "Publicación en Boletín Oficial durante 5 días"
+        ]
+      }
     ],
     "mapLink": "https://maps.google.com/maps?q=Av.+José+Altube+2075,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
-    "notes": "También: (02320) 423057. Email: defensaconsumidorjosecpaz@gmail.com. Asesoramiento telefónico Lun–Vie 8 a 14 hs."
+    "notes": "Email: habilitacionesjcp@gmail.com"
   },
   {
     "id": "consejo-escolar",
