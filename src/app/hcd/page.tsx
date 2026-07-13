@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Phone, MapPin, ExternalLink, Landmark } from "lucide-react";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import hcdData from "@/data/hcd.json";
@@ -34,16 +33,6 @@ export default function HCDPage() {
       {/* Hero */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-600 text-white py-10 px-4">
         <div className="mx-auto max-w-4xl">
-          {hcd.photo && (
-            <div className="mb-5 rounded-xl overflow-hidden relative h-72">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${hcd.photo}`}
-                alt={`Fachada del ${hcd.name}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          )}
           <div className="flex items-center gap-3 mb-3">
             <Landmark className="h-7 w-7 text-yellow-400" />
             <span className="text-xs font-semibold bg-yellow-400/20 text-yellow-300 px-3 py-1 rounded-full">
