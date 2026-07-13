@@ -179,6 +179,7 @@
     "address": "Coronel Arias 2204, José C. Paz",
     "zone": "Centro",
     "phone": "(02320) 432177",
+    "phoneReclamos": "11-5691-0382",
     "photo": "/oficinas/consejo-escolar.jpg",
     "hours": [
       { "day": "lunes",     "open": "08:00", "close": "17:00" },
@@ -194,10 +195,22 @@
       "Provisión de materiales y mobiliario escolar",
       "Administración de auxiliares escolares",
       "Solicitudes de mantenimiento de escuelas",
-      "Información sobre el sistema educativo distrital"
+      "Información sobre el sistema educativo distrital",
+      "Registro de título (Lun–Vie 08:00 a 14:00, sin turno previo, solo domiciliados en José C. Paz)"
     ],
+    "registroTitulo": {
+      "requisitos": [
+        "Título Original",
+        "Planilla de registro de título",
+        "Fotocopia de DNI",
+        "Fotocopia del Último Título Registrado",
+        "Folio"
+      ],
+      "horario": "Lunes a viernes de 08:00 a 14:00",
+      "nota": "Sin turno previo. Solo para personas con domicilio en José C. Paz."
+    },
     "mapLink": "https://maps.google.com/maps?q=Coronel+Arias+2204,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
-    "notes": "Organismo de administración escolar del Distrito de José C. Paz. Presidente: Carlos Leiva."
+    "notes": "Organismo de administración escolar del Distrito de José C. Paz. Presidente: Carlos Leiva. Reclamos: 11-5691-0382 (Lun–Vie 08:00 a 17:00)."
   },
   {
     "id": "secretaria-educacion",

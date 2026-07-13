@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Phone, MapPin, ClipboardList, Info } from "lucide-react";
+import { ArrowLeft, Phone, MapPin, ClipboardList, Info, FileText } from "lucide-react";
 import { getAllOffices, getOfficeById } from "@/lib/data/oficinas";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import PhoneLink from "@/components/shared/PhoneLink";
@@ -76,6 +76,19 @@ export default async function OfficeDetailPage({
           </h2>
           <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-2">
             <PhoneLink number={office.phone} />
+            {(office as any).phoneReclamos && (
+              <div className="flex items-center gap-2 text-sm">
+                <Phone className="h-4 w-4 text-red-500 shrink-0" />
+                <span className="text-gray-500">Reclamos:</span>
+                <a
+                  href={`tel:${(office as any).phoneReclamos.replace(/\D/g, "")}`}
+                  className="text-red-600 font-semibold hover:underline"
+                >
+                  {(office as any).phoneReclamos}
+                </a>
+                <span className="text-xs text-gray-400">(Lun–Vie 08:00 a 17:00)</span>
+              </div>
+            )}
             <div className="pt-2 border-t border-gray-100">
               <MapLink href={office.mapLink} address={office.address} />
             </div>
@@ -111,6 +124,38 @@ export default async function OfficeDetailPage({
             Para consultas sobre trámites no listados, contactar la oficina directamente.
           </p>
         </section>
+
+        {/* Registro de título */}
+        {(office as any).registroTitulo && (() => {
+          const rt = (office as any).registroTitulo;
+          return (
+            <section>
+              <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+                <FileText className="h-5 w-5 text-primary-600" />
+                Registro de título
+              </h2>
+              <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-4">
+                <div>
+                  <p className="text-sm font-semibold text-gray-700 mb-2">Requisitos:</p>
+                  <ul className="space-y-1.5">
+                    {rt.requisitos.map((req: string, i: number) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                        <span className="w-2 h-2 rounded-full bg-primary-500 shrink-0" />
+                        {req}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="pt-3 border-t border-gray-100 space-y-1">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-semibold">Horario:</span> {rt.horario}
+                  </p>
+                  <p className="text-sm text-gray-600">{rt.nota}</p>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Notas */}
         {office.notes && (
