@@ -85,7 +85,7 @@ export default async function OfficeDetailPage({
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:underline"
                     >
-                      {aviso.linkTexto || "Más información"} →
+                      {aviso.linkTexto || "Más información"}
                     </a>
                   )}
                   {aviso.pie && (

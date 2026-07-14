@@ -142,7 +142,7 @@ export default function HCDPage() {
               rel="noopener noreferrer"
               className="text-sm text-primary-600 hover:underline flex items-center gap-1"
             >
-              Abrir en Google Maps →
+              Abrir en Google Maps
             </a>
           </div>
           <iframe

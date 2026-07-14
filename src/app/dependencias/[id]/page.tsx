@@ -111,7 +111,7 @@ export default async function DependenciaDetailPage({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-teal-600 hover:underline"
                 >
-                  Sitio web oficial →
+                  Sitio web oficial
                 </a>
               )}
               {dep.instagram && (
@@ -171,7 +171,7 @@ export default async function DependenciaDetailPage({
               rel="noopener noreferrer"
               className="text-sm text-teal-600 hover:underline flex items-center gap-1"
             >
-              Abrir en Google Maps →
+              Abrir en Google Maps
             </a>
           </div>
           <iframe
