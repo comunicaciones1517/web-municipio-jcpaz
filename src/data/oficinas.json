@@ -181,7 +181,11 @@
       "Anexo de rubro",
       "Anexo de M²",
       "Cese parcial o total de comercio",
-      "Transferencia de habilitación"
+      "Transferencia de habilitación",
+      "Cambio de domicilio comercial",
+      "Permiso precario / Subsistencia mínima",
+      "Permisos para artesanos",
+      "Permisos para puestos ambulantes"
     ],
     "requisitos": [
       {
@@ -250,6 +254,47 @@
           "Inscripción de ARBA (Ingresos Brutos) o Convenio Multilateral",
           "Certificado de Habilitación anterior o formularios",
           "Publicación en Boletín Oficial durante 5 días"
+        ]
+      },
+      {
+        "titulo": "Cambio de Domicilio",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Seguridad e Higiene al día",
+          "Fotocopia de Impuesto Municipal",
+          "Fotocopia de Contrato de Locación o Comodato",
+          "Fotocopia de Escritura o Boleto de Compra-Venta (en caso de ser propietarios o comodato)",
+          "Fotocopia de Plano de Obra con Certificado Parcelario o Fotocopia de Pedido de Numeración Domiciliaria",
+          "Fotocopia de Constancia de Inscripción en ARCA y ARBA (actualizada con nuevo domicilio comercial)",
+          "Trámite de solicitud de habilitación anterior"
+        ]
+      },
+      {
+        "titulo": "Permiso Precario / Subsistencia Mínima",
+        "items": [
+          "Fotocopia de DNI",
+          "Fotocopia de Impuesto Municipal",
+          "Fotocopia de Escritura de compra-venta",
+          "Fotocopia de Pedido de Numeración Domiciliaria"
+        ]
+      },
+      {
+        "titulo": "Artesanos",
+        "items": [
+          "DNI",
+          "Fotografía del permisario (4x4)",
+          "Rubro",
+          "Denominación del emprendimiento"
+        ]
+      },
+      {
+        "titulo": "Puestos Ambulantes",
+        "items": [
+          "Fotocopia de DNI (3 copias) o Pasaporte (3 copias)",
+          "Fotocopia de CUIL (3 copias)",
+          "Libreta sanitaria",
+          "Acreditación de residencia en el distrito (3 copias)",
+          "En caso de renovación, traer el expediente del año anterior"
         ]
       }
     ],
