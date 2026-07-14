@@ -128,7 +128,7 @@ export default function HomePage() {
             <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-800 mb-3">Dirección General de Rentas</h3>
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                Para consultar sobre tus tributos, vencimientos y trámites relacionados con la Dirección General de Rentas / Secretaría de Economía y Hacienda, ingresá al siguiente link:
+                Para consultar sobre tus tributos, vencimientos y trámites relacionados con la Dirección General de Rentas / Secretaría de Economía y Hacienda, podés hacerlo ingresando acá:
               </p>
               <a
                 href="https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0"
