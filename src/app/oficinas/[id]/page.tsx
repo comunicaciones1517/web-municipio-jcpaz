@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText, AlertTriangle } from "lucide-react";
+import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText, AlertTriangle, Car } from "lucide-react";
 import { getAllOffices, getOfficeById } from "@/lib/data/oficinas";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import PhoneLink from "@/components/shared/PhoneLink";
@@ -184,6 +184,37 @@ export default async function OfficeDetailPage({
             Para consultas sobre trámites no listados, contactar la oficina directamente.
           </p>
         </section>
+
+        {/* Categorías de licencia */}
+        {(office as any).categoriasLicencia && (() => {
+          const cats = (office as any).categoriasLicencia as { grupo: string; clases: { clase: string; descripcion: string }[] }[];
+          return (
+            <section>
+              <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+                <Car className="h-5 w-5 text-primary-600" />
+                Licencias por categoría
+              </h2>
+              <div className="space-y-4">
+                {cats.map((cat, i) => (
+                  <details key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group">
+                    <summary className="px-4 py-3 cursor-pointer text-sm font-bold text-gray-800 hover:bg-gray-50 transition-colors flex items-center justify-between">
+                      {cat.grupo}
+                      <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+                    </summary>
+                    <div className="px-4 pb-4 pt-1 border-t border-gray-100 space-y-2">
+                      {cat.clases.map((cl, j) => (
+                        <div key={j} className="flex items-start gap-2 text-sm">
+                          <span className="font-semibold text-primary-700 shrink-0 min-w-[3.5rem]">{cl.clase}</span>
+                          <span className="text-gray-700">{cl.descripcion}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Requisitos por trámite */}
         {(office as any).requisitos && (() => {

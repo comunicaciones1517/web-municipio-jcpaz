@@ -450,5 +450,164 @@
     ],
     "mapLink": "https://maps.google.com/maps?q=José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=14&output=embed",
     "notes": "⚠️ Dirección pendiente de verificación. Dependiente de la Secretaría de Desarrollo Social."
+  },
+  {
+    "id": "licencias-conducir",
+    "name": "Dirección General de Licencias de Conducir",
+    "address": "Coronel Arias 2267, José C. Paz",
+    "zone": "Centro",
+    "phone": "(02320) 532402",
+    "phonesExtra": [
+      { "number": "(02320) 532402", "label": "Turnos e información", "horario": "Lun–Vie 08:00 a 16:00" },
+      { "number": "(02320) 440330", "label": "Turnos e información", "horario": "Lun–Vie 08:00 a 16:00" }
+    ],
+    "email": "turnoslicenciasdeconducirjcp@gmail.com",
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "16:00" },
+      { "day": "martes",    "open": "08:00", "close": "16:00" },
+      { "day": "miercoles", "open": "08:00", "close": "16:00" },
+      { "day": "jueves",    "open": "08:00", "close": "16:00" },
+      { "day": "viernes",   "open": "08:00", "close": "16:00" },
+      { "day": "sabado",    "open": "08:00", "close": "11:00" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "tramites": [
+      "Primera licencia de conducir",
+      "Renovación por vencimiento",
+      "Cambio de domicilio",
+      "Licencia por robo o extravío",
+      "Sumar categoría",
+      "Renovación con más de 5 años de vencimiento"
+    ],
+    "aviso": {
+      "titulo": "¿Cómo solicitar tu primera licencia?",
+      "mensaje": "1. Presentar 1 fotocopia de DNI (con domicilio en José C. Paz). 2. Solicitar turno vía email a turnoslicenciasdeconducirjcp@gmail.com o telefónicamente al (02320) 532402 / 440330. 3. Prepararse para el examen descargando el manual del conductor.",
+      "link": "https://www.gba.gob.ar/static/seguridadvial/docs/manual_del_conductor.pdf",
+      "linkTexto": "Descargar Manual del Conductor"
+    },
+    "categoriasLicencia": [
+      {
+        "grupo": "A — Motovehículos de 2 ruedas",
+        "clases": [
+          { "clase": "A.1", "descripcion": "Motovehículos de dos ruedas con 50 cc de cilindrada. Desde los 16 años." },
+          { "clase": "A.1.2", "descripcion": "Motovehículos hasta 150 cc de cilindrada. Desde los 17 años." },
+          { "clase": "A.1.3", "descripcion": "Motovehículos de dos ruedas con más de 150 cc y hasta 300 cc. Menores de 21 años deben acreditar 2 años en clase A.1.2." },
+          { "clase": "A.1.4", "descripcion": "Motovehículos de dos ruedas de más de 300 cc. Menores de 21 años deben acreditar 2 años en clase A.1.3." },
+          { "clase": "A.2.1", "descripcion": "Triciclos y cuatriciclos sin cabina de hasta 300 cc. Desde los 17 años." },
+          { "clase": "A.2.2", "descripcion": "Triciclos y cuatriciclos sin cabina de más de 300 cc. Antes de los 21 años, acreditar 1 año en cualquier cilindrada de triciclo/cuatriciclo o 2 años en A.2.1." },
+          { "clase": "A.3", "descripcion": "Triciclos y cuatriciclos cabinados (UTV) de cualquier cilindrada con volante direccional. Menores de 21 años deben acreditar 2 años en clase A.2.2." }
+        ]
+      },
+      {
+        "grupo": "B — Automóviles particulares",
+        "clases": [
+          { "clase": "B.1", "descripcion": "Automóviles, camionetas, vans de uso privado, casas rodantes motorizadas y utilitarios hasta 3500 kg de peso total. Desde los 17 años." },
+          { "clase": "B.2", "descripcion": "Automóviles, camionetas, vans de uso privado, casas rodantes motorizadas y utilitarios hasta 3500 kg con acoplado de hasta 750 kg o casa rodante no motorizada. Antigüedad de 1 año en B.1." }
+        ]
+      },
+      {
+        "grupo": "C — Profesionales / Carga",
+        "clases": [
+          { "clase": "C.1", "descripcion": "Camión sin acoplado ni semiacoplado de más de 3500 kg y hasta 12000 kg. Incluye B.1." },
+          { "clase": "C.2", "descripcion": "Camión sin acoplado ni semiacoplado de más de 12000 kg y hasta 24000 kg. Incluye C.1." },
+          { "clase": "C.3", "descripcion": "Camión sin acoplado ni semiacoplado de más de 24000 kg. Incluye C.2." }
+        ]
+      },
+      {
+        "grupo": "D — Profesionales / Transporte de pasajeros",
+        "clases": [
+          { "clase": "D.1", "descripcion": "Transporte hasta 8 plazas (excluido conductor). Incluye B.1. Antigüedad de 1 año en B.1, mayor de 21 años para primera vez." },
+          { "clase": "D.2", "descripcion": "Transporte de más de 8 y hasta 20 plazas (excluido conductor)." },
+          { "clase": "D.3", "descripcion": "Transporte de más de 20 plazas (excluido conductor)." },
+          { "clase": "D.4", "descripcion": "Vehículos para servicios de urgencia, emergencias y similares. Debe acompañarse de la subclase A, B, C, D o E correspondiente." }
+        ]
+      },
+      {
+        "grupo": "E — Profesionales / Camiones y maquinaria especial",
+        "clases": [
+          { "clase": "E.1", "descripcion": "Vehículos clase C y/o D con uno o más remolques y/o articulaciones. Incluye B.2." },
+          { "clase": "E.2", "descripcion": "Maquinaria especial no agrícola. Antigüedad de 1 año en B.1 y mayor de 21 años." }
+        ]
+      },
+      {
+        "grupo": "F — Vehículos adaptados",
+        "clases": [
+          { "clase": "F", "descripcion": "Vehículos adaptados para personas con necesidades especiales. Evaluación por junta técnica con el vehículo que posea las adaptaciones compatibles con la discapacidad." }
+        ]
+      },
+      {
+        "grupo": "G — Vehículos agrícolas",
+        "clases": [
+          { "clase": "G.1", "descripcion": "Tractores agrícolas." },
+          { "clase": "G.2", "descripcion": "Maquinaria especial agrícola." },
+          { "clase": "G.3", "descripcion": "Tren agrícola. Debe acompañarse con B.1 o G.1 y acreditar 1 año de antigüedad en la subclase correspondiente." }
+        ]
+      }
+    ],
+    "requisitos": [
+      {
+        "titulo": "Renovación por vencimiento o cambio de domicilio — Particular",
+        "items": [
+          "2 fotocopias de DNI (con domicilio en José C. Paz)",
+          "1 fotocopia de la licencia (con domicilio en José C. Paz)"
+        ]
+      },
+      {
+        "titulo": "Renovación por vencimiento o cambio de domicilio — Profesional",
+        "items": [
+          "2 fotocopias de DNI (con domicilio en José C. Paz)",
+          "1 fotocopia de la licencia (con domicilio en José C. Paz)",
+          "1 fotocopia de Certificado de Antecedentes Penales vigente (dentro de los 30 días)"
+        ]
+      },
+      {
+        "titulo": "Licencia por robo o extravío — Particular",
+        "items": [
+          "Denuncia de extravío o robo",
+          "1 fotocopia de Libre de Deudas",
+          "1 fotocopia de DNI (con domicilio en José C. Paz)"
+        ]
+      },
+      {
+        "titulo": "Licencia por robo o extravío — Profesional",
+        "items": [
+          "Denuncia de extravío o robo y Libre de Deudas",
+          "1 fotocopia de DNI (con domicilio en José C. Paz)",
+          "1 fotocopia de la licencia (con domicilio en José C. Paz)",
+          "1 fotocopia de Certificado de Antecedentes Penales vigente (dentro de los 30 días)"
+        ]
+      },
+      {
+        "titulo": "Primera licencia",
+        "items": [
+          "2 fotocopias de DNI (con domicilio en José C. Paz)"
+        ]
+      },
+      {
+        "titulo": "Sumar categoría — Particular",
+        "items": [
+          "2 fotocopias de DNI (con domicilio en José C. Paz)",
+          "1 fotocopia de la licencia (con domicilio en José C. Paz)"
+        ]
+      },
+      {
+        "titulo": "Sumar categoría — Profesional",
+        "items": [
+          "2 fotocopias de DNI (con domicilio en José C. Paz)",
+          "1 fotocopia de la licencia (con domicilio en José C. Paz)",
+          "1 fotocopia de Certificado de Antecedentes Penales vigente (dentro de los 30 días)",
+          "Se rendirá examen escrito y prueba de manejo"
+        ]
+      },
+      {
+        "titulo": "Vencimiento mayor a 5 años o cambio de domicilio fuera de plazo (más de 90 días)",
+        "items": [
+          "2 fotocopias de DNI (con domicilio en José C. Paz)",
+          "1 fotocopia de la licencia (de no poseerla, presentar denuncia de extravío)"
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Coronel+Arias+2267,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "notes": "Turnos: vía email a turnoslicenciasdeconducirjcp@gmail.com o telefónicamente al (02320) 532402 / 440330."
   }
 ]
