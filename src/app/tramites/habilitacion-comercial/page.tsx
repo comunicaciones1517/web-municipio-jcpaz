@@ -126,30 +126,6 @@ export default function HabilitacionComercialPage() {
           </div>
         </div>
 
-        {/* Mapa */}
-        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
-            <h2 className="text-base font-bold text-gray-800">Ubicación</h2>
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address + ", Buenos Aires, Argentina")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-primary-600 hover:underline flex items-center gap-1"
-            >
-              Abrir en Google Maps
-            </a>
-          </div>
-          <iframe
-            src={office.mapLink}
-            width="100%"
-            height="280"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
-
         {/* Requisitos */}
         {requisitos && (
           <section>
@@ -188,6 +164,30 @@ export default function HabilitacionComercialPage() {
             </div>
           </section>
         )}
+
+        {/* Mapa */}
+        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+            <h2 className="text-base font-bold text-gray-800">Ubicación</h2>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address + ", Buenos Aires, Argentina")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary-600 hover:underline flex items-center gap-1"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+          <iframe
+            src={office.mapLink}
+            width="100%"
+            height="280"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
 
         {/* Link a la oficina */}
         <div className="text-center pt-4">
