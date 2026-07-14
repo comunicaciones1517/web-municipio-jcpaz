@@ -8,8 +8,6 @@ import {
   FileText,
   Car,
   Store,
-  DollarSign,
-  Smartphone,
   ExternalLink,
 } from "lucide-react";
 
@@ -128,10 +126,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <DollarSign className="h-7 w-7 text-emerald-600" />
-                <h3 className="text-lg font-bold text-gray-800">Dirección General de Rentas</h3>
-              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Dirección General de Rentas</h3>
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
                 Para consultar sobre tus tributos, vencimientos y trámites relacionados con la Dirección General de Rentas / Secretaría de Economía y Hacienda, ingresá al siguiente link:
               </p>
@@ -147,10 +142,7 @@ export default function HomePage() {
             </div>
 
             <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Smartphone className="h-7 w-7 text-blue-600" />
-                <h3 className="text-lg font-bold text-gray-800">App Municipalidad de José C. Paz</h3>
-              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-3">App Municipalidad de José C. Paz</h3>
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
                 Recordá que ahora podés pagar tus tributos de forma más rápida y fácil con la App Municipalidad de José C. Paz.
               </p>
