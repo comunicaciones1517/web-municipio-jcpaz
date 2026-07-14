@@ -8,6 +8,9 @@ import {
   FileText,
   Car,
   Store,
+  DollarSign,
+  Smartphone,
+  ExternalLink,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -116,6 +119,51 @@ export default function HomePage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Rentas y App */}
+      <section className="py-10 px-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <DollarSign className="h-7 w-7 text-emerald-600" />
+                <h3 className="text-lg font-bold text-gray-800">Dirección General de Rentas</h3>
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Para consultar sobre tus tributos, vencimientos y trámites relacionados con la Dirección General de Rentas / Secretaría de Economía y Hacienda, ingresá al siguiente link:
+              </p>
+              <a
+                href="https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold bg-emerald-600 text-white px-4 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Consultar tributos
+              </a>
+            </div>
+
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <Smartphone className="h-7 w-7 text-blue-600" />
+                <h3 className="text-lg font-bold text-gray-800">App Municipalidad de José C. Paz</h3>
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Recordá que ahora podés pagar tus tributos de forma más rápida y fácil con la App Municipalidad de José C. Paz.
+              </p>
+              <a
+                href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold bg-blue-600 text-white px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Descargar en Google Play
+              </a>
+            </div>
           </div>
         </div>
       </section>
