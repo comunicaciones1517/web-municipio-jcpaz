@@ -135,7 +135,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Link
-              href="/oficinas/defensa-consumidor"
+              href="/tramites/habilitacion-comercial"
               className="group border-2 rounded-xl p-6 transition-all duration-200 bg-amber-50 border-amber-200 hover:bg-amber-100"
             >
               <div className="flex items-start justify-between mb-3">
@@ -159,7 +159,7 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/oficinas/licencias-conducir"
+              href="/tramites/licencias-conducir"
               className="group border-2 rounded-xl p-6 transition-all duration-200 bg-indigo-50 border-indigo-200 hover:bg-indigo-100"
             >
               <div className="flex items-start justify-between mb-3">
