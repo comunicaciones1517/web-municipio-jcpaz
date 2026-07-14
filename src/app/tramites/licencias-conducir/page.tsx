@@ -52,7 +52,15 @@ export default function LicenciasConducirPage() {
               <AlertTriangle className="h-6 w-6 text-indigo-500 shrink-0 mt-0.5" />
               <div className="space-y-2">
                 <p className="font-bold text-indigo-900 text-sm">{aviso.titulo}</p>
-                <p className="text-sm text-indigo-800">{aviso.mensaje}</p>
+                {aviso.pasos ? (
+                  <ol className="list-decimal list-inside space-y-1.5 text-sm text-indigo-800">
+                    {(aviso.pasos as string[]).map((paso: string, i: number) => (
+                      <li key={i}>{paso}</li>
+                    ))}
+                  </ol>
+                ) : (
+                  <p className="text-sm text-indigo-800">{aviso.mensaje}</p>
+                )}
                 {aviso.link && (
                   <a
                     href={aviso.link}

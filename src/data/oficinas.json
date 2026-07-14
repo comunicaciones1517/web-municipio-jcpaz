@@ -481,7 +481,11 @@
     ],
     "aviso": {
       "titulo": "¿Cómo solicitar tu primera licencia?",
-      "mensaje": "1. Presentar 1 fotocopia de DNI (con domicilio en José C. Paz). 2. Solicitar turno vía email a turnoslicenciasdeconducirjcp@gmail.com o telefónicamente al (02320) 532402 / 440330. 3. Prepararse para el examen descargando el manual del conductor.",
+      "pasos": [
+        "Presentar 1 fotocopia de DNI (con domicilio en José C. Paz).",
+        "Solicitar turno vía email a turnoslicenciasdeconducirjcp@gmail.com o telefónicamente al (02320) 532402 / 440330.",
+        "Prepararse para el examen descargando el manual del conductor."
+      ],
       "link": "https://www.gba.gob.ar/static/seguridadvial/docs/manual_del_conductor.pdf",
       "linkTexto": "Descargar Manual del Conductor"
     },
