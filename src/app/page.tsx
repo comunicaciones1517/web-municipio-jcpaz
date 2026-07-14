@@ -5,6 +5,9 @@ import {
   Landmark,
   Phone,
   ArrowRight,
+  FileText,
+  Car,
+  Store,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -113,6 +116,71 @@ export default function HomePage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Trámites y Guía */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-center gap-3 mb-2">
+            <FileText className="h-7 w-7 text-primary-600" />
+            <h2 className="text-2xl font-bold text-gray-800">
+              Trámites y Guía
+            </h2>
+          </div>
+          <p className="text-gray-500 mb-8">
+            Consultá los requisitos antes de acercarte a la oficina.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <Link
+              href="/oficinas/defensa-consumidor"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-amber-50 border-amber-200 hover:bg-amber-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <Store className="h-8 w-8 text-amber-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                Habilitación Comercial
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Requisitos para habilitaciones, anexos de rubro y m², cese de
+                comercio, transferencias, permisos y más.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {["Habilitaciones", "Transferencia", "Cese", "Artesanos", "Ambulantes"].map((tag) => (
+                  <span key={tag} className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Link>
+
+            <Link
+              href="/oficinas/licencias-conducir"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-indigo-50 border-indigo-200 hover:bg-indigo-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <Car className="h-8 w-8 text-indigo-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                Licencias de Conducir
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Primera licencia, renovación, categorías A–G, requisitos
+                por trámite y cómo sacar turno.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {["Primera vez", "Renovación", "Categorías", "Robo/Extravío", "Profesional"].map((tag) => (
+                  <span key={tag} className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Link>
           </div>
         </div>
       </section>
