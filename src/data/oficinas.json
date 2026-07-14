@@ -298,6 +298,13 @@
         ]
       }
     ],
+    "aviso": {
+      "titulo": "NUEVO REQUISITO PARA TU HABILITACIÓN: Certificado libre de deuda alimentaria",
+      "mensaje": "A la hora de tramitar tu habilitación comercial, deberás acreditar no poseer deudas por pago de cuotas alimentarias. Para esto, presentarás tu certificado del RDAM (Registro de Deudores Alimentarios Morosos).",
+      "link": "https://rdam.mjus.gba.gob.ar/",
+      "linkTexto": "Solicitalo ingresando aquí",
+      "pie": "Requisito obligatorio para todo/a contribuyente. Ley 13.074."
+    },
     "mapLink": "https://maps.google.com/maps?q=Av.+José+Altube+2075,+José+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "notes": "Email: habilitacionesjcp@gmail.com"
   },

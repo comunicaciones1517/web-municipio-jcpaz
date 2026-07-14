@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText } from "lucide-react";
+import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText, AlertTriangle } from "lucide-react";
 import { getAllOffices, getOfficeById } from "@/lib/data/oficinas";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import PhoneLink from "@/components/shared/PhoneLink";
@@ -68,6 +68,35 @@ export default async function OfficeDetailPage({
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        {/* Aviso destacado */}
+        {(office as any).aviso && (() => {
+          const aviso = (office as any).aviso;
+          return (
+            <div className="bg-amber-50 border-2 border-amber-400 rounded-xl p-5 shadow-sm">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="h-6 w-6 text-amber-500 shrink-0 mt-0.5" />
+                <div className="space-y-2">
+                  <p className="font-bold text-amber-900 text-sm">{aviso.titulo}</p>
+                  <p className="text-sm text-amber-800">{aviso.mensaje}</p>
+                  {aviso.link && (
+                    <a
+                      href={aviso.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:underline"
+                    >
+                      {aviso.linkTexto || "Más información"} →
+                    </a>
+                  )}
+                  {aviso.pie && (
+                    <p className="text-xs text-amber-700 italic">*{aviso.pie}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Contacto */}
         <section>
           <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
