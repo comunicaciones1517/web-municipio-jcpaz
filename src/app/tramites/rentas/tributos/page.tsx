@@ -33,10 +33,13 @@ export default function TributosPage() {
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+          <Link
+            href="/tramites/rentas/tributos/cvp"
+            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
+          >
             <Receipt className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">C.V.P</span>
-          </div>
+          </Link>
           <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
             <ShieldCheck className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Seguridad E Higiene</span>
