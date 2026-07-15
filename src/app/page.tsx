@@ -10,6 +10,11 @@ import {
   Store,
   Smartphone,
   HardHat,
+  Ambulance,
+  Flame,
+  Shield,
+  Siren,
+  Wrench,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -67,21 +72,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Emergency bar */}
-      <section className="bg-red-600 text-white py-3 px-4">
-        <div className="mx-auto max-w-7xl flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm font-medium">
-          <Phone className="h-4 w-4 shrink-0" />
-          <span>Emergencia Médica: <strong>107 / 147</strong></span>
-          <span className="text-white/40">|</span>
-          <span>Bomberos: <strong>11 5661-5900</strong></span>
-          <span className="text-white/40">|</span>
-          <span>C.O.M: <strong>(02320) 536494</strong></span>
-          <span className="text-white/40">|</span>
-          <span>Defensa Civil: <strong>11 3933-3283</strong></span>
-          <span className="text-white/40">|</span>
-          <span>Patrulla Urbana: <strong>(02320) 570804</strong></span>
-          <span className="text-white/40">|</span>
-          <span>Obras y Servicios: <strong>(02320) 572000 / 573000</strong></span>
+      {/* Emergency grid */}
+      <section className="bg-red-600 text-white py-4 px-4">
+        <div className="mx-auto max-w-4xl">
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+            <a href="tel:107" className="flex flex-col items-center gap-1.5 bg-white/10 hover:bg-white/20 rounded-xl py-3 px-2 transition-colors text-center">
+              <Ambulance className="h-6 w-6" />
+              <span className="text-[11px] font-medium leading-tight">Emergencia</span>
+              <span className="text-sm font-bold">107</span>
+            </a>
+            <a href="tel:1156615900" className="flex flex-col items-center gap-1.5 bg-white/10 hover:bg-white/20 rounded-xl py-3 px-2 transition-colors text-center">
+              <Flame className="h-6 w-6" />
+              <span className="text-[11px] font-medium leading-tight">Bomberos</span>
+              <span className="text-sm font-bold">5661-5900</span>
+            </a>
+            <a href="tel:02320536494" className="flex flex-col items-center gap-1.5 bg-white/10 hover:bg-white/20 rounded-xl py-3 px-2 transition-colors text-center">
+              <Shield className="h-6 w-6" />
+              <span className="text-[11px] font-medium leading-tight">C.O.M</span>
+              <span className="text-sm font-bold">536494</span>
+            </a>
+            <a href="tel:1139333283" className="flex flex-col items-center gap-1.5 bg-white/10 hover:bg-white/20 rounded-xl py-3 px-2 transition-colors text-center">
+              <Siren className="h-6 w-6" />
+              <span className="text-[11px] font-medium leading-tight">Defensa Civil</span>
+              <span className="text-sm font-bold">3933-3283</span>
+            </a>
+            <a href="tel:02320570804" className="flex flex-col items-center gap-1.5 bg-white/10 hover:bg-white/20 rounded-xl py-3 px-2 transition-colors text-center">
+              <Siren className="h-6 w-6" />
+              <span className="text-[11px] font-medium leading-tight">Patrulla</span>
+              <span className="text-sm font-bold">570804</span>
+            </a>
+            <a href="tel:02320572000" className="flex flex-col items-center gap-1.5 bg-white/10 hover:bg-white/20 rounded-xl py-3 px-2 transition-colors text-center">
+              <Wrench className="h-6 w-6" />
+              <span className="text-[11px] font-medium leading-tight">Obras</span>
+              <span className="text-sm font-bold">572000</span>
+            </a>
+          </div>
         </div>
       </section>
 
