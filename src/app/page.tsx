@@ -8,7 +8,6 @@ import {
   FileText,
   Car,
   Store,
-  ExternalLink,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -121,45 +120,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Rentas y App */}
-      <section className="py-10 px-4">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-3">Dirección General de Rentas</h3>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                Para consultar sobre tus tributos, vencimientos y trámites relacionados con la Dirección General de Rentas / Secretaría de Economía y Hacienda, podés hacerlo ingresando acá:
-              </p>
-              <a
-                href="https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold bg-emerald-600 text-white px-4 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Consultar tributos
-              </a>
-            </div>
-
-            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-3">App Municipalidad de José C. Paz</h3>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                Recordá que ahora podés pagar tus tributos de forma más rápida y fácil con la App Municipalidad de José C. Paz.
-              </p>
-              <a
-                href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold bg-blue-600 text-white px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Descargar en Google Play
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Trámites y Guía */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="mx-auto max-w-7xl">
@@ -173,7 +133,7 @@ export default function HomePage() {
             Consultá los requisitos antes de acercarte a la oficina.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <Link
               href="/tramites/habilitacion-comercial"
               className="group border-2 rounded-xl p-6 transition-all duration-200 bg-amber-50 border-amber-200 hover:bg-amber-100"
@@ -216,6 +176,29 @@ export default function HomePage() {
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {["Primera vez", "Renovación", "Categorías", "Robo/Extravío", "Profesional"].map((tag) => (
                   <span key={tag} className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Link>
+
+            <Link
+              href="/tramites/rentas"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-emerald-50 border-emerald-200 hover:bg-emerald-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform ml-auto" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                Rentas y Tributos
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Consultá sobre tus tributos, vencimientos y trámites de la
+                Dirección General de Rentas. Descargá la App municipal.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {["Tributos", "Vencimientos", "App Municipal"].map((tag) => (
+                  <span key={tag} className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
                     {tag}
                   </span>
                 ))}
