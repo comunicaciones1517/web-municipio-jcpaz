@@ -190,14 +190,14 @@ export default function HomePage() {
                 <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform ml-auto" />
               </div>
               <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Rentas y Tributos
+                Dirección General de Rentas
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Consultá sobre tus tributos, vencimientos y trámites de la
                 Dirección General de Rentas. Descargá la App municipal.
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {["Tributos", "Vencimientos", "App Municipal"].map((tag) => (
+                {["Tributos", "Puntos de Pago", "App Municipal"].map((tag) => (
                   <span key={tag} className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
                     {tag}
                   </span>

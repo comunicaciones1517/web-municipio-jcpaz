@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Smartphone } from "lucide-react";
+import { ArrowLeft, ExternalLink, Smartphone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Rentas y Tributos — Dirección General de Rentas | José C. Paz",
+  title: "Dirección General de Rentas | José C. Paz",
   description:
     "Consultá sobre tus tributos, vencimientos y trámites de la Dirección General de Rentas / Secretaría de Economía y Hacienda de José C. Paz.",
 };
@@ -24,7 +24,7 @@ export default function RentasPage() {
           <span className="text-xs font-semibold bg-white/20 px-3 py-1 rounded-full mb-3 inline-block">
             Guía de Trámites
           </span>
-          <h1 className="text-3xl font-bold mb-2">Rentas y Tributos</h1>
+          <h1 className="text-3xl font-bold mb-2">Dirección General de Rentas</h1>
           <p className="text-white/85 text-base max-w-2xl">
             Consultá sobre tus tributos, vencimientos y trámites relacionados
             con la Dirección General de Rentas / Secretaría de Economía y Hacienda.
@@ -51,6 +51,25 @@ export default function RentasPage() {
           >
             <ExternalLink className="h-4 w-4" />
             Consultar tributos
+          </a>
+        </div>
+
+        {/* Puntos de pago */}
+        <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6">
+          <h2 className="text-lg font-bold text-gray-800 mb-3">
+            Puntos de Pago
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Conocé los puntos de pago habilitados para abonar tus tributos municipales.
+          </p>
+          <a
+            href="https://sites.google.com/view/dir-gral-de-rentas/puntos-de-pago?authuser=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold bg-amber-600 text-white px-4 py-2.5 rounded-lg hover:bg-amber-700 transition-colors"
+          >
+            <MapPin className="h-4 w-4" />
+            Ver puntos de pago
           </a>
         </div>
 
