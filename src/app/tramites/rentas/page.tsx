@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, MapPin } from "lucide-react";
+import { ArrowLeft, Receipt, ShieldCheck, Bike, Car, FileText, HardHat } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dirección General de Rentas | José C. Paz",
@@ -33,16 +33,32 @@ export default function RentasPage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8">
+        <h2 className="text-xl font-bold text-gray-800 mb-5">Tributos</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <a
-            href="https://sites.google.com/view/dir-gral-de-rentas/puntos-de-pago?authuser=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
-          >
-            <MapPin className="h-7 w-7 text-emerald-600" />
-            <span className="text-sm font-semibold text-gray-800">Puntos de Pago</span>
-          </a>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <Receipt className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">C.V.P</span>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <ShieldCheck className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Seguridad E Higiene</span>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <Bike className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Moto</span>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <Car className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Automotor</span>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <FileText className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Otros Tributos</span>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <HardHat className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Ts. Obras</span>
+          </div>
         </div>
       </div>
     </div>
