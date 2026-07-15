@@ -29,6 +29,14 @@ export default function AutomotorPage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            La patente automotor municipal es un tributo que se paga por la
+            radicación de un vehículo en un municipio, de modelos de más de 10
+            años de antigüedad.
+          </p>
+        </div>
+
         <PagoInfo />
       </div>
     </div>

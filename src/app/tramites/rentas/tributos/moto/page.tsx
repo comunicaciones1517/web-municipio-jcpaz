@@ -29,6 +29,15 @@ export default function MotoPage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Los vehículos radicados en el partido de José C. Paz que utilicen la
+            vía pública y no se encuentren comprendidos en las prescripciones de
+            la ley impositiva de la provincia de Buenos Aires pagarán la patente
+            que determine la ordenanza tarifaria.
+          </p>
+        </div>
+
         <PagoInfo />
       </div>
     </div>

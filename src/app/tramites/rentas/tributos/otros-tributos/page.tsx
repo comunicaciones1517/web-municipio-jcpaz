@@ -29,6 +29,14 @@ export default function OtrosTributosPage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Accedé a la información y requisitos de distintos trámites
+            municipales. Consultá aquí los procedimientos para cada gestión
+            disponible.
+          </p>
+        </div>
+
         <PagoInfo />
       </div>
     </div>

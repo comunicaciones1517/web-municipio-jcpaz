@@ -29,6 +29,14 @@ export default function SeguridadHigienePage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            El Tributo de Seguridad E Higiene es una tasa que se paga en el
+            municipio para controlar la seguridad, salubridad e higiene de los
+            comercios e industrias.
+          </p>
+        </div>
+
         <PagoInfo />
       </div>
     </div>
