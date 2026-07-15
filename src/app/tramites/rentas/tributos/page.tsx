@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Receipt, ShieldCheck, Bike, Car, FileText, HardHat } from "lucide-react";
+import { ArrowLeft, Receipt, ShieldCheck, Bike, Car, HardHat } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tributos — Dirección General de Rentas | José C. Paz",
@@ -60,13 +60,6 @@ export default function TributosPage() {
           >
             <Car className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Automotor</span>
-          </Link>
-          <Link
-            href="/tramites/rentas/tributos/otros-tributos"
-            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
-          >
-            <FileText className="h-7 w-7 text-emerald-600" />
-            <span className="text-sm font-semibold text-gray-800">Otros Tributos</span>
           </Link>
           <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
             <HardHat className="h-7 w-7 text-emerald-600" />

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Receipt } from "lucide-react";
+import { ArrowLeft, Receipt, Landmark, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dirección General de Rentas | José C. Paz",
@@ -41,6 +41,14 @@ export default function RentasPage() {
             <Receipt className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Tributos</span>
           </Link>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <Landmark className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Rentas</span>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+            <BookOpen className="h-7 w-7 text-emerald-600" />
+            <span className="text-sm font-semibold text-gray-800">Digesto</span>
+          </div>
         </div>
       </div>
     </div>

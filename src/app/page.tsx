@@ -8,6 +8,8 @@ import {
   FileText,
   Car,
   Store,
+  Smartphone,
+  HardHat,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -120,6 +122,50 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Rentas y App Municipal */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <a
+              href="https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-emerald-50 border-emerald-200 hover:bg-emerald-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <Landmark className="h-8 w-8 text-emerald-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                Dirección General de Rentas
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Consulta todo sobre tus tributos, vencimientos y trámites de
+                manera rápida y sencilla.
+              </p>
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-green-50 border-green-200 hover:bg-green-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <Smartphone className="h-8 w-8 text-green-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                App de Municipalidad de José C. Paz
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Ahora podés pagar tus tributos de forma más rápida y fácil.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Trámites y Guía */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="mx-auto max-w-7xl">
@@ -183,27 +229,29 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/tramites/rentas"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-emerald-50 border-emerald-200 hover:bg-emerald-100"
+              href="/tramites/obras-y-servicios"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-orange-50 border-orange-200 hover:bg-orange-100"
             >
               <div className="flex items-start justify-between mb-3">
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform ml-auto" />
+                <HardHat className="h-8 w-8 text-orange-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
               </div>
               <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Dirección General de Rentas
+                Obras y Servicios
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Consultá sobre tus tributos, vencimientos y trámites de la
-                Dirección General de Rentas. Descargá la App municipal.
+                Cambio de titularidad, numeración domiciliaria, planos de
+                mensura, propiedad horizontal y más.
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {["Tributos", "Puntos de Pago", "App Municipal"].map((tag) => (
-                  <span key={tag} className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
+                {["Titularidad", "Numeración", "Planos", "Mensura", "Obra"].map((tag) => (
+                  <span key={tag} className="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
                     {tag}
                   </span>
                 ))}
               </div>
             </Link>
+
           </div>
         </div>
       </section>

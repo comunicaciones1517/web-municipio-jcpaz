@@ -1,4 +1,4 @@
-import { MapPin, CreditCard } from "lucide-react";
+import { MapPin, CreditCard, MessageCircle } from "lucide-react";
 
 const LUGARES_DE_PAGO = [
   {
@@ -36,6 +36,16 @@ const MEDIOS_DE_PAGO = [
 export default function PagoInfo() {
   return (
     <>
+      <a
+        href="https://wa.me/5491138789504"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold text-lg rounded-xl px-6 py-4 shadow-md transition-colors"
+      >
+        <MessageCircle className="h-6 w-6" />
+        Consulta Y Pago por WhatsApp
+      </a>
+
       <section>
         <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
           <MapPin className="h-6 w-6 text-emerald-600" />
