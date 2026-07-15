@@ -40,22 +40,34 @@ export default function TributosPage() {
             <Receipt className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">C.V.P</span>
           </Link>
-          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+          <Link
+            href="/tramites/rentas/tributos/seguridad-e-higiene"
+            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
+          >
             <ShieldCheck className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Seguridad E Higiene</span>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+          </Link>
+          <Link
+            href="/tramites/rentas/tributos/moto"
+            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
+          >
             <Bike className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Moto</span>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+          </Link>
+          <Link
+            href="/tramites/rentas/tributos/automotor"
+            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
+          >
             <Car className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Automotor</span>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
+          </Link>
+          <Link
+            href="/tramites/rentas/tributos/otros-tributos"
+            className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center hover:border-emerald-400 hover:bg-emerald-50 transition-colors"
+          >
             <FileText className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Otros Tributos</span>
-          </div>
+          </Link>
           <div className="flex flex-col items-center justify-center gap-2 bg-white border-2 border-gray-200 rounded-xl p-5 text-center">
             <HardHat className="h-7 w-7 text-emerald-600" />
             <span className="text-sm font-semibold text-gray-800">Ts. Obras</span>
