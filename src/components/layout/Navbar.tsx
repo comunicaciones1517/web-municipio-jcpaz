@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
+  { href: "/", label: "Inicio", exact: true },
   { href: "/salud", label: "Salud" },
   { href: "/oficinas", label: "Oficinas" },
   { href: "/dependencias", label: "Dependencias" },
@@ -41,7 +42,7 @@ export default function Navbar() {
                   href={link.href}
                   className={cn(
                     "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                    pathname.startsWith(link.href)
+                    (link as any).exact ? pathname === link.href : pathname.startsWith(link.href)
                       ? "bg-white/20 text-white"
                       : "text-white/80 hover:bg-white/10 hover:text-white"
                   )}
@@ -86,7 +87,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className={cn(
                     "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                    pathname.startsWith(link.href)
+                    (link as any).exact ? pathname === link.href : pathname.startsWith(link.href)
                       ? "bg-white/20 text-white"
                       : "text-white/80 hover:bg-white/10 hover:text-white"
                   )}
