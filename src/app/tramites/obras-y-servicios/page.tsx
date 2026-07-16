@@ -144,6 +144,19 @@ const REQUISITOS = [
     vigencia: "Treinta (30) días",
     lugar: "Dirección de Catastro, Secretaría de Obras y Servicios Públicos, Gral. Lavalle 2505 — Tel: 02320-573000 Int. 102/103 — obrasparticularesjcp@gmail.com — Lunes a Viernes de 08:00 a 14:00hs",
   },
+  {
+    titulo: "Copia de Plano",
+    items: [
+      "Fotocopia de la Escritura o Boleto de Compraventa",
+      "Fotocopia del último impuesto municipal C.V.P",
+      "Fotocopia del DNI del titular y/o del autorizado",
+      "Verificar la documentación en la Dirección de Catastro",
+      "Ingresar el trámite por Mesa Gral de Entradas y Salida de Expedientes",
+      "Retirar copia de plano o certificado en la Dirección de Obras Particulares",
+    ],
+    quien: "El profesional o gestor registrado en la Dirección de Obras Particulares",
+    lugar: "Dirección de Obras Particulares, Gral. Lavalle 2505 — Tel: 02320-573000 Int. 102/103 — obrasparticularesjcp@gmail.com — Lunes a Viernes de 08:00 a 14:00hs",
+  },
 ];
 
 export default function ObrasYServiciosPage() {
@@ -289,6 +302,23 @@ export default function ObrasYServiciosPage() {
                       {req.lugar}
                     </p>
                   )}
+                  <div className="border-t border-gray-100 pt-3 mt-1 space-y-2">
+                    <p className="text-sm text-gray-600 flex items-center gap-2">
+                      <MessageCircle className="h-4 w-4 text-green-500 shrink-0" />
+                      Recordá que podés solicitar tu pago por{" "}
+                      <a
+                        href="https://wa.me/5491138789504"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-600 font-semibold hover:underline"
+                      >
+                        WhatsApp
+                      </a>
+                    </p>
+                    <p className="text-xs text-gray-400 italic">
+                      Importe sujeto a la Ordenanza Tarifaria Vigente.
+                    </p>
+                  </div>
                 </div>
               </details>
             ))}
