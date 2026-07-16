@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Phone, MapPin, Mail, Clock, HardHat, FileText, MessageCircle } from "lucide-react";
+import { ArrowLeft, Phone, MapPin, Mail, Clock, HardHat, FileText, MessageCircle, ExternalLink } from "lucide-react";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 
 export const metadata: Metadata = {
@@ -186,6 +186,33 @@ export default function ObrasYServiciosPage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="https://drive.google.com/file/d/1MmaDScub7GsKXhcWeiHHRJmuvh9cwufI/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 bg-orange-50 border-2 border-orange-200 rounded-xl p-5 hover:bg-orange-100 transition-colors group"
+          >
+            <ExternalLink className="h-6 w-6 text-orange-600 shrink-0" />
+            <div>
+              <p className="font-bold text-gray-800 text-sm">Derechos de Construcción</p>
+              <p className="text-xs text-gray-500">Tarifaria Vigente</p>
+            </div>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/0B8C_KTx0ar2tOHg2b1JZaHFIWW8/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 bg-orange-50 border-2 border-orange-200 rounded-xl p-5 hover:bg-orange-100 transition-colors group"
+          >
+            <ExternalLink className="h-6 w-6 text-orange-600 shrink-0" />
+            <div>
+              <p className="font-bold text-gray-800 text-sm">Plano de Zonificación</p>
+              <p className="text-xs text-gray-500">Partido de José C. Paz</p>
+            </div>
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <h2 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
