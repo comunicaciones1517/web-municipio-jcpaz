@@ -82,6 +82,68 @@ const REQUISITOS = [
     quien: "Profesional o gestor registrado en la Dirección de Obras Particulares",
     lugar: "Mesa Gral de Entrada, Palacio Municipal, Av. Gaspar Campos 6151, Lunes a Viernes de 08:00 a 14:00hs",
   },
+  {
+    titulo: "Plancheta Catastral",
+    items: [
+      "Comprobante de pago del sellado emitido por la Dirección Gral de Rentas, Palacio Municipal, Av. Gaspar Campos 6151",
+      "Impuesto Municipal, Comprobante del último pago del C.V.P",
+    ],
+    whatsapp: {
+      texto: "Solicitar el pago por WhatsApp",
+      numero: "5491138789504",
+    },
+    quien: "Todos los contribuyentes que lo soliciten",
+    lugar: "Dirección de Catastro, Gral. Lavalle 2505 — Tel: 02320-573000 Int. 102/103 — obrasparticularesjcp@gmail.com — Lunes a Viernes de 08:00 a 14:00hs",
+  },
+  {
+    titulo: "Certificado Parcelario",
+    items: [
+      "Comprobante de pago del sellado emitido por la Dirección Gral de Rentas, Palacio Municipal, Av. Gaspar Campos 6151",
+      "Planilla de certificado parcelario",
+      "Copia de Plano de Obra aprobado o registrado en el cual debe constar el uso comercial",
+      "Constancia de libre de deuda",
+    ],
+    quien: "El inquilino o propietario del inmueble",
+    vigencia: "Seis (6) meses",
+    lugar: "Dirección de Catastro, Gral. Lavalle 2505 — Tel: 02320-573000 Int. 102/103 — obrasparticularesjcp@gmail.com — Lunes a Viernes de 08:00 a 14:00hs",
+  },
+  {
+    titulo: "Carpeta Técnica",
+    items: [
+      "Carpeta completa firmada por propietarios y profesionales",
+      "Pago de carpeta emitido por la Dirección Gral de Rentas, Palacio Municipal, Gaspar Campos 6151",
+      "Fotocopia de escritura o boleto de compra-venta certificado por escribano",
+      "Copia de DNI titular/es (en el caso de ser persona jurídica, fotocopia del estatuto societario, última acta de asamblea, designación de autoridades y fotocopia DNI del apoderado)",
+      "Copia DNI de gestor (de corresponder)",
+      "Plano antecedente (de corresponder)",
+      "Declaración jurada fotográfica (planilla de declaración jurada fotográfica en descargas)",
+      "Una copia del plano municipal a reglamentaciones vigentes",
+      "En caso de plano PH modificación de U.F, nota compromiso del propietario o administrador del consorcio certificado por el escribano",
+    ],
+    quien: "El profesional o gestor registrado en la Dirección de Obras Particulares",
+    vigencia: "Treinta (30) días",
+    lugar: "Dirección de Catastro, Secretaría de Obras y Servicios Públicos, Gral. Lavalle 2505 — Tel: 02320-573000 Int. 102/103 — obrasparticularesjcp@gmail.com — Lunes a Viernes de 08:00 a 14:00hs",
+  },
+  {
+    titulo: "Empadronamiento de Profesionales",
+    items: [
+      "Fotocopia de DNI",
+      "Foto 4x4",
+      "Fotocopia del carnet del colegio",
+      "Fotocopia del último pago de matrícula",
+      "Pago por sellado de matriculación",
+      "Copia del pago emitido por la Dirección Gral de Rentas",
+    ],
+    whatsapp: {
+      texto: "Solicitar el pago por WhatsApp",
+      numero: "5491138789504",
+    },
+    observacion: "La presente documentación deberá ser visada por la Dirección de Obras Particulares y posteriormente ingresada en la oficina de Mesa Gral de Entradas y Salidas de Expedientes. Cumplido, se deberá registrar firmas y autorizaciones para la tramitación de los planos de obras, junto a la constancia del número de expediente.",
+    nota: "Se informa que quedarán exceptuados del pago por inscripción de profesionales aquellos que fueron alcanzados por la Ordenanza Fiscal Tarifaria según Dec. 1514/2018, 1523/2018 con vigencia 01/11/2018.",
+    quien: "El profesional o gestor registrado en la Dirección de Obras Particulares",
+    vigencia: "Treinta (30) días",
+    lugar: "Dirección de Catastro, Secretaría de Obras y Servicios Públicos, Gral. Lavalle 2505 — Tel: 02320-573000 Int. 102/103 — obrasparticularesjcp@gmail.com — Lunes a Viernes de 08:00 a 14:00hs",
+  },
 ];
 
 export default function ObrasYServiciosPage() {
@@ -195,10 +257,30 @@ export default function ObrasYServiciosPage() {
                       {req.whatsapp.texto}
                     </a>
                   )}
+                  {"observacion" in req && req.observacion && (
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                      <p className="text-sm text-amber-800">
+                        <span className="font-semibold">Observación:</span> {req.observacion}
+                      </p>
+                    </div>
+                  )}
+                  {"nota" in req && req.nota && (
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                      <p className="text-sm text-blue-800">
+                        <span className="font-semibold">Nota:</span> {req.nota}
+                      </p>
+                    </div>
+                  )}
                   {"quien" in req && req.quien && (
                     <p className="text-sm text-gray-600">
                       <span className="font-semibold text-gray-800">¿Quién puede hacer el trámite?</span>{" "}
                       {req.quien}
+                    </p>
+                  )}
+                  {"vigencia" in req && req.vigencia && (
+                    <p className="text-sm text-gray-600">
+                      <span className="font-semibold text-gray-800">Vigencia administrativa:</span>{" "}
+                      {req.vigencia}
                     </p>
                   )}
                   {"lugar" in req && req.lugar && (
