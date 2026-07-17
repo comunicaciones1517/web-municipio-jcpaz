@@ -150,171 +150,83 @@ export default function HomePage() {
       </section>
 
       {/* Rentas y App Municipal */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <section className="py-10 px-4 bg-gray-50">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <a
               href="https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-emerald-50 border-emerald-200 hover:bg-emerald-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-emerald-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <Landmark className="h-8 w-8 text-emerald-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Dirección General de Rentas
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Consulta todo sobre tus tributos, vencimientos y trámites de
-                manera rápida y sencilla.
-              </p>
+              <Landmark className="h-10 w-10 text-emerald-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Dirección General de Rentas</span>
             </a>
-
             <a
               href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-green-50 border-green-200 hover:bg-green-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-green-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <Smartphone className="h-8 w-8 text-green-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                App de Municipalidad de José C. Paz
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Ahora podés pagar tus tributos de forma más rápida y fácil.
-              </p>
+              <Smartphone className="h-10 w-10 text-green-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">App Municipal</span>
             </a>
-
             <a
               href="https://drive.google.com/drive/folders/146swI0DfUgZ2HwXidkQZqNSZF_OY3Agy"
               target="_blank"
               rel="noopener noreferrer"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-amber-50 border-amber-200 hover:bg-amber-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-amber-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <Scale className="h-8 w-8 text-amber-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Ordenanza Fiscal Vigente
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Consultá la Ordenanza Fiscal Vigente.
-              </p>
+              <Scale className="h-10 w-10 text-amber-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Ordenanza Fiscal Vigente</span>
             </a>
-
             <a
               href="https://drive.google.com/file/d/1WoimnkxdOuX5kh2Yq9FylEps2XT1pOlA/view"
               target="_blank"
               rel="noopener noreferrer"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-blue-50 border-blue-200 hover:bg-blue-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-blue-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <CalendarDays className="h-8 w-8 text-blue-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Calendario Fiscal Vigente
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Consultá el Calendario Fiscal Vigente.
-              </p>
+              <CalendarDays className="h-10 w-10 text-blue-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Calendario Fiscal Vigente</span>
             </a>
           </div>
         </div>
       </section>
 
       {/* Trámites y Guía */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex items-center gap-3 mb-2">
+      <section className="py-10 px-4 bg-gray-50">
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center gap-3 mb-6">
             <FileText className="h-7 w-7 text-primary-600" />
             <h2 className="text-2xl font-bold text-gray-800">
               Trámites y Guía
             </h2>
           </div>
-          <p className="text-gray-500 mb-8">
-            Consultá los requisitos antes de acercarte a la oficina.
-          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <Link
               href="/tramites/habilitacion-comercial"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-amber-50 border-amber-200 hover:bg-amber-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-amber-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <Store className="h-8 w-8 text-amber-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Habilitación Comercial
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Requisitos para habilitaciones, anexos de rubro y m², cese de
-                comercio, transferencias, permisos y más.
-              </p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {["Habilitaciones", "Transferencia", "Cese", "Artesanos", "Ambulantes"].map((tag) => (
-                  <span key={tag} className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <Store className="h-10 w-10 text-amber-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Habilitación Comercial</span>
             </Link>
 
             <Link
               href="/tramites/licencias-conducir"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-indigo-50 border-indigo-200 hover:bg-indigo-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <Car className="h-8 w-8 text-indigo-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Licencias de Conducir
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Primera licencia, renovación, categorías A–G, requisitos
-                por trámite y cómo sacar turno.
-              </p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {["Primera vez", "Renovación", "Categorías", "Robo/Extravío", "Profesional"].map((tag) => (
-                  <span key={tag} className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <Car className="h-10 w-10 text-indigo-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Licencias de Conducir</span>
             </Link>
 
             <Link
               href="/tramites/obras-y-servicios"
-              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-orange-50 border-orange-200 hover:bg-orange-100"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-orange-300 transition-all"
             >
-              <div className="flex items-start justify-between mb-3">
-                <HardHat className="h-8 w-8 text-orange-600" />
-                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-1">
-                Obras y Servicios
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Cambio de titularidad, numeración domiciliaria, planos de
-                mensura, propiedad horizontal y más.
-              </p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {["Titularidad", "Numeración", "Planos", "Mensura", "Obra"].map((tag) => (
-                  <span key={tag} className="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <HardHat className="h-10 w-10 text-orange-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Obras y Servicios</span>
             </Link>
-
           </div>
         </div>
       </section>
