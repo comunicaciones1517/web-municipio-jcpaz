@@ -15,6 +15,8 @@ import {
   Shield,
   Siren,
   Wrench,
+  Scale,
+  CalendarDays,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -185,6 +187,42 @@ export default function HomePage() {
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Ahora podés pagar tus tributos de forma más rápida y fácil.
+              </p>
+            </a>
+
+            <a
+              href="https://drive.google.com/drive/folders/146swI0DfUgZ2HwXidkQZqNSZF_OY3Agy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-amber-50 border-amber-200 hover:bg-amber-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <Scale className="h-8 w-8 text-amber-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                Ordenanza Fiscal Vigente
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Consultá la Ordenanza Fiscal Vigente.
+              </p>
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1WoimnkxdOuX5kh2Yq9FylEps2XT1pOlA/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border-2 rounded-xl p-6 transition-all duration-200 bg-blue-50 border-blue-200 hover:bg-blue-100"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <CalendarDays className="h-8 w-8 text-blue-600" />
+                <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                Calendario Fiscal Vigente
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Consultá el Calendario Fiscal Vigente.
               </p>
             </a>
           </div>
