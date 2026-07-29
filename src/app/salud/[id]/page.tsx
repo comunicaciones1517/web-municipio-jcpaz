@@ -262,22 +262,38 @@ export default async function FacilityDetailPage({
                         {section.items.map((item, ii) => (
                           <div key={ii} className="py-2.5 first:pt-0 last:pb-0">
                             {item.subItems && item.subItems.length > 0 ? (
-                              <details className="group/sub">
-                                <summary className="cursor-pointer text-sm font-semibold text-gray-800 hover:text-primary-700 transition-colors flex items-center justify-between">
-                                  <span>{item.name}</span>
-                                  <span className="text-gray-400 group-open/sub:rotate-180 transition-transform text-xs ml-2">▼</span>
+                              <details className="group/sub bg-blue-50 border border-blue-200 rounded-lg overflow-hidden">
+                                <summary className="cursor-pointer text-sm font-bold text-blue-800 hover:bg-blue-100 transition-colors flex items-center justify-between px-4 py-3">
+                                  <span className="flex items-center gap-2">
+                                    <span className="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center shrink-0">
+                                      {item.subItems.length}
+                                    </span>
+                                    {item.name}
+                                  </span>
+                                  <span className="text-blue-400 group-open/sub:rotate-180 transition-transform text-sm ml-2">▼</span>
                                 </summary>
-                                <div className="mt-2 space-y-1.5">
+                                <div className="px-4 pb-3 pt-1 border-t border-blue-200 space-y-2">
                                   {item.schedule && (
-                                    <p className="text-sm text-primary-700 font-medium">{item.schedule}</p>
+                                    <p className="text-sm text-blue-700 font-medium">{item.schedule}</p>
+                                  )}
+                                  {item.whatsapp && (
+                                    <a
+                                      href={`https://wa.me/${item.whatsapp}`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-4 py-2 transition-colors"
+                                    >
+                                      <MessageCircle className="h-4 w-4" />
+                                      {item.whatsappLabel || "WhatsApp"}
+                                    </a>
                                   )}
                                   {item.detail && (
                                     <p className="text-sm text-gray-500">{item.detail}</p>
                                   )}
-                                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 mt-1">
+                                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-1">
                                     {item.subItems.map((sub, si2) => (
                                       <li key={si2} className="flex items-center gap-2 text-sm text-gray-700">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
                                         {sub}
                                       </li>
                                     ))}
@@ -285,18 +301,31 @@ export default async function FacilityDetailPage({
                                 </div>
                               </details>
                             ) : (
-                              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
-                                <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
-                                  {item.name}
-                                </span>
-                                <div className="flex flex-col gap-0.5">
-                                  {item.schedule && (
-                                    <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
-                                  )}
-                                  {item.detail && (
-                                    <span className="text-sm text-gray-500">{item.detail}</span>
-                                  )}
+                              <div className="space-y-1.5">
+                                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
+                                  <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
+                                    {item.name}
+                                  </span>
+                                  <div className="flex flex-col gap-0.5">
+                                    {item.schedule && (
+                                      <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
+                                    )}
+                                    {item.detail && (
+                                      <span className="text-sm text-gray-500">{item.detail}</span>
+                                    )}
+                                  </div>
                                 </div>
+                                {item.whatsapp && (
+                                  <a
+                                    href={`https://wa.me/${item.whatsapp}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-xs rounded-lg px-3 py-1.5 transition-colors"
+                                  >
+                                    <MessageCircle className="h-3.5 w-3.5" />
+                                    {item.whatsappLabel || "WhatsApp"}
+                                  </a>
+                                )}
                               </div>
                             )}
                           </div>
