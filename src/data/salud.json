@@ -1011,7 +1011,7 @@
         "title": "Diagnóstico por Imágenes (con turno programado)",
         "description": "Turnos por WhatsApp: 11 6094-7629, lunes a viernes de 8 a 12 hs. También se pueden solicitar presencialmente. Documentación requerida: foto del DNI (ambos lados), negativa de ANSES (sin obra social) o foto del carnet (con obra social), y foto de la orden médica.",
         "items": [
-          { "name": "Ecografías", "schedule": "Turnos únicamente por WhatsApp, lunes a viernes de 8 a 12 hs", "detail": "Abdominal, cadera de recién nacido, testicular de recién nacido, ginecológica, hepatobiliopancreática, mamaria, musculoesquelética, obstétrica, partes blandas, prostática, renal, testicular, transvaginal, vesical, scan fetal" },
+          { "name": "Ecografías", "schedule": "Turnos únicamente por WhatsApp, lunes a viernes de 8 a 12 hs", "subItems": ["Abdominal", "Cadera de recién nacido", "Testicular de recién nacido", "Ginecológica", "Hepatobiliopancreática", "Mamaria", "Musculoesquelética", "Obstétrica", "Partes blandas", "Prostática", "Renal", "Testicular", "Transvaginal", "Vesical", "Scan fetal"] },
           { "name": "Monitoreo fetal (NST)", "schedule": "Con turno programado", "detail": "Consumir algo dulce antes de concurrir" },
           { "name": "Mamografía", "schedule": "Lunes a sábado de 9 a 19 hs", "detail": "Turnos presencial o por WhatsApp, lunes a viernes de 8 a 12 hs" },
           { "name": "Ecocardiograma infantil", "schedule": "Martes de 8 a 11 hs", "detail": "A demanda. De 1 mes a 15 años" },

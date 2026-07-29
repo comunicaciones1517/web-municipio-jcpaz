@@ -25,12 +25,13 @@ export interface ServiceSectionItem {
   name: string;
   schedule?: string;
   detail?: string;
+  subItems?: string[];
 }
 
 export interface ServiceSection {
   title: string;
   description?: string;
-  items: ServiceSectionItem[];
+  items?: ServiceSectionItem[];
 }
 
 export interface HealthFacility {

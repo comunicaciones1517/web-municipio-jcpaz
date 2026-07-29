@@ -202,14 +202,22 @@ export default async function FacilityDetailPage({
 
           {/* Secciones detalladas (guardia, consultorios, etc.) */}
           {facility.detailedSections && facility.detailedSections.length > 0 && (
-            <div className="space-y-6">
+            <div className="space-y-3">
               {facility.detailedSections.map((section, si) => (
-                <section key={si}>
-                  <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-                    <ClipboardList className="h-5 w-5 text-primary-600" />
-                    {section.title}
-                  </h2>
-                  <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-3">
+                <details
+                  key={si}
+                  className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group"
+                >
+                  <summary className="px-5 py-4 cursor-pointer text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors flex items-center justify-between">
+                    <span className="flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-red-100 text-red-700 text-xs font-bold flex items-center justify-center shrink-0">
+                        {si + 1}
+                      </span>
+                      {section.title}
+                    </span>
+                    <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs ml-2">▼</span>
+                  </summary>
+                  <div className="px-5 pb-4 pt-2 border-t border-gray-100 space-y-3">
                     {section.description && (
                       <p className="text-sm text-gray-600 leading-relaxed">{section.description}</p>
                     )}
@@ -217,25 +225,50 @@ export default async function FacilityDetailPage({
                       <div className="divide-y divide-gray-100">
                         {section.items.map((item, ii) => (
                           <div key={ii} className="py-2.5 first:pt-0 last:pb-0">
-                            <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
-                              <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
-                                {item.name}
-                              </span>
-                              <div className="flex flex-col gap-0.5">
-                                {item.schedule && (
-                                  <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
-                                )}
-                                {item.detail && (
-                                  <span className="text-sm text-gray-500">{item.detail}</span>
-                                )}
+                            {item.subItems && item.subItems.length > 0 ? (
+                              <details className="group/sub">
+                                <summary className="cursor-pointer text-sm font-semibold text-gray-800 hover:text-primary-700 transition-colors flex items-center justify-between">
+                                  <span>{item.name}</span>
+                                  <span className="text-gray-400 group-open/sub:rotate-180 transition-transform text-xs ml-2">▼</span>
+                                </summary>
+                                <div className="mt-2 space-y-1.5">
+                                  {item.schedule && (
+                                    <p className="text-sm text-primary-700 font-medium">{item.schedule}</p>
+                                  )}
+                                  {item.detail && (
+                                    <p className="text-sm text-gray-500">{item.detail}</p>
+                                  )}
+                                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 mt-1">
+                                    {item.subItems.map((sub, si2) => (
+                                      <li key={si2} className="flex items-center gap-2 text-sm text-gray-700">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />
+                                        {sub}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </details>
+                            ) : (
+                              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
+                                <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
+                                  {item.name}
+                                </span>
+                                <div className="flex flex-col gap-0.5">
+                                  {item.schedule && (
+                                    <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
+                                  )}
+                                  {item.detail && (
+                                    <span className="text-sm text-gray-500">{item.detail}</span>
+                                  )}
+                                </div>
                               </div>
-                            </div>
+                            )}
                           </div>
                         ))}
                       </div>
                     )}
                   </div>
-                </section>
+                </details>
               ))}
             </div>
           )}
