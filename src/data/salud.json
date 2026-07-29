@@ -911,10 +911,10 @@
     "type": "hospital_publico",
     "address": "Montes de Oca 2910, entre Fray Butler y Agrelo, José C. Paz",
     "zone": "Barrio Frino",
-    "phones": ["(02320) 353104"],
+    "phones": ["11 6094-7629"],
     "whatsapp": "5491160947629",
-    "whatsappLabel": "Diagnóstico por Imágenes: 11 6094-7629",
-    "emergencyPhone": "(02320) 353104",
+    "whatsappLabel": "11 6094-7629",
+    "emergencyPhone": "11 6094-7629",
     "hasEmergencyRoom": true,
     "photo": "/salud/hospital-mujer-nino.jpg",
     "photos": ["/salud/hospital-mujer-nino.jpg"],
@@ -957,7 +957,7 @@
       {
         "title": "Guardia — Atención 24 horas",
         "description": "Atención sin turno previo, todos los días, las 24 horas.",
-        "phone": "(02320) 353104",
+        "phone": "11 6094-7629",
         "items": [
           { "name": "Pediatría", "detail": "Desde 1 mes hasta 13 años y 11 meses", "schedule": "24 hs, todos los días" },
           { "name": "Obstetricia", "detail": "Embarazadas", "schedule": "24 hs, todos los días" },
@@ -967,7 +967,7 @@
       {
         "title": "Consultorios Externos (con turno programado)",
         "description": "Asignación de turnos: lunes a viernes de 8 a 12 hs, en forma presencial en el hospital. Para Neumonología infantil, Espirometrías y Cardiología infantil los turnos se entregan de lunes a viernes de 8 a 16 hs.",
-        "phone": "(02320) 353104",
+        "phone": "11 6094-7629",
         "items": [
           { "name": "Pediatría (Niño/a sano/a)", "schedule": "Con turno programado", "detail": "Control de niño sano" },
           { "name": "Ginecología", "schedule": "Lunes a viernes de 8 a 20 hs" },
@@ -1009,17 +1009,17 @@
       {
         "title": "Servicio de Trabajo Social",
         "description": "El hospital cuenta con Servicio de Trabajo Social. Consultar días y horarios.",
-        "phone": "(02320) 353104"
+        "phone": "11 6094-7629"
       },
       {
         "title": "Diagnóstico por Imágenes (con turno programado)",
-        "description": "Turnos por WhatsApp o presencialmente, lunes a viernes de 8 a 12 hs. Documentación requerida: foto del DNI (ambos lados), negativa de ANSES (sin obra social) o foto del carnet (con obra social), y foto de la orden médica.",
+        "description": "Turnos presenciales o por WhatsApp, lunes a viernes de 8 a 12 hs. Documentación requerida: foto del DNI (ambos lados), negativa de ANSES (sin obra social) o foto del carnet (con obra social), y foto de la orden médica.",
         "whatsapp": "5491160947629",
-        "whatsappLabel": "Turnos por WhatsApp (11 6094-7629)",
+        "whatsappLabel": "Solicitar turno por WhatsApp (11 6094-7629)",
         "items": [
-          { "name": "Ecografías", "schedule": "Turnos únicamente por WhatsApp, lunes a viernes de 8 a 12 hs", "subItems": ["Abdominal", "Cadera de recién nacido", "Testicular de recién nacido", "Ginecológica", "Hepatobiliopancreática", "Mamaria", "Musculoesquelética", "Obstétrica", "Partes blandas", "Prostática", "Renal", "Testicular", "Transvaginal", "Vesical", "Scan fetal"] },
+          { "name": "Ecografías", "whatsapp": "5491160947629", "whatsappLabel": "Pedir turno por WhatsApp — Lunes a viernes de 08:00 a 12:00 hs", "subItems": ["Abdominal", "Cadera de recién nacido", "Testicular de recién nacido", "Ginecológica", "Hepatobiliopancreática", "Mamaria", "Musculoesquelética", "Obstétrica", "Partes blandas", "Prostática", "Renal", "Testicular", "Transvaginal", "Vesical", "Scan fetal"] },
           { "name": "Monitoreo fetal (NST)", "schedule": "Con turno programado", "detail": "Consumir algo dulce antes de concurrir" },
-          { "name": "Mamografía", "schedule": "Lunes a sábado de 9 a 19 hs", "detail": "Turnos presencial o por WhatsApp" },
+          { "name": "Mamografía", "schedule": "Lunes a sábado de 9 a 19 hs", "whatsapp": "5491160947629", "whatsappLabel": "Pedir turno por WhatsApp" },
           { "name": "Ecocardiograma infantil", "schedule": "Martes de 8 a 11 hs", "detail": "A demanda. De 1 mes a 15 años" },
           { "name": "Rayos X", "schedule": "24 hs" }
         ]
@@ -1032,7 +1032,7 @@
       "Línea 440 — desde zona central hacia zona sur del partido.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Montes de Oca."
     ],
-    "notes": "Hospital especializado en salud de la mujer y el niño. Atención gratuita para vecinos de José C. Paz. Aclaración: el horario de Cardiología infantil puede variar; conviene confirmar modalidad al (02320) 353104."
+    "notes": "Hospital especializado en salud de la mujer y el niño. Atención gratuita para vecinos de José C. Paz. Aclaración: el horario de Cardiología infantil puede variar; conviene confirmar modalidad al 11 6094-7629."
   },
   {
     "id": "hospital-oncologico-victoria-ishii",

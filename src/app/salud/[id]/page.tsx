@@ -257,81 +257,95 @@ export default async function FacilityDetailPage({
                         {section.whatsappLabel || "WhatsApp"}
                       </a>
                     )}
-                    {section.items && section.items.length > 0 && (
-                      <div className="divide-y divide-gray-100">
-                        {section.items.map((item, ii) => (
-                          <div key={ii} className="py-2.5 first:pt-0 last:pb-0">
-                            {item.subItems && item.subItems.length > 0 ? (
-                              <details className="group/sub bg-blue-50 border border-blue-200 rounded-lg overflow-hidden">
-                                <summary className="cursor-pointer text-sm font-bold text-blue-800 hover:bg-blue-100 transition-colors flex items-center justify-between px-4 py-3">
-                                  <span className="flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center shrink-0">
-                                      {item.subItems.length}
+                    {section.items && section.items.length > 0 && (() => {
+                      const hasSubItems = section.items.some(i => i.subItems && i.subItems.length > 0);
+                      const hasScheduleOrDetail = section.items.some(i => i.schedule || i.detail);
+                      const isSimpleList = !hasSubItems && !hasScheduleOrDetail;
+
+                      if (isSimpleList) {
+                        return (
+                          <div className="flex flex-wrap gap-2">
+                            {section.items.map((item, ii) => (
+                              <span key={ii} className="bg-gray-100 text-gray-700 text-sm px-3 py-1.5 rounded-full border border-gray-200 font-medium">
+                                {item.name}
+                              </span>
+                            ))}
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <div className="divide-y divide-gray-100">
+                          {section.items.map((item, ii) => (
+                            <div key={ii} className="py-2.5 first:pt-0 last:pb-0">
+                              {item.subItems && item.subItems.length > 0 ? (
+                                <details className="group/sub bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-300 rounded-xl overflow-hidden shadow-sm">
+                                  <summary className="cursor-pointer font-bold text-blue-900 hover:bg-blue-200/50 transition-colors flex items-center justify-between px-4 py-3.5">
+                                    <span className="flex items-center gap-2.5 text-base">
+                                      <span className="w-7 h-7 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 shadow">
+                                        {item.subItems.length}
+                                      </span>
+                                      {item.name}
                                     </span>
-                                    {item.name}
-                                  </span>
-                                  <span className="text-blue-400 group-open/sub:rotate-180 transition-transform text-sm ml-2">▼</span>
-                                </summary>
-                                <div className="px-4 pb-3 pt-1 border-t border-blue-200 space-y-2">
-                                  {item.schedule && (
-                                    <p className="text-sm text-blue-700 font-medium">{item.schedule}</p>
-                                  )}
+                                    <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center group-open/sub:rotate-180 transition-transform text-xs shrink-0">▼</span>
+                                  </summary>
+                                  <div className="px-4 pb-4 pt-2 border-t-2 border-blue-300 space-y-3 bg-white/60">
+                                    {item.whatsapp && (
+                                      <a
+                                        href={`https://wa.me/${item.whatsapp}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-4 py-2.5 transition-colors shadow-sm"
+                                      >
+                                        <MessageCircle className="h-4 w-4" />
+                                        {item.whatsappLabel || "WhatsApp"}
+                                      </a>
+                                    )}
+                                    {item.detail && (
+                                      <p className="text-sm text-gray-500">{item.detail}</p>
+                                    )}
+                                    <ul className="flex flex-wrap gap-2">
+                                      {item.subItems.map((sub, si2) => (
+                                        <li key={si2} className="bg-white text-gray-700 text-sm px-3 py-1.5 rounded-full border border-blue-200 font-medium">
+                                          {sub}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                </details>
+                              ) : (
+                                <div className="space-y-1.5">
+                                  <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
+                                    <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
+                                      {item.name}
+                                    </span>
+                                    <div className="flex flex-col gap-0.5">
+                                      {item.schedule && (
+                                        <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
+                                      )}
+                                      {item.detail && (
+                                        <span className="text-sm text-gray-500">{item.detail}</span>
+                                      )}
+                                    </div>
+                                  </div>
                                   {item.whatsapp && (
                                     <a
                                       href={`https://wa.me/${item.whatsapp}`}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-4 py-2 transition-colors"
+                                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-xs rounded-lg px-3 py-1.5 transition-colors"
                                     >
-                                      <MessageCircle className="h-4 w-4" />
+                                      <MessageCircle className="h-3.5 w-3.5" />
                                       {item.whatsappLabel || "WhatsApp"}
                                     </a>
                                   )}
-                                  {item.detail && (
-                                    <p className="text-sm text-gray-500">{item.detail}</p>
-                                  )}
-                                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-1">
-                                    {item.subItems.map((sub, si2) => (
-                                      <li key={si2} className="flex items-center gap-2 text-sm text-gray-700">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                                        {sub}
-                                      </li>
-                                    ))}
-                                  </ul>
                                 </div>
-                              </details>
-                            ) : (
-                              <div className="space-y-1.5">
-                                <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
-                                  <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
-                                    {item.name}
-                                  </span>
-                                  <div className="flex flex-col gap-0.5">
-                                    {item.schedule && (
-                                      <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
-                                    )}
-                                    {item.detail && (
-                                      <span className="text-sm text-gray-500">{item.detail}</span>
-                                    )}
-                                  </div>
-                                </div>
-                                {item.whatsapp && (
-                                  <a
-                                    href={`https://wa.me/${item.whatsapp}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-xs rounded-lg px-3 py-1.5 transition-colors"
-                                  >
-                                    <MessageCircle className="h-3.5 w-3.5" />
-                                    {item.whatsappLabel || "WhatsApp"}
-                                  </a>
-                                )}
-                              </div>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </div>
                 </details>
               ))}
