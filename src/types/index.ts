@@ -31,6 +31,9 @@ export interface ServiceSectionItem {
 export interface ServiceSection {
   title: string;
   description?: string;
+  phone?: string;
+  whatsapp?: string;
+  whatsappLabel?: string;
   items?: ServiceSectionItem[];
 }
 
@@ -42,6 +45,7 @@ export interface HealthFacility {
   zone: string;
   phones: string[];
   whatsapp?: string;
+  whatsappLabel?: string;
   emergencyPhone?: string;
   hasEmergencyRoom: boolean;
   hours: DaySchedule[];

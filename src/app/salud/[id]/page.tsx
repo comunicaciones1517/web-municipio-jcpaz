@@ -12,6 +12,7 @@ import {
   Bus,
   Globe,
   ExternalLink,
+  MessageCircle,
 } from "lucide-react";
 import { Suspense } from "react";
 import { getAllFacilities, getFacilityById } from "@/lib/data/salud";
@@ -130,6 +131,19 @@ export default async function FacilityDetailPage({
                     <PhoneLink number={facility.emergencyPhone} />
                   </div>
                 )}
+                {facility.whatsapp && (
+                  <div className="pt-2 border-t border-gray-100">
+                    <a
+                      href={`https://wa.me/${facility.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-4 py-2.5 transition-colors w-full justify-center"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      {facility.whatsappLabel || `WhatsApp: ${facility.whatsapp}`}
+                    </a>
+                  </div>
+                )}
                 <div className="flex items-start gap-2 pt-2 border-t border-gray-100">
                   <MapPin className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
                   <a
@@ -220,6 +234,28 @@ export default async function FacilityDetailPage({
                   <div className="px-5 pb-4 pt-2 border-t border-gray-100 space-y-3">
                     {section.description && (
                       <p className="text-sm text-gray-600 leading-relaxed">{section.description}</p>
+                    )}
+                    {/* Teléfono clickeable */}
+                    {section.phone && (
+                      <a
+                        href={`tel:${section.phone.replace(/[\s()-]/g, "")}`}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary-700 hover:text-primary-900 transition-colors"
+                      >
+                        <Phone className="h-4 w-4" />
+                        {section.phone}
+                      </a>
+                    )}
+                    {/* WhatsApp clickeable */}
+                    {section.whatsapp && (
+                      <a
+                        href={`https://wa.me/${section.whatsapp}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-4 py-2 transition-colors"
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        {section.whatsappLabel || "WhatsApp"}
+                      </a>
                     )}
                     {section.items && section.items.length > 0 && (
                       <div className="divide-y divide-gray-100">
