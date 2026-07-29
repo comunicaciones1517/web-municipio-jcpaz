@@ -136,7 +136,7 @@ export default function FacilityCard({ facility }: FacilityCardProps) {
         {/* CTA — push to bottom */}
         <div className="mt-auto pt-4 border-t border-gray-100">
           <Link
-            href={`/salud/${facility.id}`}
+            href={`/salud/${facility.id}?ver=jcp2026`}
             className="flex items-center justify-between w-full group/link"
           >
             <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">
