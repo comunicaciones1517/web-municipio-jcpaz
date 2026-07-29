@@ -200,6 +200,46 @@ export default async function FacilityDetailPage({
             )}
           </div>
 
+          {/* Secciones detalladas (guardia, consultorios, etc.) */}
+          {facility.detailedSections && facility.detailedSections.length > 0 && (
+            <div className="space-y-6">
+              {facility.detailedSections.map((section, si) => (
+                <section key={si}>
+                  <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+                    <ClipboardList className="h-5 w-5 text-primary-600" />
+                    {section.title}
+                  </h2>
+                  <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-3">
+                    {section.description && (
+                      <p className="text-sm text-gray-600 leading-relaxed">{section.description}</p>
+                    )}
+                    {section.items && section.items.length > 0 && (
+                      <div className="divide-y divide-gray-100">
+                        {section.items.map((item, ii) => (
+                          <div key={ii} className="py-2.5 first:pt-0 last:pb-0">
+                            <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3">
+                              <span className="font-semibold text-sm text-gray-800 sm:min-w-[220px] shrink-0">
+                                {item.name}
+                              </span>
+                              <div className="flex flex-col gap-0.5">
+                                {item.schedule && (
+                                  <span className="text-sm text-primary-700 font-medium">{item.schedule}</span>
+                                )}
+                                {item.detail && (
+                                  <span className="text-sm text-gray-500">{item.detail}</span>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </section>
+              ))}
+            </div>
+          )}
+
           <section>
             <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
               <MapPin className="h-5 w-5 text-primary-600" />

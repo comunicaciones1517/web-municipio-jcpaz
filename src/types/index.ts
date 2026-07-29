@@ -21,6 +21,18 @@ export type FacilityType =
   | "centro_de_salud"
   | "clinica";
 
+export interface ServiceSectionItem {
+  name: string;
+  schedule?: string;
+  detail?: string;
+}
+
+export interface ServiceSection {
+  title: string;
+  description?: string;
+  items: ServiceSectionItem[];
+}
+
 export interface HealthFacility {
   id: string;
   name: string;
@@ -28,11 +40,13 @@ export interface HealthFacility {
   address: string;
   zone: string;
   phones: string[];
+  whatsapp?: string;
   emergencyPhone?: string;
   hasEmergencyRoom: boolean;
   hours: DaySchedule[];
   specialties: string[];
   services: string[];
+  detailedSections?: ServiceSection[];
   mapLink: string;
   coordinates?: { lat: number; lng: number };
   photo?: string;

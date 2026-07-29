@@ -944,17 +944,80 @@
     ],
     "services": [
       "Guardia 24h (Pediatría, Obstetricia y Rayos X)",
-      "Consultorios externos con turno programado (lunes a viernes 8 a 12 hs)",
-      "Ecografías (15 tipos, turnos por WhatsApp 11 6094-7629)",
-      "Mamografía (lunes a sábado 9 a 19 hs)",
-      "Ecocardiograma infantil (martes 8 a 11 hs)",
-      "Monitoreo fetal (NST)",
-      "Rayos X 24h",
-      "Audiometría tonal, logoaudiometría y acufenometría (lunes y martes 8 a 12 hs)",
-      "Vacunatorio (COVID, Calendario Nacional, Dengue — lunes a viernes 8 a 13 y 14 a 15 hs, sábados 8:30 a 14 hs)",
-      "Colocación y extracción de DIU/SIU e implante subdérmico (a demanda)",
+      "Consultorios externos con turno programado",
+      "Diagnóstico por Imágenes (ecografías, mamografía, ecocardiograma, monitoreo fetal, rayos X)",
+      "Vacunatorio (COVID, Calendario Nacional, Dengue)",
+      "Salud Sexual y Anticoncepción (DIU/SIU, implante subdérmico)",
+      "Audiología",
       "Servicio de Trabajo Social",
       "Atención gratuita a vecinos"
+    ],
+    "detailedSections": [
+      {
+        "title": "Guardia — Atención 24 horas",
+        "description": "Atención sin turno previo, todos los días, las 24 horas.",
+        "items": [
+          { "name": "Pediatría", "detail": "Desde 1 mes hasta 13 años y 11 meses", "schedule": "24 hs, todos los días" },
+          { "name": "Obstetricia", "detail": "Embarazadas", "schedule": "24 hs, todos los días" },
+          { "name": "Rayos X", "detail": "General", "schedule": "24 hs, todos los días" }
+        ]
+      },
+      {
+        "title": "Consultorios Externos (con turno programado)",
+        "description": "Asignación de turnos: lunes a viernes de 8 a 12 hs, en forma presencial en el hospital. Para Neumonología infantil, Espirometrías y Cardiología infantil los turnos se entregan de lunes a viernes de 8 a 16 hs.",
+        "items": [
+          { "name": "Pediatría (Niño/a sano/a)", "schedule": "Con turno programado", "detail": "Control de niño sano" },
+          { "name": "Ginecología", "schedule": "Lunes a viernes de 8 a 20 hs" },
+          { "name": "Obstetricia — Control prenatal", "schedule": "Lunes a sábado de 8 a 16 hs", "detail": "Embarazadas" },
+          { "name": "PAP / Colposcopía", "schedule": "Toma de muestra con turno previo" },
+          { "name": "Cardiología infantil", "schedule": "Jueves de 8 a 12 hs", "detail": "De 1 mes a 15 años" },
+          { "name": "Cardiología de la embarazada", "schedule": "Viernes 8 hs", "detail": "Embarazadas" },
+          { "name": "Kinesiología traumatológica", "schedule": "Lunes a viernes de 8 a 19 hs", "detail": "A partir de los 16 años" },
+          { "name": "Neumonología infantil", "schedule": "Viernes de 8 a 12 hs", "detail": "De recién nacido a 16 años" },
+          { "name": "Espirometrías", "schedule": "Viernes 11 hs", "detail": "De 5 a 17 años" },
+          { "name": "Neurología infantil", "schedule": "Con turno programado" }
+        ]
+      },
+      {
+        "title": "Salud Sexual y Anticoncepción (a demanda)",
+        "description": "Se atiende por demanda espontánea, sin turno previo.",
+        "items": [
+          { "name": "DIU / SIU", "detail": "Colocación y extracción de dispositivos intrauterinos" },
+          { "name": "Implante subdérmico", "detail": "Colocación y extracción" }
+        ]
+      },
+      {
+        "title": "Servicio de Audiología",
+        "description": "Lunes y martes de 8 a 12 hs. Pacientes: adultos y niños mayores de 5 años.",
+        "items": [
+          { "name": "Audiometría tonal" },
+          { "name": "Logoaudiometría" },
+          { "name": "Acufenometría" }
+        ]
+      },
+      {
+        "title": "Vacunatorio",
+        "description": "Vacunas disponibles: COVID, Calendario Nacional, Dengue.",
+        "items": [
+          { "name": "Lunes a viernes", "schedule": "8 a 13 hs y de 14 a 15 hs" },
+          { "name": "Sábados", "schedule": "8:30 a 14 hs" }
+        ]
+      },
+      {
+        "title": "Servicio de Trabajo Social",
+        "description": "El hospital cuenta con Servicio de Trabajo Social. Consultar días y horarios al (02320) 353104."
+      },
+      {
+        "title": "Diagnóstico por Imágenes (con turno programado)",
+        "description": "Turnos por WhatsApp: 11 6094-7629, lunes a viernes de 8 a 12 hs. También se pueden solicitar presencialmente. Documentación requerida: foto del DNI (ambos lados), negativa de ANSES (sin obra social) o foto del carnet (con obra social), y foto de la orden médica.",
+        "items": [
+          { "name": "Ecografías", "schedule": "Turnos únicamente por WhatsApp, lunes a viernes de 8 a 12 hs", "detail": "Abdominal, cadera de recién nacido, testicular de recién nacido, ginecológica, hepatobiliopancreática, mamaria, musculoesquelética, obstétrica, partes blandas, prostática, renal, testicular, transvaginal, vesical, scan fetal" },
+          { "name": "Monitoreo fetal (NST)", "schedule": "Con turno programado", "detail": "Consumir algo dulce antes de concurrir" },
+          { "name": "Mamografía", "schedule": "Lunes a sábado de 9 a 19 hs", "detail": "Turnos presencial o por WhatsApp, lunes a viernes de 8 a 12 hs" },
+          { "name": "Ecocardiograma infantil", "schedule": "Martes de 8 a 11 hs", "detail": "A demanda. De 1 mes a 15 años" },
+          { "name": "Rayos X", "schedule": "24 hs" }
+        ]
+      }
     ],
     "mapLink": "https://maps.google.com/maps?q=Montes+de+Oca+2910,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "comoLlegar": [
@@ -963,7 +1026,7 @@
       "Línea 440 — desde zona central hacia zona sur del partido.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Montes de Oca."
     ],
-    "notes": "Turnos generales: lunes a viernes de 8 a 12 hs presencial. Turnos de Neumonología infantil, Espirometrías y Cardiología infantil: lunes a viernes de 8 a 16 hs. Turnos de Diagnóstico por Imágenes: WhatsApp 11 6094-7629 (lunes a viernes 8 a 12 hs). Kinesiología traumatológica: a partir de 16 años. Audiología: adultos y niños mayores de 5 años."
+    "notes": "Hospital especializado en salud de la mujer y el niño. Atención gratuita para vecinos de José C. Paz. Aclaración: el horario de Cardiología infantil puede variar; conviene confirmar modalidad al (02320) 353104."
   },
   {
     "id": "hospital-oncologico-victoria-ishii",
