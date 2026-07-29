@@ -909,9 +909,10 @@
     "id": "hospital-mujer-nino-nelly-quiroga",
     "name": "Hospital de la Mujer y el Niño \"Nelly Quiroga\"",
     "type": "hospital_publico",
-    "address": "Montes de Oca 2910 (esq. Fray Butler), José C. Paz",
+    "address": "Montes de Oca 2910, entre Fray Butler y Agrelo, José C. Paz",
     "zone": "Barrio Frino",
     "phones": ["(02320) 353104"],
+    "whatsapp": "11 6094-7629",
     "emergencyPhone": "(02320) 353104",
     "hasEmergencyRoom": true,
     "photo": "/salud/hospital-mujer-nino.jpg",
@@ -926,23 +927,33 @@
       { "day": "domingo",   "open": "00:00", "close": "23:59" }
     ],
     "specialties": [
+      "Pediatría",
       "Ginecología",
       "Obstetricia",
-      "Controles obstétricos",
-      "Pediatría",
-      "Neonatología",
-      "Ecografía obstétrica",
-      "Vacunatorio",
-      "Patología preventiva"
+      "PAP / Colposcopía",
+      "Cardiología infantil",
+      "Cardiología de la embarazada",
+      "Kinesiología traumatológica",
+      "Neumonología infantil",
+      "Espirometrías",
+      "Neurología infantil",
+      "Audiología",
+      "Salud Sexual y Anticoncepción",
+      "Diagnóstico por Imágenes",
+      "Trabajo Social"
     ],
     "services": [
-      "Guardia 24h",
-      "Atención del parto",
-      "Internación materno-infantil (30 camas)",
-      "Laboratorio",
-      "Ecografías",
-      "Vacunatorio",
-      "Estudios preventivos para la mujer",
+      "Guardia 24h (Pediatría, Obstetricia y Rayos X)",
+      "Consultorios externos con turno programado (lunes a viernes 8 a 12 hs)",
+      "Ecografías (15 tipos, turnos por WhatsApp 11 6094-7629)",
+      "Mamografía (lunes a sábado 9 a 19 hs)",
+      "Ecocardiograma infantil (martes 8 a 11 hs)",
+      "Monitoreo fetal (NST)",
+      "Rayos X 24h",
+      "Audiometría tonal, logoaudiometría y acufenometría (lunes y martes 8 a 12 hs)",
+      "Vacunatorio (COVID, Calendario Nacional, Dengue — lunes a viernes 8 a 13 y 14 a 15 hs, sábados 8:30 a 14 hs)",
+      "Colocación y extracción de DIU/SIU e implante subdérmico (a demanda)",
+      "Servicio de Trabajo Social",
       "Atención gratuita a vecinos"
     ],
     "mapLink": "https://maps.google.com/maps?q=Montes+de+Oca+2910,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
@@ -952,7 +963,7 @@
       "Línea 440 — desde zona central hacia zona sur del partido.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Montes de Oca."
     ],
-    "notes": "Hospital especializado en salud de la mujer y el niño, con 30 camas de internación y 2.000 m² cubiertos. Atención materno-infantil de alta complejidad."
+    "notes": "Turnos generales: lunes a viernes de 8 a 12 hs presencial. Turnos de Neumonología infantil, Espirometrías y Cardiología infantil: lunes a viernes de 8 a 16 hs. Turnos de Diagnóstico por Imágenes: WhatsApp 11 6094-7629 (lunes a viernes 8 a 12 hs). Kinesiología traumatológica: a partir de 16 años. Audiología: adultos y niños mayores de 5 años."
   },
   {
     "id": "hospital-oncologico-victoria-ishii",
