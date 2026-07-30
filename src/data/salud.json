@@ -924,12 +924,14 @@
   },
   {
     "id": "hospital-ruben-caporaletti",
-    "name": "Hospital Rubén \"Cacho\" Caporaletti",
+    "name": "Hospital de Alta Complejidad \"Rubén Caporaletti\"",
     "type": "hospital_publico",
-    "address": "Av. Croacia 2312, José C. Paz",
+    "address": "Av. Croacia 2312 (e/ Lima y Buenos Aires), Barrio Vucetich, José C. Paz",
     "zone": "José C. Paz",
-    "phones": ["(02320) 353102"],
-    "emergencyPhone": "(02320) 353102",
+    "phones": ["11 6611-4800"],
+    "whatsapp": "5491166114800",
+    "whatsappLabel": "WhatsApp Turnos Imágenes: 11 6611-4800",
+    "emergencyPhone": "11 6611-4800",
     "hasEmergencyRoom": true,
     "photo": "/salud/hospital-ruben-caporaletti.jfif",
     "photos": ["/salud/hospital-ruben-caporaletti.jfif"],
@@ -944,22 +946,71 @@
     ],
     "specialties": [
       "Clínica Médica",
-      "Cirugía General",
-      "Traumatología",
       "Pediatría",
-      "Tomografía computada",
-      "Diagnóstico por imágenes",
+      "Dermatología",
       "Cardiología",
-      "Neurología"
+      "Traumatología",
+      "Traumatología (Cirugía)",
+      "Resonancia Magnética",
+      "Tomografía Computada",
+      "Ecodoppler",
+      "Ecografías"
     ],
     "services": [
-      "Guardia 24h",
+      "Guardia 24h (Clínica Médica, Pediatría, Traumatología)",
+      "Consultorios externos con turno programado",
+      "Rayos X 24 hs a demanda",
+      "Diagnóstico por Imágenes (resonancia, ecodoppler, ecografías)",
+      "Vacunatorio (COVID y Calendario)",
+      "Servicio de Trabajo Social",
       "Internación de alta complejidad",
-      "Tomógrafo propio",
-      "Quirófano",
-      "Laboratorio",
-      "Diagnóstico por imágenes",
       "Atención gratuita a vecinos"
+    ],
+    "detailedSections": [
+      {
+        "title": "Guardia 24 horas (demanda espontánea)",
+        "items": [
+          { "name": "Clínica Médica", "schedule": "24 hs, lunes a domingos" },
+          { "name": "Pediatría", "schedule": "24 hs, lunes a domingos" },
+          { "name": "Traumatología", "schedule": "24 hs, lunes a domingos", "detail": "Pediátricos y adultos" },
+          { "name": "Rayos X", "schedule": "24 hs, a demanda" }
+        ]
+      },
+      {
+        "title": "Consultorios Externos (con turno programado)",
+        "description": "Asignación general de turnos presenciales: lunes a viernes de 8:00 a 13:00 hs / 14:00 hs.",
+        "items": [
+          { "name": "Clínica Médica", "schedule": "Miércoles 11 a 15 hs | Jueves 8 a 16 hs", "detail": "Adultos" },
+          { "name": "Pediatría (Niño/a sano/a)", "schedule": "Martes y miércoles 11 a 16 hs | Lunes y martes 13 a 17 hs", "detail": "De 1 mes a 15 años" },
+          { "name": "Dermatología", "schedule": "Lunes de 08:00 / 08:30 a 15:00 hs", "detail": "Adultos y pediátrico" },
+          { "name": "Cardiología", "schedule": "Lunes y viernes 8 a 13 hs | Martes 8 a 12 hs | Miércoles 8 a 13 hs", "detail": "Adultos" },
+          { "name": "Traumatología", "schedule": "Martes 8 a 11 hs | Viernes 8 a 13 hs", "detail": "Adultos" },
+          { "name": "Traumatología Cirugía", "schedule": "Miércoles de 08:30 a 11:00 hs", "detail": "Adultos" }
+        ]
+      },
+      {
+        "title": "Diagnóstico por Imágenes (con turno programado)",
+        "description": "Gestión de turnos: lunes a viernes de 07:00 a 19:00 hs. Documentación requerida vía WhatsApp: foto del DNI (ambos lados), negativa de ANSES (sin obra social) o carnet de afiliado (con obra social), y foto de la orden médica.",
+        "whatsapp": "5491166114800",
+        "whatsappLabel": "Solicitar turno por WhatsApp (11 6611-4800)",
+        "items": [
+          { "name": "Resonancia Magnética", "detail": "Todas las zonas (menos cardíaca y mamaria)" },
+          { "name": "Tomografía Computada", "detail": "Momentáneamente en servicio técnico" },
+          { "name": "Ecodopplers", "detail": "Ecodoppler cardíaco / ecocardiograma doppler (menos obstétrico)" },
+          { "name": "Ecografías", "subItems": ["Abdominal", "Obstétrica y Scan Fetal", "Ginecológica y Transvaginal (TV)", "Hepatobiliopancreática", "Mamaria", "Musculoesquelética", "Pancreática", "Parotídea", "Partes blandas", "Pleural", "Prostática", "Renal", "Testicular", "Tiroidea", "Vesical"] }
+        ]
+      },
+      {
+        "title": "Vacunatorio",
+        "items": [
+          { "name": "Vacunatorio COVID", "schedule": "Lunes a viernes de 8:00 a 13:00 hs" },
+          { "name": "Vacunatorio de Calendario", "schedule": "Lunes a viernes de 8:00 a 13:00 hs" }
+        ]
+      },
+      {
+        "title": "Servicio de Trabajo Social",
+        "description": "Atención en el establecimiento."
+      }
     ],
     "mapLink": "https://maps.google.com/maps?q=Av.+Croacia+2312,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "coordinates": { "lat": -34.512461, "lng": -58.7964676 },
