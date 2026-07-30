@@ -1320,20 +1320,22 @@
   },
   {
     "id": "hospital-salud-mental-loiacono",
-    "name": "Hospital de Salud Mental y Terapéutico \"Lic. María Edith Loiácono\"",
+    "name": "Hospital de Salud Mental y Consumos Problemáticos \"Lic. María Edith Loiácono\"",
     "type": "hospital_publico",
-    "address": "Serrano 4799, José C. Paz",
+    "address": "Serrano 4749 (e/ Arias y Lavalle), José C. Paz",
     "zone": "José C. Paz",
-    "phones": ["(02320) 332227"],
+    "phones": ["11 5119-4040"],
+    "whatsapp": "5491151194040",
+    "whatsappLabel": "WhatsApp: 11 5119-4040",
     "hasEmergencyRoom": false,
     "photo": "/salud/hospital-salud-mental-loiacono.jfif",
     "photos": ["/salud/hospital-salud-mental-loiacono.jfif"],
     "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "20:00" },
-      { "day": "martes",    "open": "08:00", "close": "20:00" },
-      { "day": "miercoles", "open": "08:00", "close": "20:00" },
-      { "day": "jueves",    "open": "08:00", "close": "20:00" },
-      { "day": "viernes",   "open": "08:00", "close": "20:00" },
+      { "day": "lunes",     "open": "08:00", "close": "18:00" },
+      { "day": "martes",    "open": "08:00", "close": "18:00" },
+      { "day": "miercoles", "open": "08:00", "close": "18:00" },
+      { "day": "jueves",    "open": "08:00", "close": "18:00" },
+      { "day": "viernes",   "open": "08:00", "close": "18:00" },
       { "day": "sabado",    "open": "cerrado", "close": "" },
       { "day": "domingo",   "open": "cerrado", "close": "" }
     ],
@@ -1341,23 +1343,61 @@
       "Psicología",
       "Psiquiatría",
       "Terapia Ocupacional",
-      "Tratamiento de adicciones",
+      "Tratamiento de consumos problemáticos",
       "Rehabilitación psicosocial",
-      "Salud mental infanto-juvenil"
+      "Salud mental infanto-juvenil (4 a 17 años)"
     ],
     "services": [
-      "Atención ambulatoria",
-      "Hospital de día",
-      "Internación (18 camas)",
+      "Grupos terapéuticos (turnos programados)",
+      "Hospital de Día en Salud Mental",
+      "Hospital de Día por Consumos Problemáticos",
+      "Atención individual de psicología y psiquiatría",
+      "Jugueteca infantil",
       "Programa PURPSI (medicamentos gratuitos)",
-      "Radio terapéutica",
       "Equipo multidisciplinario (psicólogos, psiquiatras, operadores)",
       "Atención gratuita a vecinos"
     ],
-    "mapLink": "https://maps.google.com/maps?q=Serrano+4799,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "detailedSections": [
+      {
+        "title": "Grupos Terapéuticos (turnos programados)",
+        "items": [
+          { "name": "Ansiedad" },
+          { "name": "Duelo" },
+          { "name": "Depresión" },
+          { "name": "Tercera Edad" },
+          { "name": "Rehabilitación cognitiva, social y funcional", "detail": "Pacientes con esquizofrenia" },
+          { "name": "Talleres de habilidades DBT", "detail": "Terapia Dialéctico Conductual" },
+          { "name": "Género y diversidad de género" },
+          { "name": "Taller de rehabilitación neurocognitiva" }
+        ]
+      },
+      {
+        "title": "Dispositivos de Hospital de Día (turnos programados)",
+        "items": [
+          { "name": "Hospital de Día en Salud Mental", "detail": "Adulto e infanto juvenil", "schedule": "Martes y jueves" },
+          { "name": "Hospital de Día por Consumos Problemáticos", "detail": "Adulto e infanto juvenil (13 a 17 años)", "schedule": "Lunes, miércoles y viernes — turnos mañana y tarde" }
+        ]
+      },
+      {
+        "title": "Dispositivos Infanto Juveniles (4 a 17 años) y Atención General",
+        "description": "Turnos programados.",
+        "items": [
+          { "name": "Jugueteca \"A jugar al Hospital\"", "detail": "Espacio destinado a infancias y familias" },
+          { "name": "Atención individual de psicología", "detail": "Pacientes adultos e infanto juveniles" },
+          { "name": "Atención individual de psiquiatría", "detail": "Pacientes adultos e infanto juveniles" },
+          { "name": "Equipo de enlace territorial" },
+          { "name": "Atención de pacientes derivados por DINAF y Patronato de Liberados" },
+          { "name": "Dispositivo de evaluaciones interdisciplinarias judiciales" },
+          { "name": "Equipo de género y diversidad" },
+          { "name": "Dispositivo de violencia por motivo de género e intrafamiliar" },
+          { "name": "Dispositivo de masculinidades" }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Serrano+4749,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "instagram": "https://www.instagram.com/saludmental_jcpaz/",
     "comoLlegar": [
-      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego remís hacia Serrano 4799.",
+      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego remís hacia Serrano 4749.",
       "Línea 749 — recorre zona oeste; consultar parada más cercana a Serrano.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Serrano."
     ],
