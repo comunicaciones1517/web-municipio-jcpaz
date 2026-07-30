@@ -1186,11 +1186,11 @@
         "title": "Diagnóstico por Imágenes (con turno programado)",
         "items": [
           { "name": "Endoscopías" },
-          { "name": "Ecografías", "subItems": ["Abdominal", "Hepatobiliopancreática", "Urológicas", "Ginecológicas / Transvaginal", "Inguinal / Partes blandas", "Obstétricas", "Prostática", "Renal", "Renovesicoprostática", "Testicular", "Tiroidea", "Vesical"] },
           { "name": "Ecodoppler General" },
           { "name": "Ecocardiograma Doppler" },
           { "name": "Servicio PET TC", "detail": "Próximamente. Con FDG, COLINA y PSMA" },
-          { "name": "Angiógrafo", "detail": "Próximamente" }
+          { "name": "Angiógrafo", "detail": "Próximamente" },
+          { "name": "Ecografías", "subItems": ["Abdominal", "Hepatobiliopancreática", "Urológicas", "Ginecológicas / Transvaginal", "Inguinal / Partes blandas", "Obstétricas", "Prostática", "Renal", "Renovesicoprostática", "Testicular", "Tiroidea", "Vesical"] }
         ]
       },
       {
@@ -1459,12 +1459,12 @@
         "title": "Servicio de Imágenes y Diagnóstico (con turno programado)",
         "description": "Días y horarios de turnos: lunes a viernes de 8:00 a 14:00 hs.",
         "items": [
-          { "name": "Ecografías", "subItems": ["Abdominal", "Renal-vesical", "Renal", "Vesico-prostática", "HBP", "Tiroidea", "Partes blandas", "Ginecológica", "Aorto-ilíaca"] },
           { "name": "Rayos X", "detail": "Disponible según indicación médica" },
-          { "name": "Ecodoppler", "subItems": ["Vasos de cuello", "Arterial y venoso (miembros superiores e inferiores)", "Testicular", "Ginecológico", "Renal", "Aorto-ilíaco"] },
           { "name": "Ecocardiograma doppler" },
           { "name": "Holter y MAPA", "schedule": "Viernes de 8:00 a 10:00 hs" },
-          { "name": "Angiógrafo", "schedule": "Turnos de lunes a viernes de 9:00 a 13:00 hs" }
+          { "name": "Angiógrafo", "schedule": "Turnos de lunes a viernes de 9:00 a 13:00 hs" },
+          { "name": "Ecografías", "subItems": ["Abdominal", "Renal-vesical", "Renal", "Vesico-prostática", "HBP", "Tiroidea", "Partes blandas", "Ginecológica", "Aorto-ilíaca"] },
+          { "name": "Ecodoppler", "subItems": ["Vasos de cuello", "Arterial y venoso (miembros superiores e inferiores)", "Testicular", "Ginecológico", "Renal", "Aorto-ilíaco"] }
         ]
       },
       {
