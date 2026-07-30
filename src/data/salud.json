@@ -1395,10 +1395,12 @@
     "id": "hospital-cardiovascular-buljan",
     "name": "Hospital Cardiovascular y Metabólico \"Miguel Ángel Bulján\"",
     "type": "hospital_publico",
-    "address": "Dinamarca 3627 (esq. Finlay), Barrio Sol y Verde, José C. Paz",
+    "address": "Dinamarca 3627 (e/ Finlay y Tolstoi), Barrio Sol y Verde, José C. Paz",
     "zone": "Barrio Sol y Verde",
-    "phones": ["(02320) 353103"],
-    "emergencyPhone": "(02320) 353103",
+    "phones": ["11 6611-4862"],
+    "whatsapp": "5491166114862",
+    "whatsappLabel": "WhatsApp Hemodinamia: 11 6611-4862",
+    "emergencyPhone": "11 6611-4862",
     "hasEmergencyRoom": true,
     "photo": "/salud/hospital-cardiovascular-buljan.jpg",
     "photos": ["/salud/hospital-cardiovascular-buljan.jpg"],
@@ -1412,24 +1414,71 @@
       { "day": "domingo",   "open": "00:00", "close": "23:59" }
     ],
     "specialties": [
-      "Cardiología",
-      "Hemodinamia y angiografía",
-      "Medicina interna y clínica médica",
-      "Diabetología y endocrinología",
-      "Rehabilitación cardiovascular",
-      "Terapia Intensiva (UTI)",
-      "Pediatría",
+      "Dermatología (Adultos)",
+      "Urología (Adultos)",
+      "Cardiología (Adultos)",
+      "Traumatología (a partir de los 15 años)",
+      "Nutrición (Adultos)",
+      "Clínica médica",
+      "Hemodinamia y Cardiología Intervencionista",
+      "Enfermedad Vascular Periférica",
       "Diagnóstico por imágenes cardiovasculares"
     ],
     "services": [
-      "Guardia 24h",
+      "Guardia 24h (Clínica médica, Cardiología, Traumatología)",
       "Angiógrafo municipal de última generación",
-      "Intervenciones quirúrgicas cardiovasculares",
-      "Unidad de Terapia Intensiva (7 camas UTI, 35 camas totales)",
-      "Laboratorio de análisis clínicos",
-      "Unidad especializada en diabetes y enfermedades metabólicas",
-      "Gimnasio de rehabilitación cardiovascular",
+      "Servicio de Hemodinamia (emergencias las 24 hs)",
+      "Internación en UCO (Unidad Coronaria)",
+      "Servicio de Imágenes y Diagnóstico (ecografías, ecodoppler, rayos X)",
+      "Holter, MAPA y ecocardiograma doppler",
+      "Vacunatorio (Fiebre Amarilla)",
       "Atención gratuita a vecinos"
+    ],
+    "detailedSections": [
+      {
+        "title": "Consultorios Externos (con turno programado)",
+        "items": [
+          { "name": "Dermatología", "detail": "Adultos", "schedule": "Turnos de 10:00 a 16:00 hs" },
+          { "name": "Urología", "detail": "Adultos", "schedule": "Turnos de 10:00 a 16:00 hs" },
+          { "name": "Cardiología", "detail": "Adultos", "schedule": "Turnos de 10:00 a 16:00 hs" },
+          { "name": "Traumatología", "detail": "A partir de los 15 años", "schedule": "Turnos de 14:00 a 18:00 hs" },
+          { "name": "Nutrición", "detail": "Adultos", "schedule": "Turnos de 14:00 a 18:00 hs" }
+        ]
+      },
+      {
+        "title": "Guardia 24 horas (a demanda — Adultos)",
+        "phone": "11 6611-4862",
+        "items": [
+          { "name": "Clínica médica", "schedule": "Lunes a domingos, 24 hs" },
+          { "name": "Cardiología", "schedule": "Martes y miércoles, 24 hs" },
+          { "name": "Traumatología", "schedule": "Lunes a viernes, 8:00 a 20:00 hs" },
+          { "name": "Internación", "detail": "UCO — Unidad Coronaria" }
+        ]
+      },
+      {
+        "title": "Servicio de Imágenes y Diagnóstico (con turno programado)",
+        "description": "Días y horarios de turnos: lunes a viernes de 8:00 a 14:00 hs.",
+        "items": [
+          { "name": "Ecografías", "subItems": ["Abdominal", "Renal-vesical", "Renal", "Vesico-prostática", "HBP", "Tiroidea", "Partes blandas", "Ginecológica", "Aorto-ilíaca"] },
+          { "name": "Rayos X", "detail": "Disponible según indicación médica" },
+          { "name": "Ecodoppler", "subItems": ["Vasos de cuello", "Arterial y venoso (miembros superiores e inferiores)", "Testicular", "Ginecológico", "Renal", "Aorto-ilíaco"] },
+          { "name": "Ecocardiograma doppler" },
+          { "name": "Holter y MAPA", "schedule": "Viernes de 8:00 a 10:00 hs" },
+          { "name": "Angiógrafo", "schedule": "Turnos de lunes a viernes de 9:00 a 13:00 hs" }
+        ]
+      },
+      {
+        "title": "Servicio de Hemodinamia",
+        "description": "Hemodinamia y Cardiología Intervencionista. Enfermedad Vascular Periférica. Disponibilidad para emergencias: las 24 hs. Consultorio de demanda espontánea: cateterismo cardíaco y vascular periférico. Atención presencial: lunes a viernes de 9:00 a 13:00 hs.",
+        "whatsapp": "5491166114862",
+        "whatsappLabel": "WhatsApp Hemodinamia: 11 6611-4862"
+      },
+      {
+        "title": "Vacunatorio (Fiebre Amarilla)",
+        "description": "Solicitar turno previo por WhatsApp.",
+        "whatsapp": "5491163972456",
+        "whatsappLabel": "Pedir turno por WhatsApp: 11 6397-2456"
+      }
     ],
     "mapLink": "https://maps.google.com/maps?q=Dinamarca+3627,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "comoLlegar": [
@@ -1438,6 +1487,6 @@
       "Línea 749 — recorre zona oeste del partido; consultar parada más cercana.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Barrio Sol y Verde."
     ],
-    "notes": "Atiende ~1.500 personas diarias de José C. Paz, Gral. Rodríguez, San Miguel, Malvinas Argentinas y zonas aledañas. Cuenta con el único Angiógrafo Municipal del partido."
+    "notes": "Atiende ~1.500 personas diarias de José C. Paz, Gral. Rodríguez, San Miguel, Malvinas Argentinas y zonas aledañas. Cuenta con el único Angiógrafo Municipal del partido. Email Hemodinamia: hemodinamiabuljan@gmail.com"
   }
 ]
