@@ -8,7 +8,6 @@ import { FACILITY_TYPE_LABELS } from "@/lib/utils";
 
 const TYPES = [
   "hospital_publico",
-  "hospital_privado",
   "centro_de_salud",
   "clinica",
 ] as const;
