@@ -875,293 +875,1968 @@
     "notes": "Centralita telefónica de la Secretaría de Salud Municipal. Informa y deriva las consultas al área o centro de salud que corresponda. Lunes a viernes en horario administrativo."
   },
   {
-    "id": "centro-sagrada-familia",
-    "name": "Centro de Salud Sagrada Familia",
+    "id": "centro-primer-nivel",
+    "name": "Dirección de Primer Nivel de Atención Médica",
     "type": "centro_de_salud",
-    "address": "Uspayata y Londres, José C. Paz",
-    "zone": "Barrio Sagrada Familia",
-    "phones": ["(02320) 42-2736"],
+    "address": "Chile y Castelar, José C. Paz",
+    "zone": "José C. Paz",
+    "phones": [],
     "hasEmergencyRoom": false,
-    "photo": "/salud/centro-sagrada-familia.webp",
-    "photos": ["/salud/centro-sagrada-familia.webp"],
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg"
+    ],
     "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "14:00" },
-      { "day": "martes",    "open": "08:00", "close": "14:00" },
-      { "day": "miercoles", "open": "08:00", "close": "14:00" },
-      { "day": "jueves",    "open": "08:00", "close": "14:00" },
-      { "day": "viernes",   "open": "08:00", "close": "14:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Londres+3294+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 461: recorre el interior del partido, parada cercana a Londres.",
-      "Línea 449: acceso desde la zona central de José C. Paz.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar a pie o en remís."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
-  },
-  {
-    "id": "centro-san-atilio",
-    "name": "Centro de Salud San Atilio",
-    "type": "centro_de_salud",
-    "address": "Guillermo Miller 2948, José C. Paz",
-    "zone": "Barrio San Atilio",
-    "phones": ["(02320) 42-3949"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "18:00" },
-      { "day": "martes",    "open": "08:00", "close": "18:00" },
-      { "day": "miercoles", "open": "08:00", "close": "18:00" },
-      { "day": "jueves",    "open": "08:00", "close": "18:00" },
-      { "day": "viernes",   "open": "08:00", "close": "18:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Guillermo+Miller+2948+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 449: conecta con la zona de Barrio San Atilio.",
-      "Línea 461: recorre el interior del partido con parada en la zona.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
-  },
-  {
-    "id": "centro-las-heras",
-    "name": "Centro de Salud Las Heras",
-    "type": "centro_de_salud",
-    "address": "Remigio López 5363, José C. Paz",
-    "zone": "Barrio Las Heras",
-    "phones": ["(02320) 42-4201"],
-    "hasEmergencyRoom": true,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "00:00", "close": "23:59" },
-      { "day": "martes",    "open": "00:00", "close": "23:59" },
-      { "day": "miercoles", "open": "00:00", "close": "23:59" },
-      { "day": "jueves",    "open": "00:00", "close": "23:59" },
-      { "day": "viernes",   "open": "00:00", "close": "23:59" },
-      { "day": "sabado",    "open": "00:00", "close": "23:59" },
-      { "day": "domingo",   "open": "00:00", "close": "23:59" }
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
     ],
     "specialties": [
       "Clínica Médica",
       "Pediatría",
-      "Ginecología",
+      "Control de Niño Sano",
       "Obstetricia",
-      "Cardiología",
-      "Dermatología",
-      "Oftalmología",
-      "Neumonología",
-      "Psicología",
-      "Nutrición"
+      "Psicología infantil"
     ],
     "services": [
-      "Guardia 24h de adultos",
-      "Enfermería 24h",
-      "Laboratorio de análisis clínicos (lunes a viernes 8:00–10:00 hs)",
-      "Ecografías",
-      "Monitoreos fetales",
-      "Electrocardiogramas",
-      "Farmacia (lunes a viernes 8:00–18:00 hs)",
-      "Vacunación",
-      "Servicio Social",
-      "Plan Nacer / Sumar",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Remigio+L%C3%B3pez+5363+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 391: recorre la zona sur del partido pasando por Las Heras.",
-      "Línea 449: conexión desde el centro de José C. Paz.",
-      "Línea 461: parada en la zona de Barrio Las Heras.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y tomar remís hacia Remigio López."
-    ],
-    "notes": "Uno de los centros de salud más completos del partido. Cuenta con guardia médica de adultos y enfermería las 24 horas. Las especialidades se atienden en días y horarios específicos; consultar turnos por teléfono."
-  },
-  {
-    "id": "centro-la-paz",
-    "name": "Centro de Salud La Paz",
-    "type": "centro_de_salud",
-    "address": "Oribe 3400, José C. Paz",
-    "zone": "Barrio La Paz",
-    "phones": ["(02320) 42-4672"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "18:00" },
-      { "day": "martes",    "open": "08:00", "close": "18:00" },
-      { "day": "miercoles", "open": "08:00", "close": "18:00" },
-      { "day": "jueves",    "open": "08:00", "close": "18:00" },
-      { "day": "viernes",   "open": "08:00", "close": "18:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
+      "Consultas médicas de clínica y pediatría",
       "Vacunación",
       "Enfermería",
       "Inyectables",
-      "Atención primaria de salud"
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
     ],
-    "mapLink": "https://maps.google.com/?q=Oribe+3400+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Horario de atención: jueves y viernes de 8 a 12 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Miércoles de 8 a 13 hs (cada 15 días)"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Martes de 8 a 14 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Chile%20y%20Castelar%2C%20Jos%C3%A9%20C.%20Paz",
     "comoLlegar": [
-      "Línea 449: conecta con la zona de Barrio La Paz.",
-      "Línea 461: parada cercana en la zona del barrio.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+      "Línea 449: parada en la zona central de José C. Paz.",
+      "Línea 440: conecta con la zona desde estaciones del Ferrocarril Belgrano Norte.",
+      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz, a pocas cuadras."
     ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
-  },
-  {
-    "id": "centro-sol-y-verde",
-    "name": "Centro de Salud Sol y Verde",
-    "type": "centro_de_salud",
-    "address": "Dinamarca 3798, José C. Paz",
-    "zone": "Barrio Sol y Verde",
-    "phones": ["(02320) 42-5655"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "16:00" },
-      { "day": "martes",    "open": "08:00", "close": "16:00" },
-      { "day": "miercoles", "open": "08:00", "close": "16:00" },
-      { "day": "jueves",    "open": "08:00", "close": "16:00" },
-      { "day": "viernes",   "open": "08:00", "close": "16:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría",
-      "Cardiología"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Diagnóstico cardiovascular",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Dinamarca+3798+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 449: acceso desde el centro de José C. Paz hacia Barrio Sol y Verde.",
-      "Línea 461: parada en la zona de Dinamarca.",
-      "Línea 391: recorre el sector con parada cercana."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal. Atención de lunes a viernes con horario extendido hasta las 20:00 hs."
+    "notes": "Sede de coordinación del Primer Nivel de Atención en Salud del municipio. Atiende consultas primarias y gestiona derivaciones a centros de mayor complejidad."
   },
   {
     "id": "centro-santa-paula",
     "name": "Centro de Salud Santa Paula",
     "type": "centro_de_salud",
-    "address": "Piñero 755, José C. Paz",
+    "address": "Piñeyro 755, José C. Paz",
     "zone": "Barrio Santa Paula",
-    "phones": ["(02320) 42-5665"],
+    "phones": [],
     "hasEmergencyRoom": false,
     "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg"],
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/centro-de-salud-santa-paula-jose-c-paz-buenos-aires-pineiro-755.jpg"
+    ],
     "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "18:00" },
-      { "day": "martes",    "open": "08:00", "close": "18:00" },
-      { "day": "miercoles", "open": "08:00", "close": "18:00" },
-      { "day": "jueves",    "open": "08:00", "close": "18:00" },
-      { "day": "viernes",   "open": "08:00", "close": "18:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
     ],
     "specialties": [
       "Clínica Médica",
       "Pediatría",
-      "Neonatología"
+      "Obstetricia",
+      "Psicopedagogía",
+      "Psicología de adultos"
     ],
     "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Control de recién nacidos",
+      "Consultas médicas de clínica y pediatría",
       "Vacunación",
       "Enfermería",
       "Inyectables",
-      "Atención primaria de salud"
+      "Atención primaria de salud",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
     ],
-    "mapLink": "https://maps.google.com/?q=Pi%C3%B1ero+755+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "detailedSections": [
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Miércoles de 8 a 13 hs (cada 15 días)"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicopedagogía (niños y niñas)",
+            "schedule": "Lunes y martes de 8 a 12 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Martes y jueves de 12 a 17 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Pi%C3%B1eyro%20755%2C%20Jos%C3%A9%20C.%20Paz",
     "comoLlegar": [
       "Línea 461: recorre el interior del partido con parada en Barrio Santa Paula.",
       "Línea 449: conecta con la zona desde el centro.",
       "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
     ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
   },
   {
-    "id": "centro-el-ombu",
-    "name": "Centro de Salud El Ombú",
+    "id": "centro-sol-y-verde",
+    "name": "Centro de Salud Sol y Verde",
     "type": "centro_de_salud",
-    "address": "Gral. Arenales 336, José C. Paz",
-    "zone": "Barrio El Ombú",
-    "phones": ["(02320) 42-5744"],
+    "address": "Dinamarca y Finlay, José C. Paz",
+    "zone": "Barrio Sol y Verde",
+    "phones": [],
     "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg"],
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-sol-y-verde-jose-c-paz-buenos-aires-dinmarca-y-finlay.jpg"
+    ],
     "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "14:00" },
-      { "day": "martes",    "open": "08:00", "close": "14:00" },
-      { "day": "miercoles", "open": "08:00", "close": "14:00" },
-      { "day": "jueves",    "open": "08:00", "close": "14:00" },
-      { "day": "viernes",   "open": "08:00", "close": "14:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
     ],
     "specialties": [
-      "Clínica Médica"
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicopedagogía",
+      "Psicología de adultos"
     ],
     "services": [
-      "Consultas médicas",
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: lunes a viernes 8 hs. Horario de atención: jueves de 9 a 16 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Martes y jueves de 8 a 16 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicopedagogía (niños y niñas)",
+            "schedule": "Martes de 8 a 14 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Martes de 8 a 11 hs y viernes de 8 a 12 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Dinamarca%20y%20Finlay%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 440 — hasta Av. Hipólito Yrigoyen, luego remís hacia Barrio Sol y Verde.",
+      "Línea 176 — parada en zona central, luego remís hacia Dinamarca."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-suizo-ideal",
+    "name": "Centro de Salud Suizo Ideal (TEA)",
+    "type": "centro_de_salud",
+    "address": "Chile 2000 (e/ Roque Sáenz Peña y Gelly y Obes), José C. Paz",
+    "zone": "Barrio Suizo Ideal",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Obstetricia",
+      "Psicología de adultos",
+      "Psiquiatría infantil",
+      "TEA (Trastorno del Espectro Autista)"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Martes de 9 a 14 hs (cada 15 días)"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Lunes, jueves y viernes de 8 a 12 hs"
+          },
+          {
+            "name": "Psiquiatría infantil",
+            "schedule": "Martes de 8:30 a 15:00 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Chile%202000%20(e%2F%20Roque%20S%C3%A1enz%20Pe%C3%B1a%20y%20Gelly%20y%20Obes)%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal especializado en TEA (Trastorno del Espectro Autista), de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-suizo-infico",
+    "name": "Centro de Salud Suizo Infico",
+    "type": "centro_de_salud",
+    "address": "Gral. Balcarce 3812, José C. Paz",
+    "zone": "Barrio Suizo Infico",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "/salud/centro-suizo-infico.jfif",
+    "photos": [
+      "/salud/centro-suizo-infico.jfif"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Jueves de 9 a 14 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Lunes y viernes de 8 a 14 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Miércoles de 8 a 14 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Gral.%20Balcarce%203812%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 461: parada en la zona de Gral. Balcarce.",
+      "Línea 449: conexión desde el centro hacia Barrio Suizo Infico.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-trailer-pineiro",
+    "name": "Centro de Salud Trailer Piñeiro",
+    "type": "centro_de_salud",
+    "address": "Pedernera y Lacroze, José C. Paz",
+    "zone": "Barrio Piñeiro",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Obstetricia"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Servicio de Obstetricia (área materna)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Viernes de 8 a 12 hs (cada 15 días)"
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Pedernera%20y%20Lacroze%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-pineiro-ii",
+    "name": "Centro de Salud Piñeiro II",
+    "type": "centro_de_salud",
+    "address": "Carmen Puch 1673 (e/ Montes de Oca y A. Blanqui), José C. Paz",
+    "zone": "Barrio Piñeiro",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: viernes 8 hs. Horario de atención: lunes de 9 a 13 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Martes (cada 15 días) y miércoles de 9 a 14 hs"
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Carmen%20Puch%201673%20(e%2F%20Montes%20de%20Oca%20y%20A.%20Blanqui)%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-la-paz",
+    "name": "Centro de Salud La Paz",
+    "type": "centro_de_salud",
+    "address": "Oribe y Castañeda, José C. Paz",
+    "zone": "Barrio La Paz",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-la-paz-jose-c-paz-buenos-aires-oribe-y-castaneda.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Horario de atención: jueves de 9 a 14 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Jueves de 9 a 13 hs (cada 15 días)"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Lunes de 8 a 14 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Lunes de 8 a 14 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Oribe%20y%20Casta%C3%B1eda%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 461: recorre el interior del partido con parada en Barrio La Paz.",
+      "Línea 449: conexión desde el centro hacia la zona."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-las-acacias",
+    "name": "Centro de Salud Las Acacias",
+    "type": "centro_de_salud",
+    "address": "Gral. Pintos y Eva Duarte de Perón, José C. Paz",
+    "zone": "Barrio Las Acacias",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicopedagogía"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: lunes y viernes 8 hs. Horario de atención: mismo día de 13 a 16 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Lunes de 8 a 13 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Jueves y viernes de 8 a 12 hs"
+          },
+          {
+            "name": "Psicopedagogía (niños y niñas)",
+            "schedule": "Miércoles y jueves de 8 a 12 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Gral.%20Pintos%20y%20Eva%20Duarte%20de%20Per%C3%B3n%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 449: conexión desde el centro de José C. Paz hacia Las Acacias.",
+      "Línea 461: parada en la zona de Gral. Pintos.",
+      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-las-heras",
+    "name": "Centro de Salud Las Heras",
+    "type": "centro_de_salud",
+    "address": "Av. Remigio López y Coronel Arias, José C. Paz",
+    "zone": "Barrio Las Heras",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-heras-jose-c-paz-buenos-aires-av-sarmiento-5363.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: jueves 8 hs. Horario de atención: lunes de 8 a 16 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Martes y miércoles de 8 a 16 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Viernes de 8 a 15 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Lunes de 8 a 17 hs y viernes de 8 a 14 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Av.%20Remigio%20L%C3%B3pez%20y%20Coronel%20Arias%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 461: parada en la zona de Remigio López.",
+      "Línea 449: conexión desde el centro hacia Barrio Las Heras."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-mirador-altube",
+    "name": "Centro de Salud Mirador Altube",
+    "type": "centro_de_salud",
+    "address": "Hipólito Yrigoyen y Tres Marías (esq. Salto), José C. Paz",
+    "zone": "Barrio Altube",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: miércoles 8 hs. Horario de atención: lunes y jueves de 9 a 14 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Viernes de 9 a 14 hs"
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Hip%C3%B3lito%20Yrigoyen%20y%20Tres%20Mar%C3%ADas%20(esq.%20Salto)%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-primavera",
+    "name": "Centro de Salud Primavera",
+    "type": "centro_de_salud",
+    "address": "Santa María y Ayacucho, José C. Paz",
+    "zone": "Barrio Primavera",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: lunes, miércoles y viernes 9 hs. Horario de atención: lunes de 9 a 14 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Lunes de 9 a 16 hs"
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Santa%20Mar%C3%ADa%20y%20Ayacucho%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-sagrada-familia",
+    "name": "Centro de Salud Sagrada Familia",
+    "type": "centro_de_salud",
+    "address": "Uspallata y Londres, José C. Paz",
+    "zone": "Barrio Sagrada Familia",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "/salud/centro-sagrada-familia.webp",
+    "photos": [
+      "/salud/centro-sagrada-familia.webp"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Obstetricia"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Servicio de Obstetricia (área materna)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Viernes de 8 a 13 hs (cada 15 días)"
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Uspallata%20y%20Londres%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-9-de-julio",
+    "name": "Centro de Salud 9 de Julio",
+    "type": "centro_de_salud",
+    "address": "D'Elía 4265, José C. Paz",
+    "zone": "Barrio 9 de Julio",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
       "Vacunación",
       "Enfermería",
       "Inyectables",
       "Atención primaria de salud"
     ],
-    "mapLink": "https://maps.google.com/?q=Gral+Arenales+336+Jos%C3%A9+C+Paz+Buenos+Aires",
+    "mapLink": "https://maps.google.com/?q=D'El%C3%ADa%204265%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 391: recorre el sector de Barrio 9 de Julio con parada cercana.",
+      "Línea 461: parada en la zona de D'Elía.",
+      "Línea 449: conexión desde el centro de José C. Paz."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-alberdi",
+    "name": "Centro de Salud Alberdi",
+    "type": "centro_de_salud",
+    "address": "Héctor Arregui y Montes de Oca, José C. Paz",
+    "zone": "Barrio Alberdi",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicopedagogía",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: lunes, martes y jueves 8 hs. Horario de atención: miércoles y viernes de 10 a 15 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Lunes y jueves de 8 a 16 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Lunes de 8:30 a 14:30 hs y miércoles de 8 a 15 hs"
+          },
+          {
+            "name": "Psicopedagogía (niños y niñas)",
+            "schedule": "Lunes de 8 a 14 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Martes y miércoles de 8 a 12 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=H%C3%A9ctor%20Arregui%20y%20Montes%20de%20Oca%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 461: recorre el interior del partido con parada en Barrio Alberdi.",
+      "Línea 449: conexión desde el centro hacia la zona."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-el-ombu",
+    "name": "Centro de Salud El Ombú",
+    "type": "centro_de_salud",
+    "address": "Arenales 362, José C. Paz",
+    "zone": "Barrio El Ombú",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-el-ombu-jose-c-paz-buenos-aires-gral-arenales-336.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicopedagogía",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: miércoles 9 hs. Horario de atención: mismo día de 9 a 13 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Jueves de 8 a 13 hs (cada 15 días)"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Martes de 8 a 14 hs"
+          },
+          {
+            "name": "Psicopedagogía (niños y niñas)",
+            "schedule": "Martes y jueves de 8 a 12 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Miércoles de 8 a 12 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Arenales%20362%2C%20Jos%C3%A9%20C.%20Paz",
     "comoLlegar": [
       "Línea 449: acceso desde el centro hacia Barrio El Ombú.",
-      "Línea 461: parada en la zona de Gral. Arenales.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
+      "Línea 461: parada en la zona de Arenales."
     ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal de barrio. Atención de lunes a viernes hasta las 17:00 hs."
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-vucetich",
+    "name": "Centro de Salud Vucetich",
+    "type": "centro_de_salud",
+    "address": "Crucero La Argentina y Guanacaste, José C. Paz",
+    "zone": "Barrio Vucetich",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil",
+      "Psicopedagogía",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: viernes 8 hs. Horario de atención: lunes y viernes de 8 a 12 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Lunes de 8 a 16 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Miércoles de 8 a 14 hs"
+          },
+          {
+            "name": "Psicopedagogía (niños y niñas)",
+            "schedule": "Lunes y viernes de 8 a 14 hs"
+          },
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Jueves de 8 a 14 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Crucero%20La%20Argentina%20y%20Guanacaste%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-san-roque",
+    "name": "Centro de Salud San Roque",
+    "type": "centro_de_salud",
+    "address": "Cacique Coliqueo y Pavón, José C. Paz",
+    "zone": "Barrio San Roque",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Miércoles de 8 a 14 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Cacique%20Coliqueo%20y%20Pav%C3%B3n%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-zona-norte",
+    "name": "Centro de Salud Zona Norte",
+    "type": "centro_de_salud",
+    "address": "Malnatti 3759, José C. Paz",
+    "zone": "Zona Norte",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Psicología infantil"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Miércoles y jueves de 8 a 12 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Malnatti%203759%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-salud-frino-sur",
+    "name": "Centro de Salud Frino Sur",
+    "type": "centro_de_salud",
+    "address": "Ramón Falcón 2307 (e/ Viena y Naciones Unidas), José C. Paz",
+    "zone": "Barrio Frino",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud"
+    ],
+    "mapLink": "https://maps.google.com/?q=Ram%C3%B3n%20Falc%C3%B3n%202307%20(e%2F%20Viena%20y%20Naciones%20Unidas)%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 391: recorre la zona sur del partido pasando por Barrio Frino.",
+      "Línea 461: parada en la zona de Ramón Falcón.",
+      "Línea 449: conexión desde el centro de José C. Paz."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-rene-favaloro",
+    "name": "Centro de Salud René Favaloro",
+    "type": "centro_de_salud",
+    "address": "Manzana 33 y Boulevard, CIC Barrio Saavedra Lamas, José C. Paz",
+    "zone": "Barrio Saavedra Lamas",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: martes y viernes 9 hs. Horario de atención: mismo día de 9 a 14 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Martes de 8 a 14 hs"
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Manzana%2033%20y%20Boulevard%2C%20CIC%20Barrio%20Saavedra%20Lamas%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-san-atilio",
+    "name": "Centro de Salud San Atilio",
+    "type": "centro_de_salud",
+    "address": "G. Miller y San Blas, José C. Paz",
+    "zone": "Barrio San Atilio",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-san-atilio-jose-c-paz-buenos-aires-guillermo-mitre-y-san-blas.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología infantil"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Turno presencial: viernes 8 hs. Horario de atención: lunes y miércoles de 8 a 16 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Viernes de 8 a 16 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (niños y niñas)",
+            "schedule": "Martes de 8:30 a 15:00 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=G.%20Miller%20y%20San%20Blas%2C%20Jos%C3%A9%20C.%20Paz",
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
+  },
+  {
+    "id": "centro-salud-urquiza",
+    "name": "Centro de Salud Urquiza",
+    "type": "centro_de_salud",
+    "address": "Caracas 4785 y Salvatori, José C. Paz",
+    "zone": "Barrio Urquiza",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg",
+    "photos": [
+      "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg"
+    ],
+    "hours": [
+      {
+        "day": "lunes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "martes",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "miercoles",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "jueves",
+        "open": "08:00",
+        "close": "14:00"
+      },
+      {
+        "day": "viernes",
+        "open": "08:00",
+        "close": "16:00"
+      },
+      {
+        "day": "sabado",
+        "open": "cerrado",
+        "close": ""
+      },
+      {
+        "day": "domingo",
+        "open": "cerrado",
+        "close": ""
+      }
+    ],
+    "specialties": [
+      "Clínica Médica",
+      "Pediatría",
+      "Control de Niño Sano",
+      "Obstetricia",
+      "Psicología de adultos"
+    ],
+    "services": [
+      "Consultas médicas de clínica y pediatría",
+      "Vacunación",
+      "Enfermería",
+      "Inyectables",
+      "Atención primaria de salud",
+      "Control de salud de niños/as (1 mes a 13 años)",
+      "Servicio de Obstetricia (área materna)",
+      "Atención en Salud Mental (APS)"
+    ],
+    "detailedSections": [
+      {
+        "title": "Control de Salud de Niños/as (1 mes a 13 años)",
+        "description": "Horario de atención: martes de 9 a 16 hs."
+      },
+      {
+        "title": "Servicio de Obstetricia (Área Materna)",
+        "description": "Viernes de 8 a 16 hs"
+      },
+      {
+        "title": "Salud Mental",
+        "description": "Consultas o informes: 11 2457-8882 / direccionsmprimenivel@gmail.com.",
+        "phone": "11 2457-8882",
+        "items": [
+          {
+            "name": "Psicología (adultos)",
+            "schedule": "Martes y jueves de 8 a 11 hs"
+          }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/?q=Caracas%204785%20y%20Salvatori%2C%20Jos%C3%A9%20C.%20Paz",
+    "comoLlegar": [
+      "Línea 391: recorre la zona de Barrio Urquiza.",
+      "Línea 449: conexión desde el centro hacia la zona."
+    ],
+    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos."
   },
   {
     "id": "area-bajo-peso",
@@ -1169,7 +2844,7 @@
     "type": "centro_de_salud",
     "address": "Av. Hipólito Yrigoyen, José C. Paz",
     "zone": "José C. Paz",
-    "phones": ["(02320) 42-6724"],
+    "phones": [],
     "hasEmergencyRoom": false,
     "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg",
     "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/secretaria-de-salud-y-accion-social-jose-c-paz-buenos-aires-yrigoyen-2945.jpg"],
@@ -1201,304 +2876,6 @@
       "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz."
     ],
     "notes": "Área especializada de la Secretaría de Salud Municipal dedicada al seguimiento y tratamiento de niños con bajo peso y problemas nutricionales. Programa gratuito para vecinos de José C. Paz. Consultar disponibilidad de turnos por teléfono."
-  },
-  {
-    "id": "centro-las-acacias",
-    "name": "Centro de Salud Las Acacias",
-    "type": "centro_de_salud",
-    "address": "Gral. Pintos 1665, José C. Paz",
-    "zone": "Barrio Las Acacias",
-    "phones": ["(02320) 43-7049"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-las-acasias-jose-c-paz-buenos-aires-gral-pinto-eva-peron.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "16:00" },
-      { "day": "martes",    "open": "08:00", "close": "16:00" },
-      { "day": "miercoles", "open": "08:00", "close": "16:00" },
-      { "day": "jueves",    "open": "08:00", "close": "16:00" },
-      { "day": "viernes",   "open": "08:00", "close": "16:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Derivaciones a especialistas",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Gral+Pintos+1665+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 449: conexión desde el centro de José C. Paz hacia Las Acacias.",
-      "Línea 461: parada en la zona de Gral. Pintos.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
-  },
-  {
-    "id": "centro-salud-urquiza",
-    "name": "Centro de Salud Urquiza",
-    "type": "centro_de_salud",
-    "address": "Caracas 4900, José C. Paz",
-    "zone": "Barrio Urquiza",
-    "phones": ["(02320) 43-7666"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-barrio-urquiza-jose-c-paz-buenos-aires-caracas-y-salvatori.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "18:00" },
-      { "day": "martes",    "open": "08:00", "close": "18:00" },
-      { "day": "miercoles", "open": "08:00", "close": "18:00" },
-      { "day": "jueves",    "open": "08:00", "close": "18:00" },
-      { "day": "viernes",   "open": "08:00", "close": "18:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Caracas+4900+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 391: recorre la zona de Barrio Urquiza.",
-      "Línea 449: conexión desde el centro hacia la zona.",
-      "Línea 461: parada en la zona de Caracas."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
-  },
-  {
-    "id": "centro-primer-nivel",
-    "name": "Centro de Salud Primer Nivel",
-    "type": "centro_de_salud",
-    "address": "Chile y Castelar, José C. Paz",
-    "zone": "José C. Paz",
-    "phones": ["(02320) 44-0800"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/direccion-primer-nivel-de-salud-jose-c-paz-buenos-aires-chile-y-castelar.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "14:00" },
-      { "day": "martes",    "open": "08:00", "close": "14:00" },
-      { "day": "miercoles", "open": "08:00", "close": "14:00" },
-      { "day": "jueves",    "open": "08:00", "close": "14:00" },
-      { "day": "viernes",   "open": "08:00", "close": "14:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría",
-      "Medicina Familiar"
-    ],
-    "services": [
-      "Consultas médicas de primer nivel",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Coordinación y derivación al segundo nivel de atención",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Chile+y+Castelar+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 449: parada en la zona central de José C. Paz.",
-      "Línea 440: conecta con la zona desde estaciones del Ferrocarril Belgrano Norte.",
-      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz, a pocas cuadras."
-    ],
-    "notes": "Sede de coordinación del Primer Nivel de Atención en Salud del municipio. Atiende consultas primarias y gestiona derivaciones a centros de mayor complejidad. Atención de lunes a viernes."
-  },
-  {
-    "id": "centro-9-de-julio",
-    "name": "Centro de Salud 9 de Julio",
-    "type": "centro_de_salud",
-    "address": "D'Elia y Castro Barros, José C. Paz",
-    "zone": "Barrio 9 de Julio",
-    "phones": ["(02320) 44-6140"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-9-de-julio-jose-c-paz-buenos-aires-maestro-angel-delia-4265.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "18:00" },
-      { "day": "martes",    "open": "08:00", "close": "18:00" },
-      { "day": "miercoles", "open": "08:00", "close": "18:00" },
-      { "day": "jueves",    "open": "08:00", "close": "18:00" },
-      { "day": "viernes",   "open": "08:00", "close": "18:00" },
-      { "day": "sabado",    "open": "08:00", "close": "12:00" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría",
-      "Ginecología",
-      "Neurología",
-      "Diabetología",
-      "Cardiología",
-      "Gastroenterología",
-      "Urología",
-      "Traumatología",
-      "Kinesiología",
-      "Nutrición",
-      "Fonoaudiología",
-      "Psicología",
-      "Podología",
-      "Odontología",
-      "Otorrinolaringología",
-      "Psiquiatría"
-    ],
-    "services": [
-      "Consultas de especialidades",
-      "Pediatría gratuita",
-      "Ginecología gratuita",
-      "Clínica médica gratuita",
-      "Ecografías",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Asesoría legal",
-      "Atención primaria y especialidades"
-    ],
-    "mapLink": "https://maps.google.com/?q=%C3%81ngel+Delia+4265+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 391: recorre el sector de Barrio 9 de Julio con parada cercana.",
-      "Línea 461: parada en la zona de Ángel Delia.",
-      "Línea 449: conexión desde el centro de José C. Paz.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y tomar remís hacia Ángel Delia."
-    ],
-    "notes": "Uno de los centros de salud más completos del partido, con más de 15 especialidades. Las especialidades de pediatría, ginecología y clínica médica son completamente gratuitas. Las restantes pueden tener arancel diferencial. Atiende los sábados hasta las 13:00 hs."
-  },
-  {
-    "id": "centro-suizo-infico",
-    "name": "Centro de Salud Suizo Infico",
-    "type": "centro_de_salud",
-    "address": "Gral. Balcarce 3812, José C. Paz",
-    "zone": "Barrio Suizo Infico",
-    "phones": ["(02320) 44-6158"],
-    "hasEmergencyRoom": false,
-    "photo": "/salud/centro-suizo-infico.jfif",
-    "photos": ["/salud/centro-suizo-infico.jfif"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "14:00" },
-      { "day": "martes",    "open": "08:00", "close": "14:00" },
-      { "day": "miercoles", "open": "08:00", "close": "14:00" },
-      { "day": "jueves",    "open": "08:00", "close": "14:00" },
-      { "day": "viernes",   "open": "08:00", "close": "14:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Gral+Balcarce+3800+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 461: parada en la zona de Gral. Balcarce.",
-      "Línea 449: conexión desde el centro hacia Barrio Suizo Infico.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
-  },
-  {
-    "id": "centro-salud-frino-sur",
-    "name": "Centro de Salud Frino Sur",
-    "type": "centro_de_salud",
-    "address": "Ramón Falcón 1836, José C. Paz",
-    "zone": "Barrio Frino",
-    "phones": ["(02320) 46-5723"],
-    "hasEmergencyRoom": false,
-    "hours": [
-      { "day": "lunes",     "open": "09:00", "close": "17:00" },
-      { "day": "martes",    "open": "09:00", "close": "17:00" },
-      { "day": "miercoles", "open": "09:00", "close": "17:00" },
-      { "day": "jueves",    "open": "09:00", "close": "17:00" },
-      { "day": "viernes",   "open": "09:00", "close": "17:00" },
-      { "day": "sabado",    "open": "10:00", "close": "14:00" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Psicología",
-      "Kinesiología"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Psicología",
-      "Kinesiología y fisioterapia",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Ram%C3%B3n+Falc%C3%B3n+1836+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 391: recorre la zona sur del partido pasando por Barrio Frino.",
-      "Línea 461: parada en la zona de Ramón Falcón.",
-      "Línea 449: conexión desde el centro de José C. Paz."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal. Abre también los sábados de 10:00 a 14:00 hs. Atención gratuita para vecinos del partido."
-  },
-  {
-    "id": "centro-alberdi",
-    "name": "Centro de Salud Alberdi",
-    "type": "centro_de_salud",
-    "address": "Montes de Oca 1700, José C. Paz",
-    "zone": "Barrio Alberdi",
-    "phones": ["(02320) 53-2544"],
-    "hasEmergencyRoom": false,
-    "photo": "https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg",
-    "photos": ["https://www.hospitales.argentina.crigu.com/wp-content/uploads/2016/04/unidad-sanitaria-alberdi-jose-c-paz-buenos-aires-montes-de-oca-y-arregui.jpg"],
-    "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "18:00" },
-      { "day": "martes",    "open": "08:00", "close": "18:00" },
-      { "day": "miercoles", "open": "08:00", "close": "18:00" },
-      { "day": "jueves",    "open": "08:00", "close": "18:00" },
-      { "day": "viernes",   "open": "08:00", "close": "18:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
-    ],
-    "specialties": [
-      "Clínica Médica",
-      "Pediatría",
-      "Medicina Familiar"
-    ],
-    "services": [
-      "Consultas médicas",
-      "Atención pediátrica",
-      "Vacunación",
-      "Enfermería",
-      "Inyectables",
-      "Primeros auxilios",
-      "Atención primaria de salud"
-    ],
-    "mapLink": "https://maps.google.com/?q=Montes+de+Oca+1700+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 461: recorre el interior del partido con parada en Barrio Alberdi.",
-      "Línea 449: conexión desde el centro hacia la zona.",
-      "Línea 176: bajar en Av. Hipólito Yrigoyen y continuar en remís hacia Montes de Oca."
-    ],
-    "notes": "Centro de Atención Primaria de Salud (CAPS) municipal, de acceso gratuito para vecinos. Atención de lunes a viernes en horario diurno."
   },
   {
     "id": "direccion-zoonosis-jose-c-paz",
