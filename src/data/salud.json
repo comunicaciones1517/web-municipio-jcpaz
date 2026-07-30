@@ -1111,27 +1111,29 @@
     "photo": "/salud/hospital-oncologico-victoria-ishii.jfif",
     "photos": ["/salud/hospital-oncologico-victoria-ishii.jfif"],
     "hours": [
-      { "day": "lunes",     "open": "08:00", "close": "17:00" },
-      { "day": "martes",    "open": "08:00", "close": "17:00" },
-      { "day": "miercoles", "open": "08:00", "close": "17:00" },
-      { "day": "jueves",    "open": "08:00", "close": "17:00" },
-      { "day": "viernes",   "open": "08:00", "close": "17:00" },
+      { "day": "lunes",     "open": "08:00", "close": "19:00" },
+      { "day": "martes",    "open": "08:00", "close": "19:00" },
+      { "day": "miercoles", "open": "08:00", "close": "19:00" },
+      { "day": "jueves",    "open": "08:00", "close": "19:00" },
+      { "day": "viernes",   "open": "08:00", "close": "19:00" },
       { "day": "sabado",    "open": "08:00", "close": "13:00" },
       { "day": "domingo",   "open": "cerrado", "close": "" }
     ],
     "specialties": [
-      "Oncología",
-      "Cirugía General y Digestiva",
-      "Ginecología",
-      "Oncoginecología",
-      "Urología",
-      "Hemato-oncología",
-      "Cuidados Paliativos y Tratamiento del Dolor",
-      "Gastroenterología",
-      "Otorrinolaringología",
-      "Anatomía Patológica",
-      "Clínica médica",
+      "Médico clínico",
       "Pediatría",
+      "Cirugía general ambulatoria",
+      "Oncología",
+      "Quimioterapia",
+      "Cuidados paliativos",
+      "Ginecología / Oncoginecología",
+      "Oncohematología",
+      "Urología",
+      "Mastología",
+      "Neurología (Adultos)",
+      "Psicología (Adultos)",
+      "Nutrición oncológica",
+      "Cardiología + ECG",
       "Diabetología (adultos e infantil)",
       "Endocrinología",
       "Cardiología Infantil",
@@ -1143,13 +1145,71 @@
       "Tratamiento HAIFU (tecnología única en Latinoamérica)",
       "Unidad de Terapia Intensiva",
       "Quirófano y sala de recuperación",
-      "Endoscopia diagnóstica y terapéutica",
-      "Laboratorio y radiología",
+      "Endoscopias y ecografías diagnósticas",
+      "Ecodoppler, ecocardiograma Doppler y tomografía computada",
       "Cirugía ambulatoria",
       "Centro Integral del Diabético (consultorios, vacunatorio, programa de leche, PRODIABA)",
       "Atención gratuita a vecinos"
     ],
     "detailedSections": [
+      {
+        "title": "Consultorios Externos (con turno programado)",
+        "description": "Turnos: lunes a viernes de 8:00 a 19:00 hs, sábados de 8:00 a 12:00 hs.",
+        "items": [
+          { "name": "Médico clínico" },
+          { "name": "Pediatría", "schedule": "Ver horarios por día más abajo" },
+          { "name": "Cirugía general ambulatoria" },
+          { "name": "Oncología" },
+          { "name": "Quimioterapia" },
+          { "name": "Cuidados paliativos" },
+          { "name": "Ginecología / Oncoginecología" },
+          { "name": "Oncohematología" },
+          { "name": "Urología" },
+          { "name": "Mastología", "detail": "Control y seguimiento de pacientes oncológicas" },
+          { "name": "Neurología", "detail": "Adultos" },
+          { "name": "Psicología", "detail": "Adultos" },
+          { "name": "Nutrición oncológica" },
+          { "name": "Cardiología + ECG (Electrocardiograma)" }
+        ]
+      },
+      {
+        "title": "Horarios de atención — Pediatría",
+        "items": [
+          { "name": "Lunes", "schedule": "09:00 a 13:00 hs" },
+          { "name": "Martes", "schedule": "08:00 a 12:00 hs" },
+          { "name": "Miércoles", "schedule": "13:00 a 16:00 hs" },
+          { "name": "Jueves", "schedule": "12:00 a 15:00 hs" },
+          { "name": "Viernes", "schedule": "13:00 a 16:00 hs" }
+        ]
+      },
+      {
+        "title": "Diagnóstico por Imágenes (con turno programado)",
+        "items": [
+          { "name": "Endoscopías" },
+          { "name": "Ecografías", "subItems": ["Abdominal", "Hepatobiliopancreática", "Urológicas", "Ginecológicas / Transvaginal", "Inguinal / Partes blandas", "Obstétricas", "Prostática", "Renal", "Renovesicoprostática", "Testicular", "Tiroidea", "Vesical"] },
+          { "name": "Ecodoppler General" },
+          { "name": "Ecocardiograma Doppler" },
+          { "name": "Servicio PET TC", "detail": "Próximamente. Con FDG, COLINA y PSMA" },
+          { "name": "Angiógrafo", "detail": "Próximamente" }
+        ]
+      },
+      {
+        "title": "Tomografía Computada y Rayos X",
+        "items": [
+          { "name": "Tomografía Computada (TC)", "detail": "Sin y con contraste (adultos y pediátricos)", "subItems": ["Cerebro", "Oídos", "Columna (Cervical, Dorsal, Lumbar y Sacrocoxígea)", "Tórax", "Abdomen", "Pelvis", "Extremidades superiores", "Extremidades inferiores"] },
+          { "name": "Rayos X", "schedule": "A demanda: lunes a viernes de 8:00 a 19:00 hs, sábados de 8:00 a 13:00 hs" }
+        ]
+      },
+      {
+        "title": "Servicio Social",
+        "items": [
+          { "name": "Lunes a viernes", "schedule": "8:00 a 14:00 hs" },
+          { "name": "Sábados", "schedule": "8:00 a 13:00 hs" }
+        ]
+      },
+      {
+        "title": "Servicio de Enfermería"
+      },
       {
         "title": "Centro Integral del Diabético — Especialidades (con turno programado)",
         "description": "Turnos programados en el hospital.",
