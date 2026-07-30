@@ -911,9 +911,9 @@
         "title": "Diagnóstico por Imágenes (con turno programado)",
         "description": "Adultos y pediátricos. Turnos: lunes a viernes de 8:00 a 13:00 hs en forma presencial.",
         "items": [
+          { "name": "Rayos X", "schedule": "24 hs, a demanda" },
           { "name": "Ecografías", "schedule": "Lun 18 hs | Mar 8 y 17 hs | Mié 8 y 16 hs | Jue 16 hs | Vie 16:30 hs | Sáb y Dom 9 y 13 hs", "subItems": ["Abdominal", "Ginecológica (transabdominal / transvaginal)", "Renal", "Vesical", "Prostática", "Mamaria", "Testicular", "Tiroides", "Partes blandas"] },
           { "name": "Ecodoppler", "schedule": "Lun 13 y 18 hs | Mar 17 hs | Mié 16 hs | Jue 16 hs | Vie 16:30 hs | Sáb y Dom 9 y 13 hs", "subItems": ["Arterial y venoso MMSS / MMII", "Vasos de cuello", "Tiroides", "Testicular", "Mamario"] },
-          { "name": "Rayos X", "schedule": "24 hs, a demanda" },
           { "name": "Tomografía Computada", "schedule": "Con turno programado", "detail": "Sin y con contraste. Adultos y pediátricos.", "subItems": ["Cerebro", "Oídos", "Columna (Cervical, Dorsal, Lumbar, Sacrocoxígea)", "Tórax", "Abdomen", "Pelvis", "Extremidades Superiores", "Extremidades Inferiores"] }
         ]
       }
