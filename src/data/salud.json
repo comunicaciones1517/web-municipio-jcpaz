@@ -1623,13 +1623,13 @@
         "items": [
           { "name": "Consultas veterinarias", "detail": "Sin cargo" },
           { "name": "Castraciones", "detail": "Sin cargo" },
-          { "name": "Cirugías", "subItems": ["Generales", "Oncológicas", "Traumatológicas"] },
           { "name": "Estudios e Imagenología", "detail": "Radiología y Cardiología" },
           { "name": "Análisis de laboratorio completo" },
           { "name": "Recepción de muestras", "detail": "Posibles enfermedades zoonóticas, extraídas en este centro y en veterinarias particulares" },
           { "name": "Control y seguimiento de animales mordedores" },
           { "name": "Inspecciones por denuncias de maltrato animal" },
-          { "name": "Identificación de animales ponzoñosos" }
+          { "name": "Identificación de animales ponzoñosos" },
+          { "name": "Cirugías", "subItems": ["Generales", "Oncológicas", "Traumatológicas"] }
         ]
       },
       {
