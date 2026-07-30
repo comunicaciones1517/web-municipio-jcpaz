@@ -425,6 +425,18 @@
           { "day": "sabado",    "open": "08:00", "close": "13:00" },
           { "day": "domingo",   "open": "cerrado", "close": "" }
         ]
+      },
+      {
+        "label": "Pediatría",
+        "hours": [
+          { "day": "lunes",     "open": "09:00", "close": "13:00" },
+          { "day": "martes",    "open": "08:00", "close": "12:00" },
+          { "day": "miercoles", "open": "13:00", "close": "16:00" },
+          { "day": "jueves",    "open": "12:00", "close": "15:00" },
+          { "day": "viernes",   "open": "13:00", "close": "16:00" },
+          { "day": "sabado",    "open": "cerrado", "close": "" },
+          { "day": "domingo",   "open": "cerrado", "close": "" }
+        ]
       }
     ],
     "specialties": [
@@ -465,7 +477,7 @@
         "description": "Horario del área oncológica: lunes a viernes de 8:00 a 19:00 hs, sábados de 8:00 a 12:00 hs.",
         "items": [
           { "name": "Médico clínico" },
-          { "name": "Pediatría", "schedule": "Ver horarios por día más abajo" },
+          { "name": "Pediatría", "schedule": "Ver card de horarios arriba" },
           { "name": "Cirugía general ambulatoria" },
           { "name": "Oncología" },
           { "name": "Quimioterapia" },
@@ -478,16 +490,6 @@
           { "name": "Psicología", "detail": "Adultos" },
           { "name": "Nutrición oncológica" },
           { "name": "Cardiología + ECG (Electrocardiograma)" }
-        ]
-      },
-      {
-        "title": "Horarios de atención — Pediatría",
-        "items": [
-          { "name": "Lunes", "schedule": "09:00 a 13:00 hs" },
-          { "name": "Martes", "schedule": "08:00 a 12:00 hs" },
-          { "name": "Miércoles", "schedule": "13:00 a 16:00 hs" },
-          { "name": "Jueves", "schedule": "12:00 a 15:00 hs" },
-          { "name": "Viernes", "schedule": "13:00 a 16:00 hs" }
         ]
       },
       {

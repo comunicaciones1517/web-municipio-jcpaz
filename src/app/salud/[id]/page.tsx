@@ -142,27 +142,27 @@ export default async function FacilityDetailPage({
 
         {/* Cuerpo */}
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 space-y-8">
-          <section className="space-y-4">
+          <section className="space-y-3">
             <div>
-              <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <ClipboardList className="h-5 w-5 text-primary-600" />
+              <h2 className="text-base font-bold text-gray-800 mb-2 flex items-center gap-2">
+                <ClipboardList className="h-4 w-4 text-primary-600" />
                 Horario de atención
                 {facility.hoursLabel && (
-                  <span className="text-sm font-normal text-gray-500">&nbsp;— {facility.hoursLabel}</span>
+                  <span className="text-xs font-normal text-gray-500">&nbsp;— {facility.hoursLabel}</span>
                 )}
               </h2>
-              <div className="bg-white border border-gray-200 rounded-xl p-4">
+              <div className="bg-white border border-gray-200 rounded-xl p-3">
                 <HoursDisplay hours={facility.hours} variant="pills" />
               </div>
             </div>
 
             {facility.secondaryHours?.map((sh, shi) => (
               <div key={shi}>
-                <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-                  <ClipboardList className="h-5 w-5 text-primary-600" />
+                <h2 className="text-base font-bold text-gray-800 mb-2 flex items-center gap-2">
+                  <ClipboardList className="h-4 w-4 text-primary-600" />
                   Horario — {sh.label}
                 </h2>
-                <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <div className="bg-white border border-gray-200 rounded-xl p-3">
                   <HoursDisplay hours={sh.hours} variant="pills" />
                 </div>
               </div>
