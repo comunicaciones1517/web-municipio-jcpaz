@@ -820,8 +820,7 @@
     "address": "Padre Ustarroz 5258 (e/ Fatone y Coronel Suárez), José C. Paz",
     "zone": "Barrio Concejal Alfonzo",
     "photo": "/salud/hospital-angio.jfif",
-    "phones": ["(02320) 353101"],
-    "emergencyPhone": "(02320) 353101",
+    "phones": [],
     "hasEmergencyRoom": true,
     "hours": [
       { "day": "lunes",     "open": "00:00", "close": "23:59" },
@@ -860,7 +859,6 @@
       {
         "title": "Guardia — Atención 24 horas (a demanda)",
         "description": "Atención sin turno previo, todos los días, las 24 horas.",
-        "phone": "(02320) 353101",
         "items": [
           { "name": "Clínica", "schedule": "24 hs, todos los días" },
           { "name": "Pediatría", "schedule": "24 hs, todos los días" }
@@ -869,7 +867,6 @@
       {
         "title": "Consultorios Externos (con turno programado)",
         "description": "Asignación de turnos: lunes a viernes de 8:00 a 13:00 hs, en forma presencial en el hospital.",
-        "phone": "(02320) 353101",
         "items": [
           { "name": "Clínica Médica", "schedule": "Con turno programado" },
           { "name": "Cardiología (Adultos)", "schedule": "Lunes de 9:00 a 16:00 hs" },
@@ -904,8 +901,7 @@
       },
       {
         "title": "Servicio de Trabajo Social",
-        "description": "El hospital cuenta con Servicio de Trabajo Social. Consultar días y horarios.",
-        "phone": "(02320) 353101"
+        "description": "El hospital cuenta con Servicio de Trabajo Social. Consultar días y horarios."
       },
       {
         "title": "Diagnóstico por Imágenes (con turno programado)",
@@ -1203,48 +1199,80 @@
     "id": "hospital-odontologico-eva-peron",
     "name": "Hospital Odontológico \"Eva Perón\"",
     "type": "hospital_publico",
-    "address": "Av. Hipólito Yrigoyen 3050, José C. Paz",
+    "address": "Av. Hipólito Yrigoyen 3072 (e/ Chacabuco y Artigas), José C. Paz",
     "zone": "Villa Altube",
-    "phones": ["(02320) 422260"],
-    "hasEmergencyRoom": false,
+    "phones": ["11 2127-6005"],
+    "emergencyPhone": "11 2127-6005",
+    "hasEmergencyRoom": true,
     "photo": "/salud/hospital-odontologico-eva-peron.jpg",
     "photos": ["/salud/hospital-odontologico-eva-peron.jpg"],
     "hours": [
-      { "day": "lunes",     "open": "07:00", "close": "19:00" },
-      { "day": "martes",    "open": "07:00", "close": "19:00" },
-      { "day": "miercoles", "open": "07:00", "close": "19:00" },
-      { "day": "jueves",    "open": "07:00", "close": "19:00" },
-      { "day": "viernes",   "open": "07:00", "close": "19:00" },
-      { "day": "sabado",    "open": "cerrado", "close": "" },
-      { "day": "domingo",   "open": "cerrado", "close": "" }
+      { "day": "lunes",     "open": "00:00", "close": "23:59" },
+      { "day": "martes",    "open": "00:00", "close": "23:59" },
+      { "day": "miercoles", "open": "00:00", "close": "23:59" },
+      { "day": "jueves",    "open": "00:00", "close": "23:59" },
+      { "day": "viernes",   "open": "00:00", "close": "23:59" },
+      { "day": "sabado",    "open": "00:00", "close": "23:59" },
+      { "day": "domingo",   "open": "00:00", "close": "23:59" }
     ],
     "specialties": [
-      "Odontología General",
-      "Endodoncia (tratamientos de conducto)",
-      "Cirugía oral y maxilofacial",
-      "Periodoncia",
-      "Ortodoncia",
+      "Odontología general",
       "Odontopediatría",
-      "Implantología",
-      "Radiología dental",
-      "Higiene dental"
+      "Endodoncia",
+      "Ortodoncia",
+      "Implantes",
+      "Cirugías",
+      "Prótesis",
+      "Radiografías panorámicas"
     ],
     "services": [
-      "18 consultorios odontológicos",
-      "2 quirófanos",
-      "Atención de urgencias odontológicas",
-      "Radiografías dentales",
-      "Turnos programados y de urgencia",
+      "Guardia 24h (Odontología general y Odontopediatría)",
+      "Consultorios a demanda (7 especialidades)",
+      "Radiografías panorámicas (lunes a sábados 8 a 18 hs)",
+      "Servicio de Trabajo Social",
       "Atención gratuita a vecinos"
     ],
-    "mapLink": "https://maps.google.com/maps?q=Av.+Hip%C3%B3lito+Yrigoyen+3050%2C+Jos%C3%A9+C.+Paz%2C+Buenos+Aires%2C+Argentina&hl=es&z=17&output=embed",
+    "detailedSections": [
+      {
+        "title": "Guardia 24 hs — Urgencias",
+        "description": "Atención continua sin turno previo, todos los días, las 24 horas.",
+        "phone": "11 2127-6005",
+        "items": [
+          { "name": "Odontología general", "schedule": "24 hs, todos los días" },
+          { "name": "Odontopediatría", "schedule": "24 hs, todos los días" }
+        ]
+      },
+      {
+        "title": "Consultorios (a demanda)",
+        "description": "Atención por demanda espontánea, sin turno previo.",
+        "items": [
+          { "name": "Odontología general" },
+          { "name": "Odontopediatría" },
+          { "name": "Endodoncia" },
+          { "name": "Ortodoncia" },
+          { "name": "Implantes" },
+          { "name": "Cirugías" },
+          { "name": "Prótesis" }
+        ]
+      },
+      {
+        "title": "Imágenes (a demanda)",
+        "description": "Radiografías panorámicas. Lunes a sábados de 8:00 a 18:00 hs."
+      },
+      {
+        "title": "Servicio de Trabajo Social",
+        "description": "El hospital cuenta con Servicio de Trabajo Social. Consultar días y horarios.",
+        "phone": "11 2127-6005"
+      }
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Av.+Hip%C3%B3lito+Yrigoyen+3072,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=17&output=embed",
     "comoLlegar": [
       "Línea 176 — recorre Ruta 24 (ex 197); bajarse entre Chacabuco y Artigas.",
       "Línea 440 — acceso desde Av. Hipólito Yrigoyen hacia Villa Altube.",
       "Línea 365 — parada sobre Ruta 24 en Barrio Villa Altube.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego colectivo 176 hacia Ruta 24."
     ],
-    "notes": "Turnos: llamar al (02320) 422260. El hospital atiende urgencias odontológicas sin turno previo."
+    "notes": "Hospital odontológico con guardia 24 horas para urgencias. Consultorios a demanda, sin turno previo."
   },
   {
     "id": "hospital-cardiovascular-buljan",
