@@ -815,9 +815,9 @@
   },
   {
     "id": "hospital-traumatologia-domingo-angio",
-    "name": "Hospital de Traumatología \"Domingo Angio\"",
+    "name": "Hospital Municipal UDP \"Domingo Angio\"",
     "type": "hospital_publico",
-    "address": "Padre Ustarroz 5258, José C. Paz",
+    "address": "Padre Ustarroz 5258 (e/ Fatone y Coronel Suárez), José C. Paz",
     "zone": "Barrio Concejal Alfonzo",
     "photo": "/salud/hospital-angio.jfif",
     "phones": ["(02320) 353101"],
@@ -833,20 +833,90 @@
       { "day": "domingo",   "open": "00:00", "close": "23:59" }
     ],
     "specialties": [
-      "Traumatología",
-      "Ortopedia",
-      "Cirugía de urgencias traumatológicas",
-      "Diagnóstico precoz",
-      "Clínica médica",
-      "Pediatría"
+      "Clínica Médica",
+      "Cardiología (Adultos)",
+      "Nefrología (Adultos)",
+      "Neumonología (Adultos)",
+      "Cirugía Plástica Reparadora",
+      "Cirugía Infantil",
+      "Traumatología (Pediatría / Adultos)",
+      "Infectología (Adultos)",
+      "Neurocirugía (Adultos)",
+      "Pediatría",
+      "Diagnóstico por Imágenes",
+      "Tomografía Computada"
     ],
     "services": [
-      "Guardia 24h",
-      "Atención de fracturas y lesiones traumatológicas",
-      "Diagnóstico por imágenes",
-      "Yesos y inmovilizaciones",
-      "Internación",
+      "Guardia 24h (Clínica y Pediatría)",
+      "Consultorios externos con turno programado",
+      "Internación (UTI, Clínica, Pediatría)",
+      "Diagnóstico por Imágenes (ecografías, ecodoppler, rayos X, tomografía computada)",
+      "Hemoterapia / Donación de Sangre",
+      "Vacunatorio (COVID, Calendario Nacional, Dengue)",
+      "Servicio de Trabajo Social",
       "Atención gratuita a vecinos"
+    ],
+    "detailedSections": [
+      {
+        "title": "Guardia — Atención 24 horas (a demanda)",
+        "description": "Atención sin turno previo, todos los días, las 24 horas.",
+        "phone": "(02320) 353101",
+        "items": [
+          { "name": "Clínica", "schedule": "24 hs, todos los días" },
+          { "name": "Pediatría", "schedule": "24 hs, todos los días" }
+        ]
+      },
+      {
+        "title": "Consultorios Externos (con turno programado)",
+        "description": "Asignación de turnos: lunes a viernes de 8:00 a 13:00 hs, en forma presencial en el hospital.",
+        "phone": "(02320) 353101",
+        "items": [
+          { "name": "Clínica Médica", "schedule": "Con turno programado" },
+          { "name": "Cardiología (Adultos)", "schedule": "Lunes de 9:00 a 16:00 hs" },
+          { "name": "Nefrología (Adultos)", "schedule": "Con turno programado" },
+          { "name": "Neumonología (Adultos)", "schedule": "Con turno programado", "detail": "Incluye estudio de espirometría" },
+          { "name": "Cirugía Plástica Reparadora", "schedule": "Con turno programado" },
+          { "name": "Cirugía Infantil", "schedule": "Con turno programado" },
+          { "name": "Traumatología (Pediatría / Adultos)", "schedule": "Con turno programado" },
+          { "name": "Infectología (Adultos)", "schedule": "Con turno programado" },
+          { "name": "Neurocirugía (Adultos)", "schedule": "Miércoles de 9:00 a 13:00 hs" }
+        ]
+      },
+      {
+        "title": "Internación",
+        "description": "El hospital cuenta con servicio de internación en las siguientes áreas.",
+        "items": [
+          { "name": "UTI (Unidad de Terapia Intensiva)" },
+          { "name": "Clínica" },
+          { "name": "Pediatría" }
+        ]
+      },
+      {
+        "title": "Hemoterapia / Donación de Sangre",
+        "description": "Lunes a viernes de 8:30 a 12:30 hs."
+      },
+      {
+        "title": "Vacunatorio",
+        "description": "Vacunas disponibles: COVID, Calendario Nacional, Dengue.",
+        "items": [
+          { "name": "Lunes a viernes", "schedule": "8:00 a 14:00 hs" }
+        ]
+      },
+      {
+        "title": "Servicio de Trabajo Social",
+        "description": "El hospital cuenta con Servicio de Trabajo Social. Consultar días y horarios.",
+        "phone": "(02320) 353101"
+      },
+      {
+        "title": "Diagnóstico por Imágenes (con turno programado)",
+        "description": "Adultos y pediátricos. Turnos: lunes a viernes de 8:00 a 13:00 hs en forma presencial.",
+        "items": [
+          { "name": "Ecografías", "schedule": "Lun 18 hs | Mar 8 y 17 hs | Mié 8 y 16 hs | Jue 16 hs | Vie 16:30 hs | Sáb y Dom 9 y 13 hs", "subItems": ["Abdominal", "Ginecológica (transabdominal / transvaginal)", "Renal", "Vesical", "Prostática", "Mamaria", "Testicular", "Tiroides", "Partes blandas"] },
+          { "name": "Ecodoppler", "schedule": "Lun 13 y 18 hs | Mar 17 hs | Mié 16 hs | Jue 16 hs | Vie 16:30 hs | Sáb y Dom 9 y 13 hs", "subItems": ["Arterial y venoso MMSS / MMII", "Vasos de cuello", "Tiroides", "Testicular", "Mamario"] },
+          { "name": "Rayos X", "schedule": "24 hs, a demanda" },
+          { "name": "Tomografía Computada", "schedule": "Con turno programado", "detail": "Sin y con contraste. Adultos y pediátricos.", "subItems": ["Cerebro", "Oídos", "Columna (Cervical, Dorsal, Lumbar, Sacrocoxígea)", "Tórax", "Abdomen", "Pelvis", "Extremidades Superiores", "Extremidades Inferiores"] }
+        ]
+      }
     ],
     "mapLink": "https://maps.google.com/maps?q=Padre+Ustarroz+5258,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
     "comoLlegar": [
@@ -854,7 +924,7 @@
       "Línea 749 — recorre zona oeste del partido, consultar parada más cercana.",
       "Línea 315 — acceso desde zona norte hacia Ustarroz."
     ],
-    "notes": "Hospital de Emergencias Médicas de 24 Horas (HEM24). Consultas de especialidades de lunes a viernes de 8:00 a 18:00 hs; guardia traumatológica permanente."
+    "notes": "Hospital Municipal Unidades de Diagnóstico Precoz (UDP). Turnos para todas las especialidades: lunes a viernes de 8:00 a 13:00 hs. Tomógrafo con tecnología de alta precisión, baja radiación e inteligencia artificial."
   },
   {
     "id": "hospital-ruben-caporaletti",
