@@ -69,17 +69,19 @@ export default function FacilityCard({ facility }: FacilityCardProps) {
         </div>
 
         {/* Teléfono principal — grande */}
-        <a
-          href={`tel:${facility.phones[0].replace(/[\s\-()]/g, "")}`}
-          className="flex items-center gap-2 mb-2 group/phone"
-        >
-          <div className="bg-primary-50 rounded-lg p-2">
-            <Phone className="h-5 w-5 text-primary-600" />
-          </div>
-          <span className="text-2xl font-bold text-primary-700 group-hover/phone:text-primary-900 tracking-tight">
-            {facility.phones[0]}
-          </span>
-        </a>
+        {facility.phones[0] && (
+          <a
+            href={`tel:${facility.phones[0].replace(/[\s\-()]/g, "")}`}
+            className="flex items-center gap-2 mb-2 group/phone"
+          >
+            <div className="bg-primary-50 rounded-lg p-2">
+              <Phone className="h-5 w-5 text-primary-600" />
+            </div>
+            <span className="text-2xl font-bold text-primary-700 group-hover/phone:text-primary-900 tracking-tight">
+              {facility.phones[0]}
+            </span>
+          </a>
+        )}
 
         {/* Teléfono secundario */}
         {facility.phones[1] && (
