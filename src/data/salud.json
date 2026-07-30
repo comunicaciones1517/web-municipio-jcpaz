@@ -446,8 +446,8 @@
     ],
     "detailedSections": [
       {
-        "title": "Consultorios Externos (con turno programado)",
-        "description": "Turnos: lunes a viernes de 8:00 a 19:00 hs, sábados de 8:00 a 12:00 hs.",
+        "title": "Consultorios Externos — Área Oncológica (con turno programado)",
+        "description": "Horario del área oncológica: lunes a viernes de 8:00 a 19:00 hs, sábados de 8:00 a 12:00 hs.",
         "items": [
           { "name": "Médico clínico" },
           { "name": "Pediatría", "schedule": "Ver horarios por día más abajo" },
@@ -505,7 +505,7 @@
       },
       {
         "title": "Centro Integral del Diabético — Especialidades (con turno programado)",
-        "description": "Turnos programados en el hospital.",
+        "description": "Horario del Centro Integral del Diabético: lunes a viernes de 8:00 a 17:00 hs, sábados de 8:00 a 13:00 hs.",
         "items": [
           { "name": "Clínica médica" },
           { "name": "Pediatría" },
@@ -558,7 +558,7 @@
       "Línea 440 — desde zona central del partido.",
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Arregui 501."
     ],
-    "notes": "Hospital oncológico municipal con tecnología HAIFU, la única de Latinoamérica. Puesto 18° en el mundo en tecnología oncológica. Incluye el Centro Integral del Diabético. Atención completamente gratuita para vecinos de José C. Paz."
+    "notes": "Hospital oncológico municipal con tecnología HAIFU, la única de Latinoamérica. Puesto 18° en el mundo en tecnología oncológica. En el mismo edificio funciona el Centro Integral del Diabético, con horario propio: lunes a viernes de 8:00 a 17:00 hs y sábados de 8:00 a 13:00 hs (el área oncológica atiende lunes a viernes de 8:00 a 19:00 hs y sábados de 8:00 a 12:00 hs). Atención completamente gratuita para vecinos de José C. Paz."
   },
   {
     "id": "hospital-salud-mental-loiacono",
