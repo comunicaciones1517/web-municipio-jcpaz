@@ -220,6 +220,7 @@ export default async function FacilityDetailPage({
               {facility.detailedSections.map((section, si) => (
                 <details
                   key={si}
+                  open={/guardia/i.test(section.title)}
                   className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm group"
                 >
                   <summary className="px-5 py-4 cursor-pointer text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors flex items-center justify-between">
