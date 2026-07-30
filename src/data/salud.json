@@ -1579,5 +1579,74 @@
       "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Barrio Sol y Verde."
     ],
     "notes": "Atiende ~1.500 personas diarias de José C. Paz, Gral. Rodríguez, San Miguel, Malvinas Argentinas y zonas aledañas. Cuenta con el único Angiógrafo Municipal del partido. Email Hemodinamia: hemodinamiabuljan@gmail.com"
+  },
+  {
+    "id": "direccion-zoonosis-jose-c-paz",
+    "name": "Dirección General de Zoonosis",
+    "type": "centro_de_salud",
+    "address": "Arregui 365 (entre Miranda y Capitán Martínez), José C. Paz",
+    "zone": "José C. Paz",
+    "phones": [],
+    "hasEmergencyRoom": false,
+    "hours": [
+      { "day": "lunes",     "open": "08:00", "close": "17:00" },
+      { "day": "martes",    "open": "08:00", "close": "17:00" },
+      { "day": "miercoles", "open": "08:00", "close": "17:00" },
+      { "day": "jueves",    "open": "08:00", "close": "17:00" },
+      { "day": "viernes",   "open": "08:00", "close": "17:00" },
+      { "day": "sabado",    "open": "08:00", "close": "13:00" },
+      { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "specialties": [
+      "Veterinaria",
+      "Cirugía veterinaria",
+      "Radiología y Cardiología veterinaria",
+      "Vacunación antitetánica",
+      "Vacunación antirrábica"
+    ],
+    "services": [
+      "Consultas veterinarias sin cargo",
+      "Castraciones sin cargo",
+      "Cirugías (generales, oncológicas, traumatológicas)",
+      "Estudios e imagenología (radiología y cardiología)",
+      "Análisis de laboratorio completo",
+      "Recepción de muestras de enfermedades zoonóticas",
+      "Control y seguimiento de animales mordedores",
+      "Inspecciones por denuncias de maltrato animal",
+      "Vacunación antitetánica y antirrábica (personas)",
+      "Tratamiento de heridas producidas por animales",
+      "Atención gratuita a vecinos"
+    ],
+    "detailedSections": [
+      {
+        "title": "Área Veterinaria",
+        "items": [
+          { "name": "Consultas veterinarias", "detail": "Sin cargo" },
+          { "name": "Castraciones", "detail": "Sin cargo" },
+          { "name": "Cirugías", "subItems": ["Generales", "Oncológicas", "Traumatológicas"] },
+          { "name": "Estudios e Imagenología", "detail": "Radiología y Cardiología" },
+          { "name": "Análisis de laboratorio completo" },
+          { "name": "Recepción de muestras", "detail": "Posibles enfermedades zoonóticas, extraídas en este centro y en veterinarias particulares" },
+          { "name": "Control y seguimiento de animales mordedores" },
+          { "name": "Inspecciones por denuncias de maltrato animal" },
+          { "name": "Identificación de animales ponzoñosos" }
+        ]
+      },
+      {
+        "title": "Área Humana",
+        "items": [
+          { "name": "Vacunación antitetánica" },
+          { "name": "Vacunación antirrábica" },
+          { "name": "Tratamiento de heridas producidas por animales" }
+        ]
+      }
+    ],
+    "mapLink": "https://maps.google.com/maps?q=Arregui+365,+Jos%C3%A9+C.+Paz,+Buenos+Aires,+Argentina&hl=es&z=16&output=embed",
+    "comoLlegar": [
+      "Línea 176 — bajar en Av. Hipólito Yrigoyen, luego remís hacia Arregui.",
+      "Línea 365 — parada en zona central, luego acceso hacia Arregui.",
+      "Ferrocarril Belgrano Norte — Estación José C. Paz, luego remís hacia Arregui 365."
+    ],
+    "notes": "Centro municipal de zoonosis con área veterinaria (consultas y castraciones sin cargo) y área humana (vacunación antitetánica/antirrábica y tratamiento de heridas por mordeduras). Atención gratuita para vecinos de José C. Paz."
   }
 ]
