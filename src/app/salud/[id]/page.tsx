@@ -257,15 +257,15 @@ export default async function FacilityDetailPage({
                         {section.whatsappLabel || "WhatsApp"}
                       </a>
                     )}
-                    {section.items && section.items.length > 0 && (() => {
-                      const hasSubItems = section.items.some(i => i.subItems && i.subItems.length > 0);
-                      const hasScheduleOrDetail = section.items.some(i => i.schedule || i.detail);
-                      const isSimpleList = !hasSubItems && !hasScheduleOrDetail;
+                    {(() => {
+                      const items = section.items ?? [];
+                      if (items.length === 0) return null;
+                      const isSimpleList = !items.some(i => i.subItems?.length || i.schedule || i.detail);
 
                       if (isSimpleList) {
                         return (
                           <div className="flex flex-wrap gap-2">
-                            {section.items.map((item, ii) => (
+                            {items.map((item, ii) => (
                               <span key={ii} className="bg-gray-100 text-gray-700 text-sm px-3 py-1.5 rounded-full border border-gray-200 font-medium">
                                 {item.name}
                               </span>
@@ -276,7 +276,7 @@ export default async function FacilityDetailPage({
 
                       return (
                         <div className="divide-y divide-gray-100">
-                          {section.items.map((item, ii) => (
+                          {items.map((item, ii) => (
                             <div key={ii} className="py-2.5 first:pt-0 last:pb-0">
                               {item.subItems && item.subItems.length > 0 ? (
                                 <details className="group/sub bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-300 rounded-xl overflow-hidden shadow-sm">

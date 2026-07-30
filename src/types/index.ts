@@ -26,6 +26,8 @@ export interface ServiceSectionItem {
   schedule?: string;
   detail?: string;
   subItems?: string[];
+  whatsapp?: string;
+  whatsappLabel?: string;
 }
 
 export interface ServiceSection {
