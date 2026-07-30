@@ -14,13 +14,11 @@ import {
   ExternalLink,
   MessageCircle,
 } from "lucide-react";
-import { Suspense } from "react";
 import { getAllFacilities, getFacilityById } from "@/lib/data/salud";
 import { FACILITY_TYPE_LABELS } from "@/lib/utils";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import PhoneLink from "@/components/shared/PhoneLink";
 import EmergencyBadge from "@/components/salud/EmergencyBadge";
-import PreviewGate from "@/components/salud/PreviewGate";
 
 export async function generateStaticParams() {
   return getAllFacilities().map((f) => ({ id: f.id }));
@@ -68,13 +66,12 @@ export default async function FacilityDetailPage({
   )}`;
 
   return (
-    <Suspense><PreviewGate>
       <div>
         {/* Hero / Header */}
         <div className="bg-gradient-to-r from-red-700 to-red-500 text-white py-8 px-4">
           <div className="mx-auto max-w-5xl">
             <Link
-              href="/salud?ver=jcp2026"
+              href="/salud"
               className="inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm mb-4 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
@@ -428,6 +425,5 @@ export default async function FacilityDetailPage({
           )}
         </div>
       </div>
-    </PreviewGate></Suspense>
   );
 }
