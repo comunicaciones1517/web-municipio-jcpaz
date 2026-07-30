@@ -409,8 +409,23 @@
       { "day": "miercoles", "open": "08:00", "close": "19:00" },
       { "day": "jueves",    "open": "08:00", "close": "19:00" },
       { "day": "viernes",   "open": "08:00", "close": "19:00" },
-      { "day": "sabado",    "open": "08:00", "close": "13:00" },
+      { "day": "sabado",    "open": "08:00", "close": "12:00" },
       { "day": "domingo",   "open": "cerrado", "close": "" }
+    ],
+    "hoursLabel": "Área Oncológica",
+    "secondaryHours": [
+      {
+        "label": "Centro Integral del Diabético",
+        "hours": [
+          { "day": "lunes",     "open": "08:00", "close": "17:00" },
+          { "day": "martes",    "open": "08:00", "close": "17:00" },
+          { "day": "miercoles", "open": "08:00", "close": "17:00" },
+          { "day": "jueves",    "open": "08:00", "close": "17:00" },
+          { "day": "viernes",   "open": "08:00", "close": "17:00" },
+          { "day": "sabado",    "open": "08:00", "close": "13:00" },
+          { "day": "domingo",   "open": "cerrado", "close": "" }
+        ]
+      }
     ],
     "specialties": [
       "Médico clínico",

@@ -51,6 +51,8 @@ export interface HealthFacility {
   emergencyPhone?: string;
   hasEmergencyRoom: boolean;
   hours: DaySchedule[];
+  hoursLabel?: string;
+  secondaryHours?: { label: string; hours: DaySchedule[] }[];
   specialties: string[];
   services: string[];
   detailedSections?: ServiceSection[];
