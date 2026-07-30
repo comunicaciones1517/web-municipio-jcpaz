@@ -56,50 +56,6 @@
     "notes": "Turnos: llamar la última semana de cada mes para el mes siguiente al (02320) 44-5983 (lunes a viernes 8:00–18:00 hs) o WhatsApp 11 2541-4452. Atención GRATUITA para vecinos de José C. Paz sin obra social. Residentes de otros partidos o con obra social pagan arancel diferencial. Atiende ~250 pacientes por día."
   },
   {
-    "id": "same-emergencias-jose-c-paz",
-    "name": "SAME – Servicio de Atención Médica de Emergencias",
-    "type": "hospital_publico",
-    "address": "Av. Hipólito Yrigoyen, José C. Paz",
-    "zone": "José C. Paz",
-    "phones": ["107", "147"],
-    "emergencyPhone": "107",
-    "hasEmergencyRoom": true,
-    "photo": "/salud/same-emergencias.png",
-    "photos": ["/salud/same-emergencias.png"],
-    "hours": [
-      { "day": "lunes",     "open": "00:00", "close": "23:59" },
-      { "day": "martes",    "open": "00:00", "close": "23:59" },
-      { "day": "miercoles", "open": "00:00", "close": "23:59" },
-      { "day": "jueves",    "open": "00:00", "close": "23:59" },
-      { "day": "viernes",   "open": "00:00", "close": "23:59" },
-      { "day": "sabado",    "open": "00:00", "close": "23:59" },
-      { "day": "domingo",   "open": "00:00", "close": "23:59" }
-    ],
-    "specialties": [
-      "Emergencias médicas",
-      "Trauma",
-      "Urgencias cardiovasculares",
-      "Urgencias pediátricas",
-      "Urgencias obstétricas"
-    ],
-    "services": [
-      "Guardia 24h",
-      "Traslado en ambulancia de alta complejidad",
-      "Desfibrilación y soporte vital avanzado",
-      "Atención prehospitalaria",
-      "Coordinación con hospitales de referencia",
-      "Cobertura en todo el partido de José C. Paz"
-    ],
-    "mapLink": "https://maps.google.com/?q=Av+Hip%C3%B3lito+Yrigoyen+Jos%C3%A9+C+Paz+Buenos+Aires",
-    "comoLlegar": [
-      "Línea 176: recorre Av. Hipólito Yrigoyen con paradas frecuentes.",
-      "Línea 365: parada en Av. Hipólito Yrigoyen.",
-      "Línea 440 y 449: acceso desde estación Ferrocarril Belgrano Norte.",
-      "Ferrocarril Belgrano Norte (Ramal José C. Paz): bajar en Estación José C. Paz."
-    ],
-    "notes": "Llamar al 107 ante cualquier emergencia médica. El 147 atiende urgencias municipales y derivaciones. Servicio completamente gratuito, disponible las 24 horas los 365 días del año. En caso de emergencia no trasladarse por cuenta propia: llamar primero al 107."
-  },
-  {
     "id": "hospital-traumatologia-domingo-angio",
     "name": "Hospital Municipal UDP \"Domingo Angio\"",
     "type": "hospital_publico",
