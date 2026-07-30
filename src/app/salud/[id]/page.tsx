@@ -105,114 +105,94 @@ export default async function FacilityDetailPage({
               <MapPin className="h-4 w-4 shrink-0" />
               {facility.address} — {facility.zone}
             </div>
+
+            {(facility.phones.length > 0 || facility.emergencyPhone || facility.whatsapp) && (
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3">
+                {facility.phones.map((p) => (
+                  <a
+                    key={p}
+                    href={`tel:${p.replace(/[\s()-]/g, "")}`}
+                    className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-white/80 transition-colors"
+                  >
+                    <Phone className="h-4 w-4 shrink-0" />
+                    {p}
+                  </a>
+                ))}
+                {facility.emergencyPhone && !facility.phones.includes(facility.emergencyPhone) && (
+                  <span className="inline-flex items-center gap-1.5 text-white font-semibold">
+                    <ShieldAlert className="h-4 w-4 shrink-0" />
+                    Guardia: <PhoneLink number={facility.emergencyPhone} className="!text-white hover:!text-white/80" />
+                  </span>
+                )}
+                {facility.whatsapp && (
+                  <a
+                    href={`https://wa.me/${facility.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-3 py-1.5 transition-colors"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    {facility.whatsappLabel || `WhatsApp: ${facility.whatsapp}`}
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
         {/* Cuerpo */}
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <section className="flex flex-col">
+          <section>
+            <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+              <ClipboardList className="h-5 w-5 text-primary-600" />
+              Horario de atención
+            </h2>
+            <div className="bg-white border border-gray-200 rounded-xl p-4">
+              <HoursDisplay hours={facility.hours} variant="pills" />
+            </div>
+          </section>
+
+          {facility.specialties.length > 0 && (
+            <section>
               <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <Phone className="h-5 w-5 text-primary-600" />
-                Contacto
+                <Stethoscope className="h-5 w-5 text-primary-600" />
+                Especialidades
               </h2>
-              <div className="flex-1 bg-white border border-gray-200 rounded-xl p-4 space-y-3">
-                <div className="space-y-2">
-                  {facility.phones.map((p) => (
-                    <PhoneLink key={p} number={p} />
-                  ))}
-                </div>
-                {facility.emergencyPhone && (
-                  <div className="flex items-center gap-2 pt-2 border-t border-gray-100">
-                    <ShieldAlert className="h-4 w-4 text-red-600 shrink-0" />
-                    <span className="text-sm font-semibold text-red-700 mr-1">
-                      Guardia:
-                    </span>
-                    <PhoneLink number={facility.emergencyPhone} />
-                  </div>
-                )}
-                {facility.whatsapp && (
-                  <div className="pt-2 border-t border-gray-100">
-                    <a
-                      href={`https://wa.me/${facility.whatsapp}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm rounded-lg px-4 py-2.5 transition-colors w-full justify-center"
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <div className="flex flex-wrap gap-2">
+                  {facility.specialties.map((s) => (
+                    <span
+                      key={s}
+                      className="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full border border-blue-100"
                     >
-                      <MessageCircle className="h-4 w-4" />
-                      {facility.whatsappLabel || `WhatsApp: ${facility.whatsapp}`}
-                    </a>
-                  </div>
-                )}
-                <div className="flex items-start gap-2 pt-2 border-t border-gray-100">
-                  <MapPin className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
-                  <a
-                    href={mapExternalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-primary-600 hover:underline"
-                  >
-                    {facility.address}
-                  </a>
+                      {s}
+                    </span>
+                  ))}
                 </div>
               </div>
             </section>
+          )}
 
-            {facility.specialties.length > 0 && (
-              <section className="flex flex-col">
-                <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-                  <Stethoscope className="h-5 w-5 text-primary-600" />
-                  Especialidades
-                </h2>
-                <div className="flex-1 bg-white border border-gray-200 rounded-xl p-4">
-                  <div className="flex flex-wrap gap-2">
-                    {facility.specialties.map((s) => (
-                      <span
-                        key={s}
-                        className="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full border border-blue-100"
-                      >
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {facility.services.length > 0 && (
             <section>
               <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
                 <ClipboardList className="h-5 w-5 text-primary-600" />
-                Horario de atención
+                Servicios disponibles
               </h2>
               <div className="bg-white border border-gray-200 rounded-xl p-4">
-                <HoursDisplay hours={facility.hours} />
+                <div className="flex flex-wrap gap-2">
+                  {facility.services.map((s) => (
+                    <span
+                      key={s}
+                      className="bg-gray-100 text-gray-700 text-sm px-3 py-1.5 rounded-full border border-gray-200 font-medium"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
             </section>
-
-            {facility.services.length > 0 && (
-              <section>
-                <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-                  <ClipboardList className="h-5 w-5 text-primary-600" />
-                  Servicios disponibles
-                </h2>
-                <div className="bg-white border border-gray-200 rounded-xl p-4">
-                  <ul className="grid grid-cols-1 gap-1.5">
-                    {facility.services.map((s) => (
-                      <li
-                        key={s}
-                        className="flex items-center gap-2 text-sm text-gray-700"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </section>
-            )}
-          </div>
+          )}
 
           {/* Secciones detalladas (guardia, consultorios, etc.) */}
           {facility.detailedSections && facility.detailedSections.length > 0 && (

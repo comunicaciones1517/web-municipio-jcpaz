@@ -24,9 +24,10 @@ const TODAY_INDEX: Record<number, string> = {
 interface HoursDisplayProps {
   hours: DaySchedule[];
   compact?: boolean;
+  variant?: "table" | "pills";
 }
 
-export default function HoursDisplay({ hours, compact }: HoursDisplayProps) {
+export default function HoursDisplay({ hours, compact, variant = "table" }: HoursDisplayProps) {
   const today = TODAY_INDEX[new Date().getDay()];
 
   if (compact) {
@@ -41,6 +42,41 @@ export default function HoursDisplay({ hours, compact }: HoursDisplayProps) {
           ? `${todaySchedule.open}–${todaySchedule.close}`
           : "Cerrado"}
       </span>
+    );
+  }
+
+  if (variant === "pills") {
+    return (
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
+        {hours.map((h) => {
+          const isToday = h.day === today;
+          const isClosed = h.open === "cerrado" || h.open === "";
+          return (
+            <div
+              key={h.day}
+              className={cn(
+                "rounded-xl px-3 py-2.5 text-center border",
+                isToday
+                  ? "bg-primary-600 border-primary-600 text-white shadow-sm"
+                  : "bg-gray-50 border-gray-200 text-gray-700"
+              )}
+            >
+              <p className={cn("text-xs font-semibold", isToday ? "text-white" : "text-gray-500")}>
+                {DAY_LABELS[h.day]}
+                {isToday && " (hoy)"}
+              </p>
+              <p
+                className={cn(
+                  "text-sm font-medium mt-0.5",
+                  isClosed && !isToday && "text-gray-400"
+                )}
+              >
+                {isClosed ? "Cerrado" : `${h.open} – ${h.close}`}
+              </p>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 
