@@ -21,13 +21,17 @@ const SLIDES: Slide[] = [
     href: "/salud",
   },
   {
-    buttonLabel: "Consultá tus tributos y servicios acá",
+    description:
+      "Mantenete informado sobre tus tributos y trámites de la Dirección General de Rentas.",
+    buttonLabel: "Dirección General de Rentas",
     buttonIcon: Landmark,
     href: "https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0",
     external: true,
   },
   {
-    buttonLabel: "Registrá tu comercio y pagá tus impuestos desde la App Municipal",
+    description:
+      "Recordá que ahora podés pagar tus tributos y gestionar tus comercios desde la nueva App Municipal.",
+    buttonLabel: "App Municipal",
     buttonIcon: Smartphone,
     href: "https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share",
     external: true,
