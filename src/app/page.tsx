@@ -18,6 +18,7 @@ import {
   Scale,
   CalendarDays,
 } from "lucide-react";
+import HeroSlider from "@/components/home/HeroSlider";
 
 const SECTIONS = [
   {
@@ -56,23 +57,7 @@ export default function HomePage() {
   return (
     <div>
       {/* CTA vecinal */}
-      <section className="bg-primary-700 text-white py-8 px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-lg text-white/90 mb-5 max-w-xl mx-auto">
-            Encontrá todo lo que necesitás como vecino: salud, trámites,
-            transporte y espacios públicos en un solo lugar.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/salud"
-              className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-            >
-              <HeartPulse className="h-5 w-5" />
-              Buscar servicios de salud
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* Emergency grid */}
       <section className="bg-red-600 text-white py-4 px-4">
