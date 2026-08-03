@@ -161,6 +161,7 @@ export default function HomePage() {
             >
               <Landmark className="h-10 w-10 text-emerald-600" />
               <span className="text-sm font-bold text-gray-800 leading-tight">Dirección General de Rentas</span>
+              <span className="text-xs text-gray-500 leading-snug">Si querés averiguar sobre tus tributos y otros impuestos entrá acá</span>
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
@@ -170,6 +171,7 @@ export default function HomePage() {
             >
               <Smartphone className="h-10 w-10 text-green-600" />
               <span className="text-sm font-bold text-gray-800 leading-tight">App Municipal</span>
+              <span className="text-xs text-gray-500 leading-snug">Registrá tus comercios e impuestos desde la App</span>
             </a>
             <a
               href="https://drive.google.com/drive/folders/146swI0DfUgZ2HwXidkQZqNSZF_OY3Agy"
