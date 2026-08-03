@@ -171,7 +171,7 @@ export default function HomePage() {
             >
               <Smartphone className="h-10 w-10 text-green-600" />
               <span className="text-sm font-bold text-gray-800 leading-tight">App Municipal</span>
-              <span className="text-xs text-gray-500 leading-snug">Registrá tus comercios e impuestos desde la App</span>
+              <span className="text-xs text-gray-500 leading-snug">Pagá tus tasas y registrá tu comercio desde la App</span>
             </a>
             <a
               href="https://drive.google.com/drive/folders/146swI0DfUgZ2HwXidkQZqNSZF_OY3Agy"
