@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { HeartPulse, Landmark, Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -50,6 +50,24 @@ export default function HeroSlider() {
 
   const goTo = (i: number) => setIndex((i + SLIDES.length) % SLIDES.length);
 
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const SWIPE_THRESHOLD = 40;
+    if (deltaX > SWIPE_THRESHOLD) {
+      goTo(index - 1);
+    } else if (deltaX < -SWIPE_THRESHOLD) {
+      goTo(index + 1);
+    }
+    touchStartX.current = null;
+  };
+
   const slide = SLIDES[index];
   const Icon = slide.buttonIcon;
 
@@ -58,7 +76,11 @@ export default function HeroSlider() {
 
   return (
     <section className="bg-primary-700 text-white py-8 px-4">
-      <div className="mx-auto max-w-3xl text-center relative">
+      <div
+        className="mx-auto max-w-3xl text-center relative touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <button
           onClick={() => goTo(index - 1)}
           aria-label="Anterior"
