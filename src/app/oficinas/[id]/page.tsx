@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText, AlertTriangle, Car } from "lucide-react";
+import { ArrowLeft, Phone, MapPin, Mail, ClipboardList, Info, FileText, AlertTriangle, Car, ExternalLink } from "lucide-react";
 import { getAllOffices, getOfficeById } from "@/lib/data/oficinas";
 import HoursDisplay from "@/components/shared/HoursDisplay";
 import PhoneLink from "@/components/shared/PhoneLink";
@@ -34,6 +34,17 @@ export default async function OfficeDetailPage({
   const { id } = await params;
   const office = getOfficeById(id);
   if (!office) notFound();
+
+  const mapEmbedUrl = office.mapLink.includes("output=embed")
+    ? office.mapLink
+    : office.mapLink
+        .replace("maps.google.com/?q=", "maps.google.com/maps?q=")
+        .replace("maps.google.com/maps?q=", "maps.google.com/maps?q=")
+        + "&hl=es&z=16&output=embed";
+
+  const mapExternalUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${office.address}, José C. Paz, Buenos Aires, Argentina`
+  )}`;
 
   return (
     <div>
@@ -299,19 +310,30 @@ export default async function OfficeDetailPage({
         <section>
           <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
             <MapPin className="h-5 w-5 text-primary-600" />
-            Cómo llegar
+            Ubicación
           </h2>
-          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-            <div className="bg-gray-100 h-48 flex items-center justify-center">
+          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+            <iframe
+              src={mapEmbedUrl}
+              width="100%"
+              height="380"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Mapa de ${office.name}`}
+              className="w-full"
+            />
+            <div className="px-4 py-3 border-t border-gray-100 flex items-center justify-between">
+              <span className="text-sm text-gray-500">{office.address}</span>
               <a
-                href={office.mapLink}
+                href={mapExternalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 text-primary-600 hover:text-primary-800 transition-colors"
+                className="text-sm text-primary-600 hover:text-primary-800 font-semibold flex items-center gap-1"
               >
-                <MapPin className="h-10 w-10" />
-                <span className="font-semibold">Ver en Google Maps</span>
-                <span className="text-sm text-gray-500">{office.address}</span>
+                Abrir en Google Maps
+                <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </div>
           </div>
