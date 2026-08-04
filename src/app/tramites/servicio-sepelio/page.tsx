@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, HeartHandshake, FileText, Info } from "lucide-react";
+import { ArrowLeft, HeartHandshake, FileText, Info, Phone, MapPin } from "lucide-react";
+import PhoneLink from "@/components/shared/PhoneLink";
 
 export const metadata: Metadata = {
   title: "Servicio de Sepelio — Desarrollo Social | José C. Paz",
@@ -50,6 +51,21 @@ export default function ServicioSepelioPage() {
             requisitos y criterios establecidos por el Municipio.
           </p>
         </div>
+
+        {/* Contacto */}
+        <section>
+          <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <Phone className="h-5 w-5 text-slate-600" />
+            Contacto
+          </h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm space-y-3">
+            <PhoneLink number="(02320) 422719" className="text-base font-semibold" />
+            <div className="flex items-start gap-2 text-sm text-gray-700 pt-2 border-t border-gray-100">
+              <MapPin className="h-4 w-4 text-slate-600 shrink-0 mt-0.5" />
+              <span>Av. Hipólito Yrigoyen 2945, José C. Paz</span>
+            </div>
+          </div>
+        </section>
 
         {/* Requisitos */}
         <section>
