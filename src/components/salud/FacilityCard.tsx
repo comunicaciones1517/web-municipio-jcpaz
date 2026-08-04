@@ -24,13 +24,16 @@ export default function FacilityCard({ facility }: FacilityCardProps) {
     <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
 
       {/* ── Foto ── */}
-      <div className="relative h-56 bg-gray-200 overflow-hidden shrink-0">
+      <Link
+        href={`/salud/${facility.id}`}
+        className="group/photo relative h-56 bg-gray-200 overflow-hidden shrink-0 block"
+      >
         {facility.photo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={facility.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${facility.photo}` : facility.photo}
             alt={`Foto de ${facility.name}`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover group-hover/photo:scale-105 transition-transform duration-500"
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-primary-200 to-primary-400 flex items-center justify-center">
@@ -52,7 +55,7 @@ export default function FacilityCard({ facility }: FacilityCardProps) {
             </span>
           )}
         </div>
-      </div>
+      </Link>
 
       {/* ── Contenido ── */}
       <div className="p-5 flex flex-col flex-1">

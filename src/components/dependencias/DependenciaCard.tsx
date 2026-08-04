@@ -21,14 +21,14 @@ export default function DependenciaCard({ dependencia }: Props) {
     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
       {/* Foto */}
       {dependencia.photo && (
-        <div className="relative h-44 overflow-hidden">
+        <Link href={`/dependencias/${dependencia.id}`} className="relative h-44 overflow-hidden block group">
           <Image
             src={dependencia.photo.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${dependencia.photo}` : dependencia.photo}
             alt={`Fachada de ${dependencia.name}`}
             fill
-            className="object-cover object-top"
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
-        </div>
+        </Link>
       )}
 
       {/* Header */}
