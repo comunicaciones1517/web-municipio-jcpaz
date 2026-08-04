@@ -17,6 +17,7 @@ import {
   Wrench,
   Scale,
   CalendarDays,
+  HeartHandshake,
 } from "lucide-react";
 import HeroSlider from "@/components/home/HeroSlider";
 
@@ -190,7 +191,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <Link
               href="/tramites/habilitacion-comercial"
               className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-amber-300 transition-all"
@@ -213,6 +214,14 @@ export default function HomePage() {
             >
               <HardHat className="h-10 w-10 text-orange-600" />
               <span className="text-sm font-bold text-gray-800 leading-tight">Obras y Servicios</span>
+            </Link>
+
+            <Link
+              href="/tramites/servicio-sepelio"
+              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-slate-300 transition-all"
+            >
+              <HeartHandshake className="h-10 w-10 text-slate-600" />
+              <span className="text-sm font-bold text-gray-800 leading-tight">Servicio de Sepelio</span>
             </Link>
           </div>
         </div>
