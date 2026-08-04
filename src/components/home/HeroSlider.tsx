@@ -38,86 +38,121 @@ const SLIDES: Slide[] = [
   },
 ];
 
+const AUTOPLAY_MS = 6000;
+const SWIPE_THRESHOLD = 40;
+
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const trackRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
+    if (isDragging) return;
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % SLIDES.length);
-    }, 6000);
+    }, AUTOPLAY_MS);
     return () => clearInterval(timer);
-  }, []);
+  }, [isDragging]);
 
   const goTo = (i: number) => setIndex((i + SLIDES.length) % SLIDES.length);
 
-  const touchStartX = useRef<number | null>(null);
-
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+    setIsDragging(true);
   };
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
+  const handleTouchMove = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
-    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-    const SWIPE_THRESHOLD = 40;
-    if (deltaX > SWIPE_THRESHOLD) {
+    setDragOffset(e.touches[0].clientX - touchStartX.current);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null) return;
+    if (dragOffset > SWIPE_THRESHOLD) {
       goTo(index - 1);
-    } else if (deltaX < -SWIPE_THRESHOLD) {
+    } else if (dragOffset < -SWIPE_THRESHOLD) {
       goTo(index + 1);
     }
     touchStartX.current = null;
+    setDragOffset(0);
+    setIsDragging(false);
   };
-
-  const slide = SLIDES[index];
-  const Icon = slide.buttonIcon;
 
   const buttonClasses =
     "inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-center";
 
+  const trackWidth = trackRef.current?.offsetWidth || 0;
+  const dragPercent = trackWidth ? (dragOffset / trackWidth) * 100 : 0;
+
   return (
     <section className="bg-primary-700 text-white py-8 px-4">
-      <div
-        className="mx-auto max-w-3xl text-center relative touch-pan-y"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
+      <div className="mx-auto max-w-3xl text-center relative">
         <button
           onClick={() => goTo(index - 1)}
           aria-label="Anterior"
-          className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
         <button
           onClick={() => goTo(index + 1)}
           aria-label="Siguiente"
-          className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 items-center justify-center h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
 
-        <div className="min-h-[92px] flex flex-col items-center justify-center">
-          {slide.description && (
-            <p className="text-lg text-white/90 mb-5 max-w-xl mx-auto">
-              {slide.description}
-            </p>
-          )}
-          {slide.external ? (
-            <a
-              href={slide.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonClasses}
-            >
-              <Icon className="h-5 w-5 shrink-0" />
-              {slide.buttonLabel}
-            </a>
-          ) : (
-            <Link href={slide.href} className={buttonClasses}>
-              <Icon className="h-5 w-5 shrink-0" />
-              {slide.buttonLabel}
-            </Link>
-          )}
+        <div
+          ref={trackRef}
+          className="overflow-hidden touch-pan-y"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div
+            className="flex"
+            style={{
+              transform: `translateX(calc(${-index * 100}% + ${dragPercent}%))`,
+              transition: isDragging
+                ? "none"
+                : "transform 500ms cubic-bezier(0.22, 1, 0.36, 1)",
+            }}
+          >
+            {SLIDES.map((slide, i) => {
+              const Icon = slide.buttonIcon;
+              return (
+                <div
+                  key={i}
+                  className="w-full shrink-0 min-h-[92px] flex flex-col items-center justify-center px-2"
+                >
+                  {slide.description && (
+                    <p className="text-lg text-white/90 mb-5 max-w-xl mx-auto">
+                      {slide.description}
+                    </p>
+                  )}
+                  {slide.external ? (
+                    <a
+                      href={slide.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={buttonClasses}
+                    >
+                      <Icon className="h-5 w-5 shrink-0" />
+                      {slide.buttonLabel}
+                    </a>
+                  ) : (
+                    <Link href={slide.href} className={buttonClasses}>
+                      <Icon className="h-5 w-5 shrink-0" />
+                      {slide.buttonLabel}
+                    </Link>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="flex items-center justify-center gap-2 mt-6">
@@ -126,7 +161,7 @@ export default function HeroSlider() {
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Ir a la diapositiva ${i + 1}`}
-              className={`h-2.5 rounded-full transition-all ${
+              className={`h-2.5 rounded-full transition-all duration-300 ${
                 i === index ? "w-6 bg-white" : "w-2.5 bg-white/40 hover:bg-white/60"
               }`}
             />
