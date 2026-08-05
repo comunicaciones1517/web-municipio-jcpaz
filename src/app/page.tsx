@@ -3,8 +3,6 @@ import {
   HeartPulse,
   Building2,
   Landmark,
-  Phone,
-  ArrowRight,
   FileText,
   Car,
   Store,
@@ -100,7 +98,7 @@ export default function HomePage() {
 
       {/* Secciones */}
       <section className="py-12 px-4">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
             ¿Qué necesitás?
           </h2>
@@ -109,23 +107,20 @@ export default function HomePage() {
             completa.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {SECTIONS.map((section) => {
               const Icon = section.icon;
               return (
                 <Link
                   key={section.href}
                   href={section.href}
-                  className={`group border-2 rounded-xl p-6 transition-all duration-200 ${section.color}`}
+                  className={`group border-2 rounded-2xl p-6 text-center transition-all duration-200 flex flex-col items-center gap-3 ${section.color}`}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <Icon className={`h-8 w-8 ${section.iconColor}`} />
-                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800 mb-1">
+                  <Icon className={`h-10 w-10 ${section.iconColor}`} />
+                  <h3 className="text-sm font-bold text-gray-800 leading-tight">
                     {section.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs text-gray-500 leading-snug">
                     {section.description}
                   </p>
                 </Link>
