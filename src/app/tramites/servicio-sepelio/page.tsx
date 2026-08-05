@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, HeartHandshake, FileText, Info, Phone, MapPin, Clock } from "lucide-react";
-import PhoneLink from "@/components/shared/PhoneLink";
-import HoursDisplay from "@/components/shared/HoursDisplay";
+import { ArrowLeft, HeartHandshake, FileText, Info } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Servicio de Sepelio — Desarrollo Social | José C. Paz",
@@ -53,43 +51,6 @@ export default function ServicioSepelioPage() {
           </p>
         </div>
 
-        {/* Contacto */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <section>
-            <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-              <Phone className="h-5 w-5 text-slate-600" />
-              Contacto
-            </h2>
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm space-y-3 h-full">
-              <PhoneLink number="(02320) 422719" className="text-base font-semibold" />
-              <div className="flex items-start gap-2 text-sm text-gray-700 pt-2 border-t border-gray-100">
-                <MapPin className="h-4 w-4 text-slate-600 shrink-0 mt-0.5" />
-                <span>Av. Hipólito Yrigoyen 2945, José C. Paz</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
-              <Clock className="h-5 w-5 text-slate-600" />
-              Horario de atención
-            </h2>
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm h-full">
-              <HoursDisplay
-                hours={[
-                  { day: "lunes", open: "08:00", close: "14:00" },
-                  { day: "martes", open: "08:00", close: "14:00" },
-                  { day: "miercoles", open: "08:00", close: "14:00" },
-                  { day: "jueves", open: "08:00", close: "14:00" },
-                  { day: "viernes", open: "08:00", close: "14:00" },
-                  { day: "sabado", open: "08:00", close: "12:00" },
-                  { day: "domingo", open: "08:00", close: "12:00" },
-                ]}
-              />
-            </div>
-          </section>
-        </div>
-
         {/* Requisitos */}
         <section>
           <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
@@ -110,6 +71,12 @@ export default function ServicioSepelioPage() {
                 </li>
               ))}
             </ul>
+            <p className="text-sm text-gray-600">
+              <span className="font-semibold text-gray-800">Lugar y horario:</span>{" "}
+              Secretaría de Acción Social, Av. Hipólito Yrigoyen 2945 — Tel:
+              02320-422719 — Lunes a Viernes de 08:00 a 14:00hs — Sábados y
+              Domingos de 08:00 a 12:00hs
+            </p>
           </div>
         </section>
 
