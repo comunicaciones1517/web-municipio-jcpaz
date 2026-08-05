@@ -73,9 +73,12 @@ export default function ServicioSepelioPage() {
             </ul>
             <p className="text-sm text-gray-600">
               <span className="font-semibold text-gray-800">Lugar y horario:</span>{" "}
-              Secretaría de Acción Social, Av. Hipólito Yrigoyen 2945 — Tel:
-              02320-422719 — Lunes a Viernes de 08:00 a 14:00hs — Sábados y
-              Domingos de 08:00 a 12:00hs
+              Secretaría de Acción Social, Av. Hipólito Yrigoyen 2945 — Tel:{" "}
+              <a href="tel:02320422719" className="text-primary-700 font-semibold hover:underline">
+                02320 422719
+              </a>{" "}
+              — Lunes a Viernes de 08:00 a 14:00hs — Sábados y Domingos de
+              08:00 a 12:00hs
             </p>
           </div>
         </section>
