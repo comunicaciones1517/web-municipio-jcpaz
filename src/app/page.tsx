@@ -16,6 +16,7 @@ import {
   Scale,
   CalendarDays,
   HeartHandshake,
+  ArrowRight,
 } from "lucide-react";
 import HeroSlider from "@/components/home/HeroSlider";
 
@@ -28,7 +29,6 @@ const SECTIONS = [
       "Hospitales, centros de salud y clínicas. Horarios, especialidades, contacto y más.",
     color: "bg-red-50 border-red-200 hover:bg-red-100",
     iconColor: "text-red-600",
-    badgeColor: "bg-red-100 text-red-700",
   },
   {
     href: "/oficinas",
@@ -38,7 +38,6 @@ const SECTIONS = [
       "Delegaciones y oficinas descentralizadas para gestionar trámites cerca de tu casa.",
     color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
     iconColor: "text-blue-600",
-    badgeColor: "bg-blue-100 text-blue-700",
   },
   {
     href: "/dependencias",
@@ -48,7 +47,32 @@ const SECTIONS = [
       "Cementerio municipal, instalaciones y establecimientos del municipio.",
     color: "bg-teal-50 border-teal-200 hover:bg-teal-100",
     iconColor: "text-teal-600",
-    badgeColor: "bg-teal-100 text-teal-700",
+  },
+  {
+    href: "https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0",
+    external: true,
+    icon: Landmark,
+    title: "Dirección General de Rentas",
+    description:
+      "Si querés averiguar sobre tus tributos y otros impuestos entrá acá",
+    color: "bg-white border-gray-200 hover:border-emerald-300",
+    iconColor: "text-emerald-600",
+  },
+  {
+    href: "https://drive.google.com/drive/folders/146swI0DfUgZ2HwXidkQZqNSZF_OY3Agy",
+    external: true,
+    icon: Scale,
+    title: "Ordenanza Fiscal Vigente",
+    color: "bg-white border-gray-200 hover:border-amber-300",
+    iconColor: "text-amber-600",
+  },
+  {
+    href: "https://drive.google.com/file/d/1WoimnkxdOuX5kh2Yq9FylEps2XT1pOlA/view",
+    external: true,
+    icon: CalendarDays,
+    title: "Calendario Fiscal Vigente",
+    color: "bg-white border-gray-200 hover:border-blue-300",
+    iconColor: "text-blue-600",
   },
 ];
 
@@ -110,19 +134,34 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {SECTIONS.map((section) => {
               const Icon = section.icon;
-              return (
-                <Link
-                  key={section.href}
-                  href={section.href}
-                  className={`group border-2 rounded-2xl p-6 text-center transition-all duration-200 flex flex-col items-center gap-3 ${section.color}`}
-                >
+              const content = (
+                <>
                   <Icon className={`h-10 w-10 ${section.iconColor}`} />
                   <h3 className="text-sm font-bold text-gray-800 leading-tight">
                     {section.title}
                   </h3>
-                  <p className="text-xs text-gray-500 leading-snug">
-                    {section.description}
-                  </p>
+                  {section.description && (
+                    <p className="text-xs text-gray-500 leading-snug">
+                      {section.description}
+                    </p>
+                  )}
+                </>
+              );
+              const className = `group border-2 rounded-2xl p-6 text-center transition-all duration-200 flex flex-col items-center gap-3 ${section.color}`;
+
+              return section.external ? (
+                <a
+                  key={section.href}
+                  href={section.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {content}
+                </a>
+              ) : (
+                <Link key={section.href} href={section.href} className={className}>
+                  {content}
                 </Link>
               );
             })}
@@ -130,49 +169,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Rentas y App Municipal */}
+      {/* App Municipal */}
       <section className="py-10 px-4 bg-gray-50">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <a
-              href="https://sites.google.com/view/dir-gral-de-rentas/tributo?authuser=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-emerald-300 transition-all"
-            >
-              <Landmark className="h-10 w-10 text-emerald-600" />
-              <span className="text-sm font-bold text-gray-800 leading-tight">Dirección General de Rentas</span>
-              <span className="text-xs text-gray-500 leading-snug">Si querés averiguar sobre tus tributos y otros impuestos entrá acá</span>
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-green-300 transition-all"
-            >
-              <Smartphone className="h-10 w-10 text-green-600" />
-              <span className="text-sm font-bold text-gray-800 leading-tight">App Municipal</span>
-              <span className="text-xs text-gray-500 leading-snug">Pagá tus tasas y registrá tu comercio desde la App</span>
-            </a>
-            <a
-              href="https://drive.google.com/drive/folders/146swI0DfUgZ2HwXidkQZqNSZF_OY3Agy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-amber-300 transition-all"
-            >
-              <Scale className="h-10 w-10 text-amber-600" />
-              <span className="text-sm font-bold text-gray-800 leading-tight">Ordenanza Fiscal Vigente</span>
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1WoimnkxdOuX5kh2Yq9FylEps2XT1pOlA/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-blue-300 transition-all"
-            >
-              <CalendarDays className="h-10 w-10 text-blue-600" />
-              <span className="text-sm font-bold text-gray-800 leading-tight">Calendario Fiscal Vigente</span>
-            </a>
-          </div>
+        <div className="mx-auto max-w-3xl">
+          <a
+            href="https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group border-2 border-green-200 bg-green-50 hover:bg-green-100 rounded-xl p-6 flex items-center gap-4 transition-all duration-200"
+          >
+            <Smartphone className="h-10 w-10 text-green-600 shrink-0" />
+            <div className="flex-1">
+              <h3 className="text-lg font-bold text-gray-800 mb-1">App Municipal</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Pagá tus tasas y registrá tu comercio desde la App
+              </p>
+            </div>
+            <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-transform shrink-0" />
+          </a>
         </div>
       </section>
 
