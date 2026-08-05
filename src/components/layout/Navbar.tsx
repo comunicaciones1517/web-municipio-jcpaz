@@ -22,7 +22,11 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 text-white shadow-md" style={{ backgroundColor: "#041f3a" }}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-end">
+        <div className="flex h-16 items-center justify-between gap-2">
+          <span className="text-[11px] sm:text-sm font-semibold text-white/90 tracking-wide whitespace-nowrap">
+            Dirección de Comunicaciones
+          </span>
+
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((link) =>
