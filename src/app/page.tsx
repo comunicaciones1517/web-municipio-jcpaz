@@ -172,7 +172,7 @@ export default function HomePage() {
 
       {/* Actividades Culturales */}
       <section className="py-10 px-4">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
             <Palette className="h-7 w-7 text-violet-600" />
             <h2 className="text-2xl font-bold text-gray-800">
@@ -180,7 +180,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/actividades-culturales"
               className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-violet-300 transition-all"
