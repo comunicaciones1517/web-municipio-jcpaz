@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Palette, CalendarDays, MessageCircle, MapPin, Clock } from "lucide-react";
+import EventosCulturales from "@/components/actividades/EventosCulturales";
 
 export const metadata: Metadata = {
   title: "Actividades Culturales — Grilla 2026 | José C. Paz",
@@ -86,6 +87,9 @@ export default function ActividadesCulturalesPage() {
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-8">
+        {/* Eventos puntuales */}
+        <EventosCulturales />
+
         {/* Grilla por día */}
         <section>
           <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
