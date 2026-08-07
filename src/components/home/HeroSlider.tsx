@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { HeartPulse, Landmark, Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
+import { HeartPulse, Landmark, Smartphone, Syringe, ChevronLeft, ChevronRight } from "lucide-react";
 
 type Slide = {
   description?: string;
@@ -34,6 +34,14 @@ const SLIDES: Slide[] = [
     buttonLabel: "App Municipal",
     buttonIcon: Smartphone,
     href: "https://play.google.com/store/apps/details?id=ar.com.tsf.AppWechterPersonaJCP01&pcampaignid=web_share",
+    external: true,
+  },
+  {
+    description:
+      "Consultá el Calendario Nacional de Vacunación: todas las vacunas gratuitas y obligatorias según la edad, desde recién nacidos hasta adultos mayores.",
+    buttonLabel: "Calendario de Vacunación",
+    buttonIcon: Syringe,
+    href: "https://www.argentina.gob.ar/sites/default/files/2026-03-10_calendario_nacional_vacunacion_70x50_web.pdf",
     external: true,
   },
 ];
