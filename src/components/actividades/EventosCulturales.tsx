@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarDays, MapPin, Clock } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 
 interface EventoCultural {
   fecha: string; // ISO yyyy-mm-dd
@@ -74,12 +74,8 @@ export default function EventosCulturales() {
   const pasados = EVENTOS.filter((e) => e.fecha < hoy).sort((a, b) => b.fecha.localeCompare(a.fecha));
 
   return (
-    <section id="proximos-eventos" className="space-y-6 scroll-mt-20">
+    <section className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-          <CalendarDays className="h-6 w-6 text-violet-600" />
-          Próximos Eventos
-        </h2>
         {proximos.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {proximos.map((evento, i) => (

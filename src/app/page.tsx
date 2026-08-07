@@ -190,7 +190,7 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/actividades-culturales#proximos-eventos"
+              href="/actividades-culturales/eventos"
               className="flex flex-col items-center justify-center gap-3 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-violet-300 transition-all"
             >
               <CalendarDays className="h-10 w-10 text-violet-600" />
