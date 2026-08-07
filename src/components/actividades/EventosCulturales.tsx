@@ -45,24 +45,38 @@ function hoyISO() {
   return `${hoy.getFullYear()}-${String(hoy.getMonth() + 1).padStart(2, "0")}-${String(hoy.getDate()).padStart(2, "0")}`;
 }
 
-function EventoCard({ evento }: { evento: EventoCultural }) {
+function agruparPorFecha(eventos: EventoCultural[]) {
+  const grupos = new Map<string, EventoCultural[]>();
+  for (const evento of eventos) {
+    const lista = grupos.get(evento.fecha) ?? [];
+    lista.push(evento);
+    grupos.set(evento.fecha, lista);
+  }
+  return Array.from(grupos.entries());
+}
+
+function DiaCard({ fecha, eventos }: { fecha: string; eventos: EventoCultural[] }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-xs font-bold text-violet-700 bg-violet-100 px-2.5 py-1 rounded-full">
-          {formatFecha(evento.fecha)}
-        </span>
-      </div>
-      <h3 className="font-bold text-gray-800 text-base mb-2">{evento.titulo}</h3>
-      <div className="space-y-1.5">
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <Clock className="h-4 w-4 text-violet-600 shrink-0" />
-          <span>{evento.horario}</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <MapPin className="h-4 w-4 text-violet-600 shrink-0" />
-          <span>{evento.lugar}</span>
-        </div>
+      <span className="inline-block text-xs font-bold text-violet-700 bg-violet-100 px-2.5 py-1 rounded-full mb-3">
+        {formatFecha(fecha)}
+      </span>
+      <div className="divide-y divide-gray-100">
+        {eventos.map((evento, i) => (
+          <div key={i} className="py-3 first:pt-0 last:pb-0">
+            <h3 className="font-bold text-gray-800 text-base mb-1.5">{evento.titulo}</h3>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <Clock className="h-4 w-4 text-violet-600 shrink-0" />
+                <span>{evento.horario}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <MapPin className="h-4 w-4 text-violet-600 shrink-0" />
+                <span>{evento.lugar}</span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -70,16 +84,20 @@ function EventoCard({ evento }: { evento: EventoCultural }) {
 
 export default function EventosCulturales() {
   const hoy = hoyISO();
-  const proximos = EVENTOS.filter((e) => e.fecha >= hoy).sort((a, b) => a.fecha.localeCompare(b.fecha));
-  const pasados = EVENTOS.filter((e) => e.fecha < hoy).sort((a, b) => b.fecha.localeCompare(a.fecha));
+  const proximos = agruparPorFecha(
+    EVENTOS.filter((e) => e.fecha >= hoy).sort((a, b) => a.fecha.localeCompare(b.fecha))
+  );
+  const pasados = agruparPorFecha(
+    EVENTOS.filter((e) => e.fecha < hoy).sort((a, b) => b.fecha.localeCompare(a.fecha))
+  );
 
   return (
     <section className="space-y-6">
       <div>
         {proximos.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {proximos.map((evento, i) => (
-              <EventoCard key={i} evento={evento} />
+            {proximos.map(([fecha, eventos]) => (
+              <DiaCard key={fecha} fecha={fecha} eventos={eventos} />
             ))}
           </div>
         ) : (
@@ -94,8 +112,8 @@ export default function EventosCulturales() {
             <span className="text-gray-400 group-open:rotate-180 transition-transform text-xs ml-2">▼</span>
           </summary>
           <div className="px-5 pb-5 pt-2 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {pasados.map((evento, i) => (
-              <EventoCard key={i} evento={evento} />
+            {pasados.map(([fecha, eventos]) => (
+              <DiaCard key={fecha} fecha={fecha} eventos={eventos} />
             ))}
           </div>
         </details>
