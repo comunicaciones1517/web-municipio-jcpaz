@@ -74,7 +74,7 @@ export default function EventosCulturales() {
   const pasados = EVENTOS.filter((e) => e.fecha < hoy).sort((a, b) => b.fecha.localeCompare(a.fecha));
 
   return (
-    <section className="space-y-6">
+    <section id="proximos-eventos" className="space-y-6 scroll-mt-20">
       <div>
         <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
           <CalendarDays className="h-6 w-6 text-violet-600" />
